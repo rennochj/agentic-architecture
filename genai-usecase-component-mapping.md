@@ -1693,3 +1693,910 @@ Use these checklists to ensure comprehensive NFR coverage for your tier.
 ---
 
 *This document serves as a comprehensive guide for evaluating and selecting GenAI implementation approaches. Use the complexity tiers to assess functional requirements, the NFR frameworks to evaluate non-functional needs, and the platform selection guide to make informed decisions about technology platforms based on your specific requirements, organizational capabilities, and total cost of ownership considerations.*
+
+---
+
+## 9. Comprehensive Solution Selection Framework
+
+This section provides a holistic framework for evaluating GenAI solutions across all dimensions: cost, benefit, skills, risks, and trade-offs. Use this framework to make informed decisions that align with organizational strategy and capabilities.
+
+### 9.1 Cost-Benefit Analysis Framework
+
+#### 9.1.1 Value Drivers and Benefit Categories
+
+GenAI implementations can deliver value across multiple dimensions. Understanding these categories helps quantify expected benefits.
+
+| Value Category | Description | Measurement Approach | Typical Impact Range |
+|----------------|-------------|---------------------|---------------------|
+| **Efficiency Gains** | Time savings from automated or augmented tasks | FTE hours saved × labor cost | 20-80% task time reduction |
+| **Quality Improvement** | Reduced errors, improved consistency | Error rate reduction × error cost | 30-70% error reduction |
+| **Revenue Enhancement** | New capabilities enabling revenue | Incremental revenue attribution | 5-25% revenue uplift |
+| **Cost Avoidance** | Prevented costs through better decisions | Risk reduction × potential cost | Varies by domain |
+| **Speed to Market** | Faster delivery of products/services | Time-to-market reduction × value | 20-50% cycle reduction |
+| **Customer Experience** | Improved satisfaction and retention | NPS/CSAT improvement, churn reduction | 10-30% improvement |
+| **Employee Experience** | Reduced toil, more engaging work | Engagement scores, attrition | 15-40% improvement |
+| **Scalability** | Ability to handle volume without linear cost | Volume capacity increase | 2-10x capacity |
+
+#### 9.1.2 Benefit Quantification Matrix by Use Case
+
+| Use Case Category | Primary Value Drivers | Secondary Value Drivers | Quantification Method |
+|-------------------|----------------------|------------------------|----------------------|
+| **Content Generation** | Efficiency (writer time), Speed | Quality (consistency), Scale | Hours saved × rate + volume increase |
+| **Knowledge Work** | Efficiency (research time), Quality | Decision quality, Compliance | Research hours × rate + error reduction |
+| **Autonomous Systems** | Efficiency (FTE replacement), Scale | Quality, Speed | FTE cost × automation % + volume |
+| **Conversational AI** | Efficiency (support cost), CX | Scale, Quality | Cost per interaction × volume + CSAT |
+| **Code Development** | Efficiency (dev time), Speed | Quality (bugs), Onboarding | Dev hours × rate + bug cost reduction |
+| **Decision Support** | Decision quality, Speed | Risk avoidance, Compliance | Decision value × improvement % |
+
+#### 9.1.3 ROI Calculation Framework
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                        ROI CALCULATION MODEL                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                               │
+│  TOTAL BENEFIT (Annual)                                                       │
+│  ┌─────────────────────────────────────────────────────────────────────────┐│
+│  │ Efficiency Gains    = (Hours Saved × Hourly Rate) × Users × Frequency  ││
+│  │ Quality Improvement = (Error Rate Reduction × Cost per Error) × Volume ││
+│  │ Revenue Enhancement = Incremental Revenue × Attribution %               ││
+│  │ Cost Avoidance      = Risk Reduction % × Potential Loss                ││
+│  │ Scale Benefits      = Additional Capacity × Marginal Value             ││
+│  └─────────────────────────────────────────────────────────────────────────┘│
+│                                                                               │
+│  TOTAL COST (Annual)                                                          │
+│  ┌─────────────────────────────────────────────────────────────────────────┐│
+│  │ Initial Investment  = Development + Integration + Training (amortized) ││
+│  │ Platform/License    = Subscription + Per-user fees                     ││
+│  │ Infrastructure      = Compute + Storage + Network                      ││
+│  │ LLM Consumption     = Tokens × Price per Token × Volume                ││
+│  │ Operations          = Support FTEs + Tools + Maintenance               ││
+│  │ Hidden Costs        = Technical Debt + Opportunity Cost                ││
+│  └─────────────────────────────────────────────────────────────────────────┘│
+│                                                                               │
+│  ROI METRICS                                                                  │
+│  ┌─────────────────────────────────────────────────────────────────────────┐│
+│  │ Simple ROI      = (Total Benefit - Total Cost) / Total Cost × 100%     ││
+│  │ Payback Period  = Initial Investment / (Annual Benefit - Annual Cost)  ││
+│  │ NPV (3-year)    = Σ (Net Benefit_t / (1 + r)^t) - Initial Investment   ││
+│  │ IRR             = Rate where NPV = 0                                   ││
+│  └─────────────────────────────────────────────────────────────────────────┘│
+│                                                                               │
+│  TYPICAL TARGETS                                                              │
+│  ├─► Simple ROI: >100% (Year 1), >300% (3-year)                             │
+│  ├─► Payback Period: <18 months for T1-T2, <24 months for T3-T4            │
+│  └─► IRR: >25% for strategic investments                                    │
+│                                                                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### 9.1.4 Cost-Benefit by Complexity Tier
+
+| Dimension | T1 Basic | T2 Enhanced | T3 Orchestrated | T4 Agentic |
+|-----------|----------|-------------|-----------------|------------|
+| **Typical Initial Investment** | $10K-50K | $50K-150K | $150K-500K | $500K-2M+ |
+| **Annual Operating Cost** | $20K-75K | $75K-200K | $200K-500K | $500K-1.5M+ |
+| **Time to First Value** | Days-Weeks | Weeks-Months | Months | Quarters |
+| **Time to Full ROI** | 3-6 months | 6-12 months | 12-18 months | 18-36 months |
+| **Typical Annual Benefit** | $50K-200K | $200K-750K | $750K-3M | $3M-20M+ |
+| **Expected ROI (Year 1)** | 50-200% | 75-250% | 50-150% | 25-100% |
+| **Expected ROI (3-Year)** | 200-500% | 300-600% | 250-500% | 300-800% |
+| **Risk-Adjusted ROI Factor** | 0.8-0.9 | 0.7-0.85 | 0.6-0.75 | 0.5-0.65 |
+
+#### 9.1.5 Benefit Realization Timeline
+
+```
+Benefit Realization (% of Full Value)
+    │
+100%│                                                    ┌────────── T1 Basic
+    │                                              ┌─────┘
+ 80%│                                        ┌─────┘
+    │                                  ┌─────┘      ┌─────────────── T2 Enhanced
+ 60%│                            ┌─────┘      ┌─────┘
+    │                      ┌─────┘      ┌─────┘    ┌─────────────── T3 Orchestrated
+ 40%│                ┌─────┘      ┌─────┘    ┌─────┘
+    │          ┌─────┘      ┌─────┘    ┌─────┘
+ 20%│    ┌─────┘      ┌─────┘    ┌─────┘           ┌─────────────── T4 Agentic
+    │────┘      ┌─────┘    ┌─────┘           ┌─────┘
+  0%├──────────┴──────────┴─────────────────┴───────────────────────► Months
+    0    1    3    6    9    12   15   18   21   24   30   36
+```
+
+---
+
+### 9.2 Skills Assessment Framework
+
+#### 9.2.1 Skills Taxonomy for GenAI Implementation
+
+| Skill Category | Skills Required | Proficiency Levels |
+|----------------|-----------------|-------------------|
+| **AI/ML Fundamentals** | LLM concepts, prompt engineering, embedding, RAG | Awareness → Practitioner → Expert |
+| **Software Engineering** | Python/TypeScript, API development, testing | Basic → Intermediate → Advanced |
+| **Data Engineering** | Data pipelines, vector databases, ETL | Basic → Intermediate → Advanced |
+| **Cloud Architecture** | Cloud services, infrastructure, networking | Foundational → Professional → Architect |
+| **DevOps/MLOps** | CI/CD, containerization, monitoring | Basic → Intermediate → Advanced |
+| **Security** | AppSec, data protection, compliance | Awareness → Practitioner → Specialist |
+| **Domain Expertise** | Business context, use case knowledge | Familiar → Proficient → Expert |
+| **Project Management** | Agile, risk management, stakeholder management | Basic → Intermediate → Advanced |
+| **Configuration/Low-Code** | Platform configuration, workflow design | Beginner → Intermediate → Advanced |
+
+#### 9.2.2 Skills Requirements by Complexity Tier
+
+| Skill Area | T1 Basic | T2 Enhanced | T3 Orchestrated | T4 Agentic |
+|------------|----------|-------------|-----------------|------------|
+| **AI/ML Fundamentals** | Awareness | Practitioner | Practitioner | Expert |
+| **Prompt Engineering** | Basic | Intermediate | Advanced | Expert |
+| **Software Engineering** | Basic | Intermediate | Advanced | Expert |
+| **RAG/Vector DB** | − | Basic | Intermediate | Advanced |
+| **Agent Development** | − | − | Basic | Expert |
+| **Cloud Architecture** | Foundational | Foundational | Professional | Architect |
+| **DevOps/MLOps** | − | Basic | Intermediate | Advanced |
+| **Security** | Awareness | Practitioner | Practitioner | Specialist |
+| **Configuration** | Intermediate | Advanced | Basic | − |
+| **Domain Expertise** | Familiar | Proficient | Proficient | Expert |
+
+#### 9.2.3 Team Composition by Tier and Platform
+
+**SaaS/Low-Code Platforms (Copilot Studio, Einstein, etc.)**
+
+| Role | T1 | T2 | T3 | Responsibilities |
+|------|----|----|----|--------------------|
+| Platform Admin/Configurator | 0.5 FTE | 1 FTE | 1-2 FTE | Configuration, deployment, maintenance |
+| Business Analyst | 0.25 FTE | 0.5 FTE | 1 FTE | Requirements, testing, user training |
+| Solution Architect | 0.1 FTE | 0.25 FTE | 0.5 FTE | Design, integration patterns |
+| Security/Compliance | 0.1 FTE | 0.25 FTE | 0.5 FTE | Access control, compliance |
+| **Total FTE** | **~1 FTE** | **~2 FTE** | **~4 FTE** | |
+
+**Cloud AI / Custom Development**
+
+| Role | T2 | T3 | T4 | Responsibilities |
+|------|----|----|----|--------------------|
+| AI/ML Engineer | 1 FTE | 2 FTE | 3-5 FTE | Prompts, RAG, agents, evaluation |
+| Backend Developer | 0.5 FTE | 1-2 FTE | 2-3 FTE | APIs, integration, orchestration |
+| DevOps/MLOps Engineer | 0.25 FTE | 0.5-1 FTE | 1-2 FTE | CI/CD, infrastructure, monitoring |
+| Data Engineer | 0.25 FTE | 0.5-1 FTE | 1-2 FTE | Data pipelines, vector DB |
+| Solution Architect | 0.25 FTE | 0.5 FTE | 1 FTE | Architecture, design decisions |
+| Security Engineer | 0.1 FTE | 0.25 FTE | 0.5-1 FTE | Security architecture, compliance |
+| QA/Test Engineer | 0.25 FTE | 0.5 FTE | 1 FTE | Testing, evaluation, quality |
+| Product Manager | 0.25 FTE | 0.5 FTE | 1 FTE | Requirements, roadmap, stakeholders |
+| **Total FTE** | **~3 FTE** | **~6-8 FTE** | **~12-18 FTE** | |
+
+#### 9.2.4 Skills Gap Analysis Template
+
+| Skill Area | Required Level | Current Level | Gap | Mitigation Strategy |
+|------------|----------------|---------------|-----|---------------------|
+| Prompt Engineering | Advanced | Basic | High | Training + hire 1 FTE |
+| RAG Development | Intermediate | None | High | Training + consultant |
+| Agent Frameworks | Expert | None | Critical | Hire 2 FTE + training |
+| Cloud Architecture | Professional | Foundational | Medium | Certification + mentor |
+| DevOps/MLOps | Intermediate | Basic | Low | Training |
+| Security | Practitioner | Awareness | Medium | Specialist consultant |
+
+**Gap Severity Classification:**
+- **Critical**: Cannot proceed without addressing; hire or partner required
+- **High**: Significant risk; training + external support needed
+- **Medium**: Manageable; training and mentoring sufficient
+- **Low**: Minor; self-study and on-the-job learning
+
+#### 9.2.5 Skills Development Pathways
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    SKILLS DEVELOPMENT PATHWAYS                               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  PATH A: FROM TRADITIONAL DEVELOPER TO AI ENGINEER                          │
+│  ┌─────────┐   ┌─────────────┐   ┌───────────────┐   ┌─────────────────┐  │
+│  │ Week 1-2│   │ Week 3-6    │   │ Week 7-12     │   │ Month 4-6       │  │
+│  │ LLM     │ → │ Prompt Eng  │ → │ RAG & Memory  │ → │ Agents &        │  │
+│  │ Basics  │   │ & API Use   │   │ Systems       │   │ Orchestration   │  │
+│  └─────────┘   └─────────────┘   └───────────────┘   └─────────────────┘  │
+│                                                                              │
+│  PATH B: FROM PLATFORM ADMIN TO AI CONFIGURATOR                             │
+│  ┌─────────┐   ┌─────────────┐   ┌───────────────┐   ┌─────────────────┐  │
+│  │ Week 1-2│   │ Week 3-4    │   │ Week 5-8      │   │ Month 3-4       │  │
+│  │ AI      │ → │ Platform    │ → │ Advanced      │ → │ Integration &   │  │
+│  │ Concepts│   │ Basics      │   │ Configuration │   │ Extension       │  │
+│  └─────────┘   └─────────────┘   └───────────────┘   └─────────────────┘  │
+│                                                                              │
+│  PATH C: FROM DATA ENGINEER TO AI INFRASTRUCTURE ENGINEER                   │
+│  ┌─────────┐   ┌─────────────┐   ┌───────────────┐   ┌─────────────────┐  │
+│  │ Week 1-2│   │ Week 3-6    │   │ Week 7-10     │   │ Month 3-6       │  │
+│  │ Vector  │ → │ Embedding & │ → │ Chunking &    │ → │ Advanced RAG    │  │
+│  │ DB Ops  │   │ Retrieval   │   │ Indexing      │   │ & Eval Systems  │  │
+│  └─────────┘   └─────────────┘   └───────────────┘   └─────────────────┘  │
+│                                                                              │
+│  TRAINING INVESTMENT BY TIER                                                 │
+│  ├─► T1-T2 (SaaS): 2-4 weeks training, $2K-5K per person                   │
+│  ├─► T2-T3 (Cloud AI): 6-12 weeks training, $5K-15K per person             │
+│  └─► T3-T4 (Custom): 3-6 months development, $15K-30K per person           │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### 9.3 Comprehensive Risk Assessment Framework
+
+#### 9.3.1 Risk Categories for GenAI Solutions
+
+| Risk Category | Description | Impact Areas |
+|---------------|-------------|--------------|
+| **Technical Risk** | Implementation complexity, technology maturity | Project success, performance, reliability |
+| **Operational Risk** | Day-to-day running, incidents, maintenance | Availability, cost, user satisfaction |
+| **Security Risk** | Data breaches, unauthorized access, vulnerabilities | Reputation, compliance, financial |
+| **Compliance Risk** | Regulatory violations, audit failures | Legal, financial, operational |
+| **Strategic Risk** | Vendor lock-in, technology obsolescence | Long-term value, flexibility |
+| **AI-Specific Risk** | Hallucinations, bias, misuse | Reputation, trust, harm |
+| **Financial Risk** | Cost overruns, budget uncertainty | ROI, sustainability |
+| **Organizational Risk** | Adoption failure, change resistance | Value realization, morale |
+
+#### 9.3.2 Risk Assessment Matrix by Tier
+
+| Risk Type | T1 Basic | T2 Enhanced | T3 Orchestrated | T4 Agentic |
+|-----------|----------|-------------|-----------------|------------|
+| **Technical** |
+| Implementation failure | Low | Low-Medium | Medium | High |
+| Performance issues | Low | Medium | Medium-High | High |
+| Integration complexity | Low | Medium | High | Very High |
+| **Operational** |
+| Service disruption | Low | Low | Medium | Medium-High |
+| Maintenance burden | Low | Low-Medium | Medium | High |
+| Scaling challenges | Low | Medium | Medium | High |
+| **Security** |
+| Data exposure | Low-Medium | Medium | Medium | High |
+| Prompt injection | Low | Medium | Medium | High |
+| Unauthorized actions | Very Low | Low | Medium | High |
+| **AI-Specific** |
+| Hallucination impact | Low | Medium | Medium | High |
+| Bias in outputs | Low | Medium | Medium | High |
+| Unexpected behavior | Very Low | Low | Medium | High |
+| **Financial** |
+| Budget overrun | Low | Low-Medium | Medium-High | High |
+| Cost unpredictability | Low | Medium | Medium | High |
+| **Strategic** |
+| Vendor lock-in | Varies | Varies | Varies | Low |
+| Technology obsolescence | Low | Low | Medium | Medium |
+
+#### 9.3.3 AI-Specific Risk Assessment
+
+| AI Risk | Description | Likelihood by Tier | Mitigation Strategies |
+|---------|-------------|-------------------|----------------------|
+| **Hallucination** | Model generates false or misleading information | T1: Medium, T2: Medium, T3: High, T4: High | RAG grounding, fact-checking, citations, human review |
+| **Prompt Injection** | Malicious inputs manipulate model behavior | T1: Low, T2: Medium, T3: Medium, T4: High | Input validation, output filtering, sandboxing |
+| **Data Leakage** | Sensitive information exposed in outputs | T1: Low, T2: Medium, T3: Medium, T4: High | PII filtering, DLP, training data controls |
+| **Bias Amplification** | Model perpetuates or amplifies biases | T1: Low, T2: Medium, T3: Medium, T4: Medium | Bias testing, diverse training, fairness monitoring |
+| **Harmful Content** | Inappropriate, offensive, or dangerous outputs | T1: Low, T2: Low, T3: Medium, T4: Medium | Content filters, guardrails, human oversight |
+| **Over-reliance** | Users trust AI outputs without verification | T1: Low, T2: Medium, T3: Medium, T4: High | Training, uncertainty indicators, HITL |
+| **Autonomous Harm** | Agent takes damaging actions without oversight | T1: N/A, T2: Very Low, T3: Low, T4: Medium-High | Action limits, approval workflows, reversibility |
+| **Model Drift** | Performance degrades over time | T1: Low, T2: Low, T3: Medium, T4: Medium | Monitoring, evaluation, retraining |
+
+#### 9.3.4 Risk Scoring Framework
+
+```
+RISK SCORE = Likelihood × Impact × Detectability Factor
+
+Likelihood Scale (1-5):
+1 = Rare (< 1% chance)
+2 = Unlikely (1-10%)
+3 = Possible (10-30%)
+4 = Likely (30-60%)
+5 = Almost Certain (> 60%)
+
+Impact Scale (1-5):
+1 = Negligible (< $10K, no reputation impact)
+2 = Minor ($10K-50K, limited impact)
+3 = Moderate ($50K-250K, noticeable impact)
+4 = Major ($250K-1M, significant impact)
+5 = Severe (> $1M, critical impact)
+
+Detectability Factor:
+0.5 = Easily detectable before impact
+1.0 = Detectable with monitoring
+1.5 = Difficult to detect
+2.0 = Usually detected after impact
+
+Risk Rating:
+├─► 1-5: Low (Accept or Monitor)
+├─► 6-12: Medium (Mitigate)
+├─► 13-25: High (Significant Mitigation Required)
+└─► 26-50: Critical (Reconsider or Major Investment)
+```
+
+#### 9.3.5 Risk Mitigation Strategy Matrix
+
+| Risk Level | Strategy | Actions | Investment |
+|------------|----------|---------|------------|
+| **Low** | Accept & Monitor | Basic monitoring, periodic review | Minimal |
+| **Medium** | Mitigate | Implement controls, regular testing | Moderate |
+| **High** | Significant Action | Multiple controls, continuous monitoring | Significant |
+| **Critical** | Major Intervention | Architecture changes, extensive controls, or reconsider | Substantial |
+
+#### 9.3.6 Risk Register Template
+
+| ID | Risk Description | Category | Tier | Likelihood | Impact | Detect | Score | Rating | Mitigation | Owner | Status |
+|----|------------------|----------|------|------------|--------|--------|-------|--------|------------|-------|--------|
+| R1 | LLM hallucination in customer-facing responses | AI | T2 | 4 | 3 | 1.0 | 12 | Medium | RAG + citations + human review for high-stakes | AI Lead | Open |
+| R2 | Prompt injection bypasses guardrails | Security | T3 | 3 | 4 | 1.5 | 18 | High | Input validation + output filtering + sandboxing | Security | Open |
+| R3 | Agent performs unauthorized database modification | Security | T4 | 2 | 5 | 1.5 | 15 | High | Action whitelist + approval workflow + audit | Security | Open |
+
+---
+
+### 9.4 Trade-off Analysis Framework
+
+#### 9.4.1 Core Trade-off Dimensions
+
+Understanding the fundamental trade-offs helps make balanced decisions aligned with organizational priorities.
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      CORE TRADE-OFF DIMENSIONS                               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  BUILD vs. BUY                                                               │
+│  ┌────────────────────────────────────────────────────────────────────────┐│
+│  │ Buy/SaaS                                          Build/Custom         ││
+│  │ ◄───────────────────────────────────────────────────────────────────► ││
+│  │ + Fast time-to-value        vs.        + Full control & customization ││
+│  │ + Lower initial investment  vs.        + Better long-term economics   ││
+│  │ + Managed operations        vs.        + No vendor dependency         ││
+│  │ - Limited customization     vs.        - Higher skill requirements    ││
+│  │ - Vendor lock-in risk       vs.        - Longer implementation time   ││
+│  └────────────────────────────────────────────────────────────────────────┘│
+│                                                                              │
+│  SPEED vs. FLEXIBILITY                                                       │
+│  ┌────────────────────────────────────────────────────────────────────────┐│
+│  │ Speed (Low-Code)                                   Flexibility (Code)  ││
+│  │ ◄───────────────────────────────────────────────────────────────────► ││
+│  │ + Rapid prototyping         vs.        + Unlimited possibilities      ││
+│  │ + Business user accessible  vs.        + Complex workflow support     ││
+│  │ + Quick iteration           vs.        + Deep integration options     ││
+│  │ - Platform limitations      vs.        - Longer development cycles    ││
+│  │ - Feature dependency        vs.        - Engineering expertise needed ││
+│  └────────────────────────────────────────────────────────────────────────┘│
+│                                                                              │
+│  CONTROL vs. CONVENIENCE                                                     │
+│  ┌────────────────────────────────────────────────────────────────────────┐│
+│  │ Convenience (Managed)                              Control (Self-run)  ││
+│  │ ◄───────────────────────────────────────────────────────────────────► ││
+│  │ + Reduced operational load  vs.        + Full visibility & tuning     ││
+│  │ + Built-in best practices   vs.        + Custom optimization          ││
+│  │ + Automatic updates         vs.        + Version control              ││
+│  │ - Less visibility           vs.        - Operational responsibility   ││
+│  │ - Shared resource limits    vs.        - Infrastructure management    ││
+│  └────────────────────────────────────────────────────────────────────────┘│
+│                                                                              │
+│  COST vs. CAPABILITY                                                         │
+│  ┌────────────────────────────────────────────────────────────────────────┐│
+│  │ Cost-Optimized                                     Capability-Rich     ││
+│  │ ◄───────────────────────────────────────────────────────────────────► ││
+│  │ + Lower operational cost    vs.        + Better model performance     ││
+│  │ + Simpler architecture      vs.        + Advanced features            ││
+│  │ + Predictable budget        vs.        + Competitive advantage        ││
+│  │ - Smaller/slower models     vs.        - Higher token costs           ││
+│  │ - Fewer features            vs.        - More complex operations      ││
+│  └────────────────────────────────────────────────────────────────────────┘│
+│                                                                              │
+│  AUTONOMY vs. SAFETY                                                         │
+│  ┌────────────────────────────────────────────────────────────────────────┐│
+│  │ Safety-First                                       High Autonomy       ││
+│  │ ◄───────────────────────────────────────────────────────────────────► ││
+│  │ + Human oversight at key steps vs.     + Faster task completion       ││
+│  │ + Reduced error impact      vs.        + Lower human involvement      ││
+│  │ + Audit trail clarity       vs.        + Better scaling               ││
+│  │ - Slower workflows          vs.        - Higher risk of errors        ││
+│  │ - Human bottleneck          vs.        - Complex monitoring needs     ││
+│  └────────────────────────────────────────────────────────────────────────┘│
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### 9.4.2 Trade-off Decision Matrix
+
+| Trade-off | Favors Left (Conservative) When... | Favors Right (Aggressive) When... |
+|-----------|-----------------------------------|-----------------------------------|
+| **Build vs. Buy** | Speed critical, standard use case, limited AI skills, small scale | Differentiation critical, unique requirements, strong AI team, large scale |
+| **Speed vs. Flexibility** | Proving concept, standard workflows, business-led, tight timeline | Complex requirements, competitive advantage, engineering-led, strategic investment |
+| **Control vs. Convenience** | Small team, standard requirements, cost-sensitive, early stage | Large scale, unique requirements, security-critical, mature operations |
+| **Cost vs. Capability** | Budget-constrained, non-critical use case, high volume | Quality-critical, competitive advantage, low volume, customer-facing |
+| **Autonomy vs. Safety** | High-stakes decisions, regulated industry, early deployment | High-volume tasks, well-tested scenarios, mature system, cost-sensitive |
+
+#### 9.4.3 Trade-off Scoring Template
+
+For each trade-off dimension, score your requirements and constraints to guide decisions:
+
+| Dimension | Weight (1-5) | Position (1=Left, 5=Right) | Weighted Score | Notes |
+|-----------|--------------|---------------------------|----------------|-------|
+| Build vs. Buy | | | | |
+| Speed vs. Flexibility | | | | |
+| Control vs. Convenience | | | | |
+| Cost vs. Capability | | | | |
+| Autonomy vs. Safety | | | | |
+
+**Interpretation:**
+- Average weighted score < 2.0: Strongly favor SaaS/Low-Code approach
+- Average weighted score 2.0-3.0: Consider hybrid approach
+- Average weighted score 3.0-4.0: Favor Cloud AI with frameworks
+- Average weighted score > 4.0: Favor custom development
+
+---
+
+### 9.5 Integrated Solution Selection Scorecard
+
+This scorecard brings together all evaluation dimensions into a single decision framework.
+
+#### 9.5.1 Master Evaluation Dimensions
+
+| Dimension | Weight | Description | Assessment Approach |
+|-----------|--------|-------------|---------------------|
+| **Functional Fit** | 20% | Ability to meet use case requirements | Component mapping, tier analysis |
+| **NFR Fit** | 15% | Ability to meet non-functional requirements | NFR matrix evaluation |
+| **Cost Efficiency** | 15% | Total cost of ownership relative to value | TCO analysis, ROI calculation |
+| **Risk Profile** | 15% | Risk level and manageability | Risk assessment framework |
+| **Skills Alignment** | 10% | Match with available or buildable skills | Skills gap analysis |
+| **Strategic Fit** | 10% | Alignment with organizational strategy | Strategic assessment |
+| **Time-to-Value** | 10% | Speed to production deployment | Timeline analysis |
+| **Scalability** | 5% | Ability to grow with demand | Architecture review |
+
+#### 9.5.2 Solution Scoring Matrix
+
+| Evaluation Criteria | Weight | Score (1-5) | Weighted Score | Evidence/Notes |
+|---------------------|--------|-------------|----------------|----------------|
+| **Functional Fit (20%)** |
+| Meets core use case requirements | 8% | | | |
+| Supports required complexity tier | 6% | | | |
+| Has necessary component capabilities | 6% | | | |
+| **NFR Fit (15%)** |
+| Meets security requirements | 5% | | | |
+| Meets performance requirements | 4% | | | |
+| Meets compliance requirements | 3% | | | |
+| Meets observability requirements | 3% | | | |
+| **Cost Efficiency (15%)** |
+| Initial investment acceptable | 5% | | | |
+| Operating cost sustainable | 5% | | | |
+| Expected ROI meets threshold | 5% | | | |
+| **Risk Profile (15%)** |
+| Technical risk acceptable | 5% | | | |
+| Operational risk acceptable | 4% | | | |
+| AI-specific risk managed | 3% | | | |
+| Strategic risk acceptable | 3% | | | |
+| **Skills Alignment (10%)** |
+| Current skills match | 5% | | | |
+| Skills gap closeable | 5% | | | |
+| **Strategic Fit (10%)** |
+| Aligns with technology strategy | 4% | | | |
+| Aligns with vendor strategy | 3% | | | |
+| Supports future roadmap | 3% | | | |
+| **Time-to-Value (10%)** |
+| Meets timeline requirements | 5% | | | |
+| Phased delivery possible | 5% | | | |
+| **Scalability (5%)** |
+| Handles projected growth | 3% | | | |
+| Cost scales reasonably | 2% | | | |
+| **TOTAL SCORE** | **100%** | | **/5.0** | |
+
+**Score Interpretation:**
+- 4.5-5.0: Excellent fit - proceed with confidence
+- 4.0-4.4: Good fit - proceed with minor adjustments
+- 3.5-3.9: Acceptable - proceed with attention to lower scores
+- 3.0-3.4: Marginal - address weaknesses or consider alternatives
+- <3.0: Poor fit - seek alternative solutions
+
+#### 9.5.3 Comparative Solution Evaluation
+
+Use this template to compare multiple solution approaches:
+
+| Criteria | Option A: [Name] | Option B: [Name] | Option C: [Name] |
+|----------|------------------|------------------|------------------|
+| **Platform Type** | (e.g., Copilot Studio) | (e.g., Azure AI + LangChain) | (e.g., Custom Build) |
+| **Complexity Tier Support** | | | |
+| **Functional Score** | /5.0 | /5.0 | /5.0 |
+| **NFR Score** | /5.0 | /5.0 | /5.0 |
+| **Cost Score** | /5.0 | /5.0 | /5.0 |
+| **Risk Score** | /5.0 | /5.0 | /5.0 |
+| **Skills Score** | /5.0 | /5.0 | /5.0 |
+| **Strategic Score** | /5.0 | /5.0 | /5.0 |
+| **Time Score** | /5.0 | /5.0 | /5.0 |
+| **Scalability Score** | /5.0 | /5.0 | /5.0 |
+| **WEIGHTED TOTAL** | **/5.0** | **/5.0** | **/5.0** |
+| **Recommendation** | | | |
+
+---
+
+### 9.6 Organizational AI Maturity Model
+
+Understanding organizational maturity helps set realistic expectations and guides capability building.
+
+#### 9.6.1 AI Maturity Levels
+
+| Level | Name | Characteristics | Typical Platform Fit |
+|-------|------|-----------------|---------------------|
+| **Level 1: Exploring** | AI-Curious | Experimenting, no production AI, limited understanding | SaaS AI, LLM APIs |
+| **Level 2: Experimenting** | AI-Aware | Pilots underway, basic skills developing, ad-hoc governance | Low-Code AI, Simple RAG |
+| **Level 3: Operationalizing** | AI-Enabled | Production AI, growing team, emerging governance | Cloud AI, Orchestration Frameworks |
+| **Level 4: Scaling** | AI-Driven | Multiple production systems, dedicated team, formal governance | Custom Development, Agent Frameworks |
+| **Level 5: Optimizing** | AI-Native | AI embedded in culture, center of excellence, advanced governance | Full Custom, MLOps Platform |
+
+#### 9.6.2 Maturity Assessment Dimensions
+
+| Dimension | Level 1 | Level 2 | Level 3 | Level 4 | Level 5 |
+|-----------|---------|---------|---------|---------|---------|
+| **Strategy** | No AI strategy | Ad-hoc AI initiatives | AI in tech roadmap | AI as strategic priority | AI-first culture |
+| **Skills** | No AI skills | Learning basics | Some practitioners | Dedicated AI team | AI CoE |
+| **Governance** | None | Basic guidelines | Policies defined | Formal governance | Mature AI governance |
+| **Data** | Siloed, poor quality | Some centralization | Data platforms | ML-ready data | Real-time AI data |
+| **Infrastructure** | None | API access | Cloud AI services | ML infrastructure | Full MLOps |
+| **Operations** | None | Manual | Basic monitoring | MLOps practices | Advanced MLOps |
+| **Use Cases** | Ideas only | Pilots | 1-3 production | Multiple production | Organization-wide |
+
+#### 9.6.3 Maturity-to-Platform Fit Matrix
+
+| Maturity Level | Recommended Tier | Recommended Platform Type | Key Focus Areas |
+|----------------|------------------|--------------------------|-----------------|
+| **Level 1** | T1 only | SaaS AI (Copilot Studio, ChatGPT Enterprise) | Learning, governance basics, use case identification |
+| **Level 2** | T1-T2 | SaaS AI + Cloud AI APIs | Skills development, pilot success, process definition |
+| **Level 3** | T1-T3 | Cloud AI + Orchestration Frameworks | Production excellence, team growth, governance maturity |
+| **Level 4** | T1-T4 | Custom + Frameworks | Advanced use cases, platform optimization, CoE |
+| **Level 5** | T1-T4 | Full Custom + MLOps | Innovation, efficiency, competitive advantage |
+
+#### 9.6.4 Maturity Advancement Roadmap
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    AI MATURITY ADVANCEMENT ROADMAP                           │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  Level 1 → Level 2 (3-6 months)                                             │
+│  ├─► Define AI strategy and prioritize use cases                            │
+│  ├─► Launch 2-3 pilots with low-code platforms                              │
+│  ├─► Establish basic governance and ethics guidelines                       │
+│  └─► Train 3-5 people in AI fundamentals                                    │
+│                                                                              │
+│  Level 2 → Level 3 (6-12 months)                                            │
+│  ├─► Move 1-2 pilots to production                                          │
+│  ├─► Hire or develop 2-3 AI practitioners                                   │
+│  ├─► Implement formal AI governance framework                               │
+│  ├─► Establish data quality and access programs                             │
+│  └─► Deploy cloud AI infrastructure                                         │
+│                                                                              │
+│  Level 3 → Level 4 (12-18 months)                                           │
+│  ├─► Scale to 5+ production use cases                                       │
+│  ├─► Build dedicated AI/ML team (5-10 people)                               │
+│  ├─► Implement MLOps practices                                              │
+│  ├─► Establish AI Center of Excellence                                      │
+│  └─► Develop custom solutions for strategic use cases                       │
+│                                                                              │
+│  Level 4 → Level 5 (18-24 months)                                           │
+│  ├─► AI embedded across organization                                         │
+│  ├─► Mature CoE with advanced capabilities                                  │
+│  ├─► Full MLOps platform with automation                                    │
+│  ├─► Continuous innovation pipeline                                         │
+│  └─► AI governance integrated with enterprise governance                    │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### 9.7 Success Metrics Framework
+
+Defining success metrics ensures value realization and enables continuous improvement.
+
+#### 9.7.1 Metric Categories
+
+| Category | Purpose | Frequency | Audience |
+|----------|---------|-----------|----------|
+| **Business Value** | Measure benefit realization | Monthly/Quarterly | Leadership, Stakeholders |
+| **Operational** | Ensure system health | Daily/Weekly | Operations, Engineering |
+| **Quality** | Maintain output standards | Continuous | AI Team, QA |
+| **User Experience** | Ensure adoption and satisfaction | Weekly/Monthly | Product, UX |
+| **Cost** | Manage economics | Weekly/Monthly | Finance, Operations |
+| **Risk** | Monitor and manage risks | Continuous/Weekly | Security, Compliance |
+
+#### 9.7.2 Key Metrics by Category
+
+**Business Value Metrics**
+
+| Metric | Description | Target Range | Measurement Method |
+|--------|-------------|--------------|-------------------|
+| Time Saved | Hours saved per user per week | 2-10 hours | User surveys, task timing |
+| Tasks Automated | % of tasks handled by AI | 20-60% | Workflow analytics |
+| Revenue Impact | Incremental revenue attributed | 5-25% | A/B testing, attribution |
+| Cost Reduction | Operating cost reduction | 20-50% | Financial tracking |
+| Decision Quality | Improvement in decision outcomes | 10-30% | Outcome tracking |
+
+**Operational Metrics**
+
+| Metric | Description | Target | Red Threshold |
+|--------|-------------|--------|---------------|
+| Availability | System uptime | 99.5%+ | <99% |
+| Response Time | P95 latency | <5s (T1-T2), <30s (T3), <5min (T4) | 2x target |
+| Error Rate | Failed requests | <1% | >5% |
+| Throughput | Requests per minute | Use case dependent | <80% of capacity |
+| Queue Depth | Pending requests | <100 | >1000 |
+
+**Quality Metrics**
+
+| Metric | Description | Target | Measurement |
+|--------|-------------|--------|-------------|
+| Accuracy | Correct outputs | >90% | Evaluation dataset |
+| Hallucination Rate | False information | <5% | Sampling + review |
+| Relevance | Output addresses input | >95% | User feedback |
+| Safety | Harmful content rate | <0.1% | Content filtering logs |
+| Citation Accuracy | Correct sources | >95% | Spot checking |
+
+**User Experience Metrics**
+
+| Metric | Description | Target | Measurement |
+|--------|-------------|--------|-------------|
+| User Satisfaction | NPS or CSAT | >8/10 | Surveys |
+| Adoption Rate | Active users / total users | >70% | Usage analytics |
+| Task Completion | Users achieving goals | >85% | Session analysis |
+| Retention | Users returning | >80% weekly | Usage analytics |
+| Escalation Rate | Handoff to human | <15% | Workflow tracking |
+
+**Cost Metrics**
+
+| Metric | Description | Target | Measurement |
+|--------|-------------|--------|-------------|
+| Cost per Interaction | Total cost / interactions | Varies | Financial tracking |
+| Token Efficiency | Useful output / tokens used | >70% | Analytics |
+| Cache Hit Rate | Cached responses | >30% | Cache analytics |
+| Cost vs. Budget | Actual / budgeted | <110% | Financial tracking |
+
+#### 9.7.3 Metrics Dashboard Template
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    GenAI SOLUTION METRICS DASHBOARD                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  BUSINESS VALUE                          OPERATIONAL HEALTH                  │
+│  ┌────────────────────────────┐         ┌────────────────────────────┐     │
+│  │ Time Saved: 156 hrs/week   │         │ Availability: 99.7%  [●]   │     │
+│  │ Tasks Automated: 42%       │         │ P95 Latency: 2.3s    [●]   │     │
+│  │ Cost Saved: $47K/month     │         │ Error Rate: 0.8%     [●]   │     │
+│  │ ROI YTD: 287%              │         │ Throughput: 850/min  [●]   │     │
+│  └────────────────────────────┘         └────────────────────────────┘     │
+│                                                                              │
+│  QUALITY                                 USER EXPERIENCE                     │
+│  ┌────────────────────────────┐         ┌────────────────────────────┐     │
+│  │ Accuracy: 94.2%       [●]  │         │ CSAT: 8.4/10         [●]   │     │
+│  │ Hallucination: 2.1%   [●]  │         │ Adoption: 78%        [●]   │     │
+│  │ Relevance: 96.8%      [●]  │         │ Completion: 89%      [●]   │     │
+│  │ Safety: 99.95%        [●]  │         │ Escalation: 11%      [●]   │     │
+│  └────────────────────────────┘         └────────────────────────────┘     │
+│                                                                              │
+│  COST                                    RISK                                │
+│  ┌────────────────────────────┐         ┌────────────────────────────┐     │
+│  │ Cost/Interaction: $0.12    │         │ Security Incidents: 0 [●]  │     │
+│  │ Token Efficiency: 76%      │         │ Compliance: 100%     [●]   │     │
+│  │ Monthly Cost: $24.3K       │         │ Bias Alerts: 2       [◐]   │     │
+│  │ vs Budget: 97%        [●]  │         │ HITL Triggers: 142   [●]   │     │
+│  └────────────────────────────┘         └────────────────────────────┘     │
+│                                                                              │
+│  Legend: [●] On Target  [◐] Warning  [○] Critical                           │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+### 9.8 Decision Checklist: Complete Solution Selection
+
+Use this comprehensive checklist to ensure all dimensions are evaluated before making a final decision.
+
+#### Pre-Selection Checklist
+
+- [ ] **Use Case Definition**
+  - [ ] Use case archetype identified (Section 4-5)
+  - [ ] Functional complexity tier determined (T1-T4)
+  - [ ] Required components mapped
+  - [ ] Success criteria defined
+
+- [ ] **NFR Assessment**
+  - [ ] Data sensitivity classified
+  - [ ] Regulatory requirements identified
+  - [ ] Performance requirements quantified
+  - [ ] Security requirements documented
+  - [ ] NFR-adjusted tier calculated
+
+- [ ] **Cost-Benefit Analysis**
+  - [ ] Benefits quantified by category
+  - [ ] Total cost of ownership estimated
+  - [ ] ROI calculated for 1-year and 3-year horizons
+  - [ ] Budget availability confirmed
+  - [ ] Cost trajectory understood
+
+- [ ] **Skills Assessment**
+  - [ ] Required skills identified by tier
+  - [ ] Current skills inventoried
+  - [ ] Gap analysis completed
+  - [ ] Mitigation strategy defined (hire, train, partner)
+  - [ ] Team composition planned
+
+- [ ] **Risk Assessment**
+  - [ ] Technical risks identified and scored
+  - [ ] Operational risks identified and scored
+  - [ ] AI-specific risks assessed
+  - [ ] Strategic risks evaluated
+  - [ ] Mitigation strategies defined
+  - [ ] Residual risk accepted
+
+- [ ] **Trade-off Analysis**
+  - [ ] Build vs. buy position determined
+  - [ ] Speed vs. flexibility balance set
+  - [ ] Control vs. convenience preference established
+  - [ ] Cost vs. capability priority defined
+  - [ ] Autonomy vs. safety level determined
+
+- [ ] **Platform Evaluation**
+  - [ ] Platform options identified
+  - [ ] Capability matrix reviewed
+  - [ ] NFR fit assessed
+  - [ ] Organizational fit evaluated
+  - [ ] Decision tree followed
+
+- [ ] **Strategic Alignment**
+  - [ ] Aligns with technology strategy
+  - [ ] Aligns with vendor/partnership strategy
+  - [ ] Supports organizational AI maturity path
+  - [ ] Enables future roadmap
+
+#### Selection Validation Checklist
+
+- [ ] **Scorecard Completed**
+  - [ ] All dimensions scored
+  - [ ] Scores supported by evidence
+  - [ ] Weighted total calculated
+  - [ ] Meets minimum threshold (>3.5)
+
+- [ ] **Comparative Analysis**
+  - [ ] Multiple options evaluated
+  - [ ] Clear winner or rationale for selection
+  - [ ] Trade-offs documented and accepted
+
+- [ ] **Risk Acceptance**
+  - [ ] Critical risks have mitigations
+  - [ ] Residual risk formally accepted
+  - [ ] Contingency plans defined
+
+- [ ] **Stakeholder Alignment**
+  - [ ] Technical team aligned
+  - [ ] Business stakeholders aligned
+  - [ ] Security/Compliance approved
+  - [ ] Finance/Budget approved
+  - [ ] Executive sponsor supportive
+
+- [ ] **Success Metrics Defined**
+  - [ ] Business value metrics defined
+  - [ ] Operational metrics defined
+  - [ ] Quality metrics defined
+  - [ ] Baseline established
+  - [ ] Targets set
+
+#### Post-Selection Planning
+
+- [ ] **Implementation Planning**
+  - [ ] Phased delivery approach defined
+  - [ ] Timeline and milestones set
+  - [ ] Resource allocation confirmed
+  - [ ] Dependencies identified
+
+- [ ] **Governance Setup**
+  - [ ] Decision rights established
+  - [ ] Review cadence defined
+  - [ ] Escalation paths clear
+  - [ ] Change control process defined
+
+- [ ] **Risk Monitoring**
+  - [ ] Risk indicators defined
+  - [ ] Monitoring mechanisms in place
+  - [ ] Trigger points for escalation set
+  - [ ] Regular review scheduled
+
+---
+
+## 10. Quick Reference Decision Guides
+
+### 10.1 One-Page Selection Decision Flow
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    GENAI SOLUTION SELECTION: ONE-PAGE GUIDE                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  STEP 1: IDENTIFY YOUR USE CASE                                             │
+│  ┌────────────────────────────────────────────────────────────────────────┐│
+│  │ □ Content Generation  □ Knowledge Work   □ Autonomous Systems         ││
+│  │ □ Conversational AI   □ Code/Dev         □ Decision Support           ││
+│  │ □ Creative/Design     □ Specialized Domain                            ││
+│  └────────────────────────────────────────────────────────────────────────┘│
+│                                       ▼                                      │
+│  STEP 2: DETERMINE COMPLEXITY TIER                                          │
+│  ┌────────────────────────────────────────────────────────────────────────┐│
+│  │ T1 Basic: Simple prompts, no RAG, minimal orchestration               ││
+│  │ T2 Enhanced: RAG, basic memory, structured output                     ││
+│  │ T3 Orchestrated: Multi-step workflows, tools, conditional logic       ││
+│  │ T4 Agentic: Autonomous planning, multi-agent, complex reasoning       ││
+│  └────────────────────────────────────────────────────────────────────────┘│
+│                                       ▼                                      │
+│  STEP 3: CHECK NFR REQUIREMENTS                                             │
+│  ┌────────────────────────────────────────────────────────────────────────┐│
+│  │ Sensitive Data?  YES → Elevate tier for security requirements         ││
+│  │ Regulated?       YES → Verify platform compliance certifications      ││
+│  │ High Availability? YES → Confirm resilience capabilities              ││
+│  │ Real-time?       YES → Validate performance characteristics           ││
+│  └────────────────────────────────────────────────────────────────────────┘│
+│                                       ▼                                      │
+│  STEP 4: ASSESS ORGANIZATIONAL FIT                                          │
+│  ┌────────────────────────────────────────────────────────────────────────┐│
+│  │ AI Maturity: L1-2 → Start with SaaS/Low-Code                          ││
+│  │              L3-4 → Cloud AI + Frameworks appropriate                 ││
+│  │              L5   → Custom development viable                         ││
+│  │ Skills:     Low  → SaaS/Low-Code, plan training                       ││
+│  │             High → More options available                             ││
+│  │ Budget:     Limited → SaaS/Low-Code, simple tiers                     ││
+│  │             Flexible → Consider strategic investment                  ││
+│  └────────────────────────────────────────────────────────────────────────┘│
+│                                       ▼                                      │
+│  STEP 5: MAKE PLATFORM DECISION                                             │
+│  ┌────────────────────────────────────────────────────────────────────────┐│
+│  │ T1-T2 + M365 + Fast → Copilot Studio                                  ││
+│  │ T1-T2 + CRM Focus  → Salesforce Einstein / ServiceNow AI             ││
+│  │ T2-T3 + Flexibility → Cloud AI + Orchestration Framework             ││
+│  │ T3-T4 + Strategic  → Custom Development with Frameworks              ││
+│  │ Mixed Requirements → Hybrid Architecture                              ││
+│  └────────────────────────────────────────────────────────────────────────┘│
+│                                       ▼                                      │
+│  STEP 6: VALIDATE DECISION                                                   │
+│  ┌────────────────────────────────────────────────────────────────────────┐│
+│  │ □ ROI meets threshold (>100% Year 1)                                  ││
+│  │ □ Risk score acceptable (<20)                                         ││
+│  │ □ Skills gap manageable                                               ││
+│  │ □ Timeline achievable                                                 ││
+│  │ □ Stakeholders aligned                                                ││
+│  └────────────────────────────────────────────────────────────────────────┘│
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### 10.2 Platform Selection Quick Reference
+
+| If You Have... | And Need... | Consider... | Watch Out For... |
+|----------------|-------------|-------------|------------------|
+| M365 ecosystem | T1-T2, fast deployment | Copilot Studio | T3+ complexity ceiling |
+| Salesforce | CRM-integrated AI | Einstein | Limited customization |
+| AWS cloud | Flexibility, scale | Bedrock + LangChain | Integration complexity |
+| Azure cloud | Enterprise security | Azure AI + Semantic Kernel | Learning curve |
+| Strong AI team | T3-T4, differentiation | Custom with frameworks | Time and cost |
+| Limited skills | Quick wins | SaaS AI platforms | Vendor lock-in |
+| Sensitive data | Compliance, control | Enterprise platforms or on-prem | Higher cost |
+| High volume | Cost efficiency | Custom with optimization | Development investment |
+
+### 10.3 Key Questions for Decision Makers
+
+1. **Strategic Alignment**: How critical is AI to our competitive differentiation?
+2. **Speed vs. Control**: Do we need to be in production in weeks, or can we invest in building capabilities?
+3. **Skills Reality**: Do we have (or can we build) the skills for our chosen approach?
+4. **Risk Tolerance**: What level of technical and operational risk is acceptable?
+5. **Budget Horizon**: Are we optimizing for Year 1 cost or 3-year TCO?
+6. **Lock-in Concern**: How important is flexibility and portability?
+7. **Governance**: Do we have the governance maturity for our chosen tier?
+8. **Scale**: How much growth do we anticipate, and how does that affect our choice?
+
+---
+
+## Version History (Updated)
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 4.0 | 2026-01-18 | **Comprehensive Selection Framework**: Added Section 9 with Cost-Benefit Analysis Framework (9.1), Skills Assessment Framework (9.2), Comprehensive Risk Assessment Framework (9.3), Trade-off Analysis Framework (9.4), Integrated Solution Selection Scorecard (9.5), Organizational AI Maturity Model (9.6), Success Metrics Framework (9.7), Complete Decision Checklist (9.8). Added Section 10 Quick Reference Decision Guides with one-page flow and selection matrices. |
+| 3.0 | 2026-01-18 | **Major Platform Selection Enhancement**: Added comprehensive Platform Selection Decision Framework (Section 7.0) with decision flow process. Added Platform Capability Matrices (7.2) covering functional and NFR capabilities across Copilot Studio, Salesforce Einstein, ServiceNow AI, Cloud AI Platforms, and Custom Development. Added Platform Trade-off Analysis (7.3) with comparison dimensions. Added Platform Selection Decision Trees (7.4) including NFR-driven overlays for sensitive data scenarios. Added Hybrid Architecture Patterns (7.5) with Security Wrapper and Capability Extension patterns. Added Total Cost of Ownership Framework (7.6) with cost trajectory modeling. Added Organizational Fit Assessment (7.7) with capability matrices and readiness scoring. Added Platform Selection Summary Matrix (7.8) for quick reference. |
+| 2.0 | 2026-01-18 | Added comprehensive Non-Functional Requirements Framework (Section 2) covering Security, Performance, Resilience, Observability, Responsible AI, Compliance, DevOps, and Cost Management. Added NFR dimensions to complexity tiers, NFR Platform/Tool Mapping, and tiered NFR Implementation Checklists. |
+| 1.1 | 2026-01-18 | Aligned use cases with `genai-use-case-archetypes.md`, added Simulation category, and added 'How to Use' guide. |
+| 1.0 | 2026-01-17 | Initial mapping document |
+
+---
+
+*This document now serves as a comprehensive guide for evaluating and selecting GenAI implementation approaches across all dimensions: functional requirements, non-functional requirements, cost-benefit analysis, skills assessment, risk management, trade-off analysis, and organizational readiness. Use the integrated scorecard and decision checklists to make informed, defensible decisions about your GenAI investments.*

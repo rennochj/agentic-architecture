@@ -826,8 +826,460 @@
         </mxCell>
 
         <!-- Notes -->
-        <mxCell id="notes" value="Notes: This mapping shows minimum viable component stacks and NFR requirements for each tier. Higher tiers include all lower tier components and requirements.&#xa;See genai-usecase-component-mapping.md v2.0 for detailed NFR checklists and implementation guidance." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2" vertex="1" parent="1">
+        <mxCell id="notes" value="Notes: This mapping shows minimum viable component stacks and NFR requirements for each tier. Higher tiers include all lower tier components and requirements.&#xa;See genai-usecase-component-mapping.md v4.0 for detailed NFR checklists, comprehensive selection framework, and implementation guidance." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2" vertex="1" parent="1">
           <mxGeometry x="50" y="1420" width="700" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ========================================== -->
+        <!-- COMPREHENSIVE SELECTION FRAMEWORK SECTION -->
+        <!-- ========================================== -->
+
+        <!-- Section Title -->
+        <mxCell id="selection_title" value="Comprehensive Solution Selection Framework (v4.0)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="1500" width="600" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Selection Dimensions Overview -->
+        <mxCell id="sel_dim_title" value="Solution Selection Dimensions" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="1560" width="300" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Dimension Boxes Row 1 -->
+        <mxCell id="dim_func" value="Functional Fit&#xa;(20%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="50" y="1590" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dim_nfr" value="NFR Fit&#xa;(15%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="180" y="1590" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dim_cost" value="Cost Efficiency&#xa;(15%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="310" y="1590" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dim_risk" value="Risk Profile&#xa;(15%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="440" y="1590" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Dimension Boxes Row 2 -->
+        <mxCell id="dim_skills" value="Skills Alignment&#xa;(10%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="50" y="1650" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dim_strategic" value="Strategic Fit&#xa;(10%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="180" y="1650" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dim_time" value="Time-to-Value&#xa;(10%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="310" y="1650" width="120" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dim_scale" value="Scalability&#xa;(5%)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="440" y="1650" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Cost-Benefit Analysis Section -->
+        <mxCell id="cost_benefit_title" value="Cost-Benefit Analysis by Tier" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="1560" width="250" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Cost-Benefit Matrix -->
+        <mxCell id="cb_header_tier" value="Dimension" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#16213e;fontColor=#ffffff;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="600" y="1590" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_header_t1" value="T1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="700" y="1590" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_header_t2" value="T2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="775" y="1590" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_header_t3" value="T3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="850" y="1590" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_header_t4" value="T4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="925" y="1590" width="75" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Initial Investment Row -->
+        <mxCell id="cb_invest_label" value="Initial Investment" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="600" y="1615" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_invest_t1" value="$10K-50K" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="700" y="1615" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_invest_t2" value="$50K-150K" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="775" y="1615" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_invest_t3" value="$150K-500K" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="850" y="1615" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_invest_t4" value="$500K-2M+" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="925" y="1615" width="75" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Annual OpCost Row -->
+        <mxCell id="cb_opex_label" value="Annual OpCost" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="600" y="1640" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_opex_t1" value="$20K-75K" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="700" y="1640" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_opex_t2" value="$75K-200K" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="775" y="1640" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_opex_t3" value="$200K-500K" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="850" y="1640" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_opex_t4" value="$500K-1.5M+" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="925" y="1640" width="75" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Annual Benefit Row -->
+        <mxCell id="cb_benefit_label" value="Annual Benefit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="600" y="1665" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_benefit_t1" value="$50K-200K" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="700" y="1665" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_benefit_t2" value="$200K-750K" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="775" y="1665" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_benefit_t3" value="$750K-3M" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="850" y="1665" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_benefit_t4" value="$3M-20M+" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="925" y="1665" width="75" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- ROI Row -->
+        <mxCell id="cb_roi_label" value="Yr1 ROI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="600" y="1690" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_roi_t1" value="50-200%" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="700" y="1690" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_roi_t2" value="75-250%" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="775" y="1690" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_roi_t3" value="50-150%" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="850" y="1690" width="75" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cb_roi_t4" value="25-100%" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="925" y="1690" width="75" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Skills Requirements Section -->
+        <mxCell id="skills_title" value="Skills Requirements by Tier" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="1740" width="250" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Skills Matrix -->
+        <mxCell id="sk_header_skill" value="Skill Area" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#16213e;fontColor=#ffffff;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="50" y="1770" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_header_t1" value="T1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="150" y="1770" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_header_t2" value="T2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="240" y="1770" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_header_t3" value="T3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="330" y="1770" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_header_t4" value="T4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="420" y="1770" width="90" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- AI/ML Row -->
+        <mxCell id="sk_aiml_label" value="AI/ML Fundamentals" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="50" y="1795" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_aiml_t1" value="Awareness" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="150" y="1795" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_aiml_t2" value="Practitioner" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="240" y="1795" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_aiml_t3" value="Practitioner" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="330" y="1795" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_aiml_t4" value="Expert" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="420" y="1795" width="90" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Software Eng Row -->
+        <mxCell id="sk_sw_label" value="Software Eng" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="50" y="1820" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_sw_t1" value="Basic" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="150" y="1820" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_sw_t2" value="Intermediate" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="240" y="1820" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_sw_t3" value="Advanced" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="330" y="1820" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_sw_t4" value="Expert" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="420" y="1820" width="90" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Cloud Architecture Row -->
+        <mxCell id="sk_cloud_label" value="Cloud Architecture" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="50" y="1845" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_cloud_t1" value="Foundational" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="150" y="1845" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_cloud_t2" value="Foundational" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="240" y="1845" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_cloud_t3" value="Professional" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="330" y="1845" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_cloud_t4" value="Architect" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="420" y="1845" width="90" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Team Size Row -->
+        <mxCell id="sk_team_label" value="Team Size (FTE)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="1870" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_team_t1" value="~1 FTE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="150" y="1870" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_team_t2" value="~3 FTE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="1870" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_team_t3" value="~6-8 FTE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="330" y="1870" width="90" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="sk_team_t4" value="~12-18 FTE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="420" y="1870" width="90" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Risk Assessment Section -->
+        <mxCell id="risk_title" value="Risk Assessment by Tier" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="550" y="1740" width="250" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Risk Matrix -->
+        <mxCell id="rk_header_risk" value="Risk Type" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#16213e;fontColor=#ffffff;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="550" y="1770" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_header_t1" value="T1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="650" y="1770" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_header_t2" value="T2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="735" y="1770" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_header_t3" value="T3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="820" y="1770" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_header_t4" value="T4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="905" y="1770" width="85" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Technical Risk Row -->
+        <mxCell id="rk_tech_label" value="Technical" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="550" y="1795" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_tech_t1" value="Low" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="650" y="1795" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_tech_t2" value="Low-Med" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="735" y="1795" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_tech_t3" value="Medium" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="820" y="1795" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_tech_t4" value="High" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="905" y="1795" width="85" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- AI-Specific Risk Row -->
+        <mxCell id="rk_ai_label" value="AI-Specific" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="550" y="1820" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_ai_t1" value="Low" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="650" y="1820" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_ai_t2" value="Medium" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="735" y="1820" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_ai_t3" value="Medium" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="820" y="1820" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_ai_t4" value="High" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="905" y="1820" width="85" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Financial Risk Row -->
+        <mxCell id="rk_fin_label" value="Financial" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="550" y="1845" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_fin_t1" value="Low" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="650" y="1845" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_fin_t2" value="Low-Med" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="735" y="1845" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_fin_t3" value="Med-High" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="820" y="1845" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_fin_t4" value="High" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="905" y="1845" width="85" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Risk-Adjusted ROI Row -->
+        <mxCell id="rk_adj_label" value="Risk-Adj Factor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="550" y="1870" width="100" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_adj_t1" value="0.8-0.9" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="650" y="1870" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_adj_t2" value="0.7-0.85" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="735" y="1870" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_adj_t3" value="0.6-0.75" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="820" y="1870" width="85" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="rk_adj_t4" value="0.5-0.65" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="905" y="1870" width="85" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Trade-off Analysis Section -->
+        <mxCell id="tradeoff_title" value="Core Trade-off Dimensions" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="1920" width="250" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Trade-off Spectrum -->
+        <mxCell id="to_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc" vertex="1" parent="1">
+          <mxGeometry x="50" y="1950" width="450" height="160" as="geometry"/>
+        </mxCell>
+
+        <!-- Build vs Buy -->
+        <mxCell id="to_bb_left" value="Buy/SaaS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="60" y="1960" width="80" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="to_bb_arrow" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#666666" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="145" y="1972" as="sourcePoint"/>
+            <mxPoint x="345" y="1972" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="to_bb_right" value="Build/Custom" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="350" y="1960" width="80" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="to_bb_label" value="BUILD vs. BUY" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="1955" width="90" height="15" as="geometry"/>
+        </mxCell>
+
+        <!-- Speed vs Flexibility -->
+        <mxCell id="to_sf_left" value="Speed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="60" y="1995" width="80" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="to_sf_arrow" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#666666" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="145" y="2007" as="sourcePoint"/>
+            <mxPoint x="345" y="2007" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="to_sf_right" value="Flexibility" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="350" y="1995" width="80" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="to_sf_label" value="SPEED vs. FLEXIBILITY" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="190" y="1990" width="110" height="15" as="geometry"/>
+        </mxCell>
+
+        <!-- Control vs Convenience -->
+        <mxCell id="to_cc_left" value="Convenience" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="60" y="2030" width="80" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="to_cc_arrow" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#666666" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="145" y="2042" as="sourcePoint"/>
+            <mxPoint x="345" y="2042" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="to_cc_right" value="Control" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="350" y="2030" width="80" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="to_cc_label" value="CONTROL vs. CONVENIENCE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="180" y="2025" width="130" height="15" as="geometry"/>
+        </mxCell>
+
+        <!-- Cost vs Capability -->
+        <mxCell id="to_ck_left" value="Cost-Optimized" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="60" y="2065" width="80" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="to_ck_arrow" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#666666" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="145" y="2077" as="sourcePoint"/>
+            <mxPoint x="345" y="2077" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="to_ck_right" value="Capability-Rich" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="350" y="2065" width="80" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="to_ck_label" value="COST vs. CAPABILITY" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=8;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="190" y="2060" width="110" height="15" as="geometry"/>
+        </mxCell>
+
+        <!-- AI Maturity Model Section -->
+        <mxCell id="maturity_title" value="AI Maturity Model" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="550" y="1920" width="200" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Maturity Levels -->
+        <mxCell id="mat_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc" vertex="1" parent="1">
+          <mxGeometry x="550" y="1950" width="440" height="160" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="mat_l1" value="L1: Exploring&#xa;AI-Curious" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="560" y="1965" width="80" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="mat_l2" value="L2: Experimenting&#xa;AI-Aware" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="645" y="1965" width="80" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="mat_l3" value="L3: Operationalizing&#xa;AI-Enabled" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="730" y="1965" width="80" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="mat_l4" value="L4: Scaling&#xa;AI-Driven" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="815" y="1965" width="80" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="mat_l5" value="L5: Optimizing&#xa;AI-Native" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;verticalAlign=middle" vertex="1" parent="1">
+          <mxGeometry x="900" y="1965" width="80" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Maturity Arrow -->
+        <mxCell id="mat_arrow" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#666666" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="2030" as="sourcePoint"/>
+            <mxPoint x="980" y="2030" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mat_arrow_label" value="Increasing AI Maturity →" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="700" y="2033" width="150" height="15" as="geometry"/>
+        </mxCell>
+
+        <!-- Recommended Tier by Maturity -->
+        <mxCell id="mat_rec_label" value="Recommended Tier:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="560" y="2055" width="120" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="mat_rec_l1" value="T1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="560" y="2075" width="80" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="mat_rec_l2" value="T1-T2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="645" y="2075" width="80" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="mat_rec_l3" value="T1-T3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="730" y="2075" width="80" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="mat_rec_l4" value="T1-T4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="815" y="2075" width="80" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="mat_rec_l5" value="T1-T4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="900" y="2075" width="80" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Final Notes -->
+        <mxCell id="notes2" value="See genai-usecase-component-mapping.md v4.0 for comprehensive selection scorecards, checklists, and detailed guidance on cost-benefit, skills, risk, and trade-off analysis." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="50" y="2130" width="700" height="30" as="geometry"/>
         </mxCell>
 
       </root>
