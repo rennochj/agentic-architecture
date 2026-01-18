@@ -4,6 +4,18 @@ A systematic mapping of Generative AI use cases to their supporting technical co
 
 ---
 
+## How to Use This Document
+
+This guide is designed to help you plan your Generative AI implementation by connecting your desired use case to the necessary technical architecture.
+
+1.  **Identify Your Archetype**: Start by finding your primary use case in the **[Use Case to Component Mapping Matrix](#3-use-case-to-component-mapping-matrix)**. This will give you a quick overview of the core technical components required.
+2.  **Understand the Complexity**: Note the typical **[Complexity Tier (T1-T4)](#1-complexity-tier-framework)** for your use case. This tier helps frame the expected effort, cost, and autonomy of your solution.
+3.  **Explore the Component Stack**: Dive into the **[Detailed Use Case Analysis](#4-detailed-use-case-analysis)** for your chosen archetype to see how the technical components stack up across different complexity tiers.
+4.  **Review Stack Patterns**: Compare your needs with the common **[Component Stack Patterns](#5-component-stack-patterns)** (e.g., RAG-Enhanced Assistant, Agentic System) to visualize the architecture.
+5.  **Select Your Platform**: Use the **[Platform Selection Guide](#6-platform-selection-guide)** to map your required components and complexity tier to the right types of platforms and tools.
+
+---
+
 ## Table of Contents
 
 1. [Complexity Tier Framework](#1-complexity-tier-framework)
@@ -114,7 +126,8 @@ Legend: ● Required | ◐ Often Needed | ○ Optional | − Not Applicable
 | **Content Generation** |
 | Text Generation | ● | ● | ○ | ○ | − | − | ○ | ◐ | ● |
 | Text Transformation | ● | ● | ○ | ○ | − | − | ○ | ◐ | ● |
-| Multimedia Generation | ● | ● | ○ | ○ | ● | − | ◐ | ● | ● |
+| Image & Video Generation | ● | ● | ○ | ○ | ● | − | ◐ | ● | ● |
+| Audio & Music Generation | ● | ● | ○ | ○ | ● | − | ◐ | ● | ● |
 | Content Personalization | ● | ● | ● | ● | ○ | − | ◐ | ◐ | ● |
 | Template Creation | ● | ● | ◐ | ○ | − | − | ○ | ● | ◐ |
 | **Knowledge Work** |
@@ -123,12 +136,12 @@ Legend: ● Required | ◐ Often Needed | ○ Optional | − Not Applicable
 | Research Assistance | ● | ● | ● | ● | ● | ◐ | ● | ◐ | ● |
 | Question Answering | ● | ● | ● | ◐ | ○ | − | ○ | ○ | ● |
 | Explanation & Education | ● | ● | ◐ | ◐ | ○ | − | ○ | ○ | ● |
-| **Agentic & Automation** |
-| Task Orchestration | ● | ● | ◐ | ● | ● | ● | ● | ● | ● |
-| Tool Use & Integration | ● | ● | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| Planning & Decomposition | ● | ● | ○ | ● | ◐ | ● | ● | ● | ● |
-| Self-Correction | ● | ● | ○ | ● | ○ | ● | ● | ◐ | ● |
-| Human-in-the-Loop | ● | ● | ◐ | ● | ◐ | ◐ | ● | ◐ | ● |
+| **Autonomous Systems & Agents** |
+| Workflow Automation | ● | ● | ◐ | ● | ● | ● | ● | ● | ● |
+| Autonomous Customer Agents | ● | ● | ● | ● | ● | ● | ● | ● | ● |
+| Proactive System Monitoring | ● | ● | ○ | ● | ● | ● | ● | ◐ | ● |
+| Autonomous Research & Analysis | ● | ● | ● | ● | ● | ● | ● | ● | ● |
+| Interactive Task Execution | ● | ● | ◐ | ● | ◐ | ◐ | ● | ◐ | ● |
 | **Personal Productivity** |
 | Writing Assistance | ● | ● | ○ | ◐ | ○ | − | ○ | ○ | ● |
 | Scheduling & Organization | ● | ● | ○ | ● | ● | ◐ | ● | ● | ◐ |
@@ -165,6 +178,12 @@ Legend: ● Required | ◐ Often Needed | ○ Optional | − Not Applicable
 | Financial Services | ● | ● | ● | ◐ | ● | ○ | ● | ● | ● |
 | Scientific Research | ● | ● | ● | ● | ● | ◐ | ● | ● | ● |
 | Engineering & Technical | ● | ● | ● | ◐ | ● | ◐ | ● | ● | ● |
+| **Simulation & Synthetic Data** |
+| Synthetic Dataset Creation | ● | ● | ○ | ○ | ◐ | ○ | ◐ | ● | ● |
+| Environment Simulation | ● | ● | ○ | ● | ● | ◐ | ● | ● | ● |
+| Adversarial & Edge Case Testing | ● | ● | ○ | ◐ | ● | ◐ | ● | ● | ● |
+| Digital Twins & Scenario Modeling | ● | ● | ● | ● | ● | ◐ | ● | ● | ● |
+| Content for Virtual Worlds | ● | ● | ○ | ◐ | ◐ | ○ | ◐ | ● | ● |
 
 ---
 
@@ -231,7 +250,7 @@ T4: [Goal] → [Planner Agent] → [Research Agent] → [Writer Agent]
 
 ---
 
-### 4.3 Agentic & Automation
+### 4.3 Autonomous Systems & Agents
 
 #### Complexity Progression
 
@@ -483,10 +502,11 @@ Components: 20-35+ | Latency: Minutes-Hours | Cost: $$$$
 |-------------------|-------------|-------------|-------------|-------------|
 | **Content Generation** | LLM API | LLM + Templates | Orchestration Framework | Agent Framework |
 | **Knowledge Work** | LLM API | RAG Platform | Orchestration + RAG | Agentic RAG |
-| **Agentic/Automation** | LLM + Tool | Multi-tool Setup | Workflow Platform | Agent Framework |
+| **Autonomous Systems** | LLM + Tool | Multi-tool Setup | Workflow Platform | Agent Framework |
 | **Conversational** | LLM API | Chatbot Platform | Virtual Agent Platform | Agent Framework |
 | **Code Development** | Code LLM API | IDE Integration | Code Agent | Full SWE Agent |
 | **Decision Support** | LLM API | RAG + Analytics | BI Integration | Analysis Agent |
+| **Simulation & Synthetic Data** | LLM API | RAG Platform | Orchestration Framework | Agent Framework |
 
 ### 6.3 Component → Platform/Tool Mapping
 
@@ -633,6 +653,7 @@ Components: 20-35+ | Latency: Minutes-Hours | Cost: $$$$
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.1 | 2026-01-18 | Aligned use cases with `genai-use-case-archetypes.md`, added Simulation category, and added 'How to Use' guide. |
 | 1.0 | 2026-01-17 | Initial mapping document |
 
 ---

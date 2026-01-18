@@ -36,6 +36,10 @@ A comprehensive analysis of the core technical components, patterns, and capabil
   - Image generation (text-to-image)
   - Image editing
   - Visual question answering
+- **Diffusion Models**
+  - High-fidelity image/video generation
+  - Latent diffusion
+  - Score-based models
 - **Multimodal Models**
   - Text + Image + Audio
   - Video understanding/generation
@@ -218,6 +222,7 @@ A comprehensive analysis of the core technical components, patterns, and capabil
     - Query rewriting/expansion
     - Query decomposition
     - HyDE (Hypothetical Document Embeddings)
+    - Self-Querying Retrieval
   - **Retrieval optimization**
     - Hybrid search (dense + sparse)
     - Re-ranking
@@ -931,9 +936,10 @@ A comprehensive analysis of the core technical components, patterns, and capabil
 
 ## Version History
 
-| Version | Date | Changes |
-|---------|------|---------|
-| 1.0 | 2026-01-17 | Initial comprehensive analysis |
+| Version | Date       | Changes                                           |
+|---------|------------|---------------------------------------------------|
+| 1.1     | 2026-01-18 | Added Diffusion Models, Self-Querying Retrieval.  |
+| 1.0     | 2026-01-17 | Initial comprehensive analysis                  |
 
 ---
 

@@ -14,7 +14,8 @@ The creation, modification, and adaptation of content across various formats and
 |----------|-------------|
 | **Text Generation** | Creating original written content including articles, reports, marketing copy, and documentation from prompts or outlines |
 | **Text Transformation** | Converting existing content between formats, styles, tones, or languages (e.g., summarization, paraphrasing, translation) |
-| **Multimedia Generation** | Creating images, audio, video, or 3D assets from textual descriptions or reference materials |
+| **Image & Video Generation** | Creating visual media such as illustrations, photos, and video clips from textual descriptions or reference materials |
+| **Audio & Music Generation** | Composing melodies, generating sound effects, creating voiceovers, or producing other audio content |
 | **Content Personalization** | Adapting content dynamically for specific audiences, contexts, or individual preferences |
 | **Template & Draft Creation** | Generating initial drafts, boilerplate content, or structured templates for human refinement |
 
@@ -36,19 +37,19 @@ Augmenting intellectual tasks that involve gathering, synthesizing, and applying
 
 ---
 
-## 3. Agentic & Automation
+## 3. Autonomous Systems & Agents
 
-Autonomous or semi-autonomous AI systems that execute multi-step tasks with minimal human intervention.
+AI systems that perceive their environment, make decisions, and execute multi-step tasks to achieve goals with varying degrees of human oversight.
 
 ### Sub-Cases
 
 | Sub-Case | Description |
 |----------|-------------|
-| **Task Orchestration** | Coordinating multiple steps, tools, or sub-agents to complete complex workflows end-to-end |
-| **Tool Use & Integration** | Autonomously selecting and invoking APIs, databases, or external services to accomplish goals |
-| **Planning & Decomposition** | Breaking down high-level objectives into actionable sub-tasks and determining execution order |
-| **Self-Correction & Iteration** | Evaluating outputs, detecting errors, and refining results through iterative improvement loops |
-| **Human-in-the-Loop Automation** | Executing tasks autonomously while requesting human approval or input at critical decision points |
+| **Workflow Automation** | Executing complex business processes, such as data entry, report generation, or system updates, by integrating with multiple tools and APIs. |
+| **Autonomous Customer Agents** | Handling complex customer service journeys end-to-end, from initial query to resolution, including follow-ups and transactions. |
+| **Proactive System Monitoring** | Actively monitoring systems, identifying potential issues, and taking corrective actions or escalating to humans as needed. |
+| **Autonomous Research & Analysis** | Independently gathering, analyzing, and synthesizing information from various sources to produce comprehensive reports on a given topic. |
+| **Interactive Task Execution** | Collaborating with a user in a conversational manner to complete tasks that require clarification, feedback, or step-by-step guidance. |
 
 ---
 
@@ -145,6 +146,22 @@ AI applications tailored to specific industry or professional domains.
 | **Financial Services** | Assisting with analysis, reporting, risk modeling, and customer advisory |
 | **Scientific Research** | Supporting hypothesis generation, literature analysis, and experimental design |
 | **Engineering & Technical** | Assisting with technical calculations, specifications, and design documentation |
+
+---
+
+## 10. Simulation & Synthetic Data Generation
+
+Creating artificial data, environments, or scenarios for training, testing, or analysis.
+
+### Sub-Cases
+
+| Sub-Case | Description |
+|----------|-------------|
+| **Synthetic Dataset Creation** | Generating high-quality, structured or unstructured data for training AI models, especially where real-world data is scarce or private. |
+| **Environment Simulation** | Creating dynamic, interactive simulations of real-world or hypothetical environments for reinforcement learning or system testing. |
+| **Adversarial & Edge Case Testing** | Generating novel and challenging scenarios to test the robustness and safety of AI systems. |
+| **Digital Twins & Scenario Modeling** | Creating virtual replicas of physical systems or processes to model behavior and explore what-if scenarios. |
+| **Content for Virtual Worlds** | Populating games, simulations, or metaverse platforms with AI-generated characters, objects, and narratives. |
 
 ---
 
