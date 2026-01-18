@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net" modified="2026-01-17T00:00:00.000Z" agent="Claude" version="21.0.0">
+<mxfile host="app.diagrams.net" modified="2026-01-18T00:00:00.000Z" agent="Claude" version="21.0.0">
   <diagram name="GenAI Components" id="genai-components">
     <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
       <root>
@@ -198,56 +198,70 @@
 
         <!-- Model Types -->
         <mxCell id="models" value="Model Types" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;verticalAlign=top" vertex="1" parent="1">
-          <mxGeometry x="120" y="710" width="380" height="80" as="geometry"/>
+          <mxGeometry x="120" y="710" width="330" height="80" as="geometry"/>
         </mxCell>
         <mxCell id="mod1" value="LLMs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="130" y="735" width="70" height="30" as="geometry"/>
+          <mxGeometry x="130" y="735" width="60" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="mod2" value="VLMs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="210" y="735" width="70" height="30" as="geometry"/>
+          <mxGeometry x="200" y="735" width="60" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="mod3" value="Multimodal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="290" y="735" width="70" height="30" as="geometry"/>
+        <mxCell id="mod3" value="Diffusion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="270" y="735" width="60" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="mod4" value="Embeddings" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="370" y="735" width="70" height="30" as="geometry"/>
+        <mxCell id="mod4" value="Multimodal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="340" y="735" width="70" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="mod5" value="Speech" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="450" y="735" width="50" height="30" as="geometry"/>
+        <mxCell id="mod5" value="Embeddings" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="130" y="755" width="70" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="mod6" value="Speech" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="210" y="755" width="60" height="30" as="geometry"/>
         </mxCell>
 
         <!-- Adaptation -->
         <mxCell id="adapt" value="Model Adaptation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;verticalAlign=top" vertex="1" parent="1">
-          <mxGeometry x="520" y="710" width="380" height="80" as="geometry"/>
+          <mxGeometry x="470" y="710" width="310" height="80" as="geometry"/>
         </mxCell>
         <mxCell id="adp1" value="Fine-tuning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="530" y="735" width="70" height="30" as="geometry"/>
+          <mxGeometry x="480" y="735" width="70" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="adp2" value="LoRA/PEFT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="610" y="735" width="70" height="30" as="geometry"/>
+          <mxGeometry x="560" y="735" width="70" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="adp3" value="RLHF/DPO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="690" y="735" width="70" height="30" as="geometry"/>
+          <mxGeometry x="640" y="735" width="70" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="adp4" value="Distillation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="770" y="735" width="70" height="30" as="geometry"/>
+          <mxGeometry x="720" y="735" width="70" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="adp5" value="Quantization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="850" y="735" width="70" height="30" as="geometry"/>
+
+        <!-- Optimization -->
+        <mxCell id="optim" value="Model Optimization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;verticalAlign=top" vertex="1" parent="1">
+          <mxGeometry x="800" y="710" width="250" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="opt1" value="Quantization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="810" y="735" width="80" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="opt2" value="Pruning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="900" y="735" width="70" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="opt3" value="Speculative&#xa;Decoding" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
+          <mxGeometry x="810" y="755" width="80" height="30" as="geometry"/>
         </mxCell>
 
         <!-- Architecture -->
         <mxCell id="arch" value="Architectures" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;verticalAlign=top" vertex="1" parent="1">
-          <mxGeometry x="920" y="710" width="280" height="80" as="geometry"/>
+          <mxGeometry x="1070" y="710" width="250" height="80" as="geometry"/>
         </mxCell>
         <mxCell id="arc1" value="Transformer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="930" y="735" width="80" height="30" as="geometry"/>
+          <mxGeometry x="1080" y="735" width="80" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="arc2" value="MoE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="1020" y="735" width="80" height="30" as="geometry"/>
+          <mxGeometry x="1170" y="735" width="60" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="arc3" value="SSM/Mamba" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00" vertex="1" parent="1">
-          <mxGeometry x="1110" y="735" width="80" height="30" as="geometry"/>
+          <mxGeometry x="1240" y="735" width="80" height="30" as="geometry"/>
         </mxCell>
 
         <!-- Cross-cutting: Left side -->
