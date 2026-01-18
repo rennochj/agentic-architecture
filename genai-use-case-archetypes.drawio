@@ -25,20 +25,24 @@
         <mxCell id="cat1_sub2" value="Text Transformation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="130" y="280" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cat1_sub3" value="Multimedia Generation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="cat1_sub3" value="Image &amp; Video Gen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="20" y="320" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cat1_sub4" value="Content Personalization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="cat1_sub4" value="Audio &amp; Music Gen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="130" y="320" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cat1_sub5" value="Template Creation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="75" y="360" width="100" height="30" as="geometry" />
+        <mxCell id="cat1_sub5" value="Content Personalization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="360" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cat1_sub6" value="Template Creation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="360" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="cat1_edge1" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat1" target="cat1_sub1"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="cat1_edge2" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat1" target="cat1_sub2"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="cat1_edge3" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat1" target="cat1_sub3"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="cat1_edge4" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat1" target="cat1_sub4"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="cat1_edge5" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat1" target="cat1_sub5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cat1_edge6" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat1" target="cat1_sub6"><mxGeometry relative="1" as="geometry" /></mxCell>
 
         <!-- Category 2: Knowledge Work -->
         <mxCell id="cat2" value="Knowledge Work&#xa;&amp; Research" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6c5ce7;strokeColor=#5f27cd;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
@@ -70,8 +74,8 @@
         <mxCell id="cat2_edge4" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat2" target="cat2_sub4"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="cat2_edge5" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat2" target="cat2_sub5"><mxGeometry relative="1" as="geometry" /></mxCell>
 
-        <!-- Category 3: Agentic & Automation -->
-        <mxCell id="cat3" value="Agentic &amp;&#xa;Automation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e17055;strokeColor=#d63031;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+        <!-- Category 3: Autonomous Systems & Agents -->
+        <mxCell id="cat3" value="Autonomous Systems&#xa;&amp; Agents" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e17055;strokeColor=#d63031;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
           <mxGeometry x="450" y="200" width="150" height="50" as="geometry" />
         </mxCell>
         <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="central" target="cat3">
@@ -79,19 +83,19 @@
         </mxCell>
 
         <!-- Cat3 Sub-cases -->
-        <mxCell id="cat3_sub1" value="Task Orchestration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="cat3_sub1" value="Workflow Automation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="420" y="280" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cat3_sub2" value="Tool Use &amp; Integration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="cat3_sub2" value="Autonomous Customer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="530" y="280" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cat3_sub3" value="Planning &amp; Decomposition" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="cat3_sub3" value="System Monitoring" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="420" y="320" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cat3_sub4" value="Self-Correction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="cat3_sub4" value="Autonomous Research" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="530" y="320" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cat3_sub5" value="Human-in-the-Loop" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="cat3_sub5" value="Interactive Task Exec" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="475" y="360" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="cat3_edge1" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat3" target="cat3_sub1"><mxGeometry relative="1" as="geometry" /></mxCell>
@@ -295,6 +299,43 @@
         <mxCell id="cat9_edge3" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat9" target="cat9_sub3"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="cat9_edge4" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat9" target="cat9_sub4"><mxGeometry relative="1" as="geometry" /></mxCell>
         <mxCell id="cat9_edge5" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat9" target="cat9_sub5"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- Category 10: Simulation & Synthetic Data -->
+        <mxCell id="cat10" value="Simulation &amp;&#xa;Synthetic Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d4a5ff;strokeColor=#9b59b6;fontColor=#ffffff;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="750" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="central" target="cat10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="150" />
+              <mxPoint x="100" y="150" />
+              <mxPoint x="100" y="720" />
+              <mxPoint x="125" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Cat10 Sub-cases -->
+        <mxCell id="cat10_sub1" value="Synthetic Dataset" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="830" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cat10_sub2" value="Environment Simulation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="830" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cat10_sub3" value="Adversarial Testing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="20" y="870" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cat10_sub4" value="Digital Twins" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="870" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cat10_sub5" value="Virtual World Content" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dfe6e9;strokeColor=#b2bec3;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="75" y="910" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cat10_edge1" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat10" target="cat10_sub1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cat10_edge2" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat10" target="cat10_sub2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cat10_edge3" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat10" target="cat10_sub3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cat10_edge4" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat10" target="cat10_sub4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="cat10_edge5" style="edgeStyle=none;rounded=0;html=1;strokeColor=#999999;strokeWidth=1;" edge="1" parent="1" source="cat10" target="cat10_sub5"><mxGeometry relative="1" as="geometry" /></mxCell>
 
         <!-- Legend -->
         <mxCell id="legend_box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;" vertex="1" parent="1">
