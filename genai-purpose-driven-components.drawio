@@ -1,0 +1,413 @@
+<mxfile host="app.diagrams.net" modified="2026-01-19T00:00:00.000Z" agent="Mozilla/5.0" version="21.0.0">
+  <diagram name="Purpose-Driven Components" id="purpose-driven-main">
+    <mxGraphModel dx="1434" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title -->
+        <mxCell id="title" value="Purpose-Driven Component Selection for GenAI Solutions" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#1a1a2e" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="800" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Components are instruments that enable use cases, deliver qualities, and mitigate risks" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2;fontColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="400" y="55" width="800" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- THE ARCHITECTURE DIAMOND - Central Concept -->
+        <!-- ============================================ -->
+
+        <!-- Diamond Background -->
+        <mxCell id="diamond_bg" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;strokeWidth=2;opacity=50" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="400" height="320" as="geometry"/>
+        </mxCell>
+
+        <!-- USE CASES Node - Top -->
+        <mxCell id="uc_node" value="USE CASES&#xa;What to Achieve" style="ellipse;whiteSpace=wrap;html=1;fillColor=#667eea;strokeColor=#5a67d8;fontColor=#ffffff;fontStyle=1;fontSize=12;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="730" y="95" width="140" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- QUALITIES Node - Left -->
+        <mxCell id="qual_node" value="QUALITIES&#xa;How Well" style="ellipse;whiteSpace=wrap;html=1;fillColor=#48bb78;strokeColor=#38a169;fontColor=#ffffff;fontStyle=1;fontSize=12;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="560" y="220" width="120" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- RISKS Node - Right -->
+        <mxCell id="risk_node" value="RISKS&#xa;What Could Go Wrong" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f56565;strokeColor=#e53e3e;fontColor=#ffffff;fontStyle=1;fontSize=12;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="920" y="220" width="120" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- COMPONENTS Node - Center -->
+        <mxCell id="comp_node" value="COMPONENTS&#xa;The Means" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ed8936;strokeColor=#dd6b20;fontColor=#ffffff;fontStyle=1;fontSize=14;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="720" y="215" width="160" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- VALUE Node - Bottom -->
+        <mxCell id="value_node" value="VALUE&#xa;DELIVERED" style="ellipse;whiteSpace=wrap;html=1;fillColor=#9f7aea;strokeColor=#805ad5;fontColor=#ffffff;fontStyle=1;fontSize=12;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="730" y="345" width="140" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Diamond Connections -->
+        <mxCell id="conn_uc_comp" style="edgeStyle=none;html=1;strokeColor=#667eea;strokeWidth=3;endArrow=classic;endSize=10" edge="1" parent="1" source="uc_node" target="comp_node">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_qual_comp" style="edgeStyle=none;html=1;strokeColor=#48bb78;strokeWidth=3;endArrow=classic;endSize=10" edge="1" parent="1" source="qual_node" target="comp_node">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_risk_comp" style="edgeStyle=none;html=1;strokeColor=#f56565;strokeWidth=3;endArrow=classic;endSize=10" edge="1" parent="1" source="risk_node" target="comp_node">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="conn_comp_value" style="edgeStyle=none;html=1;strokeColor=#ed8936;strokeWidth=3;endArrow=classic;endSize=10" edge="1" parent="1" source="comp_node" target="value_node">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Diamond Labels -->
+        <mxCell id="label_enable" value="enables" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontStyle=2;fontColor=#667eea" vertex="1" parent="1">
+          <mxGeometry x="750" y="170" width="50" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="label_deliver" value="delivers" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontStyle=2;fontColor=#48bb78" vertex="1" parent="1">
+          <mxGeometry x="630" y="200" width="50" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="label_mitigate" value="mitigates" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontStyle=2;fontColor=#f56565" vertex="1" parent="1">
+          <mxGeometry x="910" y="200" width="55" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Diamond Title -->
+        <mxCell id="diamond_title" value="THE ARCHITECTURE DIAMOND" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#1a1a2e" vertex="1" parent="1">
+          <mxGeometry x="700" y="420" width="200" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- THE VALUE EQUATION - Left Side -->
+        <!-- ============================================ -->
+
+        <mxCell id="eq_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#16213e;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="100" width="450" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="eq_title" value="THE VALUE EQUATION" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontColor=#ffffff;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="110" width="450" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="eq_formula" value="COMPONENT SELECTION = f(" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#ffffff;fontSize=14;fontFamily=Courier New" vertex="1" parent="1">
+          <mxGeometry x="70" y="145" width="260" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="eq_p1" value="USE CASE NEEDS," style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#667eea;fontSize=14;fontFamily=Courier New;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="170" width="180" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="eq_p2" value="QUALITY REQUIREMENTS," style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#48bb78;fontSize=14;fontFamily=Courier New;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="195" width="230" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="eq_p3" value="RISK PROFILE )" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#f56565;fontSize=14;fontFamily=Courier New;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="220" width="150" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Three Questions -->
+        <mxCell id="q_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#e9ecef;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="270" width="450" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="q_title" value="THE THREE QUESTIONS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#1a1a2e" vertex="1" parent="1">
+          <mxGeometry x="50" y="280" width="450" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="q1" value="1. WHY? → What use case does this enable?" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#667eea;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="70" y="310" width="350" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="q2" value="2. HOW WELL? → What quality does this deliver?" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#48bb78;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="70" y="340" width="350" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="q3" value="3. WHAT IF? → What risk does this mitigate?" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#f56565;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="70" y="370" width="350" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="q_footer" value="Components that can't answer at least one are candidates for removal." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="70" y="395" width="410" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- USE CASE → COMPONENT GRAVITY - Right Side -->
+        <!-- ============================================ -->
+
+        <mxCell id="grav_title" value="USE CASE → COMPONENT GRAVITY" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#1a1a2e" vertex="1" parent="1">
+          <mxGeometry x="1100" y="100" width="300" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Content Generation -->
+        <mxCell id="uc_content" value="Content Generation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#667eea;strokeColor=#5a67d8;fontColor=#ffffff;fontStyle=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="1100" y="130" width="110" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_content_comp" value="LLM ◉  Prompting ◎  Guardrails ○" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#e9ecef;fontSize=9;align=left;spacingLeft=5" vertex="1" parent="1">
+          <mxGeometry x="1220" y="130" width="200" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_content_arr" style="edgeStyle=none;html=1;strokeColor=#667eea;strokeWidth=2;endArrow=classic" edge="1" parent="1" source="uc_content" target="uc_content_comp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Knowledge Work -->
+        <mxCell id="uc_knowledge" value="Knowledge Work" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#667eea;strokeColor=#5a67d8;fontColor=#ffffff;fontStyle=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="1100" y="175" width="110" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_knowledge_comp" value="RAG ◉  VectorDB ◉  Rerank ◎  Memory ○" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#e9ecef;fontSize=9;align=left;spacingLeft=5" vertex="1" parent="1">
+          <mxGeometry x="1220" y="175" width="200" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_knowledge_arr" style="edgeStyle=none;html=1;strokeColor=#667eea;strokeWidth=2;endArrow=classic" edge="1" parent="1" source="uc_knowledge" target="uc_knowledge_comp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Autonomous Systems -->
+        <mxCell id="uc_auto" value="Autonomous Systems" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#667eea;strokeColor=#5a67d8;fontColor=#ffffff;fontStyle=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="1100" y="220" width="110" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_auto_comp" value="Agents ◉  Tools ◉  HITL ◉  Memory ◎" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#e9ecef;fontSize=9;align=left;spacingLeft=5" vertex="1" parent="1">
+          <mxGeometry x="1220" y="220" width="200" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_auto_arr" style="edgeStyle=none;html=1;strokeColor=#667eea;strokeWidth=2;endArrow=classic" edge="1" parent="1" source="uc_auto" target="uc_auto_comp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Conversational AI -->
+        <mxCell id="uc_conv" value="Conversational AI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#667eea;strokeColor=#5a67d8;fontColor=#ffffff;fontStyle=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="1100" y="265" width="110" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_conv_comp" value="Memory ◉  Routing ◉  RAG ◎  Escalation ○" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#e9ecef;fontSize=9;align=left;spacingLeft=5" vertex="1" parent="1">
+          <mxGeometry x="1220" y="265" width="200" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_conv_arr" style="edgeStyle=none;html=1;strokeColor=#667eea;strokeWidth=2;endArrow=classic" edge="1" parent="1" source="uc_conv" target="uc_conv_comp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Code Development -->
+        <mxCell id="uc_code" value="Code Development" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#667eea;strokeColor=#5a67d8;fontColor=#ffffff;fontStyle=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="1100" y="310" width="110" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_code_comp" value="Code Exec ◉  RAG ◎  Structured ◎  Tools ○" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#e9ecef;fontSize=9;align=left;spacingLeft=5" vertex="1" parent="1">
+          <mxGeometry x="1220" y="310" width="200" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_code_arr" style="edgeStyle=none;html=1;strokeColor=#667eea;strokeWidth=2;endArrow=classic" edge="1" parent="1" source="uc_code" target="uc_code_comp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Legend for gravity -->
+        <mxCell id="grav_legend" value="◉ Essential   ◎ High Value   ○ Situational" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="1100" y="355" width="320" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- QUALITY → COMPONENT ENABLERS - Bottom Left -->
+        <!-- ============================================ -->
+
+        <mxCell id="qual_section_title" value="QUALITY → COMPONENT ENABLERS" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#1a1a2e" vertex="1" parent="1">
+          <mxGeometry x="50" y="450" width="300" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Quality boxes with component arrows -->
+        <mxCell id="qual_acc" value="Accuracy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#48bb78;strokeColor=#38a169;fontColor=#ffffff;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="50" y="485" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="qual_acc_comp" value="RAG + Reranking + Grounding + Citations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#c6f6d5;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="175" y="485" width="260" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="qual_acc_arr" style="edgeStyle=none;html=1;strokeColor=#48bb78;strokeWidth=2;endArrow=classic" edge="1" parent="1" source="qual_acc" target="qual_acc_comp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="qual_safe" value="Safety" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#48bb78;strokeColor=#38a169;fontColor=#ffffff;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="50" y="535" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="qual_safe_comp" value="Guardrails + HITL + Audit + Content Filter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#c6f6d5;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="175" y="535" width="260" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="qual_safe_arr" style="edgeStyle=none;html=1;strokeColor=#48bb78;strokeWidth=2;endArrow=classic" edge="1" parent="1" source="qual_safe" target="qual_safe_comp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="qual_perf" value="Performance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#48bb78;strokeColor=#38a169;fontColor=#ffffff;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="50" y="585" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="qual_perf_comp" value="Caching + Streaming + Batching + Routing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#c6f6d5;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="175" y="585" width="260" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="qual_perf_arr" style="edgeStyle=none;html=1;strokeColor=#48bb78;strokeWidth=2;endArrow=classic" edge="1" parent="1" source="qual_perf" target="qual_perf_comp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="qual_res" value="Resilience" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#48bb78;strokeColor=#38a169;fontColor=#ffffff;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="50" y="635" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="qual_res_comp" value="State Mgmt + Retry + Fallback + Checkpoint" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#c6f6d5;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="175" y="635" width="260" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="qual_res_arr" style="edgeStyle=none;html=1;strokeColor=#48bb78;strokeWidth=2;endArrow=classic" edge="1" parent="1" source="qual_res" target="qual_res_comp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="qual_explain" value="Explainability" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#48bb78;strokeColor=#38a169;fontColor=#ffffff;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="50" y="685" width="100" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="qual_explain_comp" value="Tracing + Reasoning Display + Attribution" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#c6f6d5;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="175" y="685" width="260" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="qual_explain_arr" style="edgeStyle=none;html=1;strokeColor=#48bb78;strokeWidth=2;endArrow=classic" edge="1" parent="1" source="qual_explain" target="qual_explain_comp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- RISK → COMPONENT SHIELD - Bottom Center -->
+        <!-- ============================================ -->
+
+        <mxCell id="risk_section_title" value="RISK → COMPONENT SHIELD" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#1a1a2e" vertex="1" parent="1">
+          <mxGeometry x="500" y="450" width="250" height="25" as="geometry"/>
+        </mxCell>
+
+        <!-- Risk boxes with shield components -->
+        <mxCell id="risk_hall" value="Hallucination" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f56565;strokeColor=#e53e3e;fontColor=#ffffff;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="500" y="485" width="100" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_hall_shield" value="RAG + Citations + Grounding + Validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#fed7d7;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="620" y="485" width="250" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_hall_arr" style="edgeStyle=none;html=1;strokeColor=#f56565;strokeWidth=2;endArrow=block;endFill=1" edge="1" parent="1" source="risk_hall" target="risk_hall_shield">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="risk_inject" value="Prompt Injection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f56565;strokeColor=#e53e3e;fontColor=#ffffff;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="500" y="530" width="100" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_inject_shield" value="Input Guardrails + Sanitization + Delimiters" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#fed7d7;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="620" y="530" width="250" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_inject_arr" style="edgeStyle=none;html=1;strokeColor=#f56565;strokeWidth=2;endArrow=block;endFill=1" edge="1" parent="1" source="risk_inject" target="risk_inject_shield">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="risk_data" value="Data Exposure" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f56565;strokeColor=#e53e3e;fontColor=#ffffff;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="500" y="575" width="100" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_data_shield" value="DLP + PII Filtering + Output Guardrails" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#fed7d7;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="620" y="575" width="250" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_data_arr" style="edgeStyle=none;html=1;strokeColor=#f56565;strokeWidth=2;endArrow=block;endFill=1" edge="1" parent="1" source="risk_data" target="risk_data_shield">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="risk_action" value="Uncontrolled Actions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f56565;strokeColor=#e53e3e;fontColor=#ffffff;fontStyle=1;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="500" y="620" width="100" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_action_shield" value="HITL + Action Limits + Approval Workflows" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#fed7d7;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="620" y="620" width="250" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_action_arr" style="edgeStyle=none;html=1;strokeColor=#f56565;strokeWidth=2;endArrow=block;endFill=1" edge="1" parent="1" source="risk_action" target="risk_action_shield">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="risk_cost" value="Cost Explosion" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f56565;strokeColor=#e53e3e;fontColor=#ffffff;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="500" y="665" width="100" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_cost_shield" value="Caching + Rate Limits + Model Routing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#fed7d7;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="620" y="665" width="250" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_cost_arr" style="edgeStyle=none;html=1;strokeColor=#f56565;strokeWidth=2;endArrow=block;endFill=1" edge="1" parent="1" source="risk_cost" target="risk_cost_shield">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="risk_context" value="Context Loss" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f56565;strokeColor=#e53e3e;fontColor=#ffffff;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="500" y="710" width="100" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_context_shield" value="Memory + State Mgmt + Checkpointing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#fed7d7;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="620" y="710" width="250" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="risk_context_arr" style="edgeStyle=none;html=1;strokeColor=#f56565;strokeWidth=2;endArrow=block;endFill=1" edge="1" parent="1" source="risk_context" target="risk_context_shield">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- COMPONENT SELECTION CANVAS - Bottom Right -->
+        <!-- ============================================ -->
+
+        <mxCell id="canvas_title" value="COMPONENT SELECTION CANVAS" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#1a1a2e" vertex="1" parent="1">
+          <mxGeometry x="950" y="400" width="280" height="25" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="canvas_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#1a1a2e;strokeWidth=2;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="950" y="430" width="450" height="320" as="geometry"/>
+        </mxCell>
+
+        <!-- Canvas content -->
+        <mxCell id="canvas_header" value="Before adding a component, evaluate:" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontStyle=2;fontColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="950" y="440" width="450" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Use Case Enablement -->
+        <mxCell id="canvas_uc" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ebf4ff;strokeColor=#667eea" vertex="1" parent="1">
+          <mxGeometry x="965" y="465" width="205" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="canvas_uc_title" value="1. USE CASE ENABLEMENT" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontStyle=1;fontColor=#667eea" vertex="1" parent="1">
+          <mxGeometry x="965" y="470" width="205" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="canvas_uc_q" value="What capability does this enable?&#xa;◉ Essential  ◎ High  ○ Nice  ✕ None" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#4a5568" vertex="1" parent="1">
+          <mxGeometry x="965" y="490" width="205" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- Quality Delivery -->
+        <mxCell id="canvas_qual" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0fff4;strokeColor=#48bb78" vertex="1" parent="1">
+          <mxGeometry x="1180" y="465" width="205" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="canvas_qual_title" value="2. QUALITY DELIVERY" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontStyle=1;fontColor=#48bb78" vertex="1" parent="1">
+          <mxGeometry x="1180" y="470" width="205" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="canvas_qual_q" value="What quality does this deliver?&#xa;□ Accuracy □ Safety □ Performance" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#4a5568" vertex="1" parent="1">
+          <mxGeometry x="1180" y="490" width="205" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- Risk Mitigation -->
+        <mxCell id="canvas_risk" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#f56565" vertex="1" parent="1">
+          <mxGeometry x="965" y="540" width="205" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="canvas_risk_title" value="3. RISK MITIGATION" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontStyle=1;fontColor=#f56565" vertex="1" parent="1">
+          <mxGeometry x="965" y="545" width="205" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="canvas_risk_q" value="What risk does this mitigate?&#xa;□ Hallucination □ Security □ Cost" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#4a5568" vertex="1" parent="1">
+          <mxGeometry x="965" y="565" width="205" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- Cost & Complexity -->
+        <mxCell id="canvas_cost" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffaf0;strokeColor=#ed8936" vertex="1" parent="1">
+          <mxGeometry x="1180" y="540" width="205" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="canvas_cost_title" value="4. COST &amp; COMPLEXITY" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontStyle=1;fontColor=#ed8936" vertex="1" parent="1">
+          <mxGeometry x="1180" y="545" width="205" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="canvas_cost_q" value="Implementation + Ops + Direct Cost&#xa;□ Low  □ Medium  □ High" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=9;fontColor=#4a5568" vertex="1" parent="1">
+          <mxGeometry x="1180" y="565" width="205" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision -->
+        <mxCell id="canvas_decision" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#16213e" vertex="1" parent="1">
+          <mxGeometry x="965" y="615" width="420" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="canvas_dec_title" value="DECISION" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontStyle=1;fontColor=#ffffff" vertex="1" parent="1">
+          <mxGeometry x="965" y="620" width="420" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="canvas_formula" value="Value Score = (Use Case + Quality + Risk) / Cost" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontColor=#a0aec0;fontFamily=Courier New" vertex="1" parent="1">
+          <mxGeometry x="965" y="640" width="420" height="15" as="geometry"/>
+        </mxCell>
+        <mxCell id="canvas_options" value="✓ INCLUDE (&gt;1.5)     ◐ DEFER (1.0-1.5)     ✕ EXCLUDE (&lt;1.0)" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="965" y="660" width="420" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Key Insight Box -->
+        <mxCell id="canvas_insight" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9f7aea;strokeColor=#805ad5;shadow=1" vertex="1" parent="1">
+          <mxGeometry x="965" y="695" width="420" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="canvas_insight_text" value="KEY INSIGHT: Components without clear value across at least&#xa;one dimension (use case, quality, risk) are architectural overhead." style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontColor=#ffffff;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="965" y="700" width="420" height="35" as="geometry"/>
+        </mxCell>
+
+        <!-- ============================================ -->
+        <!-- FOOTER -->
+        <!-- ============================================ -->
+
+        <mxCell id="footer" value="See genai-purpose-driven-components.md for detailed guidance, practical scenarios, and the complete Component Selection Canvas." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#666666" vertex="1" parent="1">
+          <mxGeometry x="400" y="770" width="800" height="20" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
