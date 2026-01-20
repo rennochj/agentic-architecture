@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net" modified="2026-01-20T00:00:00.000Z" agent="GitHub Copilot" version="22.1.0" type="device">
+  <diagram name="Style 09 — IPO Flow (v3)" id="genai-archetypes-style-09-v3">
+    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0b1220;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="1600" height="1200" as="geometry" />
+        </mxCell>
+
+        <mxCell id="title" value="GenAI Input-Process-Output (IPO) Flow (v3)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=26;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="A simplified view of how inputs are processed by the v3 Archetype Groups to produce outputs." style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=14;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="1300" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Columns -->
+        <mxCell id="col_in" value="Inputs" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=18;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="150" y="200" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="col_proc" value="Processing (v3 Archetype Groups)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=18;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="200" width="300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="col_out" value="Outputs" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=18;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="200" width="300" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Input nodes -->
+        <mxCell id="in_unstructured" value="Unstructured Data&#xa;(PDFs, emails, images)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#334155;fontColor=#cbd5e1;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="150" y="300" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="in_structured" value="Structured Data&#xa;(Databases, APIs)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#334155;fontColor=#cbd5e1;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="150" y="550" width="300" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="in_prompt" value="User Prompt / Goal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#334155;fontColor=#cbd5e1;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="150" y="800" width="300" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Process nodes (v3 groups) -->
+        <mxCell id="proc_teal" value="Content &amp;amp; Knowledge Synthesis&#xa;Summarization, Q&amp;A, Extraction, Content Creation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=14;spacing=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="650" y="300" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_blue" value="Insight &amp;amp; Decision Support&#xa;Search, Classification, Anomaly Detection, Next Best Action" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563eb;strokeColor=#3b82f6;fontColor=#ffffff;fontSize=14;spacing=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="650" y="550" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_orange" value="Process &amp;amp; Task Automation&#xa;Routing, Autonomous Agent, Task Orchestration, Code Generation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=#f97316;fontColor=#ffffff;fontSize=14;spacing=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="650" y="800" width="300" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Output nodes -->
+        <mxCell id="out_content" value="Content &amp;amp; Answers&#xa;(Text, images, summaries)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#334155;fontColor=#cbd5e1;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="300" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="out_structured" value="Structured Data&#xa;(JSON, classifications, entities)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#334155;fontColor=#cbd5e1;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="550" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="out_action" value="Actions &amp;amp; Side Effects&#xa;(API calls, system changes, audit trails)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#334155;fontColor=#cbd5e1;fontSize=14;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="800" width="300" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- Connectors -->
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="in_unstructured" target="proc_teal"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="in_prompt" target="proc_teal"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="proc_teal" target="out_content"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="proc_teal" target="out_structured"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="in_structured" target="proc_blue"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="in_unstructured" target="proc_blue"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="proc_blue" target="out_structured"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="proc_blue" target="out_content"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="in_prompt" target="proc_orange"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="in_structured" target="proc_orange"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="proc_orange" target="out_action"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

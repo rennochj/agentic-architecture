@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net" modified="2026-01-20T00:00:00.000Z" agent="GitHub Copilot" version="22.1.0" type="device">
+  <diagram name="Style 03 — Quadrant Map (v3)" id="genai-archetypes-style-03-v3">
+    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0b1220;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="0" y="0" width="1600" height="1200" as="geometry" /></mxCell>
+
+        <mxCell id="title" value="GenAI Use Case Archetypes (v3) — Quadrant Map" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=26;fontStyle=1;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="40" width="1200" height="40" as="geometry" /></mxCell>
+        <mxCell id="subtitle" value="Plotting archetypes by Grounding Strategy vs. Autonomy Level" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=14;align=left;" vertex="1" parent="1"><mxGeometry x="40" y="80" width="1200" height="30" as="geometry" /></mxCell>
+
+        <!-- Plot area -->
+        <mxCell id="plot" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f172a;strokeColor=#334155;" vertex="1" parent="1"><mxGeometry x="140" y="160" width="1120" height="900" as="geometry" /></mxCell>
+
+        <!-- Axes -->
+        <mxCell id="xaxis" value="" style="endArrow=none;html=1;strokeColor=#94a3b8;strokeWidth=2;" edge="1" parent="1" source="x0" target="x1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="x0" value="" style="ellipse;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="200" y="980" width="1" height="1" as="geometry" /></mxCell>
+        <mxCell id="x1" value="" style="ellipse;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="1200" y="980" width="1" height="1" as="geometry" /></mxCell>
+
+        <mxCell id="yaxis" value="" style="endArrow=none;html=1;strokeColor=#94a3b8;strokeWidth=2;" edge="1" parent="1" source="y0" target="y1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="y0" value="" style="ellipse;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="200" y="980" width="1" height="1" as="geometry" /></mxCell>
+        <mxCell id="y1" value="" style="ellipse;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="200" y="220" width="1" height="1" as="geometry" /></mxCell>
+
+        <!-- Midlines (quadrants) -->
+        <mxCell id="midv" value="" style="endArrow=none;html=1;strokeColor=#334155;strokeWidth=2;dashed=1;dashPattern=6 6;" edge="1" parent="1" source="mv0" target="mv1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="mv0" value="" style="ellipse;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="700" y="980" width="1" height="1" as="geometry" /></mxCell>
+        <mxCell id="mv1" value="" style="ellipse;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="700" y="220" width="1" height="1" as="geometry" /></mxCell>
+
+        <mxCell id="midh" value="" style="endArrow=none;html=1;strokeColor=#334155;strokeWidth=2;dashed=1;dashPattern=6 6;" edge="1" parent="1" source="mh0" target="mh1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="mh0" value="" style="ellipse;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="200" y="600" width="1" height="1" as="geometry" /></mxCell>
+        <mxCell id="mh1" value="" style="ellipse;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="1200" y="600" width="1" height="1" as="geometry" /></mxCell>
+
+        <!-- Axis labels -->
+        <mxCell id="xlabel" value="Grounding Strategy (Ungrounded → Curated → Live) →" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#cbd5e1;fontSize=14;align=center;" vertex="1" parent="1"><mxGeometry x="420" y="1010" width="640" height="30" as="geometry" /></mxCell>
+        <mxCell id="ylabel" value="Autonomy Level (Assistive → Autonomous) ↑" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#cbd5e1;fontSize=14;align=center;rotation=-90;" vertex="1" parent="1"><mxGeometry x="20" y="480" width="340" height="30" as="geometry" /></mxCell>
+
+        <!-- Quadrant hints -->
+        <mxCell id="q1" value="High Grounding / Low Autonomy&#xa;(Grounded Assistance)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0b1220;strokeColor=#334155;fontColor=#94a3b8;fontSize=12;align=center;" vertex="1" parent="1"><mxGeometry x="880" y="240" width="240" height="60" as="geometry" /></mxCell>
+        <mxCell id="q2" value="Low Grounding / Low Autonomy&#xa;(Creative &amp;amp; Drafting)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0b1220;strokeColor=#334155;fontColor=#94a3b8;fontSize=12;align=center;" vertex="1" parent="1"><mxGeometry x="320" y="240" width="240" height="60" as="geometry" /></mxCell>
+        <mxCell id="q3" value="Low Grounding / High Autonomy&#xa;(Simulation &amp;amp; Testing)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0b1220;strokeColor=#334155;fontColor=#94a3b8;fontSize=12;align=center;" vertex="1" parent="1"><mxGeometry x="320" y="880" width="240" height="60" as="geometry" /></mxCell>
+        <mxCell id="q4" value="High Grounding / High Autonomy&#xa;(Autonomous Processes)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0b1220;strokeColor=#334155;fontColor=#94a3b8;fontSize=12;align=center;" vertex="1" parent="1"><mxGeometry x="880" y="880" width="240" height="60" as="geometry" /></mxCell>
+
+        <!-- Archetype points (cards) -->
+        <!-- Group A -->
+        <mxCell id="p1" value="#1 Content Generation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="260" y="360" width="210" height="50" as="geometry" /></mxCell>
+        <mxCell id="p2" value="#2 Summarization &amp;amp; Extraction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="520" y="420" width="210" height="50" as="geometry" /></mxCell>
+        <mxCell id="p3" value="#3 Grounded Q&amp;A" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="860" y="360" width="220" height="50" as="geometry" /></mxCell>
+        <mxCell id="p4" value="#4 Research &amp; Synthesis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="900" y="460" width="250" height="50" as="geometry" /></mxCell>
+        
+        <!-- Group B -->
+        <mxCell id="p5" value="#5 Data Interpretation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563eb;strokeColor=#3b82f6;fontColor=#ffffff;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="920" y="570" width="250" height="50" as="geometry" /></mxCell>
+        <mxCell id="p6" value="#6 Recommendation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563eb;strokeColor=#3b82f6;fontColor=#ffffff;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="650" y="620" width="230" height="50" as="geometry" /></mxCell>
+        <mxCell id="p7" value="#7 Simulation / Synthetic Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563eb;strokeColor=#3b82f6;fontColor=#ffffff;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="300" y="720" width="250" height="50" as="geometry" /></mxCell>
+
+        <!-- Group C -->
+        <mxCell id="p8" value="#8 Software Dev" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=#f97316;fontColor=#ffffff;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="600" y="740" width="220" height="50" as="geometry" /></mxCell>
+        <mxCell id="p9" value="#9 Workflow Automation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=#f97316;fontColor=#ffffff;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="820" y="780" width="250" height="50" as="geometry" /></mxCell>
+        <mxCell id="p10" value="#10 Agentic Task Automation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=#f97316;fontColor=#ffffff;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="980" y="820" width="260" height="50" as="geometry" /></mxCell>
+        <mxCell id="p11" value="#11 Ops &amp; Monitoring" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=#f97316;fontColor=#ffffff;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="940" y="900" width="260" height="50" as="geometry" /></mxCell>
+        <mxCell id="p12" value="#12 AI Governance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=#f97316;fontColor=#ffffff;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1"><mxGeometry x="860" y="660" width="280" height="50" as="geometry" /></mxCell>
+
+        <mxCell id="note" value="Tip: Put your specific use case on the map, then apply the other two dimensions (Interaction Model, Governance Posture) to refine controls." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0b1220;strokeColor=#334155;fontColor=#cbd5e1;fontSize=12;spacing=12;" vertex="1" parent="1"><mxGeometry x="1300" y="160" width="260" height="200" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net" modified="2026-01-20T00:00:00.000Z" agent="GitHub Copilot" version="22.1.0" type="device">
+  <diagram name="Style 10 — Component Map (v3)" id="genai-archetypes-style-10-v3">
+    <mxGraphModel dx="1434" dy="884" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0b1220;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="1800" height="1400" as="geometry" />
+        </mxCell>
+
+        <mxCell id="title" value="GenAI Archetype to Component Mapping (v3)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=26;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Connecting v3 use case archetypes to concrete technology building blocks." style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=14;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="1300" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Columns -->
+        <mxCell id="col_arch" value="Use Case Archetype (v3)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=18;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="50" y="150" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="col_genai" value="Core GenAI Component" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=18;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="150" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="col_support" value="Supporting Technical Component" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=18;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="150" width="400" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Archetype Group Headers -->
+        <mxCell id="header_teal" value="Content &amp;amp; Knowledge Synthesis" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#14b8a6;fontSize=16;fontStyle=1;align=left;" vertex="1" parent="1">
+            <mxGeometry x="50" y="220" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="header_blue" value="Insight &amp;amp; Decision Support" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#3b82f6;fontSize=16;fontStyle=1;align=left;" vertex="1" parent="1">
+            <mxGeometry x="50" y="480" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="header_orange" value="Process &amp;amp; Task Automation" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#f97316;fontSize=16;fontStyle=1;align=left;" vertex="1" parent="1">
+            <mxGeometry x="50" y="740" width="400" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Archetype Nodes -->
+        <mxCell id="arch_summarization" value="Summarization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="260" width="400" height="40" as="geometry" /></mxCell>
+        <mxCell id="arch_qa" value="Question &amp; Answering" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="310" width="400" height="40" as="geometry" /></mxCell>
+        <mxCell id="arch_extraction" value="Extraction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="360" width="400" height="40" as="geometry" /></mxCell>
+        <mxCell id="arch_content_creation" value="Content Creation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="410" width="400" height="40" as="geometry" /></mxCell>
+
+        <mxCell id="arch_semantic_search" value="Semantic Search" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563eb;strokeColor=#3b82f6;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="520" width="400" height="40" as="geometry" /></mxCell>
+        <mxCell id="arch_classification" value="Classification" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563eb;strokeColor=#3b82f6;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="570" width="400" height="40" as="geometry" /></mxCell>
+        <mxCell id="arch_anomaly_detection" value="Anomaly Detection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563eb;strokeColor=#3b82f6;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="620" width="400" height="40" as="geometry" /></mxCell>
+        <mxCell id="arch_next_best_action" value="Next Best Action" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2563eb;strokeColor=#3b82f6;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="670" width="400" height="40" as="geometry" /></mxCell>
+
+        <mxCell id="arch_routing" value="Routing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=#f97316;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="780" width="400" height="40" as="geometry" /></mxCell>
+        <mxCell id="arch_autonomous_agent" value="Autonomous Agent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=#f97316;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="830" width="400" height="40" as="geometry" /></mxCell>
+        <mxCell id="arch_task_orchestration" value="Task Orchestration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=#f97316;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="880" width="400" height="40" as="geometry" /></mxCell>
+        <mxCell id="arch_code_generation" value="Code Generation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c2410c;strokeColor=#f97316;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="50" y="930" width="400" height="40" as="geometry" /></mxCell>
+
+        <!-- Core GenAI Components -->
+        <mxCell id="genai_llm" value="Base Model (LLM/VLM)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#475569;strokeColor=#64748b;fontColor=#e2e8f0;fontSize=14;" vertex="1" parent="1"><mxGeometry x="650" y="260" width="400" height="80" as="geometry" /></mxCell>
+        <mxCell id="genai_rag" value="RAG Pipeline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#475569;strokeColor=#64748b;fontColor=#e2e8f0;fontSize=14;" vertex="1" parent="1"><mxGeometry x="650" y="360" width="400" height="80" as="geometry" /></mxCell>
+        <mxCell id="genai_embedding" value="Embedding Model" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#475569;strokeColor=#64748b;fontColor=#e2e8f0;fontSize=14;" vertex="1" parent="1"><mxGeometry x="650" y="520" width="400" height="80" as="geometry" /></mxCell>
+        <mxCell id="genai_agent" value="Agent Framework" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#475569;strokeColor=#64748b;fontColor=#e2e8f0;fontSize=14;" vertex="1" parent="1"><mxGeometry x="650" y="830" width="400" height="80" as="geometry" /></mxCell>
+        <mxCell id="genai_finetune" value="Fine-Tuning Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#475569;strokeColor=#64748b;fontColor=#e2e8f0;fontSize=14;" vertex="1" parent="1"><mxGeometry x="650" y="1000" width="400" height="80" as="geometry" /></mxCell>
+
+        <!-- Supporting Tech Components -->
+        <mxCell id="tech_api" value="Model API Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a8a;strokeColor=#2563eb;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="1250" y="260" width="400" height="50" as="geometry" /></mxCell>
+        <mxCell id="tech_vector" value="Vector Database" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a8a;strokeColor=#2563eb;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="1250" y="395" width="400" height="50" as="geometry" /></mxCell>
+        <mxCell id="tech_search" value="Search Index (Keyword)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a8a;strokeColor=#2563eb;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="1250" y="455" width="400" height="50" as="geometry" /></mxCell>
+        <mxCell id="tech_db" value="Structured Database (SQL/NoSQL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a8a;strokeColor=#2563eb;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="1250" y="620" width="400" height="50" as="geometry" /></mxCell>
+        <mxCell id="tech_tool_api" value="Tool / Service APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a8a;strokeColor=#2563eb;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="1250" y="780" width="400" height="50" as="geometry" /></mxCell>
+        <mxCell id="tech_orchestrator" value="Workflow Orchestrator" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a8a;strokeColor=#2563eb;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="1250" y="880" width="400" height="50" as="geometry" /></mxCell>
+        <mxCell id="tech_hitl_ui" value="Human Task UI / Queue" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a8a;strokeColor=#2563eb;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="1250" y="940" width="400" height="50" as="geometry" /></mxCell>
+        <mxCell id="tech_data" value="Curated Dataset Storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a8a;strokeColor=#2563eb;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="1250" y="1000" width="400" height="50" as="geometry" /></mxCell>
+        <mxCell id="tech_monitor" value="Monitoring, Logging &amp; Guardrails" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a8a;strokeColor=#2563eb;fontColor=#ffffff;fontSize=14;" vertex="1" parent="1"><mxGeometry x="1250" y="1060" width="400" height="50" as="geometry" /></mxCell>
+
+        <!-- Connectors -->
+        <!-- Teal -->
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="arch_summarization" target="genai_llm" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="arch_qa" target="genai_rag" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="arch_extraction" target="genai_llm" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="arch_content_creation" target="genai_llm" />
+        
+        <!-- Blue -->
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="arch_semantic_search" target="genai_embedding" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="arch_classification" target="genai_llm" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="arch_anomaly_detection" target="genai_llm" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="arch_next_best_action" target="genai_llm" />
+
+        <!-- Orange -->
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="arch_routing" target="genai_llm" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="arch_autonomous_agent" target="genai_agent" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="arch_task_orchestration" target="genai_agent" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#94a3b8;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="arch_code_generation" target="genai_llm" />
+
+        <!-- Core to Supporting -->
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="genai_llm" target="tech_api" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="genai_rag" target="tech_vector" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="genai_embedding" target="tech_vector" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="genai_embedding" target="tech_search" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="genai_llm" target="tech_db" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="genai_agent" target="tech_tool_api" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="genai_agent" target="tech_orchestrator" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="genai_agent" target="tech_hitl_ui" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=1;endArrow=classic;" edge="1" parent="1" source="genai_finetune" target="tech_data" />
+        <mxCell style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=1;endArrow=classic;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="tech_monitor">
+            <mxGeometry relative="1" as="geometry">
+                <mxPoint x="1050" y="500" as="sourcePoint"/>
+            </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
