@@ -7,10 +7,10 @@
                 <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0b1220;strokeColor=none;verticalAlign=top;arcSize=2;" parent="1" vertex="1">
                     <mxGeometry width="1600" height="3600" as="geometry"/>
                 </mxCell>
-                <mxCell id="title" value="GenAI &amp; Agentic AI Technical Components (3 Levels)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=24;fontStyle=1;align=left;verticalAlign=top;arcSize=2;" parent="1" vertex="1">
+                <mxCell id="title" value="GenAI &amp; Agentic AI Technical Components &amp; Maturity Model" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=24;fontStyle=1;align=left;verticalAlign=top;arcSize=2;" parent="1" vertex="1">
                     <mxGeometry x="40" y="24" width="1200" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="subtitle" value="Level 1: Section • Level 2: Subsection • Level 3: Item" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=14;align=left;verticalAlign=top;arcSize=2;" parent="1" vertex="1">
+                <mxCell id="subtitle" value="Maturity Layers: Foundation • Capability • Autonomy" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=14;align=left;verticalAlign=top;arcSize=2;" parent="1" vertex="1">
                     <mxGeometry x="40" y="60" width="1200" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="l1_sec1" value="1. Human-in-the-Loop Patterns" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#111827;strokeColor=#475569;fontColor=#e5e7eb;fontSize=14;fontStyle=1;align=left;spacing=8;verticalAlign=top;arcSize=2;" parent="1" vertex="1">
@@ -670,14 +670,14 @@
                 <mxCell id="l2_14_4" value="14.4 Observability" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1f2937;strokeColor=#64748b;fontColor=#e5e7eb;fontSize=12;align=left;spacing=6;verticalAlign=top;arcSize=2;" parent="l1_sec14" vertex="1">
                     <mxGeometry x="1160" y="40" width="340" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="l3_14_4a" value="Logging" style="rounded=1;whiteSpace=wrap;html=1;fillColor:#0f172a;strokeColor:#334155;fontColor=#cbd5e1;fontSize=9;align=center;verticalAlign=top;arcSize=2;" parent="l2_14_4" vertex="1">
+                <mxCell id="l3_14_4a" value="Deep Tracing" style="rounded=1;whiteSpace=wrap;html=1;fillColor:#0f172a;strokeColor:#334155;fontColor=#cbd5e1;fontSize=9;align=center;verticalAlign=top;arcSize=2;" parent="l2_14_4" vertex="1">
                     <mxGeometry x="10" y="25" width="70" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="l3_14_4b" value="Monitoring" style="rounded=1;whiteSpace=wrap;html=1;fillColor:#0f172a;strokeColor=#334155;fontColor=#cbd5e1;fontSize=9;align=center;verticalAlign=top;arcSize=2;" parent="l2_14_4" vertex="1">
+                <mxCell id="l3_14_4b" value="Cost &amp; Perf" style="rounded=1;whiteSpace=wrap;html=1;fillColor:#0f172a;strokeColor:#334155;fontColor=#cbd5e1;fontSize=9;align=center;verticalAlign=top;arcSize=2;" parent="l2_14_4" vertex="1">
                     <mxGeometry x="90" y="25" width="90" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="l3_14_4c" value="Tracing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f172a;strokeColor=#334155;fontColor=#cbd5e1;fontSize=9;align=center;verticalAlign=top;arcSize=2;" parent="l2_14_4" vertex="1">
-                    <mxGeometry x="190" y="25" width="70" height="30" as="geometry"/>
+                <mxCell id="l3_14_4c" value="Feedback Loop" style="rounded=1;whiteSpace=wrap;html=1;fillColor:#0f172a;strokeColor:#334155;fontColor=#cbd5e1;fontSize=9;align=center;verticalAlign=top;arcSize=2;" parent="l2_14_4" vertex="1">
+                    <mxGeometry x="190" y="25" width="80" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

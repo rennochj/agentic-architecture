@@ -63,9 +63,19 @@ This guide is designed to help you plan your Generative AI implementation by con
 
 ---
 
-## 1. Complexity Tier Framework
+## 1. Complexity Tier & Maturity Framework
 
-### Implementation Tiers
+### Architecture Maturity Model Alignment
+
+Enterprise adoption uses a **3-Layer Architecture Maturity Model**, which maps to specific Implementation Complexity Tiers.
+
+| Maturity Layer | Focus | Implementation Tiers | Key Characteristics |
+|----------------|-------|----------------------|---------------------|
+| **Layer 1: Foundation** | Reliable Text & Data Access | **T1 (Basic)**<br>**T2 (Enhanced)** | Single LLM calls, Zero/Few-shot prompts, Standard RAG, Basic memory. |
+| **Layer 2: Capability** | State, Memory & Action | **T3 (Orchestrated)** | Multi-step workflows, Function calling, Tool use, Structured reasoning chains. |
+| **Layer 3: Autonomy** | Collaboration & Self-Improvement | **T4 (Agentic)** | Autonomous planning, Multi-agent collaboration, Self-correction, Episodic memory. |
+
+### Implementation Tiers (Detailed)
 
 | Tier | Name | Characteristics | Typical Components | Example |
 |------|------|-----------------|-------------------|---------|
@@ -257,20 +267,19 @@ Certain use case domains have heightened NFR requirements:
 ### Progressive Component Layers
 
 ```
-Layer 4: Agentic        ┌─────────────────────────────────────────────┐
-                        │ Multi-Agent, Reflexion, A2A Protocols       │
+Layer 3: Autonomy       ┌─────────────────────────────────────────────┐
+(Agentic)               │ Agentic Workflows, Autonomous Planning,     │
+                        │ Self-Learning, Feedback Loops               │
                         └─────────────────────────────────────────────┘
                                               ▲
-Layer 3: Orchestration  ┌─────────────────────────────────────────────┐
-                        │ Workflows, State Machines, Error Handling   │
-                        └─────────────────────────────────────────────┘
-                                              ▲
-Layer 2: Augmentation   ┌─────────────────────────────────────────────┐
-                        │ RAG, Tools, Memory, Structured Output       │
+Layer 2: Capability     ┌─────────────────────────────────────────────┐
+(Intermediate)          │ Context Mgmt, Memory & Retrieval,           │
+                        │ Function Calling, Multi-Step Reasoning      │
                         └─────────────────────────────────────────────┘
                                               ▲
 Layer 1: Foundation     ┌─────────────────────────────────────────────┐
-                        │ LLM, Prompting, Context Management          │
+(Basic)                 │ LLMs, Prompt Engineering, APIs,             │
+                        │ Basic RAG for Knowledge Bases               │
                         └─────────────────────────────────────────────┘
 ```
 
@@ -308,241 +317,124 @@ Layer 1: Foundation     ┌─────────────────�
 
 ## 4. Use Case to Component Mapping Matrix
 
-### Master Matrix: Use Cases × Core Components
+### Master Matrix: Archetypes × Core Components
+
+Aligns with the **11 Core Use Case Archetypes** defined in the Use Case Archetypes Guide.
 
 Legend: ● Required | ◐ Often Needed | ○ Optional | − Not Applicable
 
-| Use Case | LLM | Prompt Eng | RAG | Memory | Tools | Agents | Orchestration | Structured Output | Guardrails |
-|----------|-----|------------|-----|--------|-------|--------|---------------|-------------------|------------|
-| **Content Generation** |
-| Text Generation | ● | ● | ○ | ○ | − | − | ○ | ◐ | ● |
-| Text Transformation | ● | ● | ○ | ○ | − | − | ○ | ◐ | ● |
-| Image & Video Generation | ● | ● | ○ | ○ | ● | − | ◐ | ● | ● |
-| Audio & Music Generation | ● | ● | ○ | ○ | ● | − | ◐ | ● | ● |
-| Content Personalization | ● | ● | ● | ● | ○ | − | ◐ | ◐ | ● |
-| Template Creation | ● | ● | ◐ | ○ | − | − | ○ | ● | ◐ |
-| **Knowledge Work** |
-| Info Retrieval & Synthesis | ● | ● | ● | ◐ | ◐ | ○ | ◐ | ◐ | ● |
-| Document Analysis | ● | ● | ◐ | ○ | ◐ | − | ◐ | ● | ● |
-| Research Assistance | ● | ● | ● | ● | ● | ◐ | ● | ◐ | ● |
-| Question Answering | ● | ● | ● | ◐ | ○ | − | ○ | ○ | ● |
-| Explanation & Education | ● | ● | ◐ | ◐ | ○ | − | ○ | ○ | ● |
-| **Autonomous Systems & Agents** |
-| Workflow Automation | ● | ● | ◐ | ● | ● | ● | ● | ● | ● |
-| Autonomous Customer Agents | ● | ● | ● | ● | ● | ● | ● | ● | ● |
-| Proactive System Monitoring | ● | ● | ○ | ● | ● | ● | ● | ◐ | ● |
-| Autonomous Research & Analysis | ● | ● | ● | ● | ● | ● | ● | ● | ● |
-| Interactive Task Execution | ● | ● | ◐ | ● | ◐ | ◐ | ● | ◐ | ● |
-| **Personal Productivity** |
-| Writing Assistance | ● | ● | ○ | ◐ | ○ | − | ○ | ○ | ● |
-| Scheduling & Organization | ● | ● | ○ | ● | ● | ◐ | ● | ● | ◐ |
-| Learning & Skill Dev | ● | ● | ● | ● | ○ | − | ◐ | ○ | ● |
-| Knowledge Management | ● | ● | ● | ● | ◐ | ○ | ◐ | ● | ◐ |
-| Communication Enhancement | ● | ● | ○ | ◐ | ○ | − | ○ | ○ | ● |
-| **Conversational AI** |
-| Customer Support | ● | ● | ● | ● | ◐ | ○ | ◐ | ◐ | ● |
-| Virtual Assistants | ● | ● | ● | ● | ● | ◐ | ● | ◐ | ● |
-| Interactive Guidance | ● | ● | ● | ● | ○ | − | ● | ○ | ● |
-| Roleplay & Simulation | ● | ● | ○ | ● | ○ | − | ○ | ○ | ● |
-| Collaborative Dialogue | ● | ● | ○ | ● | ○ | − | ○ | ○ | ● |
-| **Creative & Design** |
-| Ideation & Brainstorming | ● | ● | ○ | ◐ | ○ | − | ○ | ○ | ◐ |
-| Visual Design Generation | ● | ● | ○ | ○ | ● | − | ◐ | ● | ● |
-| Narrative & Storytelling | ● | ● | ○ | ● | ○ | − | ◐ | ○ | ● |
-| Music & Audio Creation | ● | ● | ○ | ○ | ● | − | ◐ | ● | ● |
-| Style Transfer | ● | ● | ◐ | ○ | ● | − | ◐ | ● | ● |
-| **Code & Software Dev** |
-| Code Generation | ● | ● | ◐ | ◐ | ◐ | ○ | ◐ | ● | ● |
-| Code Review & Analysis | ● | ● | ○ | ○ | ◐ | − | ○ | ● | ● |
-| Refactoring | ● | ● | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| Documentation Generation | ● | ● | ◐ | ○ | ○ | − | ○ | ● | ◐ |
-| Debugging & Troubleshooting | ● | ● | ◐ | ● | ● | ◐ | ● | ● | ● |
-| **Decision Support** |
-| Data Interpretation | ● | ● | ● | ○ | ◐ | − | ◐ | ● | ● |
-| Scenario Analysis | ● | ● | ◐ | ● | ◐ | ○ | ● | ● | ● |
-| Recommendation Generation | ● | ● | ● | ◐ | ○ | − | ◐ | ● | ● |
-| Risk Assessment | ● | ● | ● | ○ | ○ | − | ◐ | ● | ● |
-| Report Narration | ● | ● | ● | ○ | ◐ | − | ◐ | ● | ● |
-| **Specialized Domains** |
-| Healthcare & Clinical | ● | ● | ● | ● | ◐ | ○ | ● | ● | ● |
-| Legal & Compliance | ● | ● | ● | ◐ | ○ | − | ◐ | ● | ● |
-| Financial Services | ● | ● | ● | ◐ | ● | ○ | ● | ● | ● |
-| Scientific Research | ● | ● | ● | ● | ● | ◐ | ● | ● | ● |
-| Engineering & Technical | ● | ● | ● | ◐ | ● | ◐ | ● | ● | ● |
-| **Simulation & Synthetic Data** |
-| Synthetic Dataset Creation | ● | ● | ○ | ○ | ◐ | ○ | ◐ | ● | ● |
-| Environment Simulation | ● | ● | ○ | ● | ● | ◐ | ● | ● | ● |
-| Adversarial & Edge Case Testing | ● | ● | ○ | ◐ | ● | ◐ | ● | ● | ● |
-| Digital Twins & Scenario Modeling | ● | ● | ● | ● | ● | ◐ | ● | ● | ● |
-| Content for Virtual Worlds | ● | ● | ○ | ◐ | ◐ | ○ | ◐ | ● | ● |
+| Archetype Group | Archetype | LLM | Prompt Eng | RAG | Memory | Tools & Functions | Reasoning & Planning | Agents | Orchestration | Guardrails |
+|-----------------|-----------|-----|------------|-----|--------|-------------------|----------------------|--------|---------------|------------|
+| **A. Content & Knowledge** | **1. Content Generation** | ● | ● | ○ | ○ | − | ○ | − | ○ | ● |
+| | **2. Summarization & Extraction** | ● | ● | ◐ | ○ | − | ○ | − | ◐ | ● |
+| | **3. Grounded Q&A** | ● | ● | ● | ◐ | O | ○ | − | ○ | ● |
+| | **4. Research & Synthesis** | ● | ● | ● | ● | ● | ● | ◐ | ● | ● |
+| **B. Insight & Decision** | **5. Data Interpretation** | ● | ● | ○ | ◐ | ● | ◐ | − | ◐ | ● |
+| | **6. Recs & Personalization** | ● | ● | ● | ● | ○ | ◐ | − | ◐ | ● |
+| | **7. Simulation & Synthetic Data**| ● | ● | ○ | ○ | ◐ | ◐ | ◐ | ○ | ● |
+| **C. Process & Automation**| **8. Software Dev Acceleration** | ● | ● | ● | ◐ | ● | ● | ◐ | ● | ● |
+| | **9. Structured Workflow Auto** | ● | ● | ◐ | ◐ | ● | ◐ | − | ● | ● |
+| | **10. Agentic Task Automation** | ● | ● | ● | ● | ● | ● | ● | ● | ● |
+| | **11. Ops & Monitoring Copilot** | ● | ● | ● | ● | ● | ● | ● | ● | ● |
 
 ---
 
 ## 5. Detailed Use Case Analysis
 
-### 5.1 Content Generation & Transformation
+### 5.1 Group A: Content & Knowledge Synthesis
 
-#### Complexity Progression
+Archetypes: *Content Generation, Summarization & Extraction, Grounded Q&A, Research & Synthesis*
 
-| Level | Implementation | Key Components | Example |
-|-------|----------------|----------------|---------|
-| **T1 - Basic** | Single prompt, direct generation | LLM + System Prompt | "Write a blog post about X" |
-| **T2 - Enhanced** | Style/tone customization, templates | + Few-shot + Structured Output | Brand-voice content with templates |
-| **T3 - Orchestrated** | Multi-step editing, source integration | + RAG + Workflow Chains | Research-backed articles with citations |
-| **T4 - Agentic** | Autonomous content pipeline | + Agents + Tools + Memory | Full editorial workflow automation |
+#### Maturity Progression
 
-#### Component Stack by Tier
+| Layer | Implementation Style | Key Components | Example |
+|-------|----------------------|----------------|---------|
+| **L1: Foundation** | **Direct Generation / Basic RAG**<br>Single-turn request, retrieval from static docs. | LLM, Zero-shot Prompting, Vector DB (Basic) | "Draft a blog post" or "Summarize this PDF" |
+| **L2: Capability** | **Context-Aware / Multi-Step**<br>Few-shot prompting for style, hybrid search, citation tracking. | + Few-shot, Hybrid Search, Citations | "Write a report using these 5 docs, matching our style guide" |
+| **L3: Autonomy** | **Autonomous Research**<br>Iterative searching, self-correction, synthesizing long-form reports. | + Research Agent, Web Tools, Planner, Reflection | "Research competitor landscape and write a strategic analysis" |
 
-```
-T1: [LLM] → [Prompt] → [Output]
-
-T2: [LLM] → [Few-shot Prompt] → [Output Parser] → [Structured Output]
-              ↑
-         [Style Guide]
-
-T3: [User Input] → [Query] → [RAG] → [LLM] → [Draft]
-                                        ↓
-                              [Review Chain] → [Edit Chain] → [Final]
-
-T4: [Goal] → [Planner Agent] → [Research Agent] → [Writer Agent]
-                    ↓                  ↓               ↓
-              [Task Queue]      [Web Tools]    [Style Memory]
-                                      ↓               ↓
-                              [Editor Agent] ← [Reviewer Agent]
-```
-
----
-
-### 5.2 Knowledge Work & Research
-
-#### Complexity Progression
-
-| Level | Implementation | Key Components | Example |
-|-------|----------------|----------------|---------|
-| **T1 - Basic** | Direct Q&A from model knowledge | LLM + Zero-shot | General knowledge questions |
-| **T2 - Enhanced** | RAG over document corpus | + Vector DB + Embeddings | Internal wiki Q&A |
-| **T3 - Orchestrated** | Multi-source synthesis, fact-checking | + Hybrid Search + Re-ranking + Chains | Competitive intelligence reports |
-| **T4 - Agentic** | Autonomous research with iteration | + Agents + Web Search + Memory | Deep research assistant |
-
-#### Technical Requirements Matrix
-
-| Capability | T1 | T2 | T3 | T4 |
-|------------|----|----|----|----|
-| LLM API | ✓ | ✓ | ✓ | ✓ |
-| Vector Database | − | ✓ | ✓ | ✓ |
-| Embedding Model | − | ✓ | ✓ | ✓ |
-| Chunking Strategy | − | Basic | Semantic | Agentic |
-| Search Type | − | Dense | Hybrid | Agentic RAG |
-| Re-ranking | − | − | ✓ | ✓ |
-| Web Search Tool | − | − | Optional | ✓ |
-| Memory | − | Session | Persistent | Episodic |
-| Orchestration | − | − | Chains | Graph |
-| Planning | − | − | − | ✓ |
-
----
-
-### 5.3 Autonomous Systems & Agents
-
-#### Complexity Progression
-
-| Level | Implementation | Key Components | Example |
-|-------|----------------|----------------|---------|
-| **T1 - Basic** | Single action with confirmation | LLM + Single Tool | "Send this email" |
-| **T2 - Enhanced** | Multi-step with human approval | + Multi-tool + HITL | Form filling assistant |
-| **T3 - Orchestrated** | Workflow automation | + State Machine + Error Handling | Invoice processing pipeline |
-| **T4 - Agentic** | Autonomous goal pursuit | + Planning + Reflection + Multi-agent | Autonomous software engineer |
-
-#### Agent Architecture Patterns
-
-| Pattern | Complexity | Use When | Components Required |
-|---------|------------|----------|---------------------|
-| **Tool-Calling Agent** | ★★☆ | Single-purpose tool use | LLM + Tools + Output Parser |
-| **ReAct Agent** | ★★★ | Iterative problem solving | + Observation Loop + Scratchpad |
-| **Plan-and-Execute** | ★★★★ | Complex multi-step tasks | + Planner + Executor + Re-planner |
-| **Reflexion** | ★★★★ | Learning from mistakes | + Self-critique + Memory |
-| **Multi-Agent Supervisor** | ★★★★★ | Specialized sub-tasks | + Multiple Agents + Coordinator |
-| **Multi-Agent Swarm** | ★★★★★ | Emergent collaboration | + Peer Agents + Message Passing |
-
----
-
-### 5.4 Code & Software Development
-
-#### Complexity Progression
-
-| Level | Implementation | Key Components | Example |
-|-------|----------------|----------------|---------|
-| **T1 - Basic** | Code completion, simple generation | LLM + Code Prompt | Autocomplete, snippets |
-| **T2 - Enhanced** | Context-aware generation | + Codebase RAG + Structured Output | Function generation with context |
-| **T3 - Orchestrated** | Multi-file changes, testing | + Code Execution + Workflows | Feature implementation with tests |
-| **T4 - Agentic** | Autonomous development | + Agents + Git Tools + CI/CD | Full task completion (SWE-agent) |
-
-#### Component Stack for Code Assistant
+#### Component Stack by Maturity
 
 ```
-T1: [User Request] → [Code LLM] → [Code Output]
+Layer 1: [User] → [Prompt] → [RAG (Optional)] → [LLM] → [Output]
 
-T2: [User Request] → [Codebase Indexer] → [Relevant Context]
+Layer 2: [User] → [Query Rewriter] → [Hybrid Search] → [Re-ranker]
                             ↓
-                     [Code LLM] → [Structured Code Output]
+                     [Context Window] → [Few-Shot Examples] → [LLM] → [Citations]
 
-T3: [User Request] → [Planner] → [Code Generator] → [Test Generator]
-                         ↓              ↓                  ↓
-                   [Task List]   [File Editor]      [Test Runner]
-                                       ↓                  ↓
-                               [Syntax Check] ← [Results Parser]
-
-T4: [Issue/Task] → [Planning Agent] → [Codebase Explorer Agent]
-                          ↓                      ↓
-                    [Implementation Plan]  [Relevant Files]
-                          ↓                      ↓
-                   [Coding Agent] → [Testing Agent] → [Review Agent]
-                         ↓               ↓                ↓
-                    [Git Tools]    [Sandbox]      [PR Creation]
+Layer 3: [Goal] → [Research Agent] ⟷ [Web/Doc Tools]
+                       ↓
+                 [Reasoning Loop (Plan → Execute → Critique)]
+                       ↓
+                 [Writer Agent] → [Editor Agent] → [Final Report]
 ```
 
 ---
 
-### 5.5 Conversational & Interactive AI
+### 5.2 Group B: Insight & Decision Support
 
-#### Complexity Progression
+Archetypes: *Data Interpretation, Recommendation, Simulation*
 
-| Level | Implementation | Key Components | Example |
-|-------|----------------|----------------|---------|
-| **T1 - Basic** | Stateless Q&A | LLM + System Prompt | FAQ bot |
-| **T2 - Enhanced** | Context-aware conversation | + Conversation Memory + RAG | Support chatbot |
-| **T3 - Orchestrated** | Multi-intent handling, routing | + Intent Classification + Workflows | Virtual assistant |
-| **T4 - Agentic** | Proactive, goal-oriented | + Agents + Tools + Long-term Memory | Personal AI assistant |
+#### Maturity Progression
 
-#### Memory Requirements by Tier
+| Layer | Implementation Style | Key Components | Example |
+|-------|----------------------|----------------|---------|
+| **L1: Foundation** | **Description**<br>Explaining provided data or static charts. | LLM, System Prompt | "Explain what this SQL query does" |
+| **L2: Capability** | **Analysis**<br>Querying data tools, generating code to analyze data. | + Function Calling (SQL/Python), Structured Output | "Query the DB for sales trends and graph them" |
+| **L3: Autonomy** | **Exploration**<br>Proactive finding of anomalies, hypothesis testing. | + Data Analyst Agent, Code Execution Sandbox | "Monitor for anomalies and investigate root causes" |
 
-| Memory Type | T1 | T2 | T3 | T4 |
-|-------------|----|----|----|----|
-| Conversation Buffer | − | ✓ | ✓ | ✓ |
-| Summary Memory | − | Optional | ✓ | ✓ |
-| Entity Memory | − | − | ✓ | ✓ |
-| Vector Memory | − | − | Optional | ✓ |
-| Episodic Memory | − | − | − | ✓ |
-| Semantic Memory | − | − | − | ✓ |
-| Procedural Memory | − | − | − | Optional |
+#### Component Stack by Maturity
+
+```
+Layer 1: [Data Context] → [LLM] → [Narrative Explanation]
+
+Layer 2: [User Question] → [Code Generator] → [SQL/Python Executor]
+                               ↓
+                         [Structured Data] → [LLM] → [Insight]
+
+Layer 3: [Data Stream] → [Monitor Agent]
+                              ↓ (Trigger)
+                        [Analyst Agent] ⟷ [Data Tools]
+                              ↓
+                        [Report Generator] → [Alert/Dashboard]
+```
 
 ---
 
-### 5.6 Decision Support & Analytics
+### 5.3 Group C: Process & Task Automation
 
-#### Complexity Progression
+Archetypes: *Software Dev, Workflow Automation, Agentic Task Automation, Ops Copilot*
 
-| Level | Implementation | Key Components | Example |
-|-------|----------------|----------------|---------|
-| **T1 - Basic** | Data description | LLM + Data Context | "Explain this chart" |
-| **T2 - Enhanced** | Insight extraction | + Structured Output + Templates | Dashboard narration |
-| **T3 - Orchestrated** | Multi-source analysis | + Data Tools + SQL + Workflows | Business intelligence reports |
-| **T4 - Agentic** | Autonomous analysis | + Analyst Agent + Code Execution | Self-directed data exploration |
+#### Maturity Progression
+
+| Layer | Implementation Style | Key Components | Example |
+|-------|----------------------|----------------|---------|
+| **L1: Foundation** | **Assistance**<br>Code completion, drafting emails for review. | LLM, Code Models, Copilot Interface | Code autocomplete in IDE |
+| **L2: Capability** | **Orchestration**<br>Chained workflows, deterministic tool use, HITL approval. | + Orchestrator, Tools, State Machine | "Run the onboarding workflow for user X" |
+| **L3: Autonomy** | **Agentic Execution**<br>High-level goals, dynamic planning, multi-agent collaboration. | + Planning Agents, Multi-Agent Swarm, Tool Registry | "Upgrade the payment service and migrate the database" |
+
+#### Component Stack by Maturity
+
+```
+Layer 1: [Context/Diff] → [Code LLM] → [Suggestion]
+
+Layer 2: [Trigger] → [Workflow Engine] → [Step 1: LLM] → [Step 2: Tool]
+                            ↓
+                      [Approval Gate] → [Step 3: Action]
+
+Layer 3: [High-Level Objective] → [Supervisor Agent]
+                                        ↓
+                  ┌─────────────────────┼─────────────────────┐
+            [Coder Agent]        [Tester Agent]       [DevOps Agent]
+                  ↓                     ↓                    ↓
+             [Git Tools]           [CI Harness]        [Cloud CLI]
+```
 
 ---
 
 ## 6. Component Stack Patterns
 
-### Pattern A: Simple Assistant (T1-T2)
+### Pattern A: Simple Assistant (T1-T2 / Layer 1)
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -568,7 +460,7 @@ T4: [Issue/Task] → [Planning Agent] → [Codebase Explorer Agent]
 Components: 4-6 | Latency: <3s | Cost: $
 ```
 
-### Pattern B: RAG-Enhanced Assistant (T2)
+### Pattern B: RAG-Enhanced Assistant (T2 / Layer 1-2)
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -597,7 +489,7 @@ Components: 4-6 | Latency: <3s | Cost: $
 Components: 8-12 | Latency: 3-8s | Cost: $$
 ```
 
-### Pattern C: Workflow Orchestration (T3)
+### Pattern C: Workflow Orchestration (T3 / Layer 2)
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -633,7 +525,7 @@ Components: 8-12 | Latency: 3-8s | Cost: $$
 Components: 12-18 | Latency: 10-60s | Cost: $$$
 ```
 
-### Pattern D: Agentic System (T4)
+### Pattern D: Agentic System (T4 / Layer 3)
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
@@ -690,7 +582,7 @@ Selecting the right platform is a multi-dimensional decision that balances funct
 │  Step 1: USE CASE ANALYSIS                                                   │
 │  ┌────────────────────────────────────────────────────────────────────────┐ │
 │  │ • Identify use case archetype (Section 4-5)                            │ │
-│  │ • Determine functional complexity tier (T1-T4)                         │ │
+│  │ • Determine functional complexity tier (T1-T4) & Maturity Layer (L1-L3)│ │
 │  │ • Map required technical components                                    │ │
 │  └────────────────────────────────────────────────────────────────────────┘ │
 │                                     │                                        │
