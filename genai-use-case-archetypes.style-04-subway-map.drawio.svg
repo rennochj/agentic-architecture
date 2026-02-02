@@ -56,13 +56,13 @@
                         <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 177px; margin-left: 300px;">
                             <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #14b8a6; ">
                                 <div style="display: inline-block; font-size: 18px; font-family: &quot;Helvetica&quot;; color: light-dark(#14b8a6, #008d7e); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: nowrap; ">
-                                    Group A: Content &amp; Knowledge Synthesis
+                                    Group A: Content &amp; Knowledge Synthesis (Maturity Layer 1)
                                 </div>
                             </div>
                         </div>
                     </foreignObject>
                     <text x="300" y="195" fill="#14b8a6" font-family="&quot;Helvetica&quot;" font-size="18px" text-anchor="middle" font-weight="bold">
-                        Group A: Content &amp; Knowledge Synthesis
+                        Group A: Content &amp; Knowledge Synthesis (Maturity Layer 1)
                     </text>
                 </switch>
             </g>
@@ -77,13 +77,13 @@
                         <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 177px; margin-left: 850px;">
                             <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #3b82f6; ">
                                 <div style="display: inline-block; font-size: 18px; font-family: &quot;Helvetica&quot;; color: light-dark(#3b82f6, #4c89ec); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: nowrap; ">
-                                    Group B: Insight &amp; Decision Support
+                                    Group B: Insight &amp; Decision Support (Maturity Layer 2)
                                 </div>
                             </div>
                         </div>
                     </foreignObject>
                     <text x="850" y="195" fill="#3b82f6" font-family="&quot;Helvetica&quot;" font-size="18px" text-anchor="middle" font-weight="bold">
-                        Group B: Insight &amp; Decision Support
+                        Group B: Insight &amp; Decision Support (Maturity Layer 2)
                     </text>
                 </switch>
             </g>
@@ -98,13 +98,13 @@
                         <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 177px; margin-left: 1400px;">
                             <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #f97316; ">
                                 <div style="display: inline-block; font-size: 18px; font-family: &quot;Helvetica&quot;; color: light-dark(#f97316, #d86515); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: nowrap; ">
-                                    Group C: Process &amp; Task Automation
+                                    Group C: Process &amp; Task Automation (Maturity Layer 3)
                                 </div>
                             </div>
                         </div>
                     </foreignObject>
                     <text x="1400" y="195" fill="#f97316" font-family="&quot;Helvetica&quot;" font-size="18px" text-anchor="middle" font-weight="bold">
-                        Group C: Process &amp; Task Automation
+                        Group C: Process &amp; Task Automation (Maturity Layer 3)
                     </text>
                 </switch>
             </g>

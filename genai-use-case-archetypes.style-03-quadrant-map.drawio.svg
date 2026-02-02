@@ -14,13 +14,13 @@
                         <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 7px; margin-left: 32px;">
                             <div style="box-sizing: border-box; font-size: 0; text-align: left; color: #e2e8f0; ">
                                 <div style="display: inline-block; font-size: 26px; font-family: &quot;Helvetica&quot;; color: light-dark(#e2e8f0, #22272e); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: nowrap; ">
-                                    GenAI Use Case Archetypes (v3) — Quadrant Map
+                                    GenAI Use Case Archetypes (v4) — Quadrant Map
                                 </div>
                             </div>
                         </div>
                     </foreignObject>
                     <text x="32" y="33" fill="#e2e8f0" font-family="&quot;Helvetica&quot;" font-size="26px" font-weight="bold">
-                        GenAI Use Case Archetypes (v3) — Quadrant Map
+                        GenAI Use Case Archetypes (v4) — Quadrant Map
                     </text>
                 </switch>
             </g>

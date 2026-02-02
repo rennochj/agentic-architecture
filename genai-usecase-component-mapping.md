@@ -78,7 +78,6 @@ This guide is designed to help you plan your Generative AI implementation by con
 
 ```
                          Low ──────────────────────────────────────► High
-
 FUNCTIONAL DIMENSIONS
 Autonomy:             Human-driven │ Assisted │ Semi-autonomous │ Autonomous
 Data Integration:     None │ Static Context │ RAG │ Multi-source + Live
@@ -86,7 +85,6 @@ Reasoning:            Single-shot │ Chain-of-Thought │ Multi-step │ Planni
 Tool Use:             None │ Single tool │ Multi-tool │ Dynamic tool selection
 Memory:               Stateless │ Session │ Persistent │ Episodic + Semantic
 Output:               Free-form │ Templated │ Structured │ Multi-artifact
-
 NON-FUNCTIONAL DIMENSIONS
 Security:             Basic API Key │ OAuth + Encryption │ RBAC + Audit │ Zero-trust + DLP
 Performance:          Best-effort │ SLA-bound │ Low-latency │ Real-time + Auto-scale

@@ -158,25 +158,30 @@ The following 12 archetypes are the core "what" of the use case. They are organi
 
 Use this framework to guide your design and risk management activities, moving from a high-level concept to a well-defined, governable system.
 
-### 1. MAP: Define the Context
+### 1. MAP: Define the Context & Requirements
 
 - **What is the primary archetype?** Select one from the 12 above that represents the core value proposition.
 - **What are the four architectural dimensions?** Define the desired Interaction Model, Autonomy Level, Grounding Strategy, and Governance Posture.
 - **Who are the stakeholders?** Identify the end-users, operators, beneficiaries, and any parties who might be negatively impacted.
 - **What is the expected benefit?** Clearly state the goal, whether it's efficiency gains, a new capability, or risk reduction.
+- **What are the functional and performance requirements?** Define success criteria, expected accuracy, latency, and throughput.
+- **What is the estimated Total Cost of Ownership (TCO)?** Consider development, data acquisition, training, inference, and human oversight costs.
 
-### 2. MEASURE: Assess the Risks
+### 2. MEASURE: Assess Risks & Feasibility
 
 - **What is the error tolerance?** Is the output a low-stakes draft or a regulated financial decision?
 - **What is the potential blast radius of an error?** An incorrect summary has a different impact than an incorrect server shutdown command.
 - **How will you measure quality and effectiveness?** Define metrics for offline evaluation (e.g., accuracy, relevance), online monitoring (e.g., latency, drift), and user feedback.
 - **What are the primary risks for this archetype?** Refer to the "Primary Risks" listed for your chosen archetype as a starting point.
+- **What are the operational and resilience risks?** Assess dependencies on other systems, data sources, and the impact of their potential failure.
+- **What is the operational readiness of the organization?** Do you have the skills, tools, and processes to deploy, monitor, and maintain this system?
 
-### 3. MANAGE: Implement Controls
+### 3. MANAGE: Implement Controls & Mitigations
 
 - **What is the required oversight model?** Based on the Autonomy Level, define the specific human-in-the-loop stages: review, approval, or audit.
 - **What technical controls are needed?** This can include input validation, output filtering and guardrails, fine-grained tool access controls, and provenance logging.
-- **How will you handle failures and escalations?** Design procedures for rollback, human handoff, and incident response when the AI fails or encounters a situation it cannot handle.
+- **How will you handle failures and escalations?** Design resilient fallback mechanisms, procedures for rollback, human handoff, and incident response when the AI fails or encounters a situation it cannot handle.
+- **How will you manage costs?** Implement controls like rate limiting, query caching, and model selection strategies (e.g., using a cheaper model for simpler queries).
 
 ### 4. GOVERN: Document & Monitor
 
@@ -186,19 +191,28 @@ Use this framework to guide your design and risk management activities, moving f
 
 ---
 
-## Appendix: Quick Architectural Tier Heuristic
+## Appendix: Agentic Readiness & Maturity Model
 
-This heuristic can help map a use case to a common implementation maturity model.
+Aligned with the detailed technical progression, use this checklist to assess organizational readiness for each archetype group.
 
-- **Tier 1: Simple Application**
-  - **Archetypes:** Content Generation, Summarization.
-  - **Architecture:** Single API call to a model; minimal integration. Ungrounded. Assistive.
-- **Tier 2: Grounded Application**
-  - **Archetypes:** Grounded Q&A, Data Interpretation, Structured Workflow Automation.
-  - **Architecture:** Uses RAG for grounding, produces structured outputs, may have session memory. Curated Grounding. Assistive or Semi-Autonomous.
-- **Tier 3: Agentic Application**
-  - **Archetypes:** Agentic Task Automation, Software Development Acceleration, Operations Copilot.
-  - **Architecture:** Multi-step orchestration, tool use, conditional logic, strong observability. Live Grounding. Semi-Autonomous or Fully Autonomous.
-- **Tier 4: Governed, Multi-Agent System**
-  - **Archetypes:** AI Governance, complex multi-actor workflows.
-  - **Architecture:** Involves multiple agents collaborating, strong governance and auditability, and human-in-the-loop for complex oversight. All grounding strategies. All autonomy levels.
+### Layer 1: Foundation (Basic)
+*Required for: Group A (Content & Knowledge Synthesis)*
+- [ ] **LLM Selection:** Reliable base models selected and deployed.
+- [ ] **Prompt Engineering:** Structured prompts tested for safety and consistency.
+- [ ] **APIs & Data:** Secure access to necessary internal tools and SaaS.
+- [ ] **RAG:** Knowledge base connected for grounding (Grounding Strategy).
+
+### Layer 2: Capability (Intermediate)
+*Required for: Group B (Insight & Decision Support)*
+- [ ] **Context Management:** Handling multi-turn state and sessions.
+- [ ] **Memory:** Short/long-term persistence of interactions.
+- [ ] **Tool Use:** Verified function calling for real-world actions.
+- [ ] **Reasoning:** Planning capabilities for multi-step goals.
+- [ ] **Agent Framework:** Orchestration layer implemented.
+
+### Layer 3: Autonomy (Advanced)
+*Required for: Group C (Process & Task Automation)*
+- [ ] **Agentic Workflows:** Collaboration between specialized agents.
+- [ ] **Autonomous Planning:** Dynamic strategy adaptation based on signals.
+- [ ] **Feedback Loops:** Automated self-learning and improvement systems.
+- [ ] **Full Autonomy:** Independent operation with high-level oversight.

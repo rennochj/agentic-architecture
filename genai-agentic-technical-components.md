@@ -23,6 +23,34 @@ A comprehensive analysis of the core technical components, patterns, and capabil
 
 ---
 
+## 0. Architecture Maturity Model
+
+Successful enterprise adoption typically follows a 3-layer progression.
+
+### Layer 1: Foundation (Basic)
+*Focus: Reliable Text Generation & Data Access*
+1. **Large Language Models (LLMs)**
+2. **Prompt Engineering**
+3. **APIs & External Data Access**
+4. **RAG for Knowledge Bases**
+
+### Layer 2: Capability (Intermediate)
+*Focus: State, Memory & Action*
+5. **Context Management**
+6. **Memory & Retrieval**
+7. **Function Calling & Tool Use**
+8. **Multi-Step Reasoning**
+9. **Agent-Oriented Frameworks**
+
+### Layer 3: Autonomy (Advanced)
+*Focus: Collaboration & Self-Improvement*
+10. **Agentic Workflows**
+11. **Autonomous Planning**
+12. **Self-Learning & Feedback Loops**
+13. **Fully Autonomous Agents**
+
+---
+
 ## 1. Foundation Models
 
 ### 1.1 Model Types
@@ -794,10 +822,18 @@ A comprehensive analysis of the core technical components, patterns, and capabil
   - Query cache
 
 ### 12.4 Observability
+- **Deep Tracing**
+  - Reasoning path visualization (Chain of Thought)
+  - Retrieved context inspector (what was read?)
+  - Tool execution logs (inputs/outputs)
+- **Cost & Performance**
+  - Token cost attribution per request/step
+  - Latency breakdown (Model vs Network vs Client)
+  - Cache hit rates
 - **Logging**
   - Request/response logging
-  - Trace logging
-  - Structured logs
+  - Structured logs (JSON)
+  - Feedback loop capture
 - **Monitoring**
   - Latency metrics
   - Throughput metrics
@@ -902,6 +938,24 @@ A comprehensive analysis of the core technical components, patterns, and capabil
 ---
 
 ## Appendix: Component Relationships
+
+1. [Human-in-the-Loop Patterns](#14-human-in-the-loop-patterns)
+2. [Workflow Orchestration](#8-workflow-orchestration)
+3. [Agentic Architectures](#7-agentic-architectures)
+4. [Prompting Techniques](#2-prompting-techniques)
+5. [Reasoning & Planning](#5-reasoning--planning)
+6. [Context Management](#13-context-management)
+7. [Memory Systems](#4-memory-systems)
+8. [Information Augmentation & Retrieval](#3-information-augmentation--retrieval)
+9. [Tool Use & Function Calling](#6-tool-use--function-calling)
+10. [Output Processing & Structured Generation](#9-output-processing--structured-generation)
+11. [Foundation Models](#1-foundation-models)
+12. [Safety, Guardrails & Alignment](#10-safety-guardrails--alignment)
+13. [Evaluation & Testing](#11-evaluation--testing)
+14. [Infrastructure & Deployment](#12-infrastructure--deployment)
+
+
+
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
