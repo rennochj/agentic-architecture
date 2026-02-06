@@ -6,54 +6,34 @@ A comprehensive analysis of the core technical components, patterns, and capabil
 
 ## Table of Contents
 
-1. [Foundation Models](#1-foundation-models)
-2. [Prompting Techniques](#2-prompting-techniques)
-3. [Information Augmentation & Retrieval](#3-information-augmentation--retrieval)
-4. [Memory Systems](#4-memory-systems)
-5. [Reasoning & Planning](#5-reasoning--planning)
-6. [Tool Use & Function Calling](#6-tool-use--function-calling)
-7. [Agentic Architectures](#7-agentic-architectures)
-8. [Workflow Orchestration](#8-workflow-orchestration)
-9. [Output Processing & Structured Generation](#9-output-processing--structured-generation)
-10. [Safety, Guardrails & Alignment](#10-safety-guardrails--alignment)
-11. [Evaluation & Testing](#11-evaluation--testing)
-12. [Infrastructure & Deployment](#12-infrastructure--deployment)
-13. [Context Management](#13-context-management)
-14. [Human-in-the-Loop Patterns](#14-human-in-the-loop-patterns)
+1. [Layer 1: Foundation (Basic)](#1-layer-1-foundation-basic)
+   - 1.1 Foundation Models
+   - 1.2 Prompting Techniques
+   - 1.3 Information Augmentation & Retrieval
+   - 1.4 Output Processing & Structured Generation
+2. [Layer 2: Capability (Intermediate)](#2-layer-2-capability-intermediate)
+   - 2.1 Context Management
+   - 2.2 Memory Systems
+   - 2.3 Reasoning & Planning
+   - 2.4 Tool Use & Function Calling
+3. [Layer 3: Autonomy (Advanced)](#3-layer-3-autonomy-advanced)
+   - 3.1 Agentic Architectures
+   - 3.2 Workflow Orchestration
+   - 3.3 Human-in-the-Loop Patterns
+4. [Operational Excellence (Cross-Cutting)](#4-operational-excellence-cross-cutting)
+   - 4.1 Safety, Guardrails & Alignment
+   - 4.2 Evaluation & Testing
+   - 4.3 Infrastructure & Deployment
+5. [Appendix: Component Relationships](#appendix-component-relationships)
 
 ---
 
-## 0. Architecture Maturity Model
-
-Successful enterprise adoption typically follows a 3-layer progression.
-
-### Layer 1: Foundation (Basic)
+## 1. Layer 1: Foundation (Basic)
 *Focus: Reliable Text Generation & Data Access*
-1. **Large Language Models (LLMs)**
-2. **Prompt Engineering**
-3. **APIs & External Data Access**
-4. **RAG for Knowledge Bases**
 
-### Layer 2: Capability (Intermediate)
-*Focus: State, Memory & Action*
-5. **Context Management**
-6. **Memory & Retrieval**
-7. **Function Calling & Tool Use**
-8. **Multi-Step Reasoning**
-9. **Agent-Oriented Frameworks**
+### 1.1 Foundation Models
 
-### Layer 3: Autonomy (Advanced)
-*Focus: Collaboration & Self-Improvement*
-10. **Agentic Workflows**
-11. **Autonomous Planning**
-12. **Self-Learning & Feedback Loops**
-13. **Fully Autonomous Agents**
-
----
-
-## 1. Foundation Models
-
-### 1.1 Model Types
+#### 1.1.1 Model Types
 - **Large Language Models (LLMs)**
   - Text-to-text generation
   - Instruction-following models
@@ -83,7 +63,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Multimodal embeddings
   - Code embeddings
 
-### 1.2 Model Architectures
+#### 1.1.2 Model Architectures
 - **Transformer-based**
   - Encoder-only (BERT-style)
   - Decoder-only (GPT-style)
@@ -98,7 +78,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Transformer + retrieval
   - Transformer + diffusion
 
-### 1.3 Model Adaptation
+#### 1.1.3 Model Adaptation
 - **Fine-tuning**
   - Full fine-tuning
   - Parameter-efficient fine-tuning (PEFT)
@@ -119,7 +99,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Model compression
   - Teacher-student training
 
-### 1.4 Model Optimization
+#### 1.1.4 Model Optimization
 - **Quantization**
   - INT8 / INT4 quantization
   - GPTQ, AWQ, GGML/GGUF
@@ -131,11 +111,9 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Draft model acceleration
   - Parallel token generation
 
----
+### 1.2 Prompting Techniques
 
-## 2. Prompting Techniques
-
-### 2.1 Basic Prompting
+#### 1.2.1 Basic Prompting
 - **Zero-Shot Prompting**
   - Direct instruction without examples
   - Task description only
@@ -146,7 +124,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - In-context learning
   - Example selection strategies
 
-### 2.2 Reasoning Prompts
+#### 1.2.2 Reasoning Prompts
 - **Chain-of-Thought (CoT)**
   - Step-by-step reasoning
   - "Let's think step by step"
@@ -169,7 +147,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Outline-first generation
   - Parallel content expansion
 
-### 2.3 Decomposition Prompts
+#### 1.2.3 Decomposition Prompts
 - **Least-to-Most Prompting**
   - Problem decomposition
   - Sequential sub-problem solving
@@ -180,7 +158,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Explicit planning phase
   - Structured execution
 
-### 2.4 Agentic Prompting
+#### 1.2.4 Agentic Prompting
 - **ReAct (Reasoning + Acting)**
   - Interleaved thought and action
   - Observation-based reasoning
@@ -193,7 +171,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Reasoning without observation
   - Planned tool use
 
-### 2.5 Advanced Prompting Techniques
+#### 1.2.5 Advanced Prompting Techniques
 - **Prompt Chaining**
   - Sequential prompt execution
   - Output-to-input linking
@@ -214,7 +192,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Positive/negative examples
   - Boundary definition
 
-### 2.6 Prompt Optimization
+#### 1.2.6 Prompt Optimization
 - **Prompt Compression**
   - Token reduction techniques
   - LLMLingua and variants
@@ -225,7 +203,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Context-aware prompt selection
   - Adaptive few-shot selection
 
-### 2.7 Role & Persona Prompting
+#### 1.2.7 Role & Persona Prompting
 - **System Prompts**
   - Persona definition
   - Behavioral constraints
@@ -237,11 +215,9 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Debate/discussion formats
   - Perspective synthesis
 
----
+### 1.3 Information Augmentation & Retrieval
 
-## 3. Information Augmentation & Retrieval
-
-### 3.1 Retrieval-Augmented Generation (RAG)
+#### 1.3.1 Retrieval-Augmented Generation (RAG)
 - **Basic RAG**
   - Query → Retrieve → Generate
   - Single-step retrieval
@@ -260,7 +236,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
     - Relevance scoring
     - Chunk reordering
 
-### 3.2 RAG Architectures
+#### 1.3.2 RAG Architectures
 - **Naive RAG**
   - Simple retrieve-and-generate
 - **Modular RAG**
@@ -277,7 +253,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Image + text retrieval
   - Cross-modal search
 
-### 3.3 Vector Storage & Search
+#### 1.3.3 Vector Storage & Search
 - **Vector Databases**
   - Purpose-built (Pinecone, Weaviate, Qdrant, Milvus, Chroma)
   - Integrated (PostgreSQL/pgvector, Elasticsearch)
@@ -293,7 +269,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Filtered search
   - Multi-vector search
 
-### 3.4 Document Processing
+#### 1.3.4 Document Processing
 - **Chunking Strategies**
   - Fixed-size chunking
   - Semantic chunking
@@ -311,7 +287,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Entity extraction
   - Relationship extraction
 
-### 3.5 Knowledge Integration
+#### 1.3.5 Knowledge Integration
 - **Knowledge Graphs**
   - Entity-relationship modeling
   - Graph databases (Neo4j, etc.)
@@ -321,11 +297,97 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - API integration
   - Schema understanding
 
+### 1.4 Output Processing & Structured Generation
+
+#### 1.4.1 Structured Output
+- **JSON Generation**
+  - Schema-constrained output
+  - Nested structures
+- **Code Generation**
+  - Syntax-valid code
+  - Multi-file generation
+- **Structured Data**
+  - Tables
+  - Lists
+  - Key-value pairs
+
+#### 1.4.2 Output Constraints
+- **Grammar-Based Constraints**
+  - CFG (Context-Free Grammar)
+  - Regular expressions
+- **Schema Validation**
+  - JSON Schema
+  - Pydantic models
+  - TypeScript types
+- **Constrained Decoding**
+  - Token-level constraints
+  - Guided generation
+
+#### 1.4.3 Output Parsing
+- **Format Extraction**
+  - XML/JSON parsing
+  - Code block extraction
+- **Entity Extraction**
+  - Named entities
+  - Structured data
+- **Validation & Repair**
+  - Syntax correction
+  - Schema conformance
+
+#### 1.4.4 Output Enhancement
+- **Formatting**
+  - Markdown rendering
+  - Code highlighting
+- **Citation & Attribution**
+  - Source linking
+  - Reference tracking
+- **Streaming**
+  - Token-by-token output
+  - Partial response handling
+
 ---
 
-## 4. Memory Systems
+## 2. Layer 2: Capability (Intermediate)
+*Focus: State, Memory & Action*
 
-### 4.1 Short-Term Memory
+### 2.1 Context Management
+
+#### 2.1.1 Context Window Strategies
+- **Context Packing**
+  - Efficient token usage
+  - Priority-based inclusion
+- **Context Truncation**
+  - Sliding window
+  - Summarization
+- **Context Extension**
+  - Position interpolation
+  - Attention modifications
+
+#### 2.1.2 Information Prioritization
+- **Relevance Ranking**
+  - Query-based scoring
+  - Recency weighting
+- **Importance Scoring**
+  - Entity importance
+  - Information density
+- **Dynamic Selection**
+  - Adaptive retrieval
+  - Context refinement
+
+#### 2.1.3 Multi-Turn Management
+- **Conversation Threading**
+  - Topic tracking
+  - Reference resolution
+- **History Compression**
+  - Summary injection
+  - Key point extraction
+- **Context Switching**
+  - Task transitions
+  - State preservation
+
+### 2.2 Memory Systems
+
+#### 2.2.1 Short-Term Memory
 - **Context Window**
   - Token limits
   - Attention span
@@ -336,7 +398,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Current task state
   - Intermediate results
 
-### 4.2 Long-Term Memory
+#### 2.2.2 Long-Term Memory
 - **Persistent Storage**
   - Vector-based memory
   - Structured databases
@@ -356,7 +418,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Update/consolidate
   - Forget/prune
 
-### 4.3 Memory Management
+#### 2.2.3 Memory Management
 - **Summarization**
   - Conversation summarization
   - Progressive compression
@@ -370,11 +432,9 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Importance-based
   - Hybrid retrieval
 
----
+### 2.3 Reasoning & Planning
 
-## 5. Reasoning & Planning
-
-### 5.1 Reasoning Types
+#### 2.3.1 Reasoning Types
 - **Deductive Reasoning**
   - Rule-based inference
   - Logical conclusions
@@ -391,7 +451,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Cause-effect analysis
   - Counterfactual reasoning
 
-### 5.2 Planning Approaches
+#### 2.3.2 Planning Approaches
 - **Task Decomposition**
   - Hierarchical planning
   - Sub-goal generation
@@ -407,7 +467,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Dynamic adjustment
   - Constraint handling
 
-### 5.3 Advanced Reasoning
+#### 2.3.3 Advanced Reasoning
 - **Multi-Step Reasoning**
   - Complex inference chains
   - Intermediate state tracking
@@ -423,11 +483,9 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - World knowledge application
   - Implicit inference
 
----
+### 2.4 Tool Use & Function Calling
 
-## 6. Tool Use & Function Calling
-
-### 6.1 Function Calling
+#### 2.4.1 Function Calling
 - **Native Function Calling**
   - Structured tool definitions
   - JSON schema specifications
@@ -439,7 +497,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Tools that call other tools
   - Recursive invocation
 
-### 6.2 Tool Types
+#### 2.4.2 Tool Types
 - **Information Retrieval Tools**
   - Web search
   - Database queries
@@ -458,7 +516,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Notifications
   - User interaction
 
-### 6.3 Tool Integration Patterns
+#### 2.4.3 Tool Integration Patterns
 - **Model Context Protocol (MCP)**
   - Standardized tool interface
   - Server-based tools
@@ -472,7 +530,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Tool routing
   - Multi-tool orchestration
 
-### 6.4 Code Execution
+#### 2.4.4 Code Execution
 - **Sandboxed Environments**
   - Secure containers
   - Resource limits
@@ -487,9 +545,12 @@ Successful enterprise adoption typically follows a 3-layer progression.
 
 ---
 
-## 7. Agentic Architectures
+## 3. Layer 3: Autonomy (Advanced)
+*Focus: Collaboration & Self-Improvement*
 
-### 7.1 Single-Agent Patterns
+### 3.1 Agentic Architectures
+
+#### 3.1.1 Single-Agent Patterns
 - **ReAct Agent**
   - Reasoning + Action loop
   - Observation integration
@@ -503,7 +564,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Tool selection and use
   - Result interpretation
 
-### 7.2 Multi-Agent Systems
+#### 3.1.2 Multi-Agent Systems
 - **Collaboration Patterns**
   - **Supervisor Pattern**
     - Central coordinator
@@ -526,7 +587,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Domain experts
   - Skill-based routing
 
-### 7.3 Agent Components
+#### 3.1.3 Agent Components
 - **Perception**
   - Input processing
   - Environment sensing
@@ -540,7 +601,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Experience accumulation
   - Strategy adaptation
 
-### 7.4 Agent Frameworks
+#### 3.1.4 Agent Frameworks
 - **Orchestration Layers**
   - LangChain/LangGraph
   - AutoGen
@@ -552,11 +613,9 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Standard message formats
   - Capability discovery
 
----
+### 3.2 Workflow Orchestration
 
-## 8. Workflow Orchestration
-
-### 8.1 Flow Patterns
+#### 3.2.1 Flow Patterns
 - **Sequential Chains**
   - Linear execution
   - Output forwarding
@@ -574,7 +633,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Parallel processing
   - Result aggregation
 
-### 8.2 Graph-Based Orchestration
+#### 3.2.2 Graph-Based Orchestration
 - **DAG (Directed Acyclic Graph)**
   - Node dependencies
   - Execution ordering
@@ -588,7 +647,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Runtime graph modification
   - Adaptive workflows
 
-### 8.3 State Management
+#### 3.2.3 State Management
 - **Conversation State**
   - Message history
   - Turn management
@@ -602,7 +661,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Shared state access
   - Conflict resolution
 
-### 8.4 Error Handling
+#### 3.2.4 Error Handling
 - **Retry Strategies**
   - Exponential backoff
   - Circuit breakers
@@ -613,61 +672,51 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - State rollback
   - Compensation actions
 
----
+### 3.3 Human-in-the-Loop Patterns
 
-## 9. Output Processing & Structured Generation
+#### 3.3.1 Interaction Modes
+- **Approval Workflows**
+  - Action confirmation
+  - Review gates
+- **Feedback Collection**
+  - Thumbs up/down
+  - Detailed feedback
+  - Corrections
+- **Collaborative Editing**
+  - Suggestion mode
+  - Iterative refinement
 
-### 9.1 Structured Output
-- **JSON Generation**
-  - Schema-constrained output
-  - Nested structures
-- **Code Generation**
-  - Syntax-valid code
-  - Multi-file generation
-- **Structured Data**
-  - Tables
-  - Lists
-  - Key-value pairs
+#### 3.3.2 Escalation Patterns
+- **Uncertainty Escalation**
+  - Confidence thresholds
+  - Ambiguity detection
+- **Risk-Based Escalation**
+  - High-stakes actions
+  - Irreversible operations
+- **Error Escalation**
+  - Failure handling
+  - Manual intervention
 
-### 9.2 Output Constraints
-- **Grammar-Based Constraints**
-  - CFG (Context-Free Grammar)
-  - Regular expressions
-- **Schema Validation**
-  - JSON Schema
-  - Pydantic models
-  - TypeScript types
-- **Constrained Decoding**
-  - Token-level constraints
-  - Guided generation
-
-### 9.3 Output Parsing
-- **Format Extraction**
-  - XML/JSON parsing
-  - Code block extraction
-- **Entity Extraction**
-  - Named entities
-  - Structured data
-- **Validation & Repair**
-  - Syntax correction
-  - Schema conformance
-
-### 9.4 Output Enhancement
-- **Formatting**
-  - Markdown rendering
-  - Code highlighting
-- **Citation & Attribution**
-  - Source linking
-  - Reference tracking
-- **Streaming**
-  - Token-by-token output
-  - Partial response handling
+#### 3.3.3 User Experience
+- **Transparency**
+  - Reasoning display
+  - Source attribution
+  - Confidence indicators
+- **Control**
+  - Stop/cancel capabilities
+  - Override mechanisms
+  - Preference settings
+- **Feedback Loops**
+  - Learning from corrections
+  - Preference adaptation
 
 ---
 
-## 10. Safety, Guardrails & Alignment
+## 4. Operational Excellence (Cross-Cutting)
 
-### 10.1 Input Guardrails
+### 4.1 Safety, Guardrails & Alignment
+
+#### 4.1.1 Input Guardrails
 - **Content Filtering**
   - Harmful content detection
   - PII detection
@@ -680,7 +729,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Request throttling
   - Abuse prevention
 
-### 10.2 Output Guardrails
+#### 4.1.2 Output Guardrails
 - **Content Moderation**
   - Toxicity filtering
   - Bias detection
@@ -694,7 +743,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Constraint checking
   - Safety classification
 
-### 10.3 Alignment Techniques
+#### 4.1.3 Alignment Techniques
 - **Constitutional AI**
   - Principle-based guidance
   - Self-critique
@@ -706,7 +755,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Refusal training
   - Scope limitations
 
-### 10.4 Security Considerations
+#### 4.1.4 Security Considerations
 - **Data Privacy**
   - PII handling
   - Data retention policies
@@ -718,11 +767,9 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Sandboxing
   - Resource isolation
 
----
+### 4.2 Evaluation & Testing
 
-## 11. Evaluation & Testing
-
-### 11.1 Evaluation Types
+#### 4.2.1 Evaluation Types
 - **Automated Evaluation**
   - Metric-based scoring
   - Reference comparison
@@ -735,7 +782,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Pairwise comparison
   - Rubric scoring
 
-### 11.2 Evaluation Metrics
+#### 4.2.2 Evaluation Metrics
 - **Generation Quality**
   - BLEU, ROUGE, METEOR
   - BERTScore
@@ -749,7 +796,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Bias measures
   - Refusal rates
 
-### 11.3 Benchmarks
+#### 4.2.3 Benchmarks
 - **General Capabilities**
   - MMLU, HellaSwag
   - ARC, WinoGrande
@@ -764,7 +811,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - AgentBench
   - GAIA
 
-### 11.4 Testing Strategies
+#### 4.2.4 Testing Strategies
 - **Unit Testing**
   - Component isolation
   - Mock responses
@@ -778,11 +825,9 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Adversarial testing
   - Edge case discovery
 
----
+### 4.3 Infrastructure & Deployment
 
-## 12. Infrastructure & Deployment
-
-### 12.1 Model Serving
+#### 4.3.1 Model Serving
 - **Inference Engines**
   - vLLM, TensorRT-LLM
   - ONNX Runtime
@@ -796,7 +841,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Load balancing
   - Auto-scaling
 
-### 12.2 API Management
+#### 4.3.2 API Management
 - **API Gateways**
   - Rate limiting
   - Authentication
@@ -810,7 +855,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Retry logic
   - Error handling
 
-### 12.3 Caching
+#### 4.3.3 Caching
 - **Response Caching**
   - Exact match caching
   - Semantic caching
@@ -821,7 +866,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Vector cache
   - Query cache
 
-### 12.4 Observability
+#### 4.3.4 Observability
 - **Deep Tracing**
   - Reasoning path visualization (Chain of Thought)
   - Retrieved context inspector (what was read?)
@@ -847,7 +892,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
   - Quality metrics
   - Cost analysis
 
-### 12.5 Cost Optimization
+#### 4.3.5 Cost Optimization
 - **Token Optimization**
   - Prompt compression
   - Response limits
@@ -860,102 +905,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
 
 ---
 
-## 13. Context Management
-
-### 13.1 Context Window Strategies
-- **Context Packing**
-  - Efficient token usage
-  - Priority-based inclusion
-- **Context Truncation**
-  - Sliding window
-  - Summarization
-- **Context Extension**
-  - Position interpolation
-  - Attention modifications
-
-### 13.2 Information Prioritization
-- **Relevance Ranking**
-  - Query-based scoring
-  - Recency weighting
-- **Importance Scoring**
-  - Entity importance
-  - Information density
-- **Dynamic Selection**
-  - Adaptive retrieval
-  - Context refinement
-
-### 13.3 Multi-Turn Management
-- **Conversation Threading**
-  - Topic tracking
-  - Reference resolution
-- **History Compression**
-  - Summary injection
-  - Key point extraction
-- **Context Switching**
-  - Task transitions
-  - State preservation
-
----
-
-## 14. Human-in-the-Loop Patterns
-
-### 14.1 Interaction Modes
-- **Approval Workflows**
-  - Action confirmation
-  - Review gates
-- **Feedback Collection**
-  - Thumbs up/down
-  - Detailed feedback
-  - Corrections
-- **Collaborative Editing**
-  - Suggestion mode
-  - Iterative refinement
-
-### 14.2 Escalation Patterns
-- **Uncertainty Escalation**
-  - Confidence thresholds
-  - Ambiguity detection
-- **Risk-Based Escalation**
-  - High-stakes actions
-  - Irreversible operations
-- **Error Escalation**
-  - Failure handling
-  - Manual intervention
-
-### 14.3 User Experience
-- **Transparency**
-  - Reasoning display
-  - Source attribution
-  - Confidence indicators
-- **Control**
-  - Stop/cancel capabilities
-  - Override mechanisms
-  - Preference settings
-- **Feedback Loops**
-  - Learning from corrections
-  - Preference adaptation
-
----
-
 ## Appendix: Component Relationships
-
-1. [Human-in-the-Loop Patterns](#14-human-in-the-loop-patterns)
-2. [Workflow Orchestration](#8-workflow-orchestration)
-3. [Agentic Architectures](#7-agentic-architectures)
-4. [Prompting Techniques](#2-prompting-techniques)
-5. [Reasoning & Planning](#5-reasoning--planning)
-6. [Context Management](#13-context-management)
-7. [Memory Systems](#4-memory-systems)
-8. [Information Augmentation & Retrieval](#3-information-augmentation--retrieval)
-9. [Tool Use & Function Calling](#6-tool-use--function-calling)
-10. [Output Processing & Structured Generation](#9-output-processing--structured-generation)
-11. [Foundation Models](#1-foundation-models)
-12. [Safety, Guardrails & Alignment](#10-safety-guardrails--alignment)
-13. [Evaluation & Testing](#11-evaluation--testing)
-14. [Infrastructure & Deployment](#12-infrastructure--deployment)
-
-
-
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -992,6 +942,7 @@ Successful enterprise adoption typically follows a 3-layer progression.
 
 | Version | Date       | Changes                                           |
 |---------|------------|---------------------------------------------------|
+| 2.0     | 2026-02-02 | Reorganized structure by Architecture Maturity Model |
 | 1.1     | 2026-01-18 | Added Diffusion Models, Self-Querying Retrieval.  |
 | 1.0     | 2026-01-17 | Initial comprehensive analysis                  |
 
