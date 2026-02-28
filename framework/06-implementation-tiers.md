@@ -8,13 +8,13 @@ A systematic mapping of use cases to their supporting technical components, orga
 
 ## How to Use This Document
 
-1. **Start with your archetype and features** — identified via [genai-use-case-archetypes.md](genai-use-case-archetypes.md) and [genai-capability-features.md](genai-capability-features.md).
+1. **Start with your archetype and features** — identified via [02-use-case-archetypes.md](02-use-case-archetypes.md) and [03-capability-features.md](03-capability-features.md).
 2. **Determine your complexity tier (T1-T4)** — using the tier framework below.
 3. **Check feature maturity at your tier** — the Feature Maturity by Tier matrix shows what each feature looks like at T1-T4; confirm your tier can deliver the features you need.
 4. **Review the NFR requirements** — for your tier.
 5. **Explore the component stack** — for your archetype group at your maturity level.
 6. **Select a stack pattern** — that matches your tier.
-7. **Choose platforms** — via [genai-platform-selection.md](genai-platform-selection.md).
+7. **Choose platforms** — via [07-platform-selection.md](07-platform-selection.md).
 
 ---
 
@@ -61,7 +61,7 @@ This matrix shows **what each capability feature looks like at each tier**. Use 
 | **F14** Multi-Agent Collaboration | − | − | Handoff between 2 specialized agents | Full multi-agent orchestration with supervisor and shared memory |
 | **F15** Auditability & Compliance | Basic request logs | User action + output logging | Full audit trail with reasoning traces | Real-time compliance monitoring + SIEM integration |
 
-**How to read this**: Find the features your archetype requires (from Matrix A in [genai-capability-features.md](genai-capability-features.md)), then read across to your target tier. This tells you exactly what level of that feature you can deliver — and whether you need to move up a tier to meet your requirements.
+**How to read this**: Find the features your archetype requires (from Matrix A in [03-capability-features.md](03-capability-features.md)), then read across to your target tier. This tells you exactly what level of that feature you can deliver — and whether you need to move up a tier to meet your requirements.
 
 ### Complexity Dimensions
 
@@ -176,7 +176,7 @@ Autonomy:      [Goal] → [Research Agent] ⟷ [Web/Doc Tools]
                         [Writer Agent] → [Editor Agent] → [Final Report]
 ```
 
-### 4.2 Group B: Insight & Decision Support
+### 4.2 Group B: Insight & Decision Intelligence
 
 *Archetypes: Data Interpretation, Recommendation, Simulation*
 
@@ -485,11 +485,11 @@ Components: 20-35+ | Latency: Minutes-Hours | Cost: $$$$
 
 ## Related Documents
 
-- **[framework-overview.md](framework-overview.md)** — Start here
-- **[genai-capability-features.md](genai-capability-features.md)** — Layer 2: Features and mapping matrices
-- **[genai-technical-components.md](genai-technical-components.md)** — Layer 3: Component catalog
-- **[genai-component-selection-guide.md](genai-component-selection-guide.md)** — Evaluation tools
-- **[genai-platform-selection.md](genai-platform-selection.md)** — Platform comparison and TCO
+- **[01-overview.md](01-overview.md)** — Start here
+- **[03-capability-features.md](03-capability-features.md)** — Layer 2: Features and mapping matrices
+- **[04-technical-components.md](04-technical-components.md)** — Layer 3: Component catalog
+- **[05-component-selection-guide.md](05-component-selection-guide.md)** — Evaluation tools
+- **[07-platform-selection.md](07-platform-selection.md)** — Platform comparison and TCO
 
 ---
 

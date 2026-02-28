@@ -483,11 +483,11 @@ Quick reference showing which features each component category primarily enables
 
 ## Related Documents
 
-- **[framework-overview.md](framework-overview.md)** — Start here
-- **[genai-capability-features.md](genai-capability-features.md)** — Layer 2: Features enabled by these components
-- **[genai-component-selection-guide.md](genai-component-selection-guide.md)** — How to evaluate components
-- **[genai-usecase-component-mapping.md](genai-usecase-component-mapping.md)** — Maturity tiers and stack patterns
-- **[genai-platform-selection.md](genai-platform-selection.md)** — Platforms and tools that implement these components
+- **[01-overview.md](01-overview.md)** — Start here
+- **[03-capability-features.md](03-capability-features.md)** — Layer 2: Features enabled by these components
+- **[05-component-selection-guide.md](05-component-selection-guide.md)** — How to evaluate components
+- **[06-implementation-tiers.md](06-implementation-tiers.md)** — Maturity tiers and stack patterns
+- **[07-platform-selection.md](07-platform-selection.md)** — Platforms and tools that implement these components
 
 ---
 

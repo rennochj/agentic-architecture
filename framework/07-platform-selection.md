@@ -8,7 +8,7 @@ A comprehensive guide for evaluating and selecting GenAI implementation platform
 
 ## How to Use This Document
 
-1. **Know your archetype, features, and tier** — via [genai-use-case-archetypes.md](genai-use-case-archetypes.md), [genai-capability-features.md](genai-capability-features.md), and [genai-usecase-component-mapping.md](genai-usecase-component-mapping.md).
+1. **Know your archetype, features, and tier** — via [02-use-case-archetypes.md](02-use-case-archetypes.md), [03-capability-features.md](03-capability-features.md), and [06-implementation-tiers.md](06-implementation-tiers.md).
 2. **Identify candidate platform categories** — Section 1.
 3. **Compare capabilities** — functional and NFR matrices in Section 2.
 4. **Walk the decision trees** — Section 3.
@@ -704,7 +704,7 @@ TRAINING INVESTMENT BY TIER
 | Autonomous Systems | LLM + Tool | Multi-tool Setup | Workflow Platform | Agent Framework |
 | Conversational | LLM API | Chatbot Platform | Virtual Agent Platform | Agent Framework |
 | Code Development | Code LLM API | IDE Integration | Code Agent | Full SWE Agent |
-| Decision Support | LLM API | RAG + Analytics | BI Integration | Analysis Agent |
+| Decision Intelligence | LLM API | RAG + Analytics | BI Integration | Analysis Agent |
 
 ### 10.4 Component → Platform/Tool Mapping
 
@@ -742,12 +742,12 @@ TRAINING INVESTMENT BY TIER
 
 ## Related Documents
 
-- **[framework-overview.md](framework-overview.md)** — Start here
-- **[genai-capability-features.md](genai-capability-features.md)** — Layer 2: Features and mapping matrices
-- **[genai-use-case-archetypes.md](genai-use-case-archetypes.md)** — Layer 1: Archetype definitions
-- **[genai-technical-components.md](genai-technical-components.md)** — Layer 3: Component catalog
-- **[genai-usecase-component-mapping.md](genai-usecase-component-mapping.md)** — Maturity tiers & stack patterns
-- **[genai-component-selection-guide.md](genai-component-selection-guide.md)** — Evaluation tools
+- **[01-overview.md](01-overview.md)** — Start here
+- **[03-capability-features.md](03-capability-features.md)** — Layer 2: Features and mapping matrices
+- **[02-use-case-archetypes.md](02-use-case-archetypes.md)** — Layer 1: Archetype definitions
+- **[04-technical-components.md](04-technical-components.md)** — Layer 3: Component catalog
+- **[06-implementation-tiers.md](06-implementation-tiers.md)** — Maturity tiers & stack patterns
+- **[05-component-selection-guide.md](05-component-selection-guide.md)** — Evaluation tools
 
 ---
 
@@ -755,5 +755,5 @@ TRAINING INVESTMENT BY TIER
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 4.0 | 2026-02-27 | Extracted from genai-usecase-component-mapping.md as standalone document. Consolidated platform selection framework (former Sections 7.0-7.13), TCO framework, organizational fit assessment, hybrid patterns, skills/team composition, risk matrix, integrated scorecard, and quick reference guides. Added AI maturity model and skills pathways. |
+| 4.0 | 2026-02-27 | Extracted from 06-implementation-tiers.md as standalone document. Consolidated platform selection framework (former Sections 7.0-7.13), TCO framework, organizational fit assessment, hybrid patterns, skills/team composition, risk matrix, integrated scorecard, and quick reference guides. Added AI maturity model and skills pathways. |
 | 3.0 | 2026-01-18 | Original platform selection content (within mapping doc). |

@@ -375,10 +375,10 @@ Component Selection:
 
 ## Related Documents
 
-- **[framework-overview.md](framework-overview.md)** — Start here
-- **[genai-capability-features.md](genai-capability-features.md)** — Layer 2: Identify required features
-- **[genai-technical-components.md](genai-technical-components.md)** — Layer 3: Component catalog
-- **[genai-usecase-component-mapping.md](genai-usecase-component-mapping.md)** — Maturity tiers and stack patterns
+- **[01-overview.md](01-overview.md)** — Start here
+- **[03-capability-features.md](03-capability-features.md)** — Layer 2: Identify required features
+- **[04-technical-components.md](04-technical-components.md)** — Layer 3: Component catalog
+- **[06-implementation-tiers.md](06-implementation-tiers.md)** — Maturity tiers and stack patterns
 
 ---
 

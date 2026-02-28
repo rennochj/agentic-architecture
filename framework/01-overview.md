@@ -1,6 +1,6 @@
 # GenAI & Agentic Architecture Framework — Overview
 
-*Version 5.0. Last Updated: 2026-02-27*
+*Version 5.4. Last Updated: 2026-02-28*
 
 ## Purpose
 
@@ -14,12 +14,12 @@ The framework is organized into four layers that form a natural chain from **bus
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│  LAYER 1: USE CASE ARCHETYPES (12)                                          │
+│  LAYER 1: USE CASE ARCHETYPES (13)                                          │
 │  "What job needs to be done?"                                               │
 │                                                                             │
-│  12 archetypes in 3 value groups, each characterized by                     │
+│  13 archetypes in 3 value groups, each characterized by                     │
 │  4 Architectural Dimensions (Interaction, Autonomy, Grounding, Governance)  │
-│  → genai-use-case-archetypes.md                                             │
+│  → 02-use-case-archetypes.md                                             │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                              ↓ requires                                     │
 ├─────────────────────────────────────────────────────────────────────────────┤
@@ -28,7 +28,7 @@ The framework is organized into four layers that form a natural chain from **bus
 │                                                                             │
 │  Reusable, composable capabilities shared across archetypes.                │
 │  The bridge that explains WHY a technical component is needed.              │
-│  → genai-capability-features.md                                             │
+│  → 03-capability-features.md                                             │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                              ↓ enabled by                                   │
 ├─────────────────────────────────────────────────────────────────────────────┤
@@ -37,7 +37,7 @@ The framework is organized into four layers that form a natural chain from **bus
 │                                                                             │
 │  Organized by maturity: Foundation → Augmentation → Orchestration →         │
 │  Autonomy, plus cross-cutting Operational Excellence concerns.              │
-│  → genai-technical-components.md                                            │
+│  → 04-technical-components.md                                            │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                              ↓ deployed on                                  │
 ├─────────────────────────────────────────────────────────────────────────────┤
@@ -46,7 +46,7 @@ The framework is organized into four layers that form a natural chain from **bus
 │                                                                             │
 │  Platform selection, TCO analysis, organizational fit,                      │
 │  reference architectures, and implementation patterns.                      │
-│  → genai-platform-selection.md                                              │
+│  → 07-platform-selection.md                                              │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -61,37 +61,37 @@ Follow these steps to go from idea to architecture:
 ```
 Step 1 ─────────────────────────────────────────────────────────────────────
   IDENTIFY your use case archetype.
-  Read: genai-use-case-archetypes.md (or the summary table)
-  Ask:  "Which of the 12 archetypes best describes the job to be done?"
+  Read: 02-use-case-archetypes.md → Part 2 (quick reference) or Part 3 (full detail)
+  Ask:  "Which of the 13 archetypes best describes the job to be done?"
   Ask:  "What are my Interaction, Autonomy, Grounding, and Governance needs?"
 
 Step 2 ─────────────────────────────────────────────────────────────────────
   MAP to required capability features.
-  Read: genai-capability-features.md → Matrix A (Archetypes → Features)
+  Read: 03-capability-features.md → Matrix A (Archetypes → Features)
   Ask:  "Which of the 15 capability features does my archetype require?"
   Ask:  "Are there additional features my specific context demands?"
 
 Step 3 ─────────────────────────────────────────────────────────────────────
   IDENTIFY the technical components.
-  Read: genai-capability-features.md → Matrix B (Features → Components)
-  Read: genai-technical-components.md for deep-dive on each component
+  Read: 03-capability-features.md → Matrix B (Features → Components)
+  Read: 04-technical-components.md for deep-dive on each component
   Ask:  "What building blocks enable my required features?"
 
 Step 4 ─────────────────────────────────────────────────────────────────────
   EVALUATE each component for inclusion.
-  Read: genai-component-selection-guide.md
+  Read: 05-component-selection-guide.md
   Ask:  The Seven Questions (WHY? HOW WELL? WHAT IF? IS IT LEGAL?
         CAN WE SEE? CAN WE LEARN? CAN WE SHIP?)
 
 Step 5 ─────────────────────────────────────────────────────────────────────
   SELECT implementation tier and platform.
-  Read: genai-usecase-component-mapping.md (maturity tiers T1-T4)
-  Read: genai-platform-selection.md (platform comparison & TCO)
+  Read: 06-implementation-tiers.md (maturity tiers T1-T4)
+  Read: 07-platform-selection.md (platform comparison & TCO)
   Ask:  "What tier matches our maturity? What platform fits our org?"
 
 Step 6 ─────────────────────────────────────────────────────────────────────
   GOVERN with NIST RMF alignment.
-  Read: genai-use-case-archetypes.md → Part 3 (MAP, MEASURE, MANAGE, GOVERN)
+  Read: 02-use-case-archetypes.md → Part 5 (MAP, MEASURE, MANAGE, GOVERN)
   Ask:  "What risks, controls, and monitoring do we need?"
 ```
 
@@ -101,14 +101,13 @@ Step 6 ────────────────────────�
 
 | Document | Purpose | Key Contents |
 |----------|---------|--------------|
-| **[framework-overview.md](framework-overview.md)** | Entry point & navigation | This document. The four-layer model, reading order, document relationships. |
-| **[genai-use-case-archetypes.md](genai-use-case-archetypes.md)** | Layer 1: WHAT | 12 archetypes in 3 groups, 4 architectural dimensions, NIST RMF selection framework. |
-| **[use-case-archetypes-summary.md](use-case-archetypes-summary.md)** | Quick reference | Condensed table of all 12 archetypes with key features. |
-| **[genai-capability-features.md](genai-capability-features.md)** | Layer 2: WHY | 15 capability features, Matrix A (Archetypes→Features), Matrix B (Features→Components). |
-| **[genai-technical-components.md](genai-technical-components.md)** | Layer 3: HOW | Comprehensive catalog of technical building blocks, organized by maturity layer. |
-| **[genai-component-selection-guide.md](genai-component-selection-guide.md)** | Evaluation tool | Seven Questions framework, Component Selection Canvas, anti-patterns, production readiness. |
-| **[genai-usecase-component-mapping.md](genai-usecase-component-mapping.md)** | Mapping & maturity | T1-T4 implementation tiers, maturity progression, component stack patterns, NFR framework. |
-| **[genai-platform-selection.md](genai-platform-selection.md)** | Layer 4: WHERE | Platform comparison, decision trees, hybrid patterns, TCO, organizational fit. |
+| **[01-overview.md](01-overview.md)** | Entry point & navigation | This document. The four-layer model, reading order, document relationships. |
+| **[02-use-case-archetypes.md](02-use-case-archetypes.md)** | Layer 1: WHAT | 13 archetypes in 3 groups, quick reference table, 4 architectural dimensions, composition rules, NIST RMF selection framework. |
+| **[03-capability-features.md](03-capability-features.md)** | Layer 2: WHY | 15 capability features, Matrix A (Archetypes→Features), Matrix B (Features→Components). |
+| **[04-technical-components.md](04-technical-components.md)** | Layer 3: HOW | Comprehensive catalog of technical building blocks, organized by maturity layer. |
+| **[05-component-selection-guide.md](05-component-selection-guide.md)** | Evaluation tool | Seven Questions framework, Component Selection Canvas, anti-patterns, production readiness. |
+| **[06-implementation-tiers.md](06-implementation-tiers.md)** | Mapping & maturity | T1-T4 implementation tiers, maturity progression, component stack patterns, NFR framework. |
+| **[07-platform-selection.md](07-platform-selection.md)** | Layer 4: WHERE | Platform comparison, decision trees, hybrid patterns, TCO, organizational fit. |
 
 ---
 
@@ -118,7 +117,7 @@ The framework uses consistent terminology across all documents:
 
 | Concept | Standard Term | Definition |
 |---------|---------------|------------|
-| Core job-to-be-done | **Use Case Archetype** | One of 12 patterns describing the primary value a GenAI solution delivers. |
+| Core job-to-be-done | **Use Case Archetype** | One of 13 patterns describing the primary value a GenAI solution delivers. |
 | Functional capability | **Capability Feature** | A reusable, composable facet (e.g., "Contextual Grounding") that an archetype requires. |
 | Technical building block | **Technical Component** | A concrete technology element (e.g., RAG Pipeline, Memory System) that enables a feature. |
 | Component maturity layer | **Foundation / Augmentation / Orchestration / Autonomy** | The four progressive layers of technical component complexity. |
@@ -128,6 +127,12 @@ The framework uses consistent terminology across all documents:
 | Degree of independent action | **Autonomy Level** | Assistive, Semi-Autonomous, or Fully Autonomous. |
 | Data augmentation approach | **Grounding Strategy** | Ungrounded, Curated Grounding (RAG), or Live Grounding (Tool Use). |
 | Risk management posture | **Governance Posture** | The set of compliance, audit, and safety constraints for a use case. |
+
+---
+
+## Scope & Boundaries
+
+This framework addresses **software-based GenAI and agentic systems** — the reasoning, language, planning, and decision-making layers. It does not cover the physical-world concerns of embodied AI (robotics, autonomous vehicles, sensor-actuator control loops), though LLMs increasingly serve as the cognitive layer in such systems. Where a GenAI component acts as the "brain" of a physical system, this framework applies to that cognitive layer; the physical control, safety, and real-time systems engineering require additional domain-specific frameworks.
 
 ---
 

@@ -68,7 +68,7 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Why it matters** | Reduces hallucination, increases trust, and ensures responses are current and relevant to the organization's specific context. |
 | **Key patterns** | Retrieval-Augmented Generation (RAG), chunking & embedding strategies, hybrid search (dense + sparse), query rewriting, re-ranking. |
 | **Maturity progression** | **T1**: Static context injection → **T2**: Basic RAG with vector search → **T3**: Hybrid search + re-ranking + agentic retrieval → **T4**: Self-correcting retrieval with iterative refinement. |
-| **Primary archetypes** | Grounded Q&A (●), Research & Synthesis (●), Software Dev (●), Agentic Task (●), Ops Copilot (●), Governance (●) |
+| **Primary archetypes** | Grounded Q&A (●), Research & Synthesis (●), Software Dev (●), Agentic Task (●), Ops Copilot (●), Governance (●), Conversational Agent (●) |
 
 ### F2: Multi-Source Synthesis
 
@@ -98,7 +98,7 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Why it matters** | Complex requests are rarely captured perfectly in a single prompt. Iteration enables precision and user satisfaction. |
 | **Key patterns** | Multi-turn conversation management, context window strategies, conversation history compression, reference resolution, topic tracking. |
 | **Maturity progression** | **T1**: Simple follow-up questions → **T2**: Full multi-turn with context carry-over → **T3**: Multi-session memory with preference learning → **T4**: Proactive clarification and anticipation. |
-| **Primary archetypes** | Grounded Q&A (●), Software Dev (●), Ops Copilot (●), Content Generation (◐), Data Interpretation (◐) |
+| **Primary archetypes** | Grounded Q&A (●), Software Dev (●), Ops Copilot (●), Conversational Agent (●), Content Generation (◐), Data Interpretation (◐) |
 
 ### F5: Citation & Provenance
 
@@ -118,7 +118,7 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Why it matters** | One-size-fits-all responses reduce relevance and engagement. Personalization drives adoption and value. |
 | **Key patterns** | User/context modeling, preference capture, session and persistent memory, consent management, collaborative filtering. |
 | **Maturity progression** | **T1**: Role-based system prompts → **T2**: Session-level preference tracking → **T3**: Persistent user profiles with memory → **T4**: Adaptive learning with preference evolution. |
-| **Primary archetypes** | Recommendation & Personalization (●), Content Generation (○), Grounded Q&A (○), Agentic Task (◐) |
+| **Primary archetypes** | Recommendation & Personalization (●), Conversational Agent (●), Content Generation (○), Grounded Q&A (○), Agentic Task (◐) |
 
 ### F7: Autonomous Planning & Execution
 
@@ -158,7 +158,7 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Why it matters** | Without memory, every interaction starts from zero. Memory enables continuity, learning, and increasingly effective assistance. |
 | **Key patterns** | Episodic memory (events), semantic memory (facts), procedural memory (workflows), memory consolidation, forgetting/pruning, vector-based and structured storage. |
 | **Maturity progression** | **T1**: Stateless → **T2**: Session memory (conversation buffer) → **T3**: Persistent memory across sessions → **T4**: Episodic + semantic memory with consolidation. |
-| **Primary archetypes** | Recommendation (●), Agentic Task (●), Ops Copilot (●), Research & Synthesis (●) |
+| **Primary archetypes** | Recommendation (●), Agentic Task (●), Ops Copilot (●), Research & Synthesis (●), Conversational Agent (●) |
 
 ### F11: Human Oversight Gates
 
@@ -168,7 +168,7 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Why it matters** | Autonomous AI introduces risk. Human oversight is a graduated control plane — essential for trust, safety, and regulatory compliance. |
 | **Key patterns** | Approval workflows, confidence-based escalation, risk-based escalation, review queues, override mechanisms, phased autonomy. |
 | **Maturity progression** | **T1**: Optional review → **T2**: Approval before send/publish → **T3**: HITL checkpoints at each critical stage → **T4**: Graduated autonomy with audit. |
-| **Primary archetypes** | Workflow Automation (●), Agentic Task (●), Governance (●), Ops Copilot (●), Software Dev (●), Summarization (◐) |
+| **Primary archetypes** | Workflow Automation (●), Agentic Task (●), Governance (●), Ops Copilot (●), Software Dev (●), Conversational Agent (●), Summarization (◐) |
 
 ### F12: Safety & Content Controls
 
@@ -238,6 +238,7 @@ Use this to identify your feature requirements. Start with your archetype (rows)
 | 10. Agentic Task Automation | ● | ◐ | ● | ◐ | ◐ | ◐ | ● | ● | ● | ● | ● | ● | ● | ● | ● |
 | 11. Ops & Monitoring Copilot | ● | ◐ | ● | ● | ◐ | − | ● | ● | ● | ● | ● | ● | ● | ◐ | ● |
 | 12. AI Governance & Assurance | ● | ● | ● | ○ | ● | − | ○ | ◐ | ○ | ◐ | ● | ● | ● | ○ | ● |
+| 13. Conversational Agent | ● | ○ | ◐ | ● | ○ | ● | − | ◐ | ○ | ● | ● | ● | ● | − | ◐ |
 
 ### How to Read Matrix A
 
@@ -373,11 +374,11 @@ Some features naturally cluster together. Understanding these affinities helps p
 
 ## Related Documents
 
-- **[framework-overview.md](framework-overview.md)** — Start here for navigation
-- **[genai-use-case-archetypes.md](genai-use-case-archetypes.md)** — Layer 1: The 12 archetypes
-- **[genai-technical-components.md](genai-technical-components.md)** — Layer 3: Component deep-dive
-- **[genai-component-selection-guide.md](genai-component-selection-guide.md)** — How to evaluate components
-- **[genai-usecase-component-mapping.md](genai-usecase-component-mapping.md)** — Maturity tiers and stack patterns
+- **[01-overview.md](01-overview.md)** — Start here for navigation
+- **[02-use-case-archetypes.md](02-use-case-archetypes.md)** — Layer 1: The 13 archetypes
+- **[04-technical-components.md](04-technical-components.md)** — Layer 3: Component deep-dive
+- **[05-component-selection-guide.md](05-component-selection-guide.md)** — How to evaluate components
+- **[06-implementation-tiers.md](06-implementation-tiers.md)** — Maturity tiers and stack patterns
 
 ---
 

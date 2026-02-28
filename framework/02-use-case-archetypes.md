@@ -1,21 +1,45 @@
 # Generative AI & Agentic Use Case Archetypes
 
-*Version 5.0. Last Updated: 2026-02-27*
+*Version 5.4. Last Updated: 2026-02-28*
 
-This document defines the 12 use case archetypes that form Layer 1 of the GenAI & Agentic Architecture Framework. Each archetype represents a distinct job-to-be-done — the core value a GenAI solution delivers, independent of its interaction style or implementation complexity.
+This document defines the 13 use case archetypes that form Layer 1 of the GenAI & Agentic Architecture Framework. Each archetype represents a distinct job-to-be-done — the core value a GenAI solution delivers, independent of its interaction style or implementation complexity.
 
 **How to use this document:**
-1. Identify which archetype(s) best describe your use case — many real solutions combine more than one.
-2. If multiple archetypes are involved, see **Part 2.5: Archetype Composition** for patterns and design rules.
-3. Note the Four Architectural Dimensions for your context.
-4. Use the **Primary Features** listed for each archetype (or their union, for composites) to navigate to [genai-capability-features.md](genai-capability-features.md) (Layer 2).
-5. Apply the Use Case Selection Framework (Part 3) for risk-aware design.
+1. Use the **Quick Reference table** to identify your archetype(s).
+2. Apply the **Four Architectural Dimensions** to characterize how your archetype will be implemented.
+3. Dive into the **full archetype detail** for scope, patterns, and risks.
+4. See **Part 4: Archetype Composition** when combining multiple archetypes.
+5. Apply the **Use Case Selection Framework** (Part 5) for risk-aware design.
 
 ---
 
-## Part 1: The Four Architectural Dimensions
+## Part 1: Agentic Use Case Archetypes - Quick Reference
 
-A use case is not just its core function — it is the combination of that function with these four cross-cutting characteristics. Each dimension is a design choice that shapes the architecture.
+*All archetypes implicitly require F12 (Safety Controls) and F13 (Learning & Feedback) for production use.*
+
+| Group | # | Archetype | Description | Primary Features | Typical Outputs |
+|-------|---|-----------|-------------|-----------------|-----------------|
+| **A: Content & Knowledge Synthesis** | 1 | **Content Generation** | Create or rewrite content (text, code, images, audio, video) based on prompts, templates, or inputs. | F3 · F4 · F6 · F12 · F13 | Drafts, creative assets, translations, rewritten tone/style. |
+| | 2 | **Summarization & Extraction** | Condense information or pull structured data from unstructured or semi-structured inputs. | F1 · F3 · F5 · F12 · F13 | Executive summaries, key-value fields, named entities, timelines. |
+| | 3 | **Grounded Q&A** | Answer questions using a specific, curated body of knowledge with citations and evidence. | F1 · F4 · F5 · F12 · F13 | Answers with source links, document snippets, known-vs-unknown signals. |
+| | 4 | **Research & Synthesis** | Produce analytical artifacts by synthesizing information from many sources. | F1 · F2 · F3 · F5 · F7 · F8 · F13 | Research briefs, competitive analysis, literature reviews. |
+| **B: Insight & Decision Intelligence** | 5 | **Data Interpretation & Analytics** | Explain trends and act on anomalies from structured data, from narrative insight to automated response. | F3 · F8 · F9 · F12 · F13 | Narrative explanations of KPI changes, anomaly summaries, triggered alerts. |
+| | 6 | **Recommendation & Personalization** | Tailor and deliver content, workflows, or experiences to a user, segment, or context. | F1 · F6 · F10 · F12 · F13 | Personalized content, next-best-action suggestions, adaptive learning plans, dynamic pricing. |
+| | 7 | **Simulation & Synthetic Data** | Generate data, scenarios, or environments for training, testing, or what-if analysis. | F3 · F7 · F12 · F13 | Synthetic datasets, adversarial test cases, scenario catalogs. |
+| **C: Process & Task Automation** | 8 | **Software Dev Acceleration** | Assist with coding, testing, reviewing, and debugging across the SDLC. | F1 · F3 · F4 · F8 · F11 · F12 · F13 | Code diffs, unit tests, PR summaries, refactoring suggestions. |
+| | 9 | **Structured Workflow Automation** | Automate deterministic business processes using GenAI for NLU/NLG steps. | F3 · F8 · F11 · F12 · F13 · F15 | Completed forms, drafted emails, reconciled records. |
+| | 10 | **Agentic Task Automation** | Plan and execute multi-step, dynamic tasks by orchestrating tools and adapting to observations. | F7 · F8 · F9 · F10 · F11 · F12 · F13 · F14 · F15 | Completed end-to-end tasks, detailed action logs. |
+| | 11 | **Ops & Monitoring Copilot** | Assist operators by monitoring signals, diagnosing issues, and suggesting remediation. | F1 · F7 · F8 · F9 · F10 · F11 · F12 · F13 · F15 | Incident summaries, root-cause hypotheses, remediation playbooks. |
+| | 12 | **AI Governance & Assurance** | Use GenAI to support GRC: policy checks, control testing, audit evidence gathering. | F1 · F2 · F3 · F5 · F11 · F12 · F13 · F15 | Compliance reports, risk registers, red-teaming findings. |
+| | 13 | **Conversational Agent** | Conduct sustained, goal-directed conversations for support, sales, coaching, or advisory interactions. | F1 · F4 · F6 · F10 · F11 · F12 · F13 | Resolved support tickets, guided sales conversations, coaching sessions, escalation handoffs. |
+
+**Feature Key**: F1 Contextual Grounding · F2 Multi-Source Synthesis · F3 Structured Output · F4 Interactive Refinement · F5 Citation & Provenance · F6 Adaptive Personalization · F7 Autonomous Planning · F8 Tool Orchestration · F9 Real-Time Data · F10 Long-Term Memory · F11 Human Oversight · F12 Safety Controls · F13 Learning & Feedback · F14 Multi-Agent Collaboration · F15 Auditability & Compliance
+
+---
+
+## Part 2: The Four Architectural Dimensions
+
+Once you have identified your archetype, use these four dimensions to characterize how it will be implemented. The same archetype can be realised in very different ways depending on the choices made here.
 
 | Dimension | Description | Levels |
 |-----------|-------------|--------|
@@ -26,7 +50,7 @@ A use case is not just its core function — it is the combination of that funct
 
 ---
 
-## Part 2: The 12 Use Case Archetypes
+## Part 3: The 13 Archetypes — Full Detail
 
 ### Group A: Content & Knowledge Synthesis
 
@@ -107,21 +131,22 @@ A use case is not just its core function — it is the combination of that funct
 
 ---
 
-### Group B: Insight & Decision Support
+### Group B: Insight & Decision Intelligence
 
-*Focus: Interpreting data and informing human decisions.*
+*Focus: Deriving insights and driving decisions — from informing human judgment to executing decisions autonomously.*
 
 ---
 
 #### 5. Data Interpretation & Analytics
 
-**Description**: Explain trends, anomalies, and insights from structured data (dashboards, databases, BI tools) in natural language.
+**Description**: Explain trends, anomalies, and insights from structured data (dashboards, databases, BI tools) in natural language — and, at higher autonomy levels, trigger automated responses to detected patterns.
 
-**Typical Outputs**: Narrative explanations of KPI changes, plain-language anomaly summaries, answers to data questions.
+**Typical Outputs**: Narrative explanations of KPI changes, plain-language anomaly summaries, answers to data questions, triggered alerts and automated responses.
 
 **Scope**:
 - Data interpretation — explaining patterns, anomalies, and trends
 - Report and dashboard narration — converting charts and metrics into narratives
+- Automated response — triggering alerts, adjustments, or escalations based on detected patterns
 
 **Primary Features**: F3 (Structured Output) · F8 (Tool Orchestration) · F9 (Real-Time Data Access) · F12 (Safety Controls) · F13 (Learning & Feedback)
 
@@ -133,9 +158,9 @@ A use case is not just its core function — it is the combination of that funct
 
 #### 6. Recommendation & Personalization
 
-**Description**: Tailor content, workflows, or experiences to a user, segment, or context to increase relevance or effectiveness.
+**Description**: Tailor and deliver content, workflows, or experiences to a user, segment, or context — from suggesting options to autonomously executing personalized actions (dynamic pricing, content serving, adaptive learning paths).
 
-**Typical Outputs**: Personalized content, next-best-action suggestions, adaptive learning plans, prioritized task lists.
+**Typical Outputs**: Personalized content, next-best-action suggestions, adaptive learning plans, prioritized task lists, dynamically priced offers, auto-served recommendations.
 
 **Scope**:
 - Content personalization — adapting for specific audiences, contexts, or preferences
@@ -268,7 +293,29 @@ A use case is not just its core function — it is the combination of that funct
 
 ---
 
-## Part 2.5: Archetype Composition
+#### 13. Conversational Agent
+
+**Description**: Conduct sustained, goal-directed conversations that guide users through support, sales, coaching, onboarding, or advisory interactions — with persona-appropriate tone, empathy, and escalation awareness.
+
+**Typical Outputs**: Resolved support tickets, guided sales conversations, coaching and mentoring sessions, onboarding completions, escalation handoffs with full context.
+
+**Scope**:
+- Customer service and support — resolving issues through multi-turn dialogue
+- Sales and advisory — guiding prospects through product discovery and purchase decisions
+- Coaching and mentoring — sustained developmental conversations with progress tracking
+- Onboarding and guided workflows — walking users through processes conversationally
+- Escalation management — detecting when to hand off to a human agent, with full context transfer
+
+**Primary Features**: F1 (Contextual Grounding) · F4 (Interactive Refinement) · F6 (Adaptive Personalization) · F10 (Long-Term Memory) · F11 (Human Oversight) · F12 (Safety Controls) · F13 (Learning & Feedback)
+
+**Common Patterns**: Persona and tone management, intent classification and routing, escalation logic with context handoff, sentiment and frustration detection, conversation repair strategies, multi-turn context tracking, response latency optimization, CSAT/NPS feedback loops.
+
+**Primary Risks**: Tone-deaf or inappropriate responses in sensitive situations, failed escalation (user stuck in a loop), over-promising or providing incorrect commitments, privacy leakage of other customers' data, empathy failures, brand-damaging interactions at scale.
+
+---
+
+## Part 4: Archetype Composition
+
 
 Real-world solutions frequently span more than one archetype. A customer-facing research assistant might chain **Research & Synthesis** into **Content Generation**; an autonomous DevOps agent might nest **Grounded Q&A**, **Ops Copilot**, and **Structured Workflow Automation** inside **Agentic Task Automation**. This section provides the vocabulary and design rules for these composite solutions.
 
@@ -293,7 +340,7 @@ Content Generation:    F3, F4, F6, F12, F13
 Composite feature set: F1, F2, F3, F4, F5, F6, F7, F8, F12, F13
 ```
 
-Use **Matrix A** in [genai-capability-features.md](genai-capability-features.md) to build this merged profile, then trace through **Matrix B** and the **Features × Tiers** matrix in [genai-usecase-component-mapping.md](genai-usecase-component-mapping.md) as usual.
+Use **Matrix A** in [03-capability-features.md](03-capability-features.md) to build this merged profile, then trace through **Matrix B** and the **Features × Tiers** matrix in [06-implementation-tiers.md](06-implementation-tiers.md) as usual.
 
 #### 2. Highest Tier Governs
 
@@ -337,13 +384,41 @@ Evaluating individual stages is necessary but not sufficient. Add **end-to-end m
 | 2 | Content Generation | Draft the impact report in the org's template | F3, F4, F6 |
 | 3 | AI Governance & Assurance | Validate against internal policies; file evidence | F1, F5, F15 |
 
-**Composition pattern**: Sequential pipeline (1 → 2 → 3).  
-**Merged feature set**: F1, F2, F3, F4, F5, F6, F7, F8, F15 (+ implicit F12, F13).  
-**Governing tier**: T3 (Research & Synthesis drives orchestration needs).  
-**Governance posture**: Inherits from Stage 3 — full auditability, provenance chain, compliance logging.  
-**Interface contracts**:  
-- Stage 1 → 2: Structured findings JSON with source citations and confidence scores; quality gate = minimum 3 corroborating sources.  
+**Composition pattern**: Sequential pipeline (1 → 2 → 3).
+**Merged feature set**: F1, F2, F3, F4, F5, F6, F7, F8, F15 (+ implicit F12, F13).
+**Governing tier**: T3 (Research & Synthesis drives orchestration needs).
+**Governance posture**: Inherits from Stage 3 — full auditability, provenance chain, compliance logging.
+**Interface contracts**:
+- Stage 1 → 2: Structured findings JSON with source citations and confidence scores; quality gate = minimum 3 corroborating sources.
 - Stage 2 → 3: Completed report in org template; quality gate = human review before filing.
+
+### Worked Example: Knowledge Work Agent (Claude Cowork)
+
+> **Goal**: Given a prompt like "Analyse last quarter's sales data and produce a board-ready presentation with recommendations," the agent autonomously reads local files, researches supporting context, synthesises findings, and delivers polished outputs to the file system — with the user able to provide direction mid-task.
+
+| Stage | Archetype | Role | Key Features |
+|-------|-----------|------|--------------|
+| 1 | Agentic Task Automation | Outer orchestrator: decomposes the goal, manages parallel workstreams, coordinates file system and internet access | F7, F8, F9, F10, F11, F14 |
+| 2 | Research & Synthesis | Inner: reads local files, queries internet for market/competitive context, synthesises findings into structured evidence | F1, F2, F5, F7, F8 |
+| 3 | Content Generation | Inner: produces formatted deliverables (Excel with formulas, presentations, polished documents) from synthesised findings | F3, F4, F6 |
+
+**Composition pattern**: Nested (Delegation) — Agentic Task Automation is the outer orchestrator; Research & Synthesis and Content Generation are invoked as sub-tasks.
+
+**Merged feature set**: F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F14 (+ implicit F12, F13).
+
+**Governing tier**: T4 — autonomous planning with parallel workstreams and multi-agent coordination.
+
+**Architectural dimensions**:
+- *Interaction Model*: Proactive — executes autonomously once the goal is set; user can provide mid-task direction.
+- *Autonomy Level*: Semi-Autonomous — HITL for significant decisions; user maintains visibility throughout.
+- *Grounding Strategy*: Live Grounding — local file system and internet access as tools.
+- *Governance Posture*: Local data handling (file system access controls), isolated execution environment, audit trail of all actions taken.
+
+**Interface contracts**:
+- Stage 2 → 3: Structured findings (JSON/markdown) with source attribution; quality gate = factual plausibility check before generation begins.
+- Outer (Stage 1) → Inner stages: Goal decomposition with file-path context and output-format specification; quality gate = user approval before any file writes are committed.
+
+---
 
 ### Anti-Patterns
 
@@ -357,16 +432,16 @@ Evaluating individual stages is necessary but not sufficient. Add **end-to-end m
 
 ---
 
-## Part 3: Use Case Selection Framework (NIST RMF Aligned)
+## Part 5: Use Case Selection Framework (NIST RMF Aligned)
 
 Use this framework to guide design and risk management, moving from a high-level concept to a well-defined, governable system.
 
 ### 1. MAP: Define Context & Requirements
 
-- **What is the primary archetype?** Select from the 12 above.
-- **Is this a composite solution?** If it chains, blends, or nests multiple archetypes, apply the composition rules in Part 2.5 — union the features, tier to the highest participant, and define interface contracts.
+- **What is the primary archetype?** Select from the 13 above.
+- **Is this a composite solution?** If it chains, blends, or nests multiple archetypes, apply the composition rules in Part 4 — union the features, tier to the highest participant, and define interface contracts.
 - **What are the four architectural dimensions?** Define Interaction Model, Autonomy Level, Grounding Strategy, and Governance Posture.
-- **What capability features are required?** Use Matrix A in [genai-capability-features.md](genai-capability-features.md) (for composites, use the merged feature set).
+- **What capability features are required?** Use Matrix A in [03-capability-features.md](03-capability-features.md) (for composites, use the merged feature set).
 - **Who are the stakeholders?** End-users, operators, beneficiaries, impacted parties.
 - **What is the expected benefit?** Efficiency gains, new capability, or risk reduction.
 - **What are functional and performance requirements?** Success criteria, accuracy, latency, throughput.
@@ -377,7 +452,7 @@ Use this framework to guide design and risk management, moving from a high-level
 - **What is the error tolerance?** Low-stakes draft vs. regulated decision.
 - **What is the blast radius of an error?** Incorrect summary vs. incorrect server command.
 - **How will you measure quality?** Offline evaluation (accuracy, relevance), online monitoring (latency, drift), user feedback.
-- **What are the primary risks?** Refer to "Primary Risks" for your archetype.
+- **What are the primary risks?** Refer to "Primary Risks" for your archetype in Part 3.
 - **What are operational and resilience risks?** Dependencies, data sources, failure impact.
 - **What is organizational readiness?** Skills, tools, processes for deployment and maintenance.
 
@@ -406,7 +481,7 @@ Use this to assess organizational readiness by archetype group.
 - [ ] Content safety filters configured
 - [ ] Basic evaluation pipeline in place
 
-### Capability (Required for Group B: Insight & Decision)
+### Capability (Required for Group B: Insight & Decision Intelligence)
 - [ ] Tool integration framework operational
 - [ ] Data access controls enforced
 - [ ] Structured output validation working
@@ -423,11 +498,11 @@ Use this to assess organizational readiness by archetype group.
 
 ## Related Documents
 
-- **[framework-overview.md](framework-overview.md)** — Start here
-- **[use-case-archetypes-summary.md](use-case-archetypes-summary.md)** — Quick reference table
-- **[genai-capability-features.md](genai-capability-features.md)** — Layer 2: Features required by each archetype
-- **[genai-technical-components.md](genai-technical-components.md)** — Layer 3: Component catalog
-- **[genai-component-selection-guide.md](genai-component-selection-guide.md)** — How to evaluate components
+- **[01-overview.md](01-overview.md)** — Start here
+- **[03-capability-features.md](03-capability-features.md)** — Layer 2: Features required by each archetype
+- **[04-technical-components.md](04-technical-components.md)** — Layer 3: Component catalog
+- **[05-component-selection-guide.md](05-component-selection-guide.md)** — How to evaluate components
+- **[06-implementation-tiers.md](06-implementation-tiers.md)** — Maturity tiers and stack patterns
 
 ---
 
@@ -435,5 +510,9 @@ Use this to assess organizational readiness by archetype group.
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.4 | 2026-02-28 | Renamed Group B from "Insight & Decision Support" to "Insight & Decision Intelligence" to acknowledge the full spectrum from advisory to autonomous decision-making. Updated archetype 5 and 6 descriptions accordingly. Added Scope & Boundaries section to 01-overview.md. |
+| 5.3 | 2026-02-28 | Added Archetype 13: Conversational Agent. The most widely deployed GenAI use case (customer service, sales, coaching) warranted a dedicated archetype rather than relying on multi-archetype composition. |
+| 5.2 | 2026-02-28 | Reordered: Quick Reference promoted to Part 1, Four Architectural Dimensions moved to Part 2 (after archetypes are established). Updated "How to use" instructions accordingly. |
+| 5.1 | 2026-02-28 | Merged quick reference (02) and full archetype guide (03) into single document. Adopted v5.0 12-archetype taxonomy throughout. Added quick reference table. Removed taxonomy discrepancy between files. |
 | 5.0 | 2026-02-27 | Restructured: added Primary Features per archetype linking to capability features layer. Trimmed sub-case labels to concise Scope sections. Aligned with four-layer framework model. Updated NIST RMF section to reference features. |
 | 4.0 | 2026-01-20 | Consolidated v1-v3 into single guide. |
