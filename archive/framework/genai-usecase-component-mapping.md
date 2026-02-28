@@ -104,6 +104,21 @@ Responsible AI:       Content Filter │ Bias Checks │ Explainability │ Full
 Compliance:           Minimal │ Industry Standards │ Regulated │ Mission-critical
 ```
 
+### Functional Complexity Matrix
+
+This matrix visualizes the progression of functional capabilities across tiers:
+
+| Functional Dimension | T1 Basic | T2 Enhanced | T3 Orchestrated | T4 Agentic |
+| :--- | :--- | :--- | :--- | :--- |
+| **Autonomy** | ▓░░░░░░░░░ | ▓▓▓░░░░░░░ | ▓▓▓▓▓▓░░░░ | ▓▓▓▓▓▓▓▓▓▓ |
+| **Data Integration** | ▓░░░░░░░░░ | ▓▓▓░░░░░░░ | ▓▓▓▓▓▓░░░░ | ▓▓▓▓▓▓▓▓▓▓ |
+| **Reasoning** | ▓░░░░░░░░░ | ▓▓▓░░░░░░░ | ▓▓▓▓▓▓░░░░ | ▓▓▓▓▓▓▓▓▓▓ |
+| **Tool Use** | ▓░░░░░░░░░ | ▓▓░░░░░░░░ | ▓▓▓▓▓▓░░░░ | ▓▓▓▓▓▓▓▓▓▓ |
+| **Memory** | ▓░░░░░░░░░ | ▓▓▓░░░░░░░ | ▓▓▓▓▓▓░░░░ | ▓▓▓▓▓▓▓▓▓▓ |
+| **Output** | ▓▓░░░░░░░░ | ▓▓▓░░░░░░░ | ▓▓▓▓▓▓░░░░ | ▓▓▓▓▓▓▓▓▓▓ |
+
+**Legend:** ▓ = Capability level, ░ = Growth potential
+
 ---
 
 ## 2. Non-Functional Requirements Framework
@@ -224,19 +239,19 @@ Non-functional requirements (NFRs) are critical for production GenAI systems. Th
 
 This matrix shows how NFR requirements scale with implementation tier:
 
-```
-                    T1 Basic      T2 Enhanced    T3 Orchestrated   T4 Agentic
-                    ──────────────────────────────────────────────────────────
-Security            ▓░░░░░░░░░    ▓▓▓░░░░░░░    ▓▓▓▓▓▓░░░░       ▓▓▓▓▓▓▓▓▓▓
-Performance         ▓░░░░░░░░░    ▓▓▓░░░░░░░    ▓▓▓▓▓░░░░░       ▓▓▓▓▓▓▓▓░░
-Resilience          ▓░░░░░░░░░    ▓▓░░░░░░░░    ▓▓▓▓▓▓░░░░       ▓▓▓▓▓▓▓▓▓▓
-Observability       ▓░░░░░░░░░    ▓▓▓░░░░░░░    ▓▓▓▓▓▓▓░░░       ▓▓▓▓▓▓▓▓▓▓
-Responsible AI      ▓▓░░░░░░░░    ▓▓▓░░░░░░░    ▓▓▓▓▓▓░░░░       ▓▓▓▓▓▓▓▓▓▓
-Compliance          ▓░░░░░░░░░    ▓▓░░░░░░░░    ▓▓▓▓▓▓░░░░       ▓▓▓▓▓▓▓▓▓▓
-DevOps              ▓░░░░░░░░░    ▓▓▓░░░░░░░    ▓▓▓▓▓▓░░░░       ▓▓▓▓▓▓▓▓░░
-Cost Management     ▓░░░░░░░░░    ▓▓░░░░░░░░    ▓▓▓▓▓░░░░░       ▓▓▓▓▓▓▓▓▓▓
+```markdown
+| NFR Domain | T1 Basic | T2 Enhanced | T3 Orchestrated | T4 Agentic |
+| :--- | :--- | :--- | :--- | :--- |
+| **Security** | ▓░░░░░░░░░ | ▓▓▓░░░░░░░ | ▓▓▓▓▓▓░░░░ | ▓▓▓▓▓▓▓▓▓▓ |
+| **Performance** | ▓░░░░░░░░░ | ▓▓▓░░░░░░░ | ▓▓▓▓▓░░░░░ | ▓▓▓▓▓▓▓▓░░ |
+| **Resilience** | ▓░░░░░░░░░ | ▓▓░░░░░░░░ | ▓▓▓▓▓▓░░░░ | ▓▓▓▓▓▓▓▓▓▓ |
+| **Observability** | ▓░░░░░░░░░ | ▓▓▓░░░░░░░ | ▓▓▓▓▓▓▓░░░ | ▓▓▓▓▓▓▓▓▓▓ |
+| **Responsible AI** | ▓▓░░░░░░░░ | ▓▓▓░░░░░░░ | ▓▓▓▓▓▓░░░░ | ▓▓▓▓▓▓▓▓▓▓ |
+| **Compliance** | ▓░░░░░░░░░ | ▓▓░░░░░░░░ | ▓▓▓▓▓▓░░░░ | ▓▓▓▓▓▓▓▓▓▓ |
+| **DevOps** | ▓░░░░░░░░░ | ▓▓▓░░░░░░░ | ▓▓▓▓▓▓░░░░ | ▓▓▓▓▓▓▓▓░░ |
+| **Cost Management** | ▓░░░░░░░░░ | ▓▓░░░░░░░░ | ▓▓▓▓▓░░░░░ | ▓▓▓▓▓▓▓▓▓▓ |
 
-Legend: ▓ = Required focus area    ░ = Lower priority
+**Legend:** ▓ = Required focus area, ░ = Lower priority
 ```
 
 ### 2.4 Domain-Specific NFR Considerations
@@ -319,23 +334,24 @@ Layer 1: Foundation     ┌─────────────────�
 
 ### Master Matrix: Archetypes × Core Components
 
-Aligns with the **11 Core Use Case Archetypes** defined in the Use Case Archetypes Guide.
+Aligns with the **12 Core Use Case Archetypes** defined in the Use Case Archetypes Guide and the **15 Technical Components** defined in the Technical Components Guide.
 
 Legend: ● Required | ◐ Often Needed | ○ Optional | − Not Applicable
 
-| Archetype Group | Archetype | LLM | Prompt Eng | RAG | Memory | Tools & Functions | Reasoning & Planning | Agents | Orchestration | Guardrails |
-|-----------------|-----------|-----|------------|-----|--------|-------------------|----------------------|--------|---------------|------------|
-| **A. Content & Knowledge** | **1. Content Generation** | ● | ● | ○ | ○ | − | ○ | − | ○ | ● |
-| | **2. Summarization & Extraction** | ● | ● | ◐ | ○ | − | ○ | − | ◐ | ● |
-| | **3. Grounded Q&A** | ● | ● | ● | ◐ | O | ○ | − | ○ | ● |
-| | **4. Research & Synthesis** | ● | ● | ● | ● | ● | ● | ◐ | ● | ● |
-| **B. Insight & Decision** | **5. Data Interpretation** | ● | ● | ○ | ◐ | ● | ◐ | − | ◐ | ● |
-| | **6. Recs & Personalization** | ● | ● | ● | ● | ○ | ◐ | − | ◐ | ● |
-| | **7. Simulation & Synthetic Data**| ● | ● | ○ | ○ | ◐ | ◐ | ◐ | ○ | ● |
-| **C. Process & Automation**| **8. Software Dev Acceleration** | ● | ● | ● | ◐ | ● | ● | ◐ | ● | ● |
-| | **9. Structured Workflow Auto** | ● | ● | ◐ | ◐ | ● | ◐ | − | ● | ● |
-| | **10. Agentic Task Automation** | ● | ● | ● | ● | ● | ● | ● | ● | ● |
-| | **11. Ops & Monitoring Copilot** | ● | ● | ● | ● | ● | ● | ● | ● | ● |
+| Archetype Group | Archetype | Fdn Models | Prompting | Retrieval (RAG) | Output Proc | Context Mgmt | Memory | Reasoning | Tools | Agents | Workflow | HITL | Safety | Eval | Infra | Obs. |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **A. Content** | **1. Content Generation** | ● | ● | ○ | ◐ | ○ | ○ | ○ | − | − | ○ | ○ | ● | ● | ● | ● |
+| | **2. Summ. & Extract** | ● | ● | ◐ | ● | ○ | ○ | ○ | − | − | ◐ | ◐ | ● | ● | ● | ● |
+| | **3. Grounded Q&A** | ● | ● | ● | ◐ | ● | ◐ | ○ | ○ | − | ○ | ○ | ● | ● | ● | ● |
+| | **4. Research & Synthesis**| ● | ● | ● | ● | ● | ● | ● | ● | ◐ | ● | ● | ● | ● | ● | ● |
+| **B. Insight** | **5. Data Interpretation** | ● | ● | ○ | ● | ◐ | ◐ | ◐ | ● | − | ◐ | ◐ | ● | ● | ● | ● |
+| | **6. Recs & Personaliz.** | ● | ● | ● | ● | ● | ● | ◐ | ○ | − | ◐ | ○ | ● | ● | ● | ● |
+| | **7. Sim. & Synthetic** | ● | ● | ○ | ● | ○ | ○ | ◐ | ◐ | ◐ | ○ | ◐ | ● | ● | ● | ● |
+| **C. Process** | **8. Soft. Dev Accel.** | ● | ● | ● | ● | ● | ◐ | ● | ● | ◐ | ● | ● | ● | ● | ● | ● |
+| | **9. Struct Workflow** | ● | ● | ◐ | ● | ◐ | ◐ | ◐ | ● | − | ● | ● | ● | ● | ● | ● |
+| | **10. Agentic Task** | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● |
+| | **11. Ops Copilot** | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● | ● |
+| | **12. Governance** | ● | ● | ● | ● | ◐ | ◐ | ● | ◐ | ◐ | ● | ● | ● | ● | ● | ● |
 
 ---
 
@@ -403,7 +419,7 @@ Layer 3: [Data Stream] → [Monitor Agent]
 
 ### 5.3 Group C: Process & Task Automation
 
-Archetypes: *Software Dev, Workflow Automation, Agentic Task Automation, Ops Copilot*
+Archetypes: *Software Dev, Workflow Automation, Agentic Task Automation, Ops Copilot, AI Governance & Assurance*
 
 #### Maturity Progression
 

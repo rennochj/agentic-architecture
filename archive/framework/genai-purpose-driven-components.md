@@ -1,5 +1,7 @@
 # Purpose-Driven Component Selection for GenAI Solutions
 
+*Aligned with GenAI Use Case Archetypes v4.0 and Technical Components Guide.*
+
 > **The Core Principle**: Technical components are not goals in themselves—they are *instruments* that enable use cases, deliver desired qualities, mitigate anticipated risks, and support the continuous evolution of living systems.
 
 ---
@@ -45,7 +47,7 @@ Every component decision should answer these seven questions across two categori
 
 | # | Question | Focus | Example |
 |---|----------|-------|---------|
-| 1 | **WHY?** | What use case capability does this enable? | "RAG enables knowledge-grounded responses" |
+| 1 | **WHY?** | What use case capability does this enable? | "RAG enables Grounded Q&A (Group A)" |
 | 2 | **HOW WELL?** | What quality attribute does this deliver? | "RAG improves accuracy and reduces hallucination" |
 | 3 | **WHAT IF?** | What risk does this mitigate? | "RAG addresses the risk of fabricated facts" |
 | 4 | **IS IT LEGAL?** | What compliance requirement does this address? | "Audit logging enables regulatory traceability" |
@@ -110,36 +112,36 @@ This matrix shows how each component category maps across all seven dimensions:
 
 | Component | Enables | Delivers | Mitigates | Compliance | Observable | Evolvable | Ship-Ready |
 |-----------|---------|----------|-----------|------------|------------|-----------|------------|
-| **LLM** | All generation | Capability | Intelligence gap | — | Via wrappers | Model swap | API-ready |
-| **Embedding Models** | Semantic search | Relevance | Wrong retrieval | — | Similarity scores | Retrainable | Managed services |
-| **VLM/Multimodal** | Visual understanding | Capability | Limited inputs | — | Via wrappers | Model swap | API-ready |
+| **LLM** | Content Generation (Group A) | Capability | Intelligence gap | — | Via wrappers | Model swap | API-ready |
+| **Embedding Models** | Semantic Search (Group A) | Relevance | Wrong retrieval | — | Similarity scores | Retrainable | Managed services |
+| **VLM/Multimodal** | Visual Understanding (Group A) | Capability | Limited inputs | — | Via wrappers | Model swap | API-ready |
 
 ### Augmentation Layer
 
 | Component | Enables | Delivers | Mitigates | Compliance | Observable | Evolvable | Ship-Ready |
 |-----------|---------|----------|-----------|------------|------------|-----------|------------|
-| **RAG Pipeline** | Knowledge Q&A | Accuracy | Hallucination | Source audit | Retrieval metrics | Index updates | Production patterns |
-| **Vector Database** | Semantic search | Speed, scale | Latency | Data lineage | Query analytics | Schema evolution | Managed options |
-| **Reranking** | Precision retrieval | Relevance | Low-quality results | — | Score distribution | Model updates | Pluggable |
+| **RAG Pipeline** | Grounded Q&A (Group A) | Accuracy | Hallucination | Source audit | Retrieval metrics | Index updates | Production patterns |
+| **Vector Database** | Knowledge Retrieval | Speed, scale | Latency | Data lineage | Query analytics | Schema evolution | Managed options |
+| **Reranking** | Precision/Relevance | Relevance | Low-quality results | — | Score distribution | Model updates | Pluggable |
 | **Evaluation Datasets** | Quality testing | Accuracy | Regression | Audit trail | Quality metrics | **Continuous learning** | CI/CD integration |
 
 ### Orchestration Layer
 
 | Component | Enables | Delivers | Mitigates | Compliance | Observable | Evolvable | Ship-Ready |
 |-----------|---------|----------|-----------|------------|------------|-----------|------------|
-| **Workflow Engine** | Multi-step tasks | Reliability | Process failure | Audit trail | **Execution traces** | DAG updates | Battle-tested |
-| **State Management** | Long conversations | Continuity | State loss | — | State inspection | Schema migration | Persistence patterns |
-| **Routing/Branching** | Conditional logic | Flexibility | One-size failures | — | Decision logs | Rule updates | A/B testing |
-| **Error Handling** | All production | Resilience | Cascades | Incident logs | **Error analytics** | Playbook updates | Production-essential |
+| **Workflow Engine** | Structured Workflow (Group C) | Reliability | Process failure | Audit trail | **Execution traces** | DAG updates | Battle-tested |
+| **State Management** | Multi-turn Context | Continuity | State loss | — | State inspection | Schema migration | Persistence patterns |
+| **Routing/Branching** | Adaptive Logic | Flexibility | One-size failures | — | Decision logs | Rule updates | A/B testing |
+| **Error Handling** | Resilience | Resilience | Cascades | Incident logs | **Error analytics** | Playbook updates | Production-essential |
 
 ### Agentic Layer
 
 | Component | Enables | Delivers | Mitigates | Compliance | Observable | Evolvable | Ship-Ready |
 |-----------|---------|----------|-----------|------------|------------|-----------|------------|
-| **Agents** | Autonomy | Capability | Human bottleneck | Action audit | **Agent traces** | Strategy updates | Requires maturity |
-| **Tools/Functions** | Integrations | Extensibility | System isolation | API audit | Call logging | Tool versioning | MCP standards |
-| **Memory Systems** | Personalization | Context | Amnesia | Data retention | Memory inspection | Consolidation | Scaling patterns |
-| **Reasoning Engine** | Complex decisions | Intelligence | Shallow analysis | Decision audit | **Reasoning traces** | Prompt iteration | Evaluation-dependent |
+| **Agents** | Agentic Automation (Group C) | Capability | Human bottleneck | Action audit | **Agent traces** | Strategy updates | Requires maturity |
+| **Tools/Functions** | Integrations / Action | Extensibility | System isolation | API audit | Call logging | Tool versioning | MCP standards |
+| **Memory Systems** | Personalization (Group B) | Context | Amnesia | Data retention | Memory inspection | Consolidation | Scaling patterns |
+| **Reasoning Engine** | Decision Support (Group B) | Intelligence | Shallow analysis | Decision audit | **Reasoning traces** | Prompt iteration | Evaluation-dependent |
 
 ### Safety & Compliance Layer
 

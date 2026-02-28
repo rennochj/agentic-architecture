@@ -1,0 +1,387 @@
+<mxfile host="app.diagrams.net">
+    <diagram name="Bridge Network — Full Framework" id="framework-bridge-network">
+        <mxGraphModel dx="1600" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1400" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+
+                <!-- Background -->
+                <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0b1220;gradientColor=#111b34;gradientDirection=south;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry width="2400" height="1400" as="geometry"/>
+                </mxCell>
+
+                <!-- Title -->
+                <mxCell id="title" value="GenAI Framework — Bridge Network" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=26;fontStyle=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="600" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" value="Features are the central bridge: Archetypes (left) define WHAT → Features (center) define WHY → Components (right) define HOW → Platforms (far right) define WHERE" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=11;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="55" width="1100" height="20" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════ TIER SWIM LANES (horizontal bands) ═══════ -->
+                <mxCell id="t1_lane" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#064e3b;strokeColor=none;opacity=15;" parent="1" vertex="1">
+                    <mxGeometry x="0" y="90" width="2400" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="t1_label" value="T1 Foundation" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#6ee7b7;fontSize=11;fontStyle=1;align=left;rotation=-90;" parent="1" vertex="1">
+                    <mxGeometry x="-30" y="190" width="110" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="t2_lane" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=none;opacity=15;" parent="1" vertex="1">
+                    <mxGeometry x="0" y="370" width="2400" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="t2_label" value="T2 Augmentation" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#93c5fd;fontSize=11;fontStyle=1;align=left;rotation=-90;" parent="1" vertex="1">
+                    <mxGeometry x="-40" y="470" width="130" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="t3_lane" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3b0764;strokeColor=none;opacity=15;" parent="1" vertex="1">
+                    <mxGeometry x="0" y="650" width="2400" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="t3_label" value="T3 Orchestration" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#c4b5fd;fontSize=11;fontStyle=1;align=left;rotation=-90;" parent="1" vertex="1">
+                    <mxGeometry x="-40" y="750" width="130" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="t4_lane" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#7c2d12;strokeColor=none;opacity=15;" parent="1" vertex="1">
+                    <mxGeometry x="0" y="930" width="2400" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="t4_label" value="T4 Autonomy" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#fca5a5;fontSize=11;fontStyle=1;align=left;rotation=-90;" parent="1" vertex="1">
+                    <mxGeometry x="-30" y="1030" width="110" height="20" as="geometry"/>
+                </mxCell>
+
+                <!-- Column headers -->
+                <mxCell id="col1" value="LAYER 1: WHAT" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#f97316;fontSize=14;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="85" width="340" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="col2" value="LAYER 2: WHY" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#a78bfa;fontSize=14;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="85" width="500" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="col3" value="LAYER 3: HOW" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#38bdf8;fontSize=14;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1160" y="85" width="500" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="col4" value="LAYER 4: WHERE" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#34d399;fontSize=14;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1810" y="85" width="300" height="25" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════ LEFT: ARCHETYPES (positioned in tier lanes) ═══════ -->
+                <!-- T1 archetypes -->
+                <mxCell id="a1" value="1. Content Generation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="130" width="165" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a2" value="2. Summarize &amp; Extract" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="130" width="165" height="40" as="geometry"/>
+                </mxCell>
+
+                <!-- T2 archetypes -->
+                <mxCell id="a3" value="3. Grounded Q&amp;A" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="390" width="165" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a5" value="5. Data Interp. &amp; Analytics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e40af;strokeColor=#3b82f6;fontColor=#ffffff;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="390" width="165" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a6" value="6. Recommend. &amp; Personal." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e40af;strokeColor=#3b82f6;fontColor=#ffffff;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="445" width="165" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a7" value="7. Simulation &amp; Synth Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e40af;strokeColor=#3b82f6;fontColor=#ffffff;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="445" width="165" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a8" value="8. Software Dev Accel." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9a3412;strokeColor=#f97316;fontColor=#ffffff;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="500" width="165" height="40" as="geometry"/>
+                </mxCell>
+
+                <!-- T3 archetypes -->
+                <mxCell id="a4" value="4. Research &amp; Synthesis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="680" width="165" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a9" value="9. Structured Workflow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9a3412;strokeColor=#f97316;fontColor=#ffffff;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="680" width="165" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a11" value="11. Ops &amp; Monitoring" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9a3412;strokeColor=#f97316;fontColor=#ffffff;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="740" width="165" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="a12" value="12. AI Gov. &amp; Assurance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9a3412;strokeColor=#f97316;fontColor=#ffffff;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="740" width="165" height="40" as="geometry"/>
+                </mxCell>
+
+                <!-- T4 archetypes -->
+                <mxCell id="a10" value="10. Agentic Task Automation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9a3412;strokeColor=#f97316;fontColor=#ffffff;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="970" width="200" height="40" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════ CENTER: FEATURES (the bridge) ═══════ -->
+                <!-- Features spanning multiple tiers shown in their primary tier -->
+                <mxCell id="bridge_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6366f1;strokeWidth=2;dashed=1;dashPattern=10 6;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="110" width="620" height="1090" as="geometry"/>
+                </mxCell>
+
+                <!-- T1 features -->
+                <mxCell id="f3" value="F3 Structured Output" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="140" width="145" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="f12" value="F12 Safety Controls ★" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#818cf8;fontColor=#e0e7ff;fontSize=10;fontStyle=1;spacing=4;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="140" width="145" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="f13" value="F13 Feedback ★" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#818cf8;fontColor=#e0e7ff;fontSize=10;fontStyle=1;spacing=4;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="830" y="140" width="145" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="f4" value="F4 Interactive Refinement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="200" width="145" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="f6" value="F6 Adaptive Personalization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="200" width="155" height="35" as="geometry"/>
+                </mxCell>
+
+                <!-- T2 features -->
+                <mxCell id="f1" value="F1 Contextual Grounding" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="400" width="155" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="f2" value="F2 Multi-Source Synthesis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="400" width="155" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="f5" value="F5 Citation &amp; Provenance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="460" width="155" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="f8" value="F8 Tool Orchestration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="460" width="145" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="f9" value="F9 Real-Time Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="430" width="145" height="35" as="geometry"/>
+                </mxCell>
+
+                <!-- T3 features -->
+                <mxCell id="f7" value="F7 Autonomous Planning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="700" width="155" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="f10" value="F10 Long-Term Memory" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="700" width="155" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="f11" value="F11 Human Oversight" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="760" width="155" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="f15" value="F15 Auditability" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="760" width="145" height="35" as="geometry"/>
+                </mxCell>
+
+                <!-- T4 features -->
+                <mxCell id="f14" value="F14 Multi-Agent Collaboration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#312e81;strokeColor=#6366f1;fontColor=#c7d2fe;fontSize=10;fontStyle=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="980" width="180" height="35" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════ RIGHT: TECHNICAL COMPONENTS ═══════ -->
+                <!-- Foundation components (T1-T2) -->
+                <mxCell id="tc_found" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#0284c7;strokeWidth=1;dashed=1;opacity=60;" parent="1" vertex="1">
+                    <mxGeometry x="1160" y="115" width="540" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc_found_lbl" value="Foundation Components" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#38bdf8;fontSize=10;fontStyle=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1170" y="118" width="180" height="18" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="tc1" value="Models &amp; Inference" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0e4c72;strokeColor=#38bdf8;fontColor=#bae6fd;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="145" width="140" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc2" value="Prompt Engineering" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0e4c72;strokeColor=#38bdf8;fontColor=#bae6fd;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1340" y="145" width="140" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc3" value="Output Processing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0e4c72;strokeColor=#38bdf8;fontColor=#bae6fd;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1500" y="145" width="140" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc4" value="RAG Pipeline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0e4c72;strokeColor=#38bdf8;fontColor=#bae6fd;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="400" width="140" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc5" value="Vector Store &amp; Search" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0e4c72;strokeColor=#38bdf8;fontColor=#bae6fd;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1340" y="400" width="140" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc6" value="Context Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0e4c72;strokeColor=#38bdf8;fontColor=#bae6fd;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1500" y="400" width="140" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc7" value="Memory Systems" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0e4c72;strokeColor=#38bdf8;fontColor=#bae6fd;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="460" width="140" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc8" value="Data &amp; Knowledge" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0e4c72;strokeColor=#38bdf8;fontColor=#bae6fd;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1340" y="460" width="140" height="35" as="geometry"/>
+                </mxCell>
+
+                <!-- Orchestration components (T3) -->
+                <mxCell id="tc_orch" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#7c3aed;strokeWidth=1;dashed=1;opacity=60;" parent="1" vertex="1">
+                    <mxGeometry x="1160" y="660" width="540" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc_orch_lbl" value="Orchestration Components" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#a78bfa;fontSize=10;fontStyle=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1170" y="663" width="200" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc9" value="Planning &amp; Reasoning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4c1d95;strokeColor=#a78bfa;fontColor=#ddd6fe;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="690" width="150" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc10" value="Tool Integration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4c1d95;strokeColor=#a78bfa;fontColor=#ddd6fe;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1345" y="690" width="150" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc11" value="Multi-Agent Systems" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4c1d95;strokeColor=#a78bfa;fontColor=#ddd6fe;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="745" width="150" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc12" value="Workflow &amp; State Mgmt" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4c1d95;strokeColor=#a78bfa;fontColor=#ddd6fe;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1345" y="745" width="155" height="35" as="geometry"/>
+                </mxCell>
+
+                <!-- Operational Excellence (cross-cutting) -->
+                <mxCell id="tc_ops" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#78716c;strokeWidth=1;dashed=1;opacity=60;" parent="1" vertex="1">
+                    <mxGeometry x="1160" y="930" width="540" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc_ops_lbl" value="Operational Excellence (Cross-cutting)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#a8a29e;fontSize=10;fontStyle=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1170" y="933" width="280" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc13" value="Safety &amp; Guardrails" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#292524;strokeColor=#78716c;fontColor=#d6d3d1;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="960" width="130" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc14" value="Evaluation &amp; Testing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#292524;strokeColor=#78716c;fontColor=#d6d3d1;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1325" y="960" width="130" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc15" value="Observability" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#292524;strokeColor=#78716c;fontColor=#d6d3d1;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1470" y="960" width="110" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="tc16" value="HITL Systems" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#292524;strokeColor=#78716c;fontColor=#d6d3d1;fontSize=10;fontStyle=1;shadow=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1595" y="960" width="95" height="35" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════ FAR RIGHT: PLATFORMS ═══════ -->
+                <mxCell id="plat_panel" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#042f2e;strokeColor=#059669;strokeWidth=2;opacity=40;" parent="1" vertex="1">
+                    <mxGeometry x="1760" y="115" width="300" height="1090" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="p1" value="Enterprise Low-Code&#xa;(Copilot Studio, Einstein,&#xa;ServiceNow AI)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064e3b;strokeColor=#059669;fontColor=#a7f3d0;fontSize=10;fontStyle=1;shadow=1;spacing=6;" parent="1" vertex="1">
+                    <mxGeometry x="1800" y="170" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2" value="Cloud AI Services&#xa;(Azure AI, AWS Bedrock,&#xa;GCP Vertex AI)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064e3b;strokeColor=#059669;fontColor=#a7f3d0;fontSize=10;fontStyle=1;shadow=1;spacing=6;" parent="1" vertex="1">
+                    <mxGeometry x="1800" y="430" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3" value="RAG Platforms&#xa;(Pinecone, Weaviate,&#xa;Vectara, Qdrant)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064e3b;strokeColor=#059669;fontColor=#a7f3d0;fontSize=10;fontStyle=1;shadow=1;spacing=6;" parent="1" vertex="1">
+                    <mxGeometry x="1800" y="520" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p4" value="Orchestration Frameworks&#xa;(LangChain, LlamaIndex,&#xa;AutoGen, CrewAI)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064e3b;strokeColor=#059669;fontColor=#a7f3d0;fontSize=10;fontStyle=1;shadow=1;spacing=6;" parent="1" vertex="1">
+                    <mxGeometry x="1800" y="710" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="p5" value="Full Custom / Hybrid&#xa;(Python + APIs + Multi-Agent&#xa;Frameworks)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064e3b;strokeColor=#059669;fontColor=#a7f3d0;fontSize=10;fontStyle=1;shadow=1;spacing=6;" parent="1" vertex="1">
+                    <mxGeometry x="1800" y="990" width="220" height="60" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════ FLOW ARROWS (selected key connections) ═══════ -->
+                <!-- Archetype → Feature arrows -->
+                <mxCell id="edge_a1_f3" value="" style="endArrow=block;html=1;strokeColor=#14b8a6;strokeWidth=1;endFill=1;opacity=40;curved=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="225" y="155" as="sourcePoint"/>
+                        <mxPoint x="510" y="155" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_a3_f1" value="" style="endArrow=block;html=1;strokeColor=#14b8a6;strokeWidth=1;endFill=1;opacity=40;curved=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="225" y="415" as="sourcePoint"/>
+                        <mxPoint x="510" y="418" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_a10_f7" value="" style="endArrow=block;html=1;strokeColor=#f97316;strokeWidth=1;endFill=1;opacity=40;curved=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="990" as="sourcePoint"/>
+                        <mxPoint x="590" y="998" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_a10_f14" value="" style="endArrow=block;html=1;strokeColor=#f97316;strokeWidth=1;endFill=1;opacity=40;curved=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="320" y="993" as="sourcePoint"/>
+                        <mxPoint x="590" y="993" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Feature → Component arrows -->
+                <mxCell id="edge_f1_tc4" value="" style="endArrow=block;html=1;strokeColor=#6366f1;strokeWidth=1;endFill=1;opacity=40;curved=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="665" y="418" as="sourcePoint"/>
+                        <mxPoint x="1180" y="418" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_f7_tc9" value="" style="endArrow=block;html=1;strokeColor=#6366f1;strokeWidth=1;endFill=1;opacity=40;curved=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="665" y="718" as="sourcePoint"/>
+                        <mxPoint x="1180" y="708" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_f3_tc3" value="" style="endArrow=block;html=1;strokeColor=#6366f1;strokeWidth=1;endFill=1;opacity=40;curved=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="655" y="158" as="sourcePoint"/>
+                        <mxPoint x="1500" y="163" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Component → Platform arrows -->
+                <mxCell id="edge_tc1_p1" value="" style="endArrow=block;html=1;strokeColor=#059669;strokeWidth=1;endFill=1;opacity=40;curved=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1640" y="165" as="sourcePoint"/>
+                        <mxPoint x="1800" y="195" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_tc4_p3" value="" style="endArrow=block;html=1;strokeColor=#059669;strokeWidth=1;endFill=1;opacity=40;curved=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1640" y="460" as="sourcePoint"/>
+                        <mxPoint x="1800" y="545" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="edge_tc9_p4" value="" style="endArrow=block;html=1;strokeColor=#059669;strokeWidth=1;endFill=1;opacity=40;curved=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1500" y="710" as="sourcePoint"/>
+                        <mxPoint x="1800" y="735" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- ═══════ COMPOSITION PANEL (bottom) ═══════ -->
+                <mxCell id="comp_panel" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e1b4b;strokeColor=#4f46e5;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1240" width="2320" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="comp_title" value="ARCHETYPE COMPOSITION" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#c7d2fe;fontSize=13;fontStyle=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="1250" width="250" height="22" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="comp_seq" value="Sequential: Research(4) → Content Gen(1) → AI Gov(12)     |     Parallel: Ops Copilot(11) ∥ Data Interp(5)     |     Nested: Agentic(10) { Q&amp;A(3), Workflow(9), Content(1) }" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=11;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="1280" width="1200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="comp_rules" value="Rules: ① Union of features  ② Highest tier governs  ③ Interface contracts at seams  ④ Strictest governance  ⑤ End-to-end evaluation" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#fbbf24;fontSize=11;fontStyle=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="1310" width="1000" height="20" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="comp_visual_lbl" value="Example composition flow:" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=10;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1400" y="1250" width="180" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="cv1" value="Research &amp;&#xa;Synthesis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=9;fontStyle=1;spacing=3;" parent="1" vertex="1">
+                    <mxGeometry x="1400" y="1275" width="100" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="cv_arr1" value="" style="endArrow=block;html=1;strokeColor=#94a3b8;strokeWidth=2;endFill=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1508" y="1293" as="sourcePoint"/>
+                        <mxPoint x="1540" y="1293" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="cv2" value="Content&#xa;Generation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0f766e;strokeColor=#14b8a6;fontColor=#ffffff;fontSize=9;fontStyle=1;spacing=3;" parent="1" vertex="1">
+                    <mxGeometry x="1545" y="1275" width="100" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="cv_arr2" value="" style="endArrow=block;html=1;strokeColor=#94a3b8;strokeWidth=2;endFill=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1653" y="1293" as="sourcePoint"/>
+                        <mxPoint x="1685" y="1293" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="cv3" value="AI Gov. &amp;&#xa;Assurance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9a3412;strokeColor=#f97316;fontColor=#ffffff;fontSize=9;fontStyle=1;spacing=3;" parent="1" vertex="1">
+                    <mxGeometry x="1690" y="1275" width="100" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="cv_arr3" value="" style="endArrow=block;html=1;strokeColor=#94a3b8;strokeWidth=2;endFill=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1798" y="1293" as="sourcePoint"/>
+                        <mxPoint x="1830" y="1293" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="cv_result" value="✓ Filed&#xa;Report" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064e3b;strokeColor=#059669;fontColor=#a7f3d0;fontSize=9;fontStyle=1;spacing=3;" parent="1" vertex="1">
+                    <mxGeometry x="1835" y="1275" width="70" height="35" as="geometry"/>
+                </mxCell>
+
+                <!-- Legend -->
+                <mxCell id="legend" value="★ = Required by all archetypes in production   |   Arrows show selected key mappings; full mappings in Matrix A and Matrix B documents   |   Tier swim lanes show where each element primarily operates" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#64748b;fontSize=10;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1380" width="1400" height="18" as="geometry"/>
+                </mxCell>
+
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
