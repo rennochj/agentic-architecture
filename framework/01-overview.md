@@ -1,6 +1,6 @@
 # GenAI & Agentic Architecture Framework — Overview
 
-*Version 5.4. Last Updated: 2026-02-28*
+*Version 5.4. Last Updated: 2026-03-01*
 
 ## Purpose
 
@@ -32,11 +32,12 @@ The framework is organized into four layers that form a natural chain from **bus
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                              ↓ enabled by                                   │
 ├─────────────────────────────────────────────────────────────────────────────┤
-│  LAYER 3: TECHNICAL COMPONENTS (~15 categories)                             │
+│  LAYER 3: TECHNICAL COMPONENTS (~25 categories)                             │
 │  "What building blocks implement the features?"                             │
 │                                                                             │
-│  Organized by maturity: Foundation → Augmentation → Orchestration →         │
-│  Autonomy, plus cross-cutting Operational Excellence concerns.              │
+│  13 capability components across 4 maturity layers (Foundation →            │
+│  Augmentation → Orchestration → Autonomy) + 11 cross-cutting               │
+│  Operational Excellence sections.                                           │
 │  → 04-technical-components.md                                            │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                              ↓ deployed on                                  │
@@ -104,7 +105,7 @@ Step 6 ────────────────────────�
 | **[01-overview.md](01-overview.md)** | Entry point & navigation | This document. The four-layer model, reading order, document relationships. |
 | **[02-use-case-archetypes.md](02-use-case-archetypes.md)** | Layer 1: WHAT | 13 archetypes in 3 groups, quick reference table, 4 architectural dimensions, composition rules, NIST RMF selection framework. |
 | **[03-capability-features.md](03-capability-features.md)** | Layer 2: WHY | 15 capability features, Matrix A (Archetypes→Features), Matrix B (Features→Components). |
-| **[04-technical-components.md](04-technical-components.md)** | Layer 3: HOW | Comprehensive catalog of technical building blocks, organized by maturity layer. |
+| **[04-technical-components.md](04-technical-components.md)** | Layer 3: HOW | Comprehensive catalog: 13 capability components across 4 maturity layers (incl. §1.3 Model Selection, §4.4 Agent Runtime) + 11 Operational Excellence cross-cutting sections. |
 | **[05-component-selection-guide.md](05-component-selection-guide.md)** | Evaluation tool | Seven Questions framework, Component Selection Canvas, anti-patterns, production readiness. |
 | **[06-implementation-tiers.md](06-implementation-tiers.md)** | Mapping & maturity | T1-T4 implementation tiers, maturity progression, component stack patterns, NFR framework. |
 | **[07-platform-selection.md](07-platform-selection.md)** | Layer 4: WHERE | Platform comparison, decision trees, hybrid patterns, TCO, organizational fit. |
@@ -122,7 +123,7 @@ The framework uses consistent terminology across all documents:
 | Technical building block | **Technical Component** | A concrete technology element (e.g., RAG Pipeline, Memory System) that enables a feature. |
 | Component maturity layer | **Foundation / Augmentation / Orchestration / Autonomy** | The four progressive layers of technical component complexity. |
 | Implementation complexity | **Tier 1-4 (T1-T4)** | Basic → Enhanced → Orchestrated → Agentic. Maps to maturity layers. |
-| Cross-cutting concerns | **Operational Excellence** | Safety, Guardrails, Evaluation, Observability, and Infrastructure concerns that span all layers. |
+| Cross-cutting concerns | **Operational Excellence** | 11 cross-cutting sections that apply at every tier: Safety & Guardrails, Evaluation & Testing, Infrastructure & Deployment, Observability, Cost Management, Resilience & Fault Tolerance, Performance & Latency, DevOps & Change Management, Data & Knowledge Governance, Identity & Authorization, Incident Response. |
 | User/system interaction style | **Interaction Model** | One-shot, Conversational, Proactive, or API-driven. |
 | Degree of independent action | **Autonomy Level** | Assistive, Semi-Autonomous, or Fully Autonomous. |
 | Data augmentation approach | **Grounding Strategy** | Ungrounded, Curated Grounding (RAG), or Live Grounding (Tool Use). |
@@ -151,5 +152,6 @@ This framework addresses **software-based GenAI and agentic systems** — the re
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.4 | 2026-03-01 | Updated Layer 3 component count (~15 → ~25: 13 capability components + 11 OE sections). Expanded Operational Excellence terminology to list all 11 sections. Updated document map for 04. Aligns with 04-technical-components.md v5.4 additions: §1.3 Model Selection & Customization Strategy, §3.2.4 Shared Memory, §4.4 Agent Runtime & Deployment, §5.5 Cost Management, §5.6 Resilience, §5.7 Performance, §5.8 DevOps, §5.9 Data Governance, §5.10 Identity & Authorization, §5.11 Incident Response. |
 | 5.0 | 2026-02-27 | Major restructure: introduced 4-layer model with new Capability Features layer, harmonized terminology, reorganized documents for clarity and usability. |
 | 4.0 | 2026-01-20 | Consolidated v1-v3 archetypes into single guide. |

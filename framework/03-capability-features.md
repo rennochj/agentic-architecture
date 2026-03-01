@@ -1,6 +1,6 @@
 # Capability Features: The Bridge Between Use Cases and Components
 
-*Aligned with GenAI & Agentic Architecture Framework v5.0. Last Updated: 2026-02-27*
+*Aligned with GenAI & Agentic Architecture Framework v5.4. Last Updated: 2026-03-01*
 
 > **The Core Insight**: Use case archetypes tell you *what job to do*. Technical components tell you *what to build*. Capability Features explain *what functional capabilities the solution must exhibit* — they are the bridge that makes component selection purposeful.
 
@@ -68,7 +68,9 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Why it matters** | Reduces hallucination, increases trust, and ensures responses are current and relevant to the organization's specific context. |
 | **Key patterns** | Retrieval-Augmented Generation (RAG), chunking & embedding strategies, hybrid search (dense + sparse), query rewriting, re-ranking. |
 | **Maturity progression** | **T1**: Static context injection → **T2**: Basic RAG with vector search → **T3**: Hybrid search + re-ranking + agentic retrieval → **T4**: Self-correcting retrieval with iterative refinement. |
-| **Primary archetypes** | Grounded Q&A (●), Research & Synthesis (●), Software Dev (●), Agentic Task (●), Ops Copilot (●), Governance (●), Conversational Agent (●) |
+| **Primary archetypes** | Grounded Q&A (●), Research & Synthesis (●), Summarization & Extraction (●), Recommendation (●), Software Dev (●), Agentic Task (●), Ops Copilot (●), Governance (●), Conversational Agent (●) |
+| **Key risks** | Stale knowledge base; retrieval of irrelevant chunks adding noise to context; prompt injection via retrieved content; over-reliance on retrieved context suppressing model reasoning. |
+| **Evaluation signals** | Retrieval precision & recall; groundedness rate (% of claims supported by retrieved context); hallucination rate compared to ungrounded baseline. |
 
 ### F2: Multi-Source Synthesis
 
@@ -79,6 +81,8 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Key patterns** | Iterative retrieval and decomposition, outline-first generation, evidence mapping, contradiction detection, source quality evaluation. |
 | **Maturity progression** | **T2**: Retrieve from multiple docs and summarize → **T3**: Structured synthesis with evaluation gates → **T4**: Autonomous research agent with iterative search and self-critique. |
 | **Primary archetypes** | Research & Synthesis (●), Data Interpretation (◐), Governance (●), Ops Copilot (◐) |
+| **Key risks** | Source quality bias distorting synthesis; missing counter-evidence; non-reproducible results across runs; contradiction amplification without resolution. |
+| **Evaluation signals** | Source coverage breadth; contradiction detection rate; synthesis coherence score (LLM-as-Judge or human); reviewer agreement on accuracy. |
 
 ### F3: Structured Output Generation
 
@@ -88,7 +92,9 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Why it matters** | Enterprise systems require reliable, parseable outputs. Free-form text can't be programmatically processed or validated. |
 | **Key patterns** | JSON Schema constraints, grammar-based decoding, Pydantic/TypeScript validation, code generation with syntax checking, template-based generation. |
 | **Maturity progression** | **T1**: Basic format instructions → **T2**: Schema-constrained output with validation → **T3**: Multi-artifact generation with cross-validation → **T4**: Complex code/document generation with testing. |
-| **Primary archetypes** | Summarization & Extraction (●), Software Dev (●), Workflow Automation (●), Agentic Task (●), Data Interpretation (●), Simulation (●) |
+| **Primary archetypes** | Content Generation (●), Summarization & Extraction (●), Software Dev (●), Workflow Automation (●), Agentic Task (●), Data Interpretation (●), Simulation (●) |
+| **Key risks** | Schema drift (near-valid but invalid output); silent truncation of required fields; over-constrained generation losing semantic meaning; downstream system failures from malformed output. |
+| **Evaluation signals** | Schema validation pass rate; field completeness rate; downstream system acceptance rate; repair attempt rate (how often output needs post-hoc correction). |
 
 ### F4: Interactive Refinement
 
@@ -98,7 +104,9 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Why it matters** | Complex requests are rarely captured perfectly in a single prompt. Iteration enables precision and user satisfaction. |
 | **Key patterns** | Multi-turn conversation management, context window strategies, conversation history compression, reference resolution, topic tracking. |
 | **Maturity progression** | **T1**: Simple follow-up questions → **T2**: Full multi-turn with context carry-over → **T3**: Multi-session memory with preference learning → **T4**: Proactive clarification and anticipation. |
-| **Primary archetypes** | Grounded Q&A (●), Software Dev (●), Ops Copilot (●), Conversational Agent (●), Content Generation (◐), Data Interpretation (◐) |
+| **Primary archetypes** | Grounded Q&A (●), Content Generation (●), Software Dev (●), Ops Copilot (●), Conversational Agent (●), Data Interpretation (◐) |
+| **Key risks** | Context drift across long conversations; users unable to course-correct effectively; topic bleeding between sessions; context window exhaustion degrading response quality. |
+| **Evaluation signals** | Task completion rate; average turns-to-resolution; conversation abandonment rate; user satisfaction (CSAT/NPS). |
 
 ### F5: Citation & Provenance
 
@@ -109,6 +117,8 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Key patterns** | Source linking, chunk-level attribution, reference tracking, confidence indicators, "known vs. unknown" signals. |
 | **Maturity progression** | **T1**: None → **T2**: Document-level citations → **T3**: Passage-level citations with confidence → **T4**: Full provenance chain including reasoning steps. |
 | **Primary archetypes** | Grounded Q&A (●), Research & Synthesis (●), Governance (●), Summarization & Extraction (●) |
+| **Key risks** | Source misattribution (citing wrong document for a claim); hallucinated citations (citing non-existent sources); citation theater (links present but not claim-accurate); provenance gaps in multi-step reasoning. |
+| **Evaluation signals** | Citation accuracy rate (% of citations that correctly support the cited claim); % of claims with source attribution; user click-through rate on citations. |
 
 ### F6: Adaptive Personalization
 
@@ -118,7 +128,9 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Why it matters** | One-size-fits-all responses reduce relevance and engagement. Personalization drives adoption and value. |
 | **Key patterns** | User/context modeling, preference capture, session and persistent memory, consent management, collaborative filtering. |
 | **Maturity progression** | **T1**: Role-based system prompts → **T2**: Session-level preference tracking → **T3**: Persistent user profiles with memory → **T4**: Adaptive learning with preference evolution. |
-| **Primary archetypes** | Recommendation & Personalization (●), Conversational Agent (●), Content Generation (○), Grounded Q&A (○), Agentic Task (◐) |
+| **Primary archetypes** | Recommendation & Personalization (●), Conversational Agent (●), Content Generation (●), Grounded Q&A (○), Agentic Task (◐) |
+| **Key risks** | Filter bubbles (over-personalization narrowing user exposure); privacy violations from over-collection of preference data; cold-start problem for new users; preference drift without re-learning. |
+| **Evaluation signals** | Recommendation acceptance rate; user preference alignment score; output diversity over time; consent and opt-out compliance rate. |
 
 ### F7: Autonomous Planning & Execution
 
@@ -128,7 +140,9 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Why it matters** | Many valuable tasks require multi-step reasoning and action — beyond what a single LLM call can achieve. |
 | **Key patterns** | ReAct loops, Plan-and-Execute, Reflexion, task decomposition, sub-goal generation, re-planning on failure, state management. |
 | **Maturity progression** | **T2**: Simple chained steps → **T3**: Conditional workflows with tool use → **T4**: Full autonomous planning with reflection and recovery. |
-| **Primary archetypes** | Agentic Task Automation (●), Ops Copilot (●), Research & Synthesis (●), Software Dev (◐), Simulation (◐) |
+| **Primary archetypes** | Agentic Task Automation (●), Ops Copilot (●), Research & Synthesis (●), Simulation (●), Software Dev (◐) |
+| **Key risks** | Goal misinterpretation leading to an incorrect plan; plan looping (infinite retry on failure); unintended side effects from autonomous actions; cost overruns from runaway execution. |
+| **Evaluation signals** | Task completion rate; plan adherence rate; human intervention rate; average steps-to-completion; error recovery success rate. |
 
 ### F8: Tool Orchestration
 
@@ -139,6 +153,8 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Key patterns** | Function calling, MCP (Model Context Protocol), tool descriptions and schemas, automatic tool selection, multi-tool orchestration, sandboxed code execution. |
 | **Maturity progression** | **T1**: None → **T2**: Single predetermined tool → **T3**: Multi-tool with selection logic → **T4**: Dynamic tool discovery and composition. |
 | **Primary archetypes** | Data Interpretation (●), Agentic Task (●), Ops Copilot (●), Software Dev (●), Workflow Automation (●), Research (●) |
+| **Key risks** | Hallucinated tool parameters; API rate limit exhaustion; cascading failures across tool chain; prompt injection via tool outputs; unauthorized tool invocation. |
+| **Evaluation signals** | Tool call success rate; tool selection accuracy (correct tool chosen for the task); average latency per tool invocation; injection attempt detection rate. |
 
 ### F9: Real-Time Data Access
 
@@ -149,6 +165,8 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Key patterns** | SQL/database query tools, API integration, streaming data consumption, data freshness validation, access control enforcement. |
 | **Maturity progression** | **T2**: Single data source queries → **T3**: Multi-source queries with joins/correlation → **T4**: Streaming data with anomaly detection and alerting. |
 | **Primary archetypes** | Data Interpretation (●), Ops Copilot (●), Agentic Task (●), Workflow Automation (◐) |
+| **Key risks** | Stale data from aggressive caching; access control gaps (querying restricted data); data fidelity issues (type coercion, null handling); over-broad queries with cost or security implications. |
+| **Evaluation signals** | Data freshness (age of data returned); query success rate; unauthorized access attempt rate; data quality error rate per query. |
 
 ### F10: Long-Term Memory & Context
 
@@ -159,6 +177,8 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Key patterns** | Episodic memory (events), semantic memory (facts), procedural memory (workflows), memory consolidation, forgetting/pruning, vector-based and structured storage. |
 | **Maturity progression** | **T1**: Stateless → **T2**: Session memory (conversation buffer) → **T3**: Persistent memory across sessions → **T4**: Episodic + semantic memory with consolidation. |
 | **Primary archetypes** | Recommendation (●), Agentic Task (●), Ops Copilot (●), Research & Synthesis (●), Conversational Agent (●) |
+| **Key risks** | Privacy leakage (surfacing one user's stored data to another); memory poisoning from adversarial input stored as fact; unbounded memory growth; GDPR/right-to-erasure compliance gaps. |
+| **Evaluation signals** | Memory retrieval relevance score; session continuity rate (returning users pick up without re-explaining context); false recall rate (incorrect memories retrieved); consent compliance rate. |
 
 ### F11: Human Oversight Gates
 
@@ -169,6 +189,8 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Key patterns** | Approval workflows, confidence-based escalation, risk-based escalation, review queues, override mechanisms, phased autonomy. |
 | **Maturity progression** | **T1**: Optional review → **T2**: Approval before send/publish → **T3**: HITL checkpoints at each critical stage → **T4**: Graduated autonomy with audit. |
 | **Primary archetypes** | Workflow Automation (●), Agentic Task (●), Governance (●), Ops Copilot (●), Software Dev (●), Conversational Agent (●), Summarization (◐) |
+| **Key risks** | Alert fatigue causing rubber-stamp approvals without genuine review; approval bottlenecks slowing time-critical automation; oversight bypass in edge cases; unclear escalation ownership. |
+| **Evaluation signals** | Human review completion rate; override/rejection rate (how often humans reject AI actions); time-to-approve per gate; escalation routing accuracy. |
 
 ### F12: Safety & Content Controls
 
@@ -179,6 +201,8 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Key patterns** | Input guardrails (injection detection, PII masking), output guardrails (toxicity filtering, factuality checking), content classification, DLP integration, behavioral boundaries. |
 | **Maturity progression** | **T1**: Provider content filters → **T2**: Custom filters + PII detection → **T3**: Multi-layer filtering + injection defense → **T4**: Adaptive moderation with adversarial defense. |
 | **Primary archetypes** | All user-facing archetypes (●) |
+| **Key risks** | False positives blocking legitimate content; false negatives passing harmful content; adversarial bypass of guardrails; brittleness against novel attack vectors not in training distribution. |
+| **Evaluation signals** | True/false positive rate on harmful content detection; prompt injection detection rate; policy violation rate in production; red-team bypass rate. |
 
 ### F13: Continuous Learning & Feedback
 
@@ -189,6 +213,8 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Key patterns** | User feedback collection (thumbs up/down, corrections), evaluation datasets, LLM-as-Judge, A/B testing, drift detection, prompt versioning, quality metrics dashboards. |
 | **Maturity progression** | **T1**: Manual review → **T2**: User feedback + basic metrics → **T3**: Continuous evaluation + A/B testing → **T4**: Automated quality gates + drift detection + auto-retraining triggers. |
 | **Primary archetypes** | All production archetypes (●) |
+| **Key risks** | Feedback poisoning from adversarial or low-effort ratings; silent quality drift without detection triggers; biased feedback loops (power users over-represented); feedback fatigue reducing signal quality. |
+| **Evaluation signals** | Feedback collection rate (% of interactions rated); quality metric trend over time (improving/stable/degrading); drift detection alert rate; A/B test win rate on prompt/retrieval improvements. |
 
 ### F14: Multi-Agent Collaboration
 
@@ -199,6 +225,8 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Key patterns** | Supervisor pattern, hierarchical delegation, peer-to-peer, swarm, shared state/blackboard, role-based specialization, A2A protocol. |
 | **Maturity progression** | **T3**: Handoff between 2 specialized agents → **T4**: Full multi-agent orchestration with supervisor, dynamic delegation, and shared memory. |
 | **Primary archetypes** | Agentic Task Automation (●), Software Dev advanced (◐), Research advanced (◐) |
+| **Key risks** | Agent coordination failures (message loss, deadlock); cascading errors across agent network; unbounded delegation (runaway sub-tasks consuming cost/time); shared state corruption; inter-agent trust violations. |
+| **Evaluation signals** | Cross-agent task completion rate; inter-agent communication error rate; end-to-end latency vs. single-agent baseline; human intervention rate for coordination failures. |
 
 ### F15: Auditability & Compliance
 
@@ -209,6 +237,8 @@ Capability Features are **reusable, composable functional facets** that describe
 | **Key patterns** | Immutable audit logging, reasoning traces, decision audit trails, model version tracking, data lineage, compliance dashboards, policy-as-code. |
 | **Maturity progression** | **T1**: Basic request logs → **T2**: User action + output logging → **T3**: Full audit trail with reasoning traces → **T4**: Real-time compliance monitoring + SIEM integration. |
 | **Primary archetypes** | Governance (●), Workflow Automation (●), Agentic Task (●), Ops Copilot (●) |
+| **Key risks** | Incomplete audit trails (logging gaps at system boundaries); unstructured logs resistant to querying; log tampering; excessive log volume without indexing strategy; regulatory gap between what is logged and what is required. |
+| **Evaluation signals** | Audit trail completeness rate (% of decisions with full trace); log query response time; compliance gap detection rate; time-to-produce audit evidence on demand. |
 
 ---
 
@@ -224,14 +254,14 @@ Use this to identify your feature requirements. Start with your archetype (rows)
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | **Archetype** | **Context Grounding** | **Multi-Source Synthesis** | **Structured Output** | **Interactive Refinement** | **Citation & Provenance** | **Adaptive Personal.** | **Autonomous Plan** | **Tool Orchestration** | **Real-Time Data** | **Long-Term Memory** | **Human Oversight** | **Safety Controls** | **Learning & Feedback** | **Multi-Agent** | **Audit & Compliance** |
 | **Group A: Content & Knowledge** | | | | | | | | | | | | | | | |
-| 1. Content Generation | ○ | − | ◐ | ◐ | ○ | ○ | − | − | − | ○ | ○ | ● | ● | − | ○ |
-| 2. Summarization & Extraction | ◐ | ◐ | ● | ○ | ● | − | − | − | − | − | ◐ | ● | ● | − | ◐ |
+| 1. Content Generation | ○ | − | ● | ● | ○ | ● | − | − | − | ○ | ○ | ● | ● | − | ○ |
+| 2. Summarization & Extraction | ● | ◐ | ● | ○ | ● | − | − | − | − | − | ◐ | ● | ● | − | ◐ |
 | 3. Grounded Q&A | ● | ○ | ◐ | ● | ● | ○ | − | ○ | ○ | ◐ | ○ | ● | ● | − | ◐ |
 | 4. Research & Synthesis | ● | ● | ● | ○ | ● | − | ● | ● | ◐ | ● | ◐ | ● | ● | ◐ | ◐ |
 | **Group B: Insight & Decision** | | | | | | | | | | | | | | | |
 | 5. Data Interpretation | ○ | ◐ | ● | ◐ | ◐ | − | ○ | ● | ● | ○ | ◐ | ● | ● | − | ◐ |
-| 6. Recommendation | ◐ | ○ | ◐ | ◐ | ○ | ● | − | ○ | ○ | ● | ○ | ● | ● | − | ◐ |
-| 7. Simulation & Synthetic Data | ○ | ○ | ● | ○ | − | − | ◐ | ◐ | − | − | ◐ | ● | ● | ○ | ◐ |
+| 6. Recommendation | ● | ○ | ◐ | ◐ | ○ | ● | − | ○ | ○ | ● | ○ | ● | ● | − | ◐ |
+| 7. Simulation & Synthetic Data | ○ | ○ | ● | ○ | − | − | ● | ◐ | − | − | ◐ | ● | ● | ○ | ◐ |
 | **Group C: Process & Automation** | | | | | | | | | | | | | | | |
 | 8. Software Dev Acceleration | ● | ◐ | ● | ● | ◐ | ○ | ◐ | ● | ○ | ◐ | ● | ● | ● | ◐ | ◐ |
 | 9. Structured Workflow Auto. | ◐ | − | ● | ○ | ○ | − | ◐ | ● | ◐ | ◐ | ● | ● | ● | − | ● |
@@ -249,6 +279,20 @@ Use this to identify your feature requirements. Start with your archetype (rows)
 
 This tells you: *A Grounded Q&A system must at minimum be grounded in curated knowledge, cite its sources, support multi-turn refinement, have safety guardrails, and include feedback mechanisms.*
 
+### When ◐ Becomes ●: Decision Guidance
+
+For ◐ (Often Needed) features, evaluate against your **Four Architectural Dimensions** to determine if they become required for your specific implementation:
+
+| Feature | Upgrade to ● when… |
+|---------|---------------------|
+| **F1 (Contextual Grounding)** | Grounding Strategy = Curated (RAG) or Live (Tool Use) — i.e., anytime domain accuracy matters |
+| **F5 (Citation & Provenance)** | F1 is ● — grounding without citation is incomplete; users cannot verify what they cannot trace |
+| **F10 (Long-Term Memory)** | Interaction Model = Conversational *and* users are recurring — every returning user expects continuity |
+| **F11 (Human Oversight)** | Autonomy Level = Semi-Autonomous or Fully Autonomous — and any action is irreversible |
+| **F15 (Auditability)** | Governance Posture includes regulatory compliance (healthcare, finance, government) |
+| **F14 (Multi-Agent)** | A single agent cannot complete the task within context limits or requires parallel specialist workstreams |
+| **F9 (Real-Time Data)** | Decisions require data fresher than your knowledge base update cycle (typically sub-hour for ops, sub-day for analytics) |
+
 ---
 
 ## Matrix B: Capability Features → Technical Components
@@ -259,7 +303,9 @@ Use this after Matrix A. For each feature you identified as required, read acros
 
 **Legend**: ● Primary enabler | ◐ Supporting role | ○ Optional/context-dependent | − Not involved
 
-| | Foundation Models | Prompting | RAG / Retrieval | Output Processing | Context Mgmt | Memory Systems | Reasoning & Planning | Tools & Functions | Agents | Workflow Orchestration | HITL Patterns | Guardrails & Safety | Evaluation & Testing | Observability & Infra |
+*Note: Column names align with the primary capability component categories in [04-technical-components.md](04-technical-components.md). **"Observability & Infrastructure"** combines §5.3 Infrastructure & §5.4 Observability. The expanded Operational Excellence catalog (§5.5 Cost Management through §5.11 Incident Response — see 04-technical-components.md §5) covers production prerequisites that are cross-cutting requirements rather than feature-specific enablers, so they are not represented as columns here. Two additional capability components are also not columns in this matrix — see the note after the matrix.*
+
+| | Foundation Models | Prompting | RAG & Retrieval | Output Processing | Context Management | Memory Systems | Reasoning & Planning | Tool Use & Functions | Agentic Architectures | Workflow Orchestration | HITL Patterns | Safety & Guardrails | Evaluation & Testing | Observability & Infrastructure |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | **F1: Contextual Grounding** | ● | ● | ● | ○ | ● | − | ○ | − | − | − | − | ○ | ● | ◐ |
 | **F2: Multi-Source Synthesis** | ● | ● | ● | ● | ● | ◐ | ● | ◐ | ◐ | ◐ | − | − | ● | ◐ |
@@ -277,12 +323,25 @@ Use this after Matrix A. For each feature you identified as required, read acros
 | **F14: Multi-Agent Collaboration** | ● | ● | ○ | ○ | ● | ● | ● | ● | ● | ● | ◐ | ● | ● | ● |
 | **F15: Auditability & Compliance** | − | − | − | − | − | − | − | − | − | ◐ | ● | ● | ● | ● |
 
+### Components Not Represented as Matrix B Columns
+
+Two capability components in [04-technical-components.md](04-technical-components.md) are structural prerequisites rather than feature-specific runtime enablers, so they are not columns in Matrix B:
+
+| Component | Section | Relationship to Features |
+|---|---|---|
+| **Model Selection & Customization Strategy** | §1.3 | Underpins *all* features — model capability and adaptation approach (the customization ladder) set the performance ceiling for every feature in the stack. Evaluate before finalising any other component choice. |
+| **Agent Runtime & Deployment** | §4.4 | Production infrastructure prerequisite for **F7** (Autonomous Planning) and **F14** (Multi-Agent Collaboration). Any T3/T4 deployment that includes these features requires a hosting pattern, session lifecycle management, and compute isolation. |
+
+Additionally, the **Operational Excellence** components §5.5–§5.11 (Cost Management, Resilience, Performance, DevOps, Data Governance, Identity & Authorization, Incident Response) are production requirements that apply across all features — not feature-specific enablers. See §5 of [04-technical-components.md](04-technical-components.md) for the full OE catalog.
+
+---
+
 ### How to Read Matrix B
 
 **Example**: You need **Contextual Grounding (F1)** for your Grounded Q&A system:
 - **Primary enablers (●)**: Foundation Models, Prompting, RAG/Retrieval, Context Management, Evaluation & Testing
 - **Supporting (◐)**: Observability & Infrastructure
-- **Optional (○)**: Output Processing, Reasoning & Planning, Guardrails & Safety
+- **Optional (○)**: Output Processing, Reasoning & Planning, Safety & Guardrails
 
 This tells you: *Contextual Grounding primarily requires a solid RAG pipeline backed by good prompting, context management, and evaluation — with observability to monitor retrieval quality.*
 
@@ -312,13 +371,13 @@ This tells you: *Contextual Grounding primarily requires a solid RAG pipeline ba
 |-----------|-----------|----------|
 | Foundation Models | F1, F4, F12 | Essential |
 | Prompting | F1, F4, F5 | Essential |
-| RAG / Retrieval | F1, F5 | Essential |
+| RAG & Retrieval | F1, F5 | Essential |
 | Output Processing | F5 | Essential (for citations) |
 | Context Management | F1, F4 | Essential |
 | Memory Systems | F4 | Important (conversation history) |
-| Guardrails & Safety | F12 | Essential |
+| Safety & Guardrails | F12 | Essential |
 | Evaluation & Testing | F1, F5, F12, F13 | Essential |
-| Observability & Infra | F1, F5, F12, F13 | Essential |
+| Observability & Infrastructure | F1, F5, F12, F13 | Essential |
 
 **Step 4: Apply Component Selection Guide** → Evaluate each component using the Seven Questions.
 
@@ -372,6 +431,39 @@ Some features naturally cluster together. Understanding these affinities helps p
 
 ---
 
+## Feature Dependencies
+
+Some features are only effective when combined with others. Selecting a feature without its dependencies produces an incomplete or dysfunctional implementation.
+
+| Feature | Depends On | Reason |
+|---------|-----------|--------|
+| **F5 (Citation & Provenance)** | F1 (Contextual Grounding) | You cannot cite sources without retrieving them — F5 without F1 produces citations with nothing to attribute. |
+| **F7 (Autonomous Planning)** | F8 (Tool Orchestration) | Planning without execution tools has no real-world effect — plans need actions. |
+| **F9 (Real-Time Data Access)** | F8 (Tool Orchestration) | Live data access requires tool invocation to query external systems. |
+| **F14 (Multi-Agent Collaboration)** | F7 (Autonomous Planning) + F8 (Tool Orchestration) | Agent coordination requires each agent to plan and act; without these, "agents" are just parallel LLM calls. |
+| **F6 (Adaptive Personalization)** | F10 (Long-Term Memory) | Personalization beyond a single session requires cross-session persistence; without it, every session starts cold. |
+| **F11 (Human Oversight Gates)** | F15 (Auditability & Compliance) | Oversight decisions must be logged to be meaningful — approvals without records are unauditable. |
+| **F13 (Learning & Feedback)** | F15 (Auditability & Compliance) | Feedback loops require logging infrastructure to capture signals and track improvement over time. |
+
+**Implication**: When Matrix A marks a feature as ● or ◐ for your archetype, trace its dependencies above and include those features too — even if they initially appear optional.
+
+---
+
+## Anti-Patterns to Avoid
+
+| Anti-Pattern | Problem | Remedy |
+|---|---|---|
+| **Feature bloat** | Selecting all 15 features "just in case," over-engineering from day one. | Start with the ● features for your archetype. Add ◐ features only when an Architectural Dimension or context clearly demands it. |
+| **Missing the foundation** | Selecting F7/F8/F14 (Action Cluster) without first establishing F12 (Safety) and F11 (Oversight). | The Foundation Cluster (F12, F13, F15) is never optional in production. Instrument it from the start, regardless of archetype. |
+| **Citation theater** | Marking F5 as required but only implementing document-level links, not claim-level attribution. | Be explicit about your F5 maturity tier. T2 (document links) is better than nothing, but don't present it as full provenance. |
+| **Personalization without consent** | Implementing F6 (Adaptive Personalization) without a consent management and data retention strategy. | Pair F6 with explicit privacy controls. Review data minimization requirements before building user profiles. |
+| **Planning without guardrails** | Implementing F7 (Autonomous Planning) without F11 (Human Oversight) for irreversible actions. | Every autonomous plan that can cause irreversible real-world effects must have at least one human checkpoint. |
+| **Feedback without action** | Implementing F13 feedback collection but never closing the loop — signals are collected but no one reviews or acts on them. | Assign ownership to feedback review. Set an explicit cadence for quality reviews and triggered improvement actions. |
+| **Audit as afterthought** | Treating F15 (Auditability) as a Phase 3 concern, only to discover retrofitting audit trails requires architectural changes. | Instrument logging from day one, even at T1. Basic request/response logs are cheap; retroactive tracing is expensive. |
+| **Dependency blindness** | Selecting F14 (Multi-Agent) without ensuring F7 and F8 are in place at each agent level. | Before selecting a feature, check the Feature Dependencies table above and include all prerequisite features. |
+
+---
+
 ## Related Documents
 
 - **[01-overview.md](01-overview.md)** — Start here for navigation
@@ -386,4 +478,6 @@ Some features naturally cluster together. Understanding these affinities helps p
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.2 | 2026-03-01 | Updated Matrix B footnote to acknowledge expanded OE catalog (§5.5–§5.11). Added "Components Not Represented as Matrix B Columns" section covering §1.3 Model Selection & Customization Strategy and §4.4 Agent Runtime & Deployment. Aligned with 04-technical-components.md v5.4. |
+| 1.1 | 2026-03-01 | Reconciled Matrix A with 02-use-case-archetypes.md (upgraded F3/F4/F6 for Content Generation, F1 for Summarization & Recommendation, F7 for Simulation). Updated feature card Primary Archetypes accordingly. Renamed Matrix B columns to align with 04-technical-components.md. Added Key Risks and Evaluation Signals to all 15 feature cards. Added ◐ Decision Guidance section. Added Feature Dependencies section. Added Anti-Patterns section. |
 | 1.0 | 2026-02-27 | Initial creation. 15 capability features defined. Matrix A (Archetypes→Features) and Matrix B (Features→Components) created. Feature detail cards, worked example, and affinity map added. |

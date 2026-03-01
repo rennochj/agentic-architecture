@@ -1,6 +1,6 @@
 # Generative AI & Agentic Use Case Archetypes
 
-*Version 5.4. Last Updated: 2026-02-28*
+*Version 5.4. Last Updated: 2026-03-01*
 
 This document defines the 13 use case archetypes that form Layer 1 of the GenAI & Agentic Architecture Framework. Each archetype represents a distinct job-to-be-done — the core value a GenAI solution delivers, independent of its interaction style or implementation complexity.
 
@@ -476,6 +476,7 @@ Use this framework to guide design and risk management, moving from a high-level
 Use this to assess organizational readiness by archetype group.
 
 ### Foundation (Required for Group A: Content & Knowledge)
+- [ ] Model selection strategy defined (customization ladder evaluated; foundation model or fine-tuned variant chosen with evidence — see §1.3 of 04-technical-components.md)
 - [ ] Reliable base models selected and deployed
 - [ ] Basic prompt engineering practices established
 - [ ] Content safety filters configured
@@ -489,6 +490,7 @@ Use this to assess organizational readiness by archetype group.
 
 ### Autonomy (Required for Group C: Process & Automation)
 - [ ] Agent execution framework tested
+- [ ] Agent runtime and deployment infrastructure provisioned (hosting pattern selected, session lifecycle managed, compute isolation confirmed — see §4.4 of 04-technical-components.md)
 - [ ] Human-in-the-loop workflows designed
 - [ ] Full observability and tracing operational
 - [ ] State management and recovery proven
@@ -510,6 +512,7 @@ Use this to assess organizational readiness by archetype group.
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.4 | 2026-03-01 | Updated Agentic Readiness Checklist: added model selection prerequisite to Foundation tier (§1.3) and agent runtime/deployment infrastructure to Autonomy tier (§4.4). Aligned with 04-technical-components.md v5.4. |
 | 5.4 | 2026-02-28 | Renamed Group B from "Insight & Decision Support" to "Insight & Decision Intelligence" to acknowledge the full spectrum from advisory to autonomous decision-making. Updated archetype 5 and 6 descriptions accordingly. Added Scope & Boundaries section to 01-overview.md. |
 | 5.3 | 2026-02-28 | Added Archetype 13: Conversational Agent. The most widely deployed GenAI use case (customer service, sales, coaching) warranted a dedicated archetype rather than relying on multi-archetype composition. |
 | 5.2 | 2026-02-28 | Reordered: Quick Reference promoted to Part 1, Four Architectural Dimensions moved to Part 2 (after archetypes are established). Updated "How to use" instructions accordingly. |
