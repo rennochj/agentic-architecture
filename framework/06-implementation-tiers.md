@@ -1,6 +1,6 @@
 # GenAI Use Case to Technical Component Mapping
 
-*Version 4.0. Last Updated: 2026-02-27*
+*Version 5.5. Last Updated: 2026-03-03. Aligned with Framework v5.5.*
 
 A systematic mapping of use cases to their supporting technical components, organized by implementation complexity tier and maturity layer. This document helps you plan how to build your GenAI solution by connecting your identified archetypes and features to concrete architecture patterns.
 
@@ -62,6 +62,8 @@ This matrix shows **what each capability feature looks like at each tier**. Use 
 | **F15** Auditability & Compliance | Basic request logs | User action + output logging | Full audit trail with reasoning traces | Real-time compliance monitoring + SIEM integration |
 
 **How to read this**: Find the features your archetype requires (from Matrix A in [03-capability-features.md](03-capability-features.md)), then read across to your target tier. This tells you exactly what level of that feature you can deliver — and whether you need to move up a tier to meet your requirements.
+
+> **Authoritative source**: This matrix is the authoritative reference for feature maturity by tier. The "Maturity progression" rows in the feature detail cards in [03-capability-features.md](03-capability-features.md) summarize the same information — if they diverge, this matrix governs.
 
 ### Complexity Dimensions
 
@@ -406,6 +408,18 @@ Components: 20-35+ | Latency: Minutes-Hours | Cost: $$$$
 
 ## 7. NFR Implementation Checklists
 
+> **Relationship to 04-technical-components.md**: These checklists provide **tier-specific readiness gates** — what to implement at T1 vs. T4. For **implementation guidance** on each domain (patterns, anti-patterns, and detailed technical decisions), see the corresponding Operational Excellence section in [04-technical-components.md](04-technical-components.md):
+>
+> | NFR Domain (this document) | OE Section (04) |
+> |---|---|
+> | Security | §5.1 Safety & Guardrails, §5.10 Identity & Authorization |
+> | Performance | §5.7 Performance & Latency Management |
+> | Resilience | §5.6 Resilience & Fault Tolerance |
+> | Observability | §5.4 Observability |
+> | DevOps | §5.8 DevOps & Change Management |
+> | Cost Management | §5.5 Cost Management & Budget Controls |
+> | Compliance | §5.9 Data Readiness & Knowledge Governance, §5.10 Identity, §5.11 Incident Response |
+
 ### T1 (Basic)
 - [ ] API keys stored securely (not in code)
 - [ ] TLS/HTTPS for all API calls
@@ -483,6 +497,41 @@ Components: 20-35+ | Latency: Minutes-Hours | Cost: $$$$
 
 ---
 
+## 9. Upgrading an Existing System
+
+Most teams are not starting greenfield — they have a running T1 or T2 system and want to add capabilities. Tier upgrades are not simple feature additions; they introduce architectural changes that affect the entire stack.
+
+### Assessing Your Current Tier
+
+Map your existing system against the tier characteristics in §1:
+
+| Signal | You're At |
+|---|---|
+| Single LLM call, no retrieval, no tools | T1 |
+| RAG in place, basic memory, structured output | T2 |
+| Multi-step workflows, tool use, conditional logic, HITL gates | T3 |
+| Autonomous planning, multi-agent, self-correction | T4 |
+
+If you straddle two tiers (e.g., RAG + one tool but no workflow orchestration), you're at the lower tier with a partial step toward the next.
+
+### What Changes When Moving Up
+
+| Upgrade | New Components Required | New NFRs Required | Common Pitfalls |
+|---|---|---|---|
+| **T1 → T2** | RAG pipeline, vector DB, embedding model, conversation memory, output parsing | Structured logging, request tracing, PII detection, CI/CD, spending alerts | Underestimating chunking/embedding quality; skipping evaluation pipeline |
+| **T2 → T3** | Workflow orchestration, tool integration, state management, HITL checkpoints, error recovery | Distributed tracing, circuit breakers, fine-grained permissions, prompt injection defense, policy-as-code | Retrofitting observability across steps; missing human oversight gates for tool actions; tool permission sprawl |
+| **T3 → T4** | Planning engine, agent runtime, multi-agent coordination, shared memory, dynamic tool selection | Zero-trust architecture, agent sandboxing, full state persistence, predictive alerting, graduated autonomy | Underestimating agent failure modes; runaway cost without budget controls; insufficient kill-switch infrastructure |
+
+### Upgrade Principles
+
+1. **Retrofit the OE layer first** — Before adding agentic capabilities to a T2 system, ensure the T3 NFR checklist (§7) is satisfied. Observability, error handling, and security gaps become critical failures at higher tiers.
+2. **Add evaluation before adding autonomy** — If you don't have a golden dataset and evaluation pipeline, build those before adding autonomous planning. You cannot safely grant autonomy to a system you cannot measure.
+3. **Expand the action space incrementally** — Don't give a new agent access to all tools at once. Start with read-only tools, validate behavior, then add write tools one at a time with explicit human approval gates.
+4. **Budget for data readiness** — Higher tiers typically require richer data. Moving to T3 tool use requires documented API schemas. Moving to T4 multi-agent requires shared memory infrastructure. Run the Data Readiness Gate (02-use-case-archetypes.md, Part 5) against the new tier's requirements.
+5. **Don't skip tiers** — A jump from T1 to T4 is almost always a project failure. Each tier builds operational maturity that the next tier depends on.
+
+---
+
 ## Related Documents
 
 - **[01-overview.md](01-overview.md)** — Start here
@@ -497,6 +546,7 @@ Components: 20-35+ | Latency: Minutes-Hours | Cost: $$$$
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.5 | 2026-03-03 | Aligned with Framework v5.5. Added NFR↔OE cross-reference mapping table at §7 linking each NFR domain to its corresponding OE section in 04-technical-components.md. Added §9 Upgrading an Existing System (brownfield guidance: tier assessment, upgrade requirements, principles). Added authoritative source note to Feature Maturity by Tier matrix. |
 | 4.0 | 2026-02-27 | Refactored: extracted platform selection (Sections 7.0-7.13) to separate document. Harmonized layer terminology. Replaced 15-column matrix with two-matrix approach in capability-features.md. Retained maturity progressions, stack patterns, NFR framework, and checklists. |
 | 3.0 | 2026-01-18 | Added platform selection guide. |
 | 2.0 | 2026-01-18 | Added NFR framework. |

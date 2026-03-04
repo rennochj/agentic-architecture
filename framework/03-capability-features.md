@@ -1,6 +1,6 @@
 # Capability Features: The Bridge Between Use Cases and Components
 
-*Aligned with GenAI & Agentic Architecture Framework v5.4. Last Updated: 2026-03-01*
+*Version 5.5. Last Updated: 2026-03-03. Aligned with Framework v5.5.*
 
 > **The Core Insight**: Use case archetypes tell you *what job to do*. Technical components tell you *what to build*. Capability Features explain *what functional capabilities the solution must exhibit* — they are the bridge that makes component selection purposeful.
 
@@ -385,6 +385,37 @@ This tells you: *Contextual Grounding primarily requires a solid RAG pipeline ba
 
 ---
 
+## Matrix C: Archetypes → Technical Components (Quick Lookup)
+
+This matrix answers: **"What components does my archetype need?"** — collapsing the two-step Matrix A × Matrix B lookup into a single reference.
+
+Derived by tracing each archetype's required (●) features through Matrix B's primary (●) enablers. **Universal components** (Foundation Models, Prompting, Safety & Guardrails, Evaluation & Testing, Observability & Infrastructure) are required by every archetype and omitted from the table to highlight differentiating components.
+
+| # | Archetype | Differentiating Components (beyond universals) | Min Tier |
+|---|-----------|----------------------------------------------|----------|
+| **Group A: Content & Knowledge** | | | |
+| 1 | Content Generation | Output Processing · Context Management · Memory Systems | T1 |
+| 2 | Summarization & Extraction | RAG & Retrieval · Output Processing · Context Management | T1 |
+| 3 | Grounded Q&A | RAG & Retrieval · Output Processing · Context Management · Memory Systems | T2 |
+| 4 | Research & Synthesis | RAG & Retrieval · Output Processing · Context Management · Memory Systems · Reasoning & Planning · Tool Use · Agentic Architectures · Workflow Orchestration | T3 |
+| **Group B: Insight & Decision** | | | |
+| 5 | Data Interpretation | Output Processing · Tool Use & Functions | T2 |
+| 6 | Recommendation | RAG & Retrieval · Context Management · Memory Systems | T2 |
+| 7 | Simulation & Synthetic Data | Output Processing · Context Management · Memory Systems · Reasoning & Planning · Tool Use · Agentic Architectures · Workflow Orchestration | T2 |
+| **Group C: Process & Automation** | | | |
+| 8 | Software Dev Acceleration | RAG & Retrieval · Output Processing · Context Management · Memory Systems · Tool Use · Workflow Orchestration · HITL Patterns | T2 |
+| 9 | Structured Workflow Automation | Output Processing · Tool Use · Workflow Orchestration · HITL Patterns | T2 |
+| 10 | Agentic Task Automation | RAG & Retrieval · Output Processing · Context Management · Memory Systems · Reasoning & Planning · Tool Use · Agentic Architectures · Workflow Orchestration · HITL Patterns | T3 |
+| 11 | Ops & Monitoring Copilot | RAG & Retrieval · Output Processing · Context Management · Memory Systems · Reasoning & Planning · Tool Use · Agentic Architectures · Workflow Orchestration · HITL Patterns | T3 |
+| 12 | AI Governance & Assurance | RAG & Retrieval · Output Processing · Context Management · Reasoning & Planning · Workflow Orchestration · HITL Patterns | T2 |
+| 13 | Conversational Agent | RAG & Retrieval · Context Management · Memory Systems · Workflow Orchestration · HITL Patterns | T2 |
+
+**Universal components** (required by all archetypes): Foundation Models (§1.1) · Prompting (§1.2) · Safety & Guardrails (§5.1) · Evaluation & Testing (§5.2) · Observability & Infrastructure (§5.3-5.4). Additionally, Model Selection Strategy (§1.3) and Data Readiness Assessment (§5.9.0) are structural prerequisites for all archetypes.
+
+**How to use**: Find your archetype, note the differentiating components, add the universals, then evaluate each component using the Seven Questions in [05-component-selection-guide.md](05-component-selection-guide.md). For ◐ (Often Needed) features not reflected here, trace them manually through Matrix A → Matrix B.
+
+---
+
 ## Feature Affinity Map
 
 Some features naturally cluster together. Understanding these affinities helps plan phased delivery:
@@ -478,6 +509,7 @@ Some features are only effective when combined with others. Selecting a feature 
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.5 | 2026-03-03 | Aligned version numbering with Framework v5.5. Added Matrix C: Archetypes → Technical Components (pre-computed lookup collapsing Matrix A × Matrix B for all 13 archetypes, with universal components factored out). |
 | 1.2 | 2026-03-01 | Updated Matrix B footnote to acknowledge expanded OE catalog (§5.5–§5.11). Added "Components Not Represented as Matrix B Columns" section covering §1.3 Model Selection & Customization Strategy and §4.4 Agent Runtime & Deployment. Aligned with 04-technical-components.md v5.4. |
 | 1.1 | 2026-03-01 | Reconciled Matrix A with 02-use-case-archetypes.md (upgraded F3/F4/F6 for Content Generation, F1 for Summarization & Recommendation, F7 for Simulation). Updated feature card Primary Archetypes accordingly. Renamed Matrix B columns to align with 04-technical-components.md. Added Key Risks and Evaluation Signals to all 15 feature cards. Added ◐ Decision Guidance section. Added Feature Dependencies section. Added Anti-Patterns section. |
 | 1.0 | 2026-02-27 | Initial creation. 15 capability features defined. Matrix A (Archetypes→Features) and Matrix B (Features→Components) created. Feature detail cards, worked example, and affinity map added. |

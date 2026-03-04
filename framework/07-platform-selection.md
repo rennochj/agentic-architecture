@@ -1,8 +1,10 @@
 # GenAI Platform Selection Guide
 
-*Version 4.0. Last Updated: 2026-02-27*
+*Version 5.5. Last Updated: 2026-03-03. Aligned with Framework v5.5.*
 
 A comprehensive guide for evaluating and selecting GenAI implementation platforms. This document helps you compare platform options, assess organizational fit, model total cost of ownership, and make defensible architecture decisions.
+
+> **Platform landscape caveat**: GenAI platform capabilities evolve rapidly. The capability matrices and product comparisons in this document reflect the landscape as of early 2026. Before making platform decisions, validate specific capability claims against current vendor documentation. **Prioritize the decision framework** (Sections 3-6: decision trees, TCO model, organizational fit, scorecard) **over specific capability ratings** (Section 2) — the framework is durable; the ratings are perishable. We recommend reviewing Section 2 quarterly.
 
 ---
 
@@ -755,5 +757,6 @@ TRAINING INVESTMENT BY TIER
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.5 | 2026-03-03 | Aligned with Framework v5.5. Added platform landscape caveat noting the perishable nature of capability ratings and recommending quarterly review of Section 2. |
 | 4.0 | 2026-02-27 | Extracted from 06-implementation-tiers.md as standalone document. Consolidated platform selection framework (former Sections 7.0-7.13), TCO framework, organizational fit assessment, hybrid patterns, skills/team composition, risk matrix, integrated scorecard, and quick reference guides. Added AI maturity model and skills pathways. |
 | 3.0 | 2026-01-18 | Original platform selection content (within mapping doc). |

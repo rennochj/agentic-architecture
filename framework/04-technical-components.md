@@ -1,6 +1,6 @@
 # Technical Components of Generative AI & Agentic AI Solutions
 
-*Version 5.4. Last Updated: 2026-03-01*
+*Version 5.5. Last Updated: 2026-03-03*
 
 A comprehensive catalog of the technical building blocks that comprise modern GenAI and Agentic AI systems. This document is the Layer 3 reference for the GenAI & Agentic Architecture Framework.
 
@@ -48,13 +48,47 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 │  Infrastructure & Deployment · Observability ·                   │
 │  Cost Management · Resilience & Fault Tolerance ·                │
 │  Performance & Latency · DevOps & Change Management ·            │
-│  Data & Knowledge Governance · Identity, Access & Authz ·        │
+│  Data Readiness & Knowledge Governance · Identity, Access & Authz ·│
 │  Incident Response & AI Operations Runbooks                      │
 │                                                                  │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 > **Note on layer assignment**: Layer labels reflect where a component's core complexity lives. Many components span tiers — for example, Agentic Prompting (§1.2.4) lives in the Foundation Layer but applies at T3-T4. For component maturity by tier, see the Feature Maturity matrix in [06-implementation-tiers.md](06-implementation-tiers.md). For component interdependencies and dependency graphs, see §6 of [06-implementation-tiers.md](06-implementation-tiers.md).
+
+### Section Index
+
+| § | Section | Subsections |
+|---|---------|-------------|
+| **1** | **Foundation Layer** | |
+| 1.1 | Foundation Models | Model Types · Architectures · Adaptation · Optimization |
+| 1.2 | Prompting Techniques | Basic · Reasoning · Decomposition · Agentic · Advanced · Optimization · Role & Persona |
+| 1.3 | Model Selection & Customization Strategy | Selection Dimensions · Customization Ladder · Evaluation Methodology · Fine-Tuning · Distillation |
+| **2** | **Augmentation Layer** | |
+| 2.1 | RAG & Information Retrieval | RAG Patterns · Architectures · Vector Storage · Document Processing · Knowledge Integration |
+| 2.2 | Output Processing & Structured Generation | Structured Output · Constraints · Parsing & Validation · Enhancement |
+| **3** | **Orchestration Layer** | |
+| 3.1 | Context Management | Context Window Strategies · Information Prioritization · Multi-Turn Management |
+| 3.2 | Memory Systems | Short-Term · Long-Term · Management · Shared & Distributed |
+| 3.3 | Reasoning & Planning | Reasoning Types · Planning Approaches · Advanced Reasoning |
+| 3.4 | Tool Use & Function Calling | Function Calling · Tool Types · Integration Patterns · Code Execution |
+| **4** | **Autonomy Layer** | |
+| 4.1 | Agentic Architectures | Single-Agent Patterns · Multi-Agent Systems · Agent Components · Agent Frameworks |
+| 4.2 | Workflow Orchestration | Flow Patterns · Graph-Based · State Management · Error Handling |
+| 4.3 | Human-in-the-Loop Patterns | Interaction Modes · Escalation Patterns · User Experience |
+| 4.4 | Agent Runtime & Deployment | Hosting Patterns · Session Lifecycle · Compute & Isolation · Managed vs. Self-Hosted |
+| **5** | **Operational Excellence (Cross-Cutting)** | |
+| 5.1 | Safety, Guardrails & Alignment | Input Guardrails · Output Guardrails · Alignment · Security |
+| 5.2 | Evaluation & Testing | Types · Metrics · Testing Strategies · Testability by Design |
+| 5.3 | Infrastructure & Deployment | Model Serving · API Management · Caching · Cost Optimization |
+| 5.4 | Observability | Deep Tracing · Monitoring · Logging · Analytics & Alerting |
+| 5.5 | Cost Management & Budget Controls | Budget Guardrails · Cost Attribution · Model Economics · Spend Observability |
+| 5.6 | Resilience & Fault Tolerance | Multi-Provider Failover · Graceful Degradation · State Recovery · Agent Failure Modes |
+| 5.7 | Performance & Latency Management | Latency Budgeting · Parallelism · Throughput · Perceived Performance |
+| 5.8 | DevOps & Change Management | Prompt Versioning · Model Lifecycle · AI-Native CI/CD · Safe Deployment |
+| 5.9 | Data Readiness & Knowledge Governance | **Data Readiness Assessment** · Corpus Lifecycle · Data Quality Pipelines · PII & Sensitive Data · Index Operations · **Structured Data Readiness** |
+| 5.10 | Identity, Access & Authorization | Model Access Controls · Agent Authorization · Credential Management · Multi-Tenant Isolation |
+| 5.11 | Incident Response & AI Operations Runbooks | Incident Classification · Kill Switches · Post-Incident Analysis · Operational Playbooks |
 
 ---
 
@@ -840,9 +874,22 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 
 ---
 
-### 5.9 Data & Knowledge Governance
+### 5.9 Data Readiness & Knowledge Governance
 
-*RAG and fine-tuning systems are only as good as the data they depend on. The framework covers RAG as a capability (§2) and Safety as a content concern (§5.1), but neither addresses the operational lifecycle of the data and knowledge assets themselves. Data governance for AI is distinct from traditional data governance: vector indices have staleness, documents have authority hierarchies, and PII embedded in a chunk propagates into every response that retrieves it. These concerns require dedicated operational processes.*
+*Data is the most underestimated prerequisite of every AI project. Poor data is the leading cause of failed GenAI deployments — not model quality, not infrastructure, not prompting. This section addresses two distinct concerns: **Data Readiness** (the pre-project assessment of whether data is fit for purpose) and **Data Quality Operations** (the ongoing operational management of data assets once the system is built). RAG and fine-tuning systems are only as good as the data they depend on, and agents querying structured data are only as reliable as the semantic quality of the schemas they navigate. These concerns require dedicated treatment at both the architecture and operations layer.*
+
+#### 5.9.0 Data Readiness Assessment
+
+*A pre-project structured evaluation of whether available data can support the intended use case. Conducted before committing to an architecture — not after. Data readiness gaps discovered at this stage cost hours to fix; discovered post-build, they cost months.*
+
+- **Domain Coverage Audit** — Map the knowledge domains, topics, time ranges, languages, and user segments the system must serve; compare against what data actually exists. Quantify gaps as a coverage percentage. *A 70% coverage corpus will hallucinate on the remaining 30% — know your gaps before they become production incidents.*
+- **Data Format & Parsability Assessment** — Inventory source data formats (PDFs, databases, APIs, logs, Office documents, images); identify what preprocessing is required and estimate effort. Flag blockers: scanned PDFs requiring OCR, proprietary binary formats, password-protected files, data locked behind manual-export-only interfaces.
+- **Data Volume & Density Evaluation** — Assess whether data volume is sufficient for the use case. For RAG: sufficient coverage depth per topic. For fine-tuning: sufficient labeled examples (typically 500–2,000 for task-specific fine-tuning). For analytics agents: sufficient historical depth for trend detection. *Volume without quality is noise; prioritize representative quality over raw quantity.*
+- **Baseline Quality Sampling** — Sample 50–100 representative items and audit for accuracy, completeness, consistency, and recency. Define a minimum acceptable quality floor *before* ingestion; reject below-floor content rather than degrading the system silently.
+- **Access & Licensing Clearance** — Confirm that all data sources are legally and contractually cleared for AI use (retrieval, inference, and training where applicable). For PII/PHI: Privacy Impact Assessment completed. For third-party data: AI-use terms explicitly permitted. For internal data: data owner approval obtained. *Document clearance status per source — one uncleaned source can expose the entire system to legal risk.*
+- **Source Authority Classification** — Before building ingestion pipelines, classify each source as primary (authoritative, first-party), secondary (derivative, reviewed), or tertiary (user-generated, unverified). Apply retrieval weighting and confidence indicators accordingly. *Treating a user forum post with the same authority as an official policy document is a trust and accuracy risk.*
+- **Representative Bias Check** — Assess whether the data reflects the population and scenarios the system will serve in production. Identify known coverage gaps, demographic skews, historical biases, and time-period concentrations. *A corpus dominated by one business unit, region, or time period will produce confidently incorrect answers for everything outside it.*
+- **Structured Data Semantic Quality** — For agents that query databases or BI tools: assess schema documentation completeness, data dictionary coverage, meaningful column/table naming, referential integrity, and the availability of sample queries. *An agent querying a database with undocumented column names and no data dictionary will generate plausible-looking but incorrect SQL.*
 
 #### 5.9.1 Corpus Lifecycle Management
 
@@ -871,6 +918,18 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 - **Multi-Index Management** — For systems with multiple RAG indices (by domain, by access tier, by language), maintain a registry of indices with their ownership, refresh cadence, and access control list.
 - **Index Health Monitoring** — Track index size, embedding coverage, retrieval latency, and null-retrieval rate; anomalies (e.g., sudden drop in retrieval quality) often indicate a corpus issue rather than a model issue.
 - **Corpus Snapshots for Reproducibility** — For regulated use cases, maintain point-in-time snapshots of the corpus so that a specific decision can be re-evaluated against the exact knowledge state that was active at the time.
+
+#### 5.9.5 Structured & Relational Data Readiness
+
+*Agents that query databases, data warehouses, or BI tools operate on structured data rather than document corpora. The readiness concerns differ significantly from RAG: the challenge is not chunking and embedding text, but enabling accurate query generation against schemas that are often underdocumented, inconsistently named, and designed for human developers — not LLMs.*
+
+- **Schema Documentation & Semantic Layer** — Maintain a machine-readable schema registry with human-readable descriptions for every table and column; supplement with a semantic layer that maps business concepts ("monthly revenue") to underlying fields ("SUM(orders.amount) WHERE status='completed'"). *Without a semantic layer, SQL-generating agents will produce syntactically valid but semantically wrong queries.*
+- **Data Dictionary Completeness** — Document field-level metadata: data type, allowed values, business definition, update frequency, and owning team. Assess dictionary coverage as a percentage before building any SQL-generation or analytics capability; target >90% coverage of columns the agent will query.
+- **Referential Integrity Validation** — Verify that foreign key constraints, join relationships, and lookup tables are consistent; LLM-generated joins on broken referential integrity produce silently wrong results. Run automated integrity checks on a scheduled cadence and alert on violations before they reach production queries.
+- **Sample Query Library** — Maintain a curated library of validated reference queries that cover common business questions; use these as few-shot examples for SQL generation and as a golden dataset for query quality evaluation. *Reference queries are the structured-data equivalent of a RAG golden dataset.*
+- **Query Performance Governance** — Define query cost limits and execution time SLAs for LLM-generated queries; enforce LIMIT clauses by default; route expensive queries through an approval gate before execution. *An LLM generating a full-table scan on a billion-row dataset is a real operational risk.*
+- **Read/Write Boundary Enforcement** — For agents with write access, define explicit whitelists of tables and operations that are writable; enforce read-only access to all other data stores at the database user/role level, not just in the prompt. *Prompt-level restrictions are insufficient; enforce at the authorization layer.*
+- **Data Freshness & Lag Awareness** — Document the update latency for each data source (real-time, hourly batch, daily ETL, weekly report); surface lag metadata to the agent so it can communicate data freshness accurately to users. *An agent confidently quoting yesterday's inventory as current stock levels is a product and trust failure.*
 
 ---
 
@@ -969,7 +1028,7 @@ Quick reference showing which features each component category **primarily enabl
 | **Resilience & Fault Tolerance** | − (operational concern; indirectly supports all features by ensuring they remain available under failure conditions) |
 | **Performance & Latency Management** | − (operational concern; indirectly supports F4/F9/F13 by ensuring system responsiveness meets user expectations) |
 | **DevOps & Change Management** | − (operational concern; indirectly supports F13 (Continuous Learning & Feedback) by enabling safe, frequent iteration) |
-| **Data & Knowledge Governance** | F1, F5 (corpus quality and freshness directly affects retrieval accuracy and citation validity); indirectly supports F2, F10 |
+| **Data Readiness & Knowledge Governance** | F1, F5 (corpus quality and freshness directly affects retrieval accuracy and citation validity); §5.9.0 Data Readiness Assessment and §5.9.5 Structured Data Readiness are pre-production prerequisites that underpin F1, F8, F9; indirectly supports F2, F10 |
 | **Identity, Access & Authorization** | F11, F12, F15 (authorization scopes enforce human oversight gates, content controls, and auditability); indirectly supports all features in multi-tenant and enterprise deployments |
 | **Incident Response & AI Operations Runbooks** | − (operational concern; provides the response infrastructure that makes F12 and F15 operationally effective when failures occur) |
 
@@ -989,6 +1048,7 @@ Quick reference showing which features each component category **primarily enabl
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.5 | 2026-03-03 | Renamed §5.9 to "Data Readiness & Knowledge Governance" to reflect expanded scope. Added §5.9.0 Data Readiness Assessment (8 pre-project evaluation activities: domain coverage audit, format assessment, volume/density evaluation, baseline quality sampling, access/licensing clearance, source authority classification, representative bias check, structured data semantic quality). Added §5.9.5 Structured & Relational Data Readiness (7 items covering semantic layer, data dictionary, referential integrity, sample query library, query performance governance, read/write boundary enforcement, data freshness/lag awareness). Updated appendix component→feature mapping for Data Readiness & Knowledge Governance to reflect §5.9.0 and §5.9.5 additions. Aligned with 02-use-case-archetypes.md v5.5. |
 | 5.4 | 2026-03-01 | Added three new capability components: §1.3 Model Selection & Customization Strategy (selection dimensions, customization ladder, evaluation methodology, fine-tuning patterns, distillation strategy), §3.2.4 Shared & Distributed Memory (blackboard, distributed state, namespace partitioning, conflict resolution), §4.4 Agent Runtime & Deployment (hosting patterns, session lifecycle, compute isolation, managed vs. self-hosted trade-offs). Added three new Operational Excellence components: §5.9 Data & Knowledge Governance (corpus lifecycle, data quality pipelines, PII in datasets, index operations), §5.10 Identity, Access & Authorization (model access controls, agent authorization scopes, credential management, multi-tenant isolation), §5.11 Incident Response & AI Operations Runbooks (AI incident classification, kill switches, post-incident analysis, five operational playbooks). Updated architecture overview diagram, appendix, and version history. Earlier in this version: Added §5.6 Resilience & Fault Tolerance, §5.7 Performance & Latency Management, §5.8 DevOps & Change Management, §5.2.4 Testability by Design, §5.5 Cost Management. Added "When to use" guidance and Conversational Agent patterns throughout. Restructured evaluation metrics. Updated agent frameworks. |
 | 3.0 | 2026-02-27 | Harmonized layer terminology (Foundation/Augmentation/Orchestration/Autonomy + Operational Excellence). Added feature linkage per layer. Added Component→Feature appendix. Reorganized for consistency with four-layer framework model. |
 | 2.0 | 2026-02-02 | Reorganized by Architecture Maturity Model. |

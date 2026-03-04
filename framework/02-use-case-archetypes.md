@@ -1,6 +1,6 @@
 # Generative AI & Agentic Use Case Archetypes
 
-*Version 5.4. Last Updated: 2026-03-01*
+*Version 5.5. Last Updated: 2026-03-03*
 
 This document defines the 13 use case archetypes that form Layer 1 of the GenAI & Agentic Architecture Framework. Each archetype represents a distinct job-to-be-done — the core value a GenAI solution delivers, independent of its interaction style or implementation complexity.
 
@@ -75,6 +75,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 
 **Primary Risks**: Hallucination, brand/compliance drift, intellectual property leakage, generation of unsafe or biased content.
 
+**Data Prerequisites**: Brand and style guides in structured, accessible format. Approved tone and vocabulary references. Example content pairs (input brief → target output) for few-shot grounding. Template library with schema definitions for structured outputs. Intellectual property and licensing clearance for any reference material used in prompting.
+
 ---
 
 #### 2. Summarization & Extraction
@@ -92,6 +94,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 **Common Patterns**: OCR/document parsing pipelines, schema-guided extraction, confidence scoring, human-in-the-loop verification.
 
 **Primary Risks**: Silent extraction errors, bias in labeling, poor confidence calibration, data retention issues with source documents.
+
+**Data Prerequisites**: Representative sample of source documents in target formats (PDFs, contracts, reports, emails) — covering format and complexity diversity. Defined extraction schema (field names, types, cardinality, required vs. optional). Labeled golden examples (input document → expected extracted fields) for evaluation; minimum 50 examples recommended before production. Document parsability confirmed (not scanned images without OCR pipeline). Data retention and PII policy defined for source document storage.
 
 ---
 
@@ -111,6 +115,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 
 **Primary Risks**: Prompt injection via retrieved content, stale or outdated knowledge, overconfident but incorrect answers, source misattribution.
 
+**Data Prerequisites**: Authoritative, curated knowledge corpus with defined scope boundaries (what the system should and should not answer). Source authority hierarchy established (primary / secondary / user-generated). Document metadata available for citation: title, author, date, version, owner. Freshness SLA defined per knowledge domain (e.g., policy docs refreshed within 30 days of change). Out-of-scope topic list documented so "I don't know" handling can be tested. PII scrubbing completed before corpus ingestion.
+
 ---
 
 #### 4. Research & Synthesis
@@ -128,6 +134,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 **Common Patterns**: Iterative retrieval and decomposition (outline-first generation), evidence mapping, evaluation gates for contradiction detection, web/document tool integration.
 
 **Primary Risks**: Source quality issues, amplification of bias, missing counter-evidence, non-reproducible results.
+
+**Data Prerequisites**: Access to authoritative primary and secondary sources (internal document libraries, licensed databases, web search API). Source quality classification system in place before synthesis begins. Cross-source reconciliation approach defined (how to handle contradictions between sources). Research scope constraints documented to prevent unbounded retrieval. If web search is included: allowed/blocked domain lists defined.
 
 ---
 
@@ -154,6 +162,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 
 **Primary Risks**: Confident-but-wrong explanations (spurious correlations), data access control gaps, misinterpretation of user intent.
 
+**Data Prerequisites**: Queryable structured data (database, data warehouse, or BI tool) with a documented schema and data dictionary — column/table names must be meaningful or supplemented by a semantic layer. Historical data depth sufficient for trend analysis (typically 13+ months for seasonality, 3+ years for longer-cycle patterns). Sample validated queries covering the most common analytical questions (used as few-shot examples for SQL generation). Data freshness and update latency documented per source (batch vs. real-time). Row-level security enforced so the agent cannot access data beyond the querying user's permissions.
+
 ---
 
 #### 6. Recommendation & Personalization
@@ -173,6 +183,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 
 **Primary Risks**: Privacy violations, filter bubbles, unfair outcomes, over-personalization, data minimization failures.
 
+**Data Prerequisites**: User behavioral history (interaction signals, preference events, purchase or engagement data) with consent management in place. Item or content catalog with structured feature metadata (attributes, categories, relationships). Cold-start strategy defined for new users with no history (content-based fallback, onboarding survey, default segment). Consent and data minimization policy implemented before storing user profiles. Feedback signal design completed (explicit ratings, implicit signals, A/B test infrastructure) to close the learning loop.
+
 ---
 
 #### 7. Simulation & Synthetic Data
@@ -191,6 +203,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 **Common Patterns**: Constraint-based generation, statistical validation against real-world distributions, privacy checks to prevent data leakage.
 
 **Primary Risks**: Leakage of sensitive patterns, unrealistic distributions, introduction of unexpected biases.
+
+**Data Prerequisites**: Real-world reference dataset with statistical characterization (distributions, value ranges, correlations, edge case frequencies) — used to validate that synthetic outputs match real-world properties. Domain constraints and business rules documented (valid value ranges, logical dependencies, cardinality constraints). Privacy-safe sample of real data available for distribution comparison without exposing raw sensitive records. Downstream use case defined precisely (training a classifier, stress-testing a system, populating a test environment) — fidelity requirements differ significantly by use case.
 
 ---
 
@@ -219,6 +233,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 
 **Primary Risks**: Vulnerable or non-performant code, license/IP compliance, unsafe automation in production, brittle changes without tests.
 
+**Data Prerequisites**: Codebase accessible and indexable (or a representative, well-structured sample for scoped use cases). Coding standards, style guides, and architectural conventions documented and current. Existing test suite available as a quality reference and regression baseline. Dependency manifests and build configurations current and resolving cleanly. License compatibility confirmed for model training and code suggestion (open-source license constraints apply to suggested code). Known vulnerability baseline established so the assistant can be evaluated against it.
+
 ---
 
 #### 9. Structured Workflow Automation
@@ -236,6 +252,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 **Common Patterns**: Integration with workflow engines (BPM, RPA), idempotent tool calls, human-in-the-loop approval steps.
 
 **Primary Risks**: Incorrect side-effects in external systems, partial failures, "automation debt," unclear error accountability.
+
+**Data Prerequisites**: Business process documented end-to-end (BPM diagram, runbook, or SOP) with decision points, exceptions, and escalation paths explicit. Form schemas and field definitions for all inputs/outputs the agent processes. Integration API contracts for downstream systems — schemas, authentication, idempotency guarantees, and error response formats. Sample input/output pairs for the automation target (used as golden examples for quality evaluation). Integration test environment available before production automation; rollback/undo capability documented for each write operation.
 
 ---
 
@@ -256,6 +274,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 
 **Primary Risks**: Tool misuse, prompt injection leading to unauthorized actions, runaway costs from looping, unsafe real-world consequences.
 
+**Data Prerequisites**: All tool APIs documented with schemas, authentication methods, rate limits, and error response formats — and validated in a non-production environment before agent deployment. Action space explicitly bounded: a written inventory of what the agent is and is not permitted to do, enforced at the authorization layer, not only in the prompt. Integration test environment (sandbox or staging) available for end-to-end agent testing before production. Rollback/undo or compensating transaction capability documented for every write or state-changing operation. Credential and secret management strategy in place (vault, rotation policy) — no credentials embedded in prompts or configuration files.
+
 ---
 
 #### 11. Operations & Monitoring Copilot
@@ -272,6 +292,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 **Common Patterns**: Integrations with observability tools (Datadog, Splunk), runbooks-as-code, strict permissions, detailed audit logs.
 
 **Primary Risks**: Incorrect remediation causing further outages, alert fatigue amplification, permission creep, poor auditability.
+
+**Data Prerequisites**: Observability data streams accessible and queryable in real time — logs, metrics, traces, and alert events — with retention policy sufficient for incident investigation. Runbooks and remediation playbooks in structured, parseable format (Markdown, YAML, or structured knowledge base) — not locked in human-only wikis. Historical incident data available for training and testing alert pattern detection. Alert taxonomy documented (severity levels, categories, ownership routing). Read permissions confirmed for all monitoring systems; write/remediation permissions scoped to the minimum necessary and gated by human oversight at appropriate autonomy levels.
 
 ---
 
@@ -290,6 +312,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 **Common Patterns**: RAG over compliance frameworks and internal policies, evaluation harnesses for testing other AI systems, detailed provenance logging.
 
 **Primary Risks**: False assurance from automated checks, incomplete/misleading evidence, over-reliance on automated judgments.
+
+**Data Prerequisites**: Regulatory frameworks and internal policies in machine-readable or structured indexed form — current versions, with version history. Control catalog with assessment criteria, evidence types, and testing procedures. Audit trails and evidence logs from systems being governed, accessible via API or structured export. Evidence collection templates defining what constitutes sufficient proof for each control. Historical findings and remediation records available for trend analysis and recurrence detection. Human review workflow defined before any automated finding is treated as authoritative.
 
 ---
 
@@ -311,6 +335,8 @@ Once you have identified your archetype, use these four dimensions to characteri
 **Common Patterns**: Persona and tone management, intent classification and routing, escalation logic with context handoff, sentiment and frustration detection, conversation repair strategies, multi-turn context tracking, response latency optimization, CSAT/NPS feedback loops.
 
 **Primary Risks**: Tone-deaf or inappropriate responses in sensitive situations, failed escalation (user stuck in a loop), over-promising or providing incorrect commitments, privacy leakage of other customers' data, empathy failures, brand-damaging interactions at scale.
+
+**Data Prerequisites**: Conversation history logs (historical interactions) for intent modeling, tone calibration, and failure mode analysis — scrubbed of PII before use. Knowledge base or FAQ corpus for grounding factual responses, with defined freshness SLA. Product, service, or policy catalog with structured metadata (pricing, eligibility, constraints) current as of deployment. Escalation criteria and routing rules documented and tested with real-world failure cases. Persona and tone guidelines in written, referenceable form. CSAT or user satisfaction signal infrastructure in place before launch to enable feedback-driven improvement from day one.
 
 ---
 
@@ -447,6 +473,21 @@ Use this framework to guide design and risk management, moving from a high-level
 - **What are functional and performance requirements?** Success criteria, accuracy, latency, throughput.
 - **What is the estimated TCO?** Development, data, training, inference, and human oversight.
 
+#### Data Readiness Gate
+
+Data readiness is a go/no-go prerequisite — not an operational concern to address later. Answer these questions before committing to an archetype or approach. Gaps discovered here are far cheaper to resolve than those found mid-implementation.
+
+| Question | What to Assess | Red Flags |
+|----------|---------------|-----------|
+| **Is the data accessible?** | Can the AI system reach the required data — via APIs, database connections, file access, or knowledge base? Are network policies, credentials, and access rights resolved? | Firewall blocks, no API contract, data locked in legacy systems without export path. |
+| **Is the data legally cleared for AI use?** | Are there consent, licensing, or regulatory restrictions on using this data for AI retrieval, inference, or training? For PII/PHI: has a Privacy Impact Assessment been completed? For third-party data: do terms explicitly permit AI use? | No explicit AI-use clause in license, PII without consent, PHI without BAA, third-party data with AI-use restrictions. |
+| **Does the data cover the domain sufficiently?** | Is there enough data to support the use case? Are critical topics, time periods, languages, user segments, or product lines represented? What is the gap between what exists and what the archetype's Data Prerequisites require? | Critical topics missing, historical data too shallow for trend analysis, single-language corpus for a multilingual use case. |
+| **Is the data in a usable format?** | What preprocessing, conversion, or normalization is required to reach ingestion-ready state? For structured data: is the schema documented? For unstructured: are documents in parseable formats (not scanned images, password-protected PDFs)? | No schema documentation, data only in proprietary binary formats, OCR required at scale without pipeline, no API — only manual export. |
+| **What is the baseline quality?** | Sample 50–100 representative items and audit for accuracy, completeness, consistency, and recency. Define a minimum acceptable quality floor and assess whether current data meets it. | >10% of sampled items are missing required fields, contradictory, or demonstrably incorrect; no quality baseline exists. |
+| **Is the data representative and unbiased?** | Does the data reflect the population, domains, and edge cases the system will encounter in production? Are there known coverage gaps, historical skews, or demographic biases that could propagate into model outputs? | Training/retrieval corpus skewed toward one region, department, or time period; known underrepresentation of key user segments. |
+
+**Decision rule**: If two or more red flags are present, resolve them before proceeding. A high-quality model on poor data produces poor results — data readiness cannot be deferred to a later sprint.
+
 ### 2. MEASURE: Assess Risks & Feasibility
 
 - **What is the error tolerance?** Low-stakes draft vs. regulated decision.
@@ -481,12 +522,19 @@ Use this to assess organizational readiness by archetype group.
 - [ ] Basic prompt engineering practices established
 - [ ] Content safety filters configured
 - [ ] Basic evaluation pipeline in place
+- [ ] **Data readiness assessment completed** for all knowledge domains the system will draw on (see Data Readiness Gate in Part 5 and §5.9.0 of 04-technical-components.md)
+- [ ] **Source authority hierarchy defined** — primary, secondary, and tertiary sources classified; ownership assigned per domain
+- [ ] **Data quality baseline established** — sample audit completed; minimum acceptable quality floor defined and documented
+- [ ] **Data licensing and consent clearance confirmed** — all data sources verified as legally cleared for AI use (retrieval, inference, and training where applicable)
 
 ### Capability (Required for Group B: Insight & Decision Intelligence)
 - [ ] Tool integration framework operational
 - [ ] Data access controls enforced
 - [ ] Structured output validation working
 - [ ] Feedback collection mechanisms deployed
+- [ ] **Semantic layer or data dictionary documented** for all structured data sources the system queries — column/table names meaningful or supplemented by business-readable definitions (see §5.9.5 of 04-technical-components.md)
+- [ ] **Data freshness SLA defined and monitored** per knowledge domain and data source — staleness thresholds set, alerts configured
+- [ ] **Row-level and feature-level access controls verified** — agent cannot query data beyond the invoking user's permissions
 
 ### Autonomy (Required for Group C: Process & Automation)
 - [ ] Agent execution framework tested
@@ -495,6 +543,9 @@ Use this to assess organizational readiness by archetype group.
 - [ ] Full observability and tracing operational
 - [ ] State management and recovery proven
 - [ ] Multi-agent coordination patterns validated (if T4)
+- [ ] **Tool API contracts documented and validated** — schemas, authentication, rate limits, error modes, and idempotency guarantees confirmed in non-production environment before agent deployment
+- [ ] **Agent action space explicitly bounded** — written inventory of permitted/prohibited operations enforced at the authorization layer, not only in the prompt
+- [ ] **Rollback and compensating transaction capability documented** for every write or state-changing tool invocation the agent can perform
 
 ---
 
@@ -512,6 +563,7 @@ Use this to assess organizational readiness by archetype group.
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.5 | 2026-03-03 | Added Data Readiness Gate to Part 5 MAP phase (go/no-go prerequisite table with 6 questions and red flags). Added Data Prerequisites section to all 13 archetypes in Part 3. Expanded Agentic Readiness Checklist with data readiness items at Foundation, Capability, and Autonomy tiers. Aligned with 04-technical-components.md v5.5 (§5.9.0 Data Readiness Assessment, §5.9.5 Structured & Relational Data Readiness). |
 | 5.4 | 2026-03-01 | Updated Agentic Readiness Checklist: added model selection prerequisite to Foundation tier (§1.3) and agent runtime/deployment infrastructure to Autonomy tier (§4.4). Aligned with 04-technical-components.md v5.4. |
 | 5.4 | 2026-02-28 | Renamed Group B from "Insight & Decision Support" to "Insight & Decision Intelligence" to acknowledge the full spectrum from advisory to autonomous decision-making. Updated archetype 5 and 6 descriptions accordingly. Added Scope & Boundaries section to 01-overview.md. |
 | 5.3 | 2026-02-28 | Added Archetype 13: Conversational Agent. The most widely deployed GenAI use case (customer service, sales, coaching) warranted a dedicated archetype rather than relying on multi-archetype composition. |

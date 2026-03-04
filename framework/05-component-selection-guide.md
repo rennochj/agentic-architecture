@@ -1,10 +1,12 @@
 # Component Selection Guide: Purpose-Driven Decision Making
 
-*Aligned with GenAI & Agentic Architecture Framework v5.0. Last Updated: 2026-02-27*
+*Version 5.5. Last Updated: 2026-03-03. Aligned with Framework v5.5.*
 
 > **The Core Principle**: Technical components are not goals in themselves — they are *instruments* that enable use cases, deliver desired qualities, mitigate anticipated risks, and support the continuous evolution of living systems.
 
 This guide provides evaluation tools for deciding which technical components to include in your GenAI architecture. Use it after identifying your required capability features (Layer 2) and candidate components (Layer 3).
+
+> **Component scope**: As of Framework v5.5, the component catalog in [04-technical-components.md](04-technical-components.md) includes 13 capability components across 4 maturity layers plus 11 Operational Excellence cross-cutting sections. The Seven Questions and Canvas apply to all component categories — including the newer additions: Model Selection & Customization Strategy (§1.3), Agent Runtime & Deployment (§4.4), Data Readiness & Knowledge Governance (§5.9), Identity & Authorization (§5.10), and Incident Response (§5.11). For structural prerequisites like Data Readiness Assessment (§5.9.0), the evaluation focuses on Questions 1 (WHY), 3 (WHAT IF), and 7 (CAN WE SHIP) — these are go/no-go prerequisites rather than optional components.
 
 ---
 
@@ -149,6 +151,36 @@ Use this canvas to evaluate each component decision:
 │  • EXCLUDE: Value/Cost < 1.0 OR Design < 2.0                               │
 │                                                                             │
 │  DECISION: □ INCLUDE    □ DEFER    □ EXCLUDE                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Light Canvas (T1-T2 Quick Decisions)
+
+For T1-T2 systems with fewer than 10 components, the full Canvas can be overkill. Use this three-question variant for quick component decisions. Reserve the full Canvas v2.0 for T3-T4 systems or formal governance reviews.
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                     LIGHT COMPONENT CANVAS                                  │
+│                                                                             │
+│  Component: ___________________________________                             │
+│                                                                             │
+│  1. WHY?  What feature does this enable?  _________________________        │
+│           □ Essential  □ High Value  □ Nice to Have  □ Not Needed          │
+│                                                                             │
+│  2. WHAT IF?  What risk does this mitigate?  ______________________        │
+│           □ Critical Risk  □ Important  □ Minor  □ No Risk                 │
+│                                                                             │
+│  3. CAN WE SHIP?  How production-ready is this?  _________________        │
+│           □ Battle-tested  □ Stable  □ Emerging  □ Experimental            │
+│                                                                             │
+│  DECISION:                                                                  │
+│  • INCLUDE: Essential/High Value AND (Critical/Important risk OR Stable+)  │
+│  • DEFER:   Nice to Have OR Emerging maturity                               │
+│  • EXCLUDE: Not Needed OR Experimental with no risk mitigation             │
+│                                                                             │
+│  → □ INCLUDE    □ DEFER    □ EXCLUDE                                       │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -398,6 +430,7 @@ Component Selection:
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 5.5 | 2026-03-03 | Aligned with Framework v5.5. Added component scope note referencing expanded OE catalog (§5.5-§5.11), Data Readiness (§5.9.0/§5.9.5), Model Selection (§1.3), Agent Runtime (§4.4), Identity (§5.10), Incident Response (§5.11). Added Light Canvas for T1-T2 quick decisions. |
 | 3.0 | 2026-02-27 | Refactored from genai-purpose-driven-components.md. Repositioned as evaluation guide (not component taxonomy). Added feature references throughout. Retained Seven Questions, Canvas, anti-patterns, scenarios. |
 | 2.0 | 2026-01-19 | Extended Value Equation with operational concerns. |
 | 1.0 | 2026-01-19 | Initial purpose-driven component selection guide. |
