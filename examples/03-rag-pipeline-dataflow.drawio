@@ -1,0 +1,271 @@
+<mxfile host="app.diagrams.net">
+    <diagram name="RAG Pipeline — Data Flow" id="rag-pipeline-flow">
+        <mxGraphModel dx="1600" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+
+                <!-- Background -->
+                <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0b1220;gradientColor=#111b34;gradientDirection=south;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry width="1600" height="1100" as="geometry"/>
+                </mxCell>
+
+                <!-- Title -->
+                <mxCell id="title" value="RAG Pipeline — Ingestion &amp; Retrieval Data Flow" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=26;fontStyle=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="800" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" value="§2.1 Information Augmentation &amp; Retrieval: From document sources through vector storage to augmented generation" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=13;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="58" width="900" height="22" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════════════ INGESTION PIPELINE (Top) ═══════════════ -->
+                <mxCell id="ingest_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0c2d48;strokeColor=#1e3a5f;strokeWidth=2;opacity=60;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="100" width="1520" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="ingest_label" value="INGESTION PIPELINE (Offline / Batch)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#93c5fd;fontSize=14;fontStyle=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="108" width="400" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="ingest_ref" value="§2.1.4 Document Processing · §5.9 Data Readiness" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#64748b;fontSize=10;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="130" width="400" height="18" as="geometry"/>
+                </mxCell>
+
+                <!-- Sources -->
+                <mxCell id="src_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#334155;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="160" width="180" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="src_label" value="DATA SOURCES" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=10;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="165" width="180" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="src1" value="PDFs / Docs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=#475569;fontColor=#cbd5e1;fontSize=10;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="190" width="150" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="src2" value="Web / HTML" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=#475569;fontColor=#cbd5e1;fontSize=10;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="224" width="150" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="src3" value="Databases / APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=#475569;fontColor=#cbd5e1;fontSize=10;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="258" width="150" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="src4" value="Knowledge Graphs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=#475569;fontColor=#cbd5e1;fontSize=10;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="292" width="150" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="src5" value="Images / Tables" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=#475569;fontColor=#cbd5e1;fontSize=10;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="326" width="150" height="28" as="geometry"/>
+                </mxCell>
+
+                <!-- Arrow: Sources → Parsing -->
+                <mxCell id="arr1" value="" style="endArrow=classic;html=1;strokeColor=#3b82f6;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="250" y="260" as="sourcePoint"/>
+                        <mxPoint x="290" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Document Parsing -->
+                <mxCell id="parse" value="Document Parsing&#xa;&amp; Extraction&#xa;──────────────&#xa;PDF extraction&#xa;HTML scraping&#xa;Table extraction&#xa;OCR processing&#xa;Metadata extraction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#3b82f6;fontColor=#bfdbfe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="160" width="170" height="200" as="geometry"/>
+                </mxCell>
+
+                <!-- Arrow: Parsing → Chunking -->
+                <mxCell id="arr2" value="" style="endArrow=classic;html=1;strokeColor=#3b82f6;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="470" y="260" as="sourcePoint"/>
+                        <mxPoint x="510" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Chunking -->
+                <mxCell id="chunk" value="Chunking&#xa;Strategy&#xa;──────────────&#xa;Fixed-size&#xa;Semantic&#xa;Recursive&#xa;Doc-structure&#xa;Parent-child" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#3b82f6;fontColor=#bfdbfe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="160" width="150" height="200" as="geometry"/>
+                </mxCell>
+
+                <!-- Arrow: Chunking → Embedding -->
+                <mxCell id="arr3" value="" style="endArrow=classic;html=1;strokeColor=#3b82f6;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="670" y="260" as="sourcePoint"/>
+                        <mxPoint x="710" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Embedding -->
+                <mxCell id="embed" value="Embedding&#xa;Generation&#xa;──────────────&#xa;Text embeddings&#xa;Multi-modal embeddings&#xa;Code embeddings&#xa;&#xa;§1.1.1 Embedding Models" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064e3b;strokeColor=#10b981;fontColor=#a7f3d0;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="160" width="180" height="200" as="geometry"/>
+                </mxCell>
+
+                <!-- Arrow: Embedding → Vector Store -->
+                <mxCell id="arr4" value="" style="endArrow=classic;html=1;strokeColor=#3b82f6;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="900" y="260" as="sourcePoint"/>
+                        <mxPoint x="940" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Vector Store -->
+                <mxCell id="vstore" value="Vector Store&#xa;§2.1.3&#xa;──────────────&#xa;Pinecone / Weaviate /&#xa;Qdrant / Milvus / pgvector&#xa;──────────────&#xa;HNSW indexing&#xa;Metadata filters&#xa;Access control" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#60a5fa;fontColor=#bfdbfe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="150" width="190" height="220" as="geometry"/>
+                </mxCell>
+
+                <!-- Quality checks on ingestion -->
+                <mxCell id="quality_box" value="Data Quality Pipeline (§5.9.2)&#xa;Dedup · Quality Scoring · PII Scrubbing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#422006;strokeColor=#d97706;fontColor=#fde68a;fontSize=9;fontStyle=2;spacing=6;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="1170" y="160" width="370" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="quality_arr" value="" style="endArrow=classic;html=1;strokeColor=#d97706;strokeWidth=1;dashed=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1170" y="180" as="sourcePoint"/>
+                        <mxPoint x="1140" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- ═══════════════ RETRIEVAL PIPELINE (Bottom) ═══════════════ -->
+                <mxCell id="retr_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1065;strokeColor=#4a1d6e;strokeWidth=2;opacity=60;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="420" width="1520" height="380" as="geometry"/>
+                </mxCell>
+                <mxCell id="retr_label" value="RETRIEVAL &amp; GENERATION PIPELINE (Online / Per-Request)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#c4b5fd;fontSize=14;fontStyle=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="428" width="500" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="retr_ref" value="§2.1.1 RAG Patterns · §2.1.2 RAG Architectures" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#64748b;fontSize=10;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="450" width="400" height="18" as="geometry"/>
+                </mxCell>
+
+                <!-- User Query -->
+                <mxCell id="user_query" value="User Query" style="shape=parallelogram;whiteSpace=wrap;html=1;fillColor=#4a1d6e;strokeColor=#8b5cf6;fontColor=#ddd6fe;fontSize=12;fontStyle=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="490" width="150" height="50" as="geometry"/>
+                </mxCell>
+
+                <!-- Arrow: Query → Pre-retrieval -->
+                <mxCell id="arr5" value="" style="endArrow=classic;html=1;strokeColor=#8b5cf6;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="220" y="515" as="sourcePoint"/>
+                        <mxPoint x="260" y="515" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Pre-Retrieval -->
+                <mxCell id="pre_retr" value="Pre-Retrieval&#xa;Optimization&#xa;──────────────&#xa;Query rewriting&#xa;Query decomposition&#xa;HyDE (hypothetical&#xa;doc embedding)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4a1d6e;strokeColor=#8b5cf6;fontColor=#ddd6fe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="475" width="165" height="160" as="geometry"/>
+                </mxCell>
+
+                <!-- Arrow: Pre-retrieval → Search -->
+                <mxCell id="arr6" value="" style="endArrow=classic;html=1;strokeColor=#8b5cf6;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="435" y="515" as="sourcePoint"/>
+                        <mxPoint x="475" y="515" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Search / Retrieval -->
+                <mxCell id="search" value="Search &amp; Retrieval&#xa;§2.1.3&#xa;──────────────&#xa;Dense (semantic)&#xa;Sparse (BM25)&#xa;Hybrid (combined)&#xa;Filtered (ACL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#60a5fa;fontColor=#bfdbfe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="475" width="170" height="160" as="geometry"/>
+                </mxCell>
+
+                <!-- Arrow from Vector Store down to Search -->
+                <mxCell id="arr_vs" value="" style="endArrow=classic;html=1;strokeColor=#60a5fa;strokeWidth=2;dashed=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1035" y="380" as="sourcePoint"/>
+                        <mxPoint x="560" y="470" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1035" y="440"/>
+                            <mxPoint x="560" y="440"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="arr_vs_label" value="vector search" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#60a5fa;fontSize=9;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="425" width="100" height="16" as="geometry"/>
+                </mxCell>
+
+                <!-- Arrow: Search → Post-retrieval -->
+                <mxCell id="arr7" value="" style="endArrow=classic;html=1;strokeColor=#8b5cf6;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="655" y="515" as="sourcePoint"/>
+                        <mxPoint x="695" y="515" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Post-Retrieval -->
+                <mxCell id="post_retr" value="Post-Retrieval&#xa;Optimization&#xa;──────────────&#xa;Re-ranking&#xa;Contextual compression&#xa;Filtering &amp; scoring&#xa;Citation extraction" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4a1d6e;strokeColor=#8b5cf6;fontColor=#ddd6fe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="695" y="475" width="170" height="160" as="geometry"/>
+                </mxCell>
+
+                <!-- Arrow: Post-retrieval → Context Assembly -->
+                <mxCell id="arr8" value="" style="endArrow=classic;html=1;strokeColor=#8b5cf6;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="875" y="515" as="sourcePoint"/>
+                        <mxPoint x="915" y="515" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Context Assembly -->
+                <mxCell id="ctx_asm" value="Context Assembly&#xa;§3.1&#xa;──────────────&#xa;System prompt&#xa;+ Retrieved chunks&#xa;+ Conversation history&#xa;+ User query&#xa;&#xa;Priority-based packing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4a1d6e;strokeColor=#a78bfa;fontColor=#ddd6fe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="915" y="475" width="180" height="180" as="geometry"/>
+                </mxCell>
+
+                <!-- Arrow: Context → LLM -->
+                <mxCell id="arr9" value="" style="endArrow=classic;html=1;strokeColor=#8b5cf6;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1105" y="545" as="sourcePoint"/>
+                        <mxPoint x="1145" y="545" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- LLM Generation -->
+                <mxCell id="llm" value="LLM Generation&#xa;§1.1&#xa;──────────────&#xa;Foundation Model&#xa;generates response&#xa;grounded in&#xa;retrieved context" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064e3b;strokeColor=#10b981;fontColor=#a7f3d0;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1145" y="475" width="170" height="160" as="geometry"/>
+                </mxCell>
+
+                <!-- Arrow: LLM → Output -->
+                <mxCell id="arr10" value="" style="endArrow=classic;html=1;strokeColor=#8b5cf6;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1325" y="545" as="sourcePoint"/>
+                        <mxPoint x="1365" y="545" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Output Processing -->
+                <mxCell id="output_proc" value="Output&#xa;Processing&#xa;§2.2&#xa;──────────────&#xa;Validation&#xa;Citation linking&#xa;Streaming&#xa;Format check" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#3b82f6;fontColor=#bfdbfe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="1365" y="475" width="150" height="180" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════════════ RAG ARCHITECTURE VARIANTS (Bottom) ═══════════════ -->
+                <mxCell id="variants_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#334155;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="830" width="1520" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="variants_label" value="RAG ARCHITECTURE VARIANTS (§2.1.2) — Progressive Complexity" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=13;fontStyle=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="838" width="600" height="22" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="v1" value="Naive RAG&#xa;(T1-T2)&#xa;──────────────&#xa;Query → Retrieve →&#xa;Generate&#xa;Simple, single-step&#xa;Low precision OK" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#064e3b;strokeColor=#10b981;fontColor=#a7f3d0;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="870" width="180" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="v_arr1" value="→" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=24;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="245" y="920" width="40" height="30" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="v2" value="Modular RAG&#xa;(T2-T3)&#xa;──────────────&#xa;Pluggable pipeline&#xa;Pre/post retrieval opt.&#xa;Independently&#xa;upgradeable stages" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#3b82f6;fontColor=#bfdbfe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="870" width="200" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="v_arr2" value="→" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=24;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="495" y="920" width="40" height="30" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="v3" value="Agentic RAG&#xa;(T3-T4)&#xa;──────────────&#xa;Tool-based retrieval&#xa;Iterative &amp; self-correcting&#xa;Adaptive search strategy&#xa;Multiple retrieval passes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4a1d6e;strokeColor=#8b5cf6;fontColor=#ddd6fe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="870" width="210" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="v_arr3" value="→" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=24;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="755" y="920" width="40" height="30" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="v4" value="Graph RAG&#xa;(T3-T4)&#xa;──────────────&#xa;Knowledge graph&#xa;Entity-relationship&#xa;Multi-hop reasoning&#xa;Legal, compliance, KM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4a1d6e;strokeColor=#8b5cf6;fontColor=#ddd6fe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="870" width="200" height="145" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="v5" value="Multi-Modal RAG&#xa;(T2+)&#xa;──────────────&#xa;Cross-modal search&#xa;Image + Text&#xa;Technical diagrams&#xa;Product catalogs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e3a5f;strokeColor=#3b82f6;fontColor=#bfdbfe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="870" width="200" height="145" as="geometry"/>
+                </mxCell>
+
+                <!-- Features enabled -->
+                <mxCell id="features_box" value="Features Enabled: F1 (Contextual Grounding) · F2 (Multi-Source Synthesis) · F5 (Citation &amp; Provenance)" style="text;html=1;strokeColor=none;fillColor=#312e81;fontColor=#c7d2fe;fontSize=10;fontStyle=1;align=center;rounded=1;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="1300" y="870" width="240" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

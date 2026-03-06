@@ -1,0 +1,265 @@
+<mxfile host="app.diagrams.net">
+    <diagram name="Operational Excellence — Cross-Cutting Concerns" id="ops-excellence-wheel">
+        <mxGraphModel dx="1600" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1300" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+
+                <!-- Background -->
+                <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0b1220;gradientColor=#111b34;gradientDirection=south;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry width="1600" height="1300" as="geometry"/>
+                </mxCell>
+
+                <!-- Title -->
+                <mxCell id="title" value="Operational Excellence — 11 Cross-Cutting Concerns" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#e2e8f0;fontSize=26;fontStyle=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="800" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" value="§5 Operational Excellence: Every production GenAI system requires these capabilities regardless of tier (T1–T4)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=13;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="58" width="900" height="22" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════ CENTRAL HUB ═══════ -->
+                <mxCell id="hub" value="PRODUCTION&#xa;GenAI&#xa;SYSTEM" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#fbbf24;fontColor=#fbbf24;fontSize=16;fontStyle=1;shadow=1;strokeWidth=3;spacing=4;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="440" width="160" height="160" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══════ SAFETY GROUP (Top-Left) — Pre-Production Gates ═══════ -->
+                <mxCell id="grp_safety_label" value="PRE-PRODUCTION GATES" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#fbbf24;fontSize=11;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="100" y="100" width="200" height="20" as="geometry"/>
+                </mxCell>
+
+                <!-- §5.1 Safety -->
+                <mxCell id="s51" value="§5.1 Safety, Guardrails&#xa;&amp; Alignment&#xa;══════════════════&#xa;• Input guardrails&#xa;  (injection defense, PII)&#xa;• Output guardrails&#xa;  (moderation, hallucination)&#xa;• Conversational safety&#xa;• Alignment techniques&#xa;• Security controls" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#422006;strokeColor=#f59e0b;fontColor=#fef3c7;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="130" width="230" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="s51_line" value="" style="endArrow=classic;html=1;strokeColor=#f59e0b;strokeWidth=2;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="280" y="280" as="sourcePoint"/>
+                        <mxPoint x="680" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- §5.2 Evaluation -->
+                <mxCell id="s52" value="§5.2 Evaluation &amp; Testing&#xa;══════════════════&#xa;• LLM-as-Judge&#xa;• Human evaluation&#xa;• Golden dataset testing&#xa;• Red teaming (mandatory)&#xa;• Testability by design&#xa;• Eval-as-Code in CI/CD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#422006;strokeColor=#f59e0b;fontColor=#fef3c7;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="130" width="230" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="s52_line" value="" style="endArrow=classic;html=1;strokeColor=#f59e0b;strokeWidth=2;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="345" as="sourcePoint"/>
+                        <mxPoint x="700" y="460" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- §5.9 Data Readiness -->
+                <mxCell id="s59" value="§5.9 Data Readiness &amp;&#xa;Knowledge Governance&#xa;══════════════════&#xa;• Data readiness assessment&#xa;  (8 pre-project checks)&#xa;• Corpus lifecycle management&#xa;• Data quality pipelines&#xa;• PII scrubbing at ingestion&#xa;• Structured data readiness&#xa;• Index &amp; corpus operations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#422006;strokeColor=#f59e0b;fontColor=#fef3c7;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="100" width="230" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="s59_line" value="" style="endArrow=classic;html=1;strokeColor=#f59e0b;strokeWidth=2;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="680" y="335" as="sourcePoint"/>
+                        <mxPoint x="730" y="440" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- ═══════ RUNTIME GROUP (Top-Right) — Runtime Protection ═══════ -->
+                <mxCell id="grp_runtime_label" value="RUNTIME PROTECTION" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#60a5fa;fontSize=11;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1100" y="100" width="200" height="20" as="geometry"/>
+                </mxCell>
+
+                <!-- §5.10 Identity & Access -->
+                <mxCell id="s510" value="§5.10 Identity, Access&#xa;&amp; Authorization&#xa;══════════════════&#xa;• Role-based model access&#xa;• Agent authorization scopes&#xa;• Least privilege for agents&#xa;• Credential vaulting&#xa;• Multi-tenant isolation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#172554;strokeColor=#3b82f6;fontColor=#bfdbfe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="130" width="230" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="s510_line" value="" style="endArrow=classic;html=1;strokeColor=#3b82f6;strokeWidth=2;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="860" y="335" as="sourcePoint"/>
+                        <mxPoint x="790" y="455" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- §5.5 Cost Management -->
+                <mxCell id="s55" value="§5.5 Cost Management&#xa;&amp; Budget Controls&#xa;══════════════════&#xa;• Per-agent cost ceilings&#xa;• Workflow budget caps&#xa;• Cost-based circuit breakers&#xa;• Model routing (cheap→expensive)&#xa;• Cascade patterns&#xa;• Spend observability" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#172554;strokeColor=#3b82f6;fontColor=#bfdbfe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1070" y="130" width="230" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="s55_line" value="" style="endArrow=classic;html=1;strokeColor=#3b82f6;strokeWidth=2;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1100" y="345" as="sourcePoint"/>
+                        <mxPoint x="810" y="470" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- §5.7 Performance -->
+                <mxCell id="s57" value="§5.7 Performance&#xa;&amp; Latency&#xa;══════════════════&#xa;• Latency budgeting&#xa;• Parallelism patterns&#xa;• Streaming responses&#xa;• Perceived performance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#172554;strokeColor=#3b82f6;fontColor=#bfdbfe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1320" y="130" width="230" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="s57_line" value="" style="endArrow=classic;html=1;strokeColor=#3b82f6;strokeWidth=2;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1340" y="315" as="sourcePoint"/>
+                        <mxPoint x="835" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- ═══════ OBSERVABILITY GROUP (Bottom-Right) ═══════ -->
+                <mxCell id="grp_observe_label" value="OBSERVE &amp; RESPOND" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#a78bfa;fontSize=11;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1100" y="660" width="200" height="20" as="geometry"/>
+                </mxCell>
+
+                <!-- §5.4 Observability -->
+                <mxCell id="s54" value="§5.4 Observability&#xa;══════════════════&#xa;• Deep tracing (reasoning paths)&#xa;• Retrieved context inspector&#xa;• Tool execution logs&#xa;• Quality drift detection&#xa;• Cost signals per request&#xa;• Anomaly detection &amp; alerting" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1065;strokeColor=#8b5cf6;fontColor=#ddd6fe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1070" y="690" width="230" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="s54_line" value="" style="endArrow=classic;html=1;strokeColor=#8b5cf6;strokeWidth=2;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1070" y="750" as="sourcePoint"/>
+                        <mxPoint x="830" y="580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- §5.6 Resilience -->
+                <mxCell id="s56" value="§5.6 Resilience &amp;&#xa;Fault Tolerance&#xa;══════════════════&#xa;• Multi-provider failover&#xa;• Graceful degradation&#xa;• State recovery &amp; checkpointing&#xa;• Loop detection&#xa;• Stuck-plan recovery" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1065;strokeColor=#8b5cf6;fontColor=#ddd6fe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="1320" y="690" width="230" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="s56_line" value="" style="endArrow=classic;html=1;strokeColor=#8b5cf6;strokeWidth=2;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1320" y="780" as="sourcePoint"/>
+                        <mxPoint x="835" y="570" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- §5.11 Incident Response -->
+                <mxCell id="s511" value="§5.11 Incident Response&#xa;&amp; AI Ops Runbooks&#xa;══════════════════&#xa;• AI incident classification&#xa;• Kill switches (feature / model)&#xa;• Post-incident analysis&#xa;• Operational playbooks:&#xa;  – Runaway agent&#xa;  – Harmful output&#xa;  – Data leakage&#xa;  – Model drift&#xa;  – Provider outage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1065;strokeColor=#8b5cf6;fontColor=#ddd6fe;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="690" width="230" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="s511_line" value="" style="endArrow=classic;html=1;strokeColor=#8b5cf6;strokeWidth=2;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="880" y="690" as="sourcePoint"/>
+                        <mxPoint x="800" y="590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- ═══════ DEVOPS GROUP (Bottom-Left) — Change & Deploy ═══════ -->
+                <mxCell id="grp_deploy_label" value="CHANGE &amp; DEPLOY" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#10b981;fontSize=11;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="660" width="200" height="20" as="geometry"/>
+                </mxCell>
+
+                <!-- §5.8 DevOps -->
+                <mxCell id="s58" value="§5.8 DevOps &amp;&#xa;Change Management&#xa;══════════════════&#xa;• Prompts as code&#xa;• Model version pinning&#xa;• Evaluation-gated CI/CD&#xa;• Shadow mode testing&#xa;• Canary / blue-green deploy&#xa;• Feature flags for AI&#xa;• Rollback playbooks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#052e16;strokeColor=#10b981;fontColor=#a7f3d0;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="690" width="230" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="s58_line" value="" style="endArrow=classic;html=1;strokeColor=#10b981;strokeWidth=2;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="280" y="750" as="sourcePoint"/>
+                        <mxPoint x="680" y="570" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- §5.3 Infrastructure -->
+                <mxCell id="s53" value="§5.3 Infrastructure&#xa;&amp; Deployment&#xa;══════════════════&#xa;• Model serving (vLLM, etc.)&#xa;• API gateway &amp; routing&#xa;• Response &amp; KV caching&#xa;• Semantic caching&#xa;• Model routing / cascade" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#052e16;strokeColor=#10b981;fontColor=#a7f3d0;fontSize=10;align=left;spacing=8;verticalAlign=top;shadow=1;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="690" width="230" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="s53_line" value="" style="endArrow=classic;html=1;strokeColor=#10b981;strokeWidth=2;dashed=1;dashPattern=6 4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="710" as="sourcePoint"/>
+                        <mxPoint x="690" y="580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- ═══════ DEPENDENCY FLOW ANNOTATIONS ═══════ -->
+                <mxCell id="flow_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#334155;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="980" width="1520" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow_title" value="KEY INTERDEPENDENCIES &amp; OPERATIONAL FLOW" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=12;fontStyle=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="990" width="500" height="22" as="geometry"/>
+                </mxCell>
+
+                <!-- Flow: Build → Deploy → Monitor → Respond -->
+                <mxCell id="flow1" value="BUILD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#422006;strokeColor=#f59e0b;fontColor=#fef3c7;fontSize=12;fontStyle=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="1030" width="130" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow1_detail" value="Data Readiness (§5.9)&#xa;Safety Design (§5.1)&#xa;Evaluation Setup (§5.2)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=9;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="1080" width="160" height="44" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="flow_arr1" value="" style="endArrow=classic;html=1;strokeColor=#94a3b8;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="220" y="1052" as="sourcePoint"/><mxPoint x="300" y="1052" as="targetPoint"/></mxGeometry>
+                </mxCell>
+
+                <mxCell id="flow2" value="DEPLOY" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#052e16;strokeColor=#10b981;fontColor=#a7f3d0;fontSize=12;fontStyle=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="1030" width="130" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow2_detail" value="DevOps CI/CD (§5.8)&#xa;Infrastructure (§5.3)&#xa;IAM Setup (§5.10)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=9;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="1080" width="160" height="44" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="flow_arr2" value="" style="endArrow=classic;html=1;strokeColor=#94a3b8;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="450" y="1052" as="sourcePoint"/><mxPoint x="530" y="1052" as="targetPoint"/></mxGeometry>
+                </mxCell>
+
+                <mxCell id="flow3" value="PROTECT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#172554;strokeColor=#3b82f6;fontColor=#bfdbfe;fontSize=12;fontStyle=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="1030" width="130" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow3_detail" value="Budget Controls (§5.5)&#xa;Performance SLAs (§5.7)&#xa;Runtime IAM (§5.10)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=9;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="1080" width="160" height="44" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="flow_arr3" value="" style="endArrow=classic;html=1;strokeColor=#94a3b8;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="680" y="1052" as="sourcePoint"/><mxPoint x="760" y="1052" as="targetPoint"/></mxGeometry>
+                </mxCell>
+
+                <mxCell id="flow4" value="OBSERVE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2e1065;strokeColor=#8b5cf6;fontColor=#ddd6fe;fontSize=12;fontStyle=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="1030" width="130" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow4_detail" value="Observability (§5.4)&#xa;Quality Monitoring&#xa;Cost Dashboards (§5.5)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=9;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="770" y="1080" width="160" height="44" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="flow_arr4" value="" style="endArrow=classic;html=1;strokeColor=#94a3b8;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="910" y="1052" as="sourcePoint"/><mxPoint x="990" y="1052" as="targetPoint"/></mxGeometry>
+                </mxCell>
+
+                <mxCell id="flow5" value="RESPOND" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7c2d12;strokeColor=#ef4444;fontColor=#fecaca;fontSize=12;fontStyle=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="1030" width="130" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow5_detail" value="Incident Response (§5.11)&#xa;Kill Switches&#xa;Resilience (§5.6)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=9;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="1080" width="160" height="44" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="flow_arr5" value="" style="endArrow=classic;html=1;strokeColor=#94a3b8;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="1140" y="1052" as="sourcePoint"/><mxPoint x="1220" y="1052" as="targetPoint"/></mxGeometry>
+                </mxCell>
+
+                <mxCell id="flow6" value="IMPROVE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#422006;strokeColor=#f59e0b;fontColor=#fef3c7;fontSize=12;fontStyle=1;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="1230" y="1030" width="130" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="flow6_detail" value="Feedback → Eval (§5.2)&#xa;Data Refresh (§5.9)&#xa;Model Upgrade (§5.8)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=9;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1230" y="1080" width="160" height="44" as="geometry"/>
+                </mxCell>
+
+                <!-- Feedback loop arrow -->
+                <mxCell id="flow_loop" value="" style="endArrow=classic;html=1;strokeColor=#fbbf24;strokeWidth=2;curved=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1360" y="1050" as="sourcePoint"/>
+                        <mxPoint x="80" y="1050" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1420" y="1050"/>
+                            <mxPoint x="1450" y="1150"/>
+                            <mxPoint x="750" y="1160"/>
+                            <mxPoint x="50" y="1150"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="flow_loop_label" value="continuous improvement loop" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#fbbf24;fontSize=10;fontStyle=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="1150" width="200" height="18" as="geometry"/>
+                </mxCell>
+
+                <!-- Legend -->
+                <mxCell id="legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e293b;strokeColor=#334155;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="410" width="420" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend_text" value="Applies to ALL tiers (T1–T4) · Enables: F5, F7, F8, F9, F11, F12, F13, F14, F15" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#94a3b8;fontSize=9;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="545" y="415" width="410" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
