@@ -305,7 +305,7 @@ Use this after Matrix A. For each feature you identified as required, read acros
 
 *Note: Column names align with the primary capability component categories in [04-technical-components.md](04-technical-components.md). **"Observability & Infrastructure"** combines §5.3 Infrastructure & §5.4 Observability. The expanded Operational Excellence catalog (§5.5 Cost Management through §5.11 Incident Response — see 04-technical-components.md §5) covers production prerequisites that are cross-cutting requirements rather than feature-specific enablers, so they are not represented as columns here. Two additional capability components are also not columns in this matrix — see the note after the matrix.*
 
-| | Foundation Models | Prompting | RAG & Retrieval | Output Processing | Context Management | Memory Systems | Reasoning & Planning | Tool Use & Functions | Agentic Architectures | Workflow Orchestration | HITL Patterns | Safety & Guardrails | Evaluation & Testing | Observability & Infrastructure |
+| | Foundation Models (§1.1) | Prompting (§1.2) | RAG & Retrieval (§2.1) | Output Processing (§2.2) | Context Management (§3.1) | Memory Systems (§3.2) | Reasoning & Planning (§3.3) | Tool Use & Functions (§3.4) | Agentic Architectures (§4.1) | Workflow Orchestration (§4.2) | HITL Patterns (§4.3) | Safety & Guardrails (§5.1) | Evaluation & Testing (§5.2) | Observability & Infrastructure (§5.3–5.4) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | **F1: Contextual Grounding** | ● | ● | ● | ○ | ● | − | ○ | − | − | − | − | ○ | ● | ◐ |
 | **F2: Multi-Source Synthesis** | ● | ● | ● | ● | ● | ◐ | ● | ◐ | ◐ | ◐ | − | − | ● | ◐ |
