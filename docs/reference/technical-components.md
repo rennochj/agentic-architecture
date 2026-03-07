@@ -28,29 +28,29 @@
 
 | § | OE Component | What It Governs | Key Capabilities | When Required |
 |---|--------------|-----------------|-----------------|---------------|
-| §5.1 | **Safety, Guardrails & Alignment** | Harmful content, injection, PII, behavioral limits | Input/output filters · PII masking · DLP · behavioral alignment | ● Always |
-| §5.2 | **Evaluation & Testing** | Output quality, agent performance, regressions | LLM-as-Judge · golden datasets · red-teaming · testability by design | ● Always |
-| §5.3 | **Infrastructure & Deployment** | Model serving, API management, caching | Inference engines · API gateways · semantic caching | ● Always |
-| §5.4 | **Observability** | Tracing, monitoring, logging, alerting | Reasoning traces · quality drift detection · cost signals | ● Always |
-| §5.5 | **Cost Management & Budget Controls** | Budget guardrails, attribution, spend governance | Per-agent ceilings · model routing · cost dashboards | ● Production |
-| §5.6 | **Resilience & Fault Tolerance** | Failover, graceful degradation, state recovery, agent failure modes | Multi-provider failover · checkpointing · loop detection | ◐ T3+ |
-| §5.7 | **Performance & Latency Management** | Latency budgets, parallelism, throughput, perceived responsiveness | TTFT · parallel agents · streaming · optimistic UI | ◐ Latency-sensitive |
-| §5.8 | **DevOps & Change Management** | Prompt versioning, model lifecycle, AI-native CI/CD | Prompts as code · eval-gated pipelines · canary / blue-green | ● Always |
-| §5.9 | **Data & Knowledge Governance** | Corpus lifecycle, data quality, PII in datasets, index freshness | Ingestion pipelines · deduplication · right-to-erasure | ◐ RAG / fine-tuning |
-| §5.10 | **Identity, Access & Authorization** | Model access, agent scopes, credentials, multi-tenant isolation | Role-based model access · least-privilege agents · credential vaulting | ● Enterprise / multi-user |
-| §5.11 | **Incident Response & Runbooks** | AI incident classification, kill switches, post-incident analysis | Severity taxonomy · kill switches · five operational playbooks | ● Production |
+| §5.1 | **Safety, Guardrails & Alignment** | Harmful content, injection, PII, behavioral limits | Input/output filters · PII masking · DLP · behavioral alignment | :material-circle: Always |
+| §5.2 | **Evaluation & Testing** | Output quality, agent performance, regressions | LLM-as-Judge · golden datasets · red-teaming · testability by design | :material-circle: Always |
+| §5.3 | **Infrastructure & Deployment** | Model serving, API management, caching | Inference engines · API gateways · semantic caching | :material-circle: Always |
+| §5.4 | **Observability** | Tracing, monitoring, logging, alerting | Reasoning traces · quality drift detection · cost signals | :material-circle: Always |
+| §5.5 | **Cost Management & Budget Controls** | Budget guardrails, attribution, spend governance | Per-agent ceilings · model routing · cost dashboards | :material-circle: Production |
+| §5.6 | **Resilience & Fault Tolerance** | Failover, graceful degradation, state recovery, agent failure modes | Multi-provider failover · checkpointing · loop detection | :material-circle-half-full: T3+ |
+| §5.7 | **Performance & Latency Management** | Latency budgets, parallelism, throughput, perceived responsiveness | TTFT · parallel agents · streaming · optimistic UI | :material-circle-half-full: Latency-sensitive |
+| §5.8 | **DevOps & Change Management** | Prompt versioning, model lifecycle, AI-native CI/CD | Prompts as code · eval-gated pipelines · canary / blue-green | :material-circle: Always |
+| §5.9 | **Data & Knowledge Governance** | Corpus lifecycle, data quality, PII in datasets, index freshness | Ingestion pipelines · deduplication · right-to-erasure | :material-circle-half-full: RAG / fine-tuning |
+| §5.10 | **Identity, Access & Authorization** | Model access, agent scopes, credentials, multi-tenant isolation | Role-based model access · least-privilege agents · credential vaulting | :material-circle: Enterprise / multi-user |
+| §5.11 | **Incident Response & Runbooks** | AI incident classification, kill switches, post-incident analysis | Severity taxonomy · kill switches · five operational playbooks | :material-circle: Production |
 
 ---
 
 ## How to Use
 
-**Step 1 — Start with Archetypes**: Identify your archetype(s) from `02-use-case-archetypes.md`. Required features (●) in Matrix A tell you which capabilities you need.
+**Step 1 — Start with Archetypes**: Identify your archetype(s) from `02-use-case-archetypes.md`. Required features (:material-circle:) in Matrix A tell you which capabilities you need.
 
 **Step 2 — Map Features to Components**: For each required feature, read Matrix B in `03-capability-features.md` to find the components that enable it.
 
 **Step 3 — Apply the Tier Ladder**: Start at T1 (Foundation). Add T2 only when grounding is required. Add T3 when you need state, memory, or tool use. Add T4 only when autonomous planning and multi-step execution are required.
 
-**Step 4 — Apply OE**: Every production system requires the ● OE sections. Add ◐ sections based on the conditions in the "When Required" column above.
+**Step 4 — Apply OE**: Every production system requires the :material-circle: OE sections. Add :material-circle-half-full: sections based on the conditions in the "When Required" column above.
 
 | Rule | Guidance |
 |------|----------|

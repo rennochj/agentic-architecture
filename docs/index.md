@@ -32,7 +32,7 @@ Follow these six steps to go from idea to architecture:
 
     ---
 
-    Use Matrix A to find which of the 15 capability features your archetype requires. Evaluate whether your context elevates any optional (◐) features to required (●).
+    Use Matrix A to find which of the 15 capability features your archetype requires. Evaluate whether your context elevates any optional (:material-circle-half-full:) features to required (:material-circle:).
 
     [:octicons-arrow-right-24: Capability Features](framework/capability-features.md)
 

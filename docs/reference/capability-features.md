@@ -26,11 +26,11 @@
 
 ## Using the Matrices (in 03-capability-features.md)
 
-**Matrix A** (Archetypes → Features): Start with your archetype row. ● = Required, ◐ = Often Needed, ○ = Optional.
+**Matrix A** (Archetypes → Features): Start with your archetype row. :material-circle: = Required, :material-circle-half-full: = Often Needed, :material-circle-outline: = Optional.
 
 **Matrix B** (Features → Components): For each required feature, read across to find the technical components that enable it.
 
-**When ◐ becomes ●**: F1 when Grounding Strategy ≠ Ungrounded · F5 when F1 is ● · F10 when returning users + Conversational model · F11 when Autonomy = Semi/Fully Autonomous · F14 when single-agent scope is insufficient for the task · F15 when regulatory compliance is required · F9 when data must be fresher than the knowledge base update cycle.
+**When :material-circle-half-full: becomes :material-circle:**: F1 when Grounding Strategy ≠ Ungrounded · F5 when F1 is :material-circle: · F10 when returning users + Conversational model · F11 when Autonomy = Semi/Fully Autonomous · F14 when single-agent scope is insufficient for the task · F15 when regulatory compliance is required · F9 when data must be fresher than the knowledge base update cycle.
 
 ---
 
@@ -52,7 +52,7 @@
 
 | Anti-Pattern | Remedy |
 |---|---|
-| **Feature bloat** — selecting all 15 "just in case" | Start with ● features only; add ◐ when Architectural Dimensions demand it |
+| **Feature bloat** — selecting all 15 "just in case" | Start with :material-circle: features only; add :material-circle-half-full: when Architectural Dimensions demand it |
 | **Missing foundation** — action features (F7/F8/F14) without F12/F11 | Foundation Cluster (F12, F13, F15) is never optional in production |
 | **Citation theater** — F5 implemented as document links only | Be explicit about maturity tier; T2 ≠ full provenance |
 | **Personalization without consent** — F6 built without a data retention and consent strategy | Pair F6 with explicit privacy controls and data minimization before building user profiles |
