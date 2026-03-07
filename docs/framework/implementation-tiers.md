@@ -244,124 +244,19 @@ Autonomy:      [Objective] → [Supervisor Agent]
 
 ### Pattern A: Simple Assistant (T1-T2 / Foundation)
 
-```
-┌─────────────────────────────────────────────────┐
-│                 User Interface                   │
-├─────────────────────────────────────────────────┤
-│              Basic Orchestration                 │
-│         (Request → Process → Response)           │
-├─────────────────────────────────────────────────┤
-│  ┌─────────────┐    ┌─────────────────────────┐ │
-│  │   Prompts   │    │    Output Parsing       │ │
-│  │  (System +  │    │   (Optional JSON/       │ │
-│  │  Few-shot)  │    │    Structured)          │ │
-│  └─────────────┘    └─────────────────────────┘ │
-├─────────────────────────────────────────────────┤
-│                Foundation Model                  │
-│              (LLM API - Single Call)             │
-├─────────────────────────────────────────────────┤
-│           Basic Guardrails (Content Filter)      │
-└─────────────────────────────────────────────────┘
-
-Components: 4-6 | Latency: <3s | Cost: $
-```
+![Pattern A: Simple Assistant](assets/diagrams/pattern-a-simple-assistant.svg){ loading=lazy }
 
 ### Pattern B: RAG-Enhanced Assistant (T2 / Foundation-Augmentation)
 
-```
-┌─────────────────────────────────────────────────┐
-│                 User Interface                   │
-├─────────────────────────────────────────────────┤
-│               Chain Orchestration                │
-│       (Query → Retrieve → Augment → Generate)   │
-├─────────────────────────────────────────────────┤
-│  ┌─────────────────────────────────────────────┐│
-│  │              RAG Pipeline                    ││
-│  │  ┌─────────┐  ┌─────────┐  ┌─────────────┐ ││
-│  │  │ Query   │→ │ Vector  │→ │  Context    │ ││
-│  │  │ Embed   │  │ Search  │  │  Assembly   │ ││
-│  │  └─────────┘  └─────────┘  └─────────────┘ ││
-│  └─────────────────────────────────────────────┘│
-├─────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌────────────────────────┐  │
-│  │   Prompts    │  │  Conversation Memory   │  │
-│  └──────────────┘  └────────────────────────┘  │
-├─────────────────────────────────────────────────┤
-│    Foundation Model    │    Embedding Model     │
-├─────────────────────────────────────────────────┤
-│  Vector Database  │  Guardrails  │ Observability│
-└─────────────────────────────────────────────────┘
-
-Components: 8-12 | Latency: 3-8s | Cost: $$
-```
+![Pattern B: RAG-Enhanced Assistant](assets/diagrams/pattern-b-rag-assistant.svg){ loading=lazy }
 
 ### Pattern C: Workflow Orchestration (T3 / Orchestration)
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    User Interface                        │
-│            (Streaming + Progress + Approvals)            │
-├─────────────────────────────────────────────────────────┤
-│                 Workflow Orchestration                   │
-│  ┌────────────────────────────────────────────────────┐ │
-│  │   [Step1] → [Step2] → [Step3] → [Step4]           │ │
-│  │                │ (conditional)                      │ │
-│  │                ▼                                    │ │
-│  │           [Alt Path]                                │ │
-│  └────────────────────────────────────────────────────┘ │
-├─────────────────────────────────────────────────────────┤
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────┐ │
-│  │    RAG      │  │   Tools     │  │    Memory       │ │
-│  │  Pipeline   │  │  (Multi)    │  │  (Persistent)   │ │
-│  └─────────────┘  └─────────────┘  └─────────────────┘ │
-├─────────────────────────────────────────────────────────┤
-│  ┌──────────────────────┐  ┌──────────────────────────┐ │
-│  │  Structured Output   │  │     State Management     │ │
-│  └──────────────────────┘  └──────────────────────────┘ │
-├─────────────────────────────────────────────────────────┤
-│   Foundation Models   │  Embedding  │  Specialized      │
-├─────────────────────────────────────────────────────────┤
-│ Vector DB │ Guardrails │ Error Handling │ Observability │
-└─────────────────────────────────────────────────────────┘
-
-Components: 12-18 | Latency: 10-60s | Cost: $$$
-```
+![Pattern C: Workflow Orchestration](assets/diagrams/pattern-c-workflow-orchestration.svg){ loading=lazy }
 
 ### Pattern D: Agentic System (T4 / Autonomy)
 
-```
-┌───────────────────────────────────────────────────────────────┐
-│                      User Interface                            │
-│        (Streaming + HITL Approvals + Progress + Feedback)      │
-├───────────────────────────────────────────────────────────────┤
-│                    Agent Orchestration                         │
-│  ┌─────────────────────────────────────────────────────────┐  │
-│  │                   Supervisor Agent                       │  │
-│  │  Planning  │  Delegation  │  Monitoring  │  Review       │  │
-│  └─────────────────────────────────────────────────────────┘  │
-│       ▼              ▼              ▼              ▼           │
-│  ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐      │
-│  │Research │   │ Writer  │   │ Coder   │   │Reviewer │      │
-│  │ Agent   │   │ Agent   │   │ Agent   │   │ Agent   │      │
-│  └─────────┘   └─────────┘   └─────────┘   └─────────┘      │
-├───────────────────────────────────────────────────────────────┤
-│         Shared Resources & Capabilities                        │
-│  ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌──────────────┐ │
-│  │  Agentic  │ │   Tool    │ │  Memory   │ │  Reasoning   │ │
-│  │    RAG    │ │   Suite   │ │  System   │ │   Engine     │ │
-│  └───────────┘ └───────────┘ └───────────┘ └──────────────┘ │
-├───────────────────────────────────────────────────────────────┤
-│     Graph Workflow │ State Machines │ Error Recovery           │
-├───────────────────────────────────────────────────────────────┤
-│  Multiple Foundation Models │ Specialized Models │ Embeddings │
-├───────────────────────────────────────────────────────────────┤
-│ Vector DBs │ Knowledge Graphs │ Full Guardrails │ Evaluation  │
-├───────────────────────────────────────────────────────────────┤
-│      Full Observability │ Tracing │ Cost Management            │
-└───────────────────────────────────────────────────────────────┘
-
-Components: 20-35+ | Latency: Minutes-Hours | Cost: $$$$
-```
+![Pattern D: Agentic System](assets/diagrams/pattern-d-agentic-system.svg){ loading=lazy }
 
 ---
 
