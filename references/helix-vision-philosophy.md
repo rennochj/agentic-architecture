@@ -19,6 +19,4 @@ Helix is designed around four explicit core principles:
 3. **Everything‑as‑Code** - Application logic, infrastructure, pipelines, and documentation are defined as version‑controlled artifacts, enabling automation, collaboration, and use of familiar developer workflows.
 4. **Flexibility** - Common tasks are made easy while still allowing room for innovation and customization.
 
-## Source
 
-The information above is based on the [Helix Vision & Philosophy](https://capgroup.sharepoint.com/_layouts/15/Doc.aspx?sourcedoc=%7BB7FDC5CB-89CE-48B1-8F4B-54FD8448A97B%7D&file=Helix%20is%20Capital%20Group%27s%20new%20integrated%20cloud%20platform.docx&action=default&mobileredirect=true&DefaultItemOpen=1).
