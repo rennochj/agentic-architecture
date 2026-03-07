@@ -196,29 +196,7 @@ For [T1](implementation-tiers.md#implementation-tiers)-[T2](implementation-tiers
 
 ### The Continuous Improvement Cycle
 
-```
-                           ┌─────────────┐
-                           │   DEPLOY    │
-                           │  (Ship It)  │
-                           └──────┬──────┘
-                                  │
-                                  ▼
-    ┌─────────────┐        ┌─────────────┐        ┌─────────────┐
-    │   IMPROVE   │◄───────│   OBSERVE   │───────►│   COLLECT   │
-    │  (Iterate)  │        │  (Monitor)  │        │ (Feedback)  │
-    └──────┬──────┘        └─────────────┘        └──────┬──────┘
-           │                      ▲                      │
-           │               ┌──────┴──────┐               │
-           └──────────────►│  EVALUATE   │◄──────────────┘
-                           │  (Measure)  │
-                           └─────────────┘
-
-  ENABLING COMPONENTS:
-  ├─► OBSERVE:  Tracing, Logging, Metrics, Dashboards
-  ├─► COLLECT:  User Feedback, Ratings, Corrections, Escalations
-  ├─► EVALUATE: Eval Datasets, Benchmarks, A/B Tests, LLM-as-Judge
-  └─► IMPROVE:  Prompt Tuning, RAG Updates, Model Swap, Guardrail Tuning
-```
+![The Continuous Improvement Cycle](assets/diagrams/continuous-improvement-cycle.svg){ loading=lazy }
 
 ### Components That Enable Learning
 
