@@ -40,15 +40,15 @@ A comprehensive guide for evaluating and selecting GenAI implementation platform
 
 | Platform Type | Best For | Tier Support | Examples |
 |---------------|----------|--------------|----------|
-| **LLM APIs** | [T1](implementation-tiers.md#t1-basic)-[T2](implementation-tiers.md#t2-enhanced), building blocks | [T1](implementation-tiers.md#t1-basic)-[T4](implementation-tiers.md#t4-agentic) (foundation) | OpenAI, Anthropic, Google |
-| **Enterprise Low-Code AI** | [T1](implementation-tiers.md#t1-basic)-[T3](implementation-tiers.md#t3-orchestrated), enterprise scenarios | [T1](implementation-tiers.md#t1-basic)-[T3](implementation-tiers.md#t3-orchestrated) | Copilot Studio, Power Platform AI |
-| **Third-Party SaaS AI** | [T1](implementation-tiers.md#t1-basic)-[T2](implementation-tiers.md#t2-enhanced), domain-specific | [T1](implementation-tiers.md#t1-basic)-[T2](implementation-tiers.md#t2-enhanced) | Salesforce Einstein, ServiceNow, Zendesk AI |
-| **Low-Code AI Builders** | [T1](implementation-tiers.md#t1-basic)-[T2](implementation-tiers.md#t2-enhanced), rapid prototyping | [T1](implementation-tiers.md#t1-basic)-[T2](implementation-tiers.md#t2-enhanced) | ChatGPT Custom GPTs, Claude Projects |
-| **RAG Platforms** | [T2](implementation-tiers.md#t2-enhanced), knowledge-intensive | [T2](implementation-tiers.md#t2-enhanced)-[T3](implementation-tiers.md#t3-orchestrated) | Pinecone + LangChain, Vectara |
-| **Orchestration Frameworks** | [T2](implementation-tiers.md#t2-enhanced)-[T3](implementation-tiers.md#t3-orchestrated), workflows | [T2](implementation-tiers.md#t2-enhanced)-[T3](implementation-tiers.md#t3-orchestrated) | LangChain, LlamaIndex |
-| **Agent Frameworks** | [T3](implementation-tiers.md#t3-orchestrated)-[T4](implementation-tiers.md#t4-agentic), autonomous | [T3](implementation-tiers.md#t3-orchestrated)-[T4](implementation-tiers.md#t4-agentic) | LangGraph, AutoGen, CrewAI |
-| **Full Stack AI Platforms** | [T2](implementation-tiers.md#t2-enhanced)-[T4](implementation-tiers.md#t4-agentic), enterprise | [T2](implementation-tiers.md#t2-enhanced)-[T4](implementation-tiers.md#t4-agentic) | AWS Bedrock, Azure AI, Vertex AI |
-| **Custom Development** | [T2](implementation-tiers.md#t2-enhanced)-[T4](implementation-tiers.md#t4-agentic), unique requirements | [T1](implementation-tiers.md#t1-basic)-[T4](implementation-tiers.md#t4-agentic) | Python + frameworks, .NET + Semantic Kernel |
+| **LLM APIs** | [T1](implementation-tiers.md#implementation-tiers)-[T2](implementation-tiers.md#implementation-tiers), building blocks | [T1](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers) (foundation) | OpenAI, Anthropic, Google |
+| **Enterprise Low-Code AI** | [T1](implementation-tiers.md#implementation-tiers)-[T3](implementation-tiers.md#implementation-tiers), enterprise scenarios | [T1](implementation-tiers.md#implementation-tiers)-[T3](implementation-tiers.md#implementation-tiers) | Copilot Studio, Power Platform AI |
+| **Third-Party SaaS AI** | [T1](implementation-tiers.md#implementation-tiers)-[T2](implementation-tiers.md#implementation-tiers), domain-specific | [T1](implementation-tiers.md#implementation-tiers)-[T2](implementation-tiers.md#implementation-tiers) | Salesforce Einstein, ServiceNow, Zendesk AI |
+| **Low-Code AI Builders** | [T1](implementation-tiers.md#implementation-tiers)-[T2](implementation-tiers.md#implementation-tiers), rapid prototyping | [T1](implementation-tiers.md#implementation-tiers)-[T2](implementation-tiers.md#implementation-tiers) | ChatGPT Custom GPTs, Claude Projects |
+| **RAG Platforms** | [T2](implementation-tiers.md#implementation-tiers), knowledge-intensive | [T2](implementation-tiers.md#implementation-tiers)-[T3](implementation-tiers.md#implementation-tiers) | Pinecone + LangChain, Vectara |
+| **Orchestration Frameworks** | [T2](implementation-tiers.md#implementation-tiers)-[T3](implementation-tiers.md#implementation-tiers), workflows | [T2](implementation-tiers.md#implementation-tiers)-[T3](implementation-tiers.md#implementation-tiers) | LangChain, LlamaIndex |
+| **Agent Frameworks** | [T3](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers), autonomous | [T3](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers) | LangGraph, AutoGen, CrewAI |
+| **Full Stack AI Platforms** | [T2](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers), enterprise | [T2](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers) | AWS Bedrock, Azure AI, Vertex AI |
+| **Custom Development** | [T2](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers), unique requirements | [T1](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers) | Python + frameworks, .NET + Semantic Kernel |
 
 ---
 
@@ -61,10 +61,10 @@ Legend: ● Full Support | ◐ Partial/Limited | ○ Requires Extension | − No
 | Capability | Copilot Studio | Salesforce Einstein | ServiceNow AI | Azure AI / Bedrock | LangChain/Graph | Custom Dev |
 |------------|----------------|---------------------|---------------|-------------------|-----------------|------------|
 | **Complexity Tier Support** |
-| [T1](implementation-tiers.md#t1-basic) - Basic | ● | ● | ● | ● | ● | ● |
-| [T2](implementation-tiers.md#t2-enhanced) - Enhanced | ● | ◐ | ◐ | ● | ● | ● |
-| [T3](implementation-tiers.md#t3-orchestrated) - Orchestrated | ◐ | ○ | ○ | ● | ● | ● |
-| [T4](implementation-tiers.md#t4-agentic) - Agentic | ○ | − | − | ● | ● | ● |
+| [T1](implementation-tiers.md#implementation-tiers) - Basic | ● | ● | ● | ● | ● | ● |
+| [T2](implementation-tiers.md#implementation-tiers) - Enhanced | ● | ◐ | ◐ | ● | ● | ● |
+| [T3](implementation-tiers.md#implementation-tiers) - Orchestrated | ◐ | ○ | ○ | ● | ● | ● |
+| [T4](implementation-tiers.md#implementation-tiers) - Agentic | ○ | − | − | ● | ● | ● |
 | **Core Components** |
 | LLM Integration | ● | ● | ● | ● | ● | ● |
 | Prompt Management | ● | ◐ | ◐ | ● | ● | ● |
@@ -307,7 +307,7 @@ Key Inflection Points:
 
 ### 4.4 Cost-Benefit by Complexity Tier
 
-| Dimension | [T1](implementation-tiers.md#t1-basic) Basic | [T2](implementation-tiers.md#t2-enhanced) Enhanced | [T3](implementation-tiers.md#t3-orchestrated) Orchestrated | [T4](implementation-tiers.md#t4-agentic) Agentic |
+| Dimension | [T1](implementation-tiers.md#implementation-tiers) Basic | [T2](implementation-tiers.md#implementation-tiers) Enhanced | [T3](implementation-tiers.md#implementation-tiers) Orchestrated | [T4](implementation-tiers.md#implementation-tiers) Agentic |
 |-----------|----------|-------------|-----------------|------------|
 | **Typical Initial Investment** | $10K-50K | $50K-150K | $150K-500K | $500K-2M+ |
 | **Annual Operating Cost** | $20K-75K | $75K-200K | $200K-500K | $500K-1.5M+ |
@@ -470,11 +470,11 @@ NFR Maturity (OOTB):High ──────────────────�
 
 | Maturity Level | Recommended Tier | Recommended Platform Type |
 |:---|:---|:---|
-| Level 1 | [T1](implementation-tiers.md#t1-basic) only | SaaS AI (Copilot Studio, ChatGPT Enterprise) |
-| Level 2 | [T1](implementation-tiers.md#t1-basic)-[T2](implementation-tiers.md#t2-enhanced) | SaaS AI + Cloud AI APIs |
-| Level 3 | [T1](implementation-tiers.md#t1-basic)-[T3](implementation-tiers.md#t3-orchestrated) | Cloud AI + Orchestration Frameworks |
-| Level 4 | [T1](implementation-tiers.md#t1-basic)-[T4](implementation-tiers.md#t4-agentic) | Custom + Frameworks |
-| Level 5 | [T1](implementation-tiers.md#t1-basic)-[T4](implementation-tiers.md#t4-agentic) | Full Custom + MLOps |
+| Level 1 | [T1](implementation-tiers.md#implementation-tiers) only | SaaS AI (Copilot Studio, ChatGPT Enterprise) |
+| Level 2 | [T1](implementation-tiers.md#implementation-tiers)-[T2](implementation-tiers.md#implementation-tiers) | SaaS AI + Cloud AI APIs |
+| Level 3 | [T1](implementation-tiers.md#implementation-tiers)-[T3](implementation-tiers.md#implementation-tiers) | Cloud AI + Orchestration Frameworks |
+| Level 4 | [T1](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers) | Custom + Frameworks |
+| Level 5 | [T1](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers) | Full Custom + MLOps |
 
 ---
 
@@ -486,7 +486,7 @@ When no single platform meets all requirements, consider hybrid approaches.
 
 | Pattern | Description | When to Use |
 |---------|-------------|-------------|
-| **Security Wrapper** | Enterprise platform provides security/compliance around custom AI core | [T3](implementation-tiers.md#t3-orchestrated)-[T4](implementation-tiers.md#t4-agentic) requiring enterprise NFRs |
+| **Security Wrapper** | Enterprise platform provides security/compliance around custom AI core | [T3](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers) requiring enterprise NFRs |
 | **Capability Extension** | Low-code handles common cases, custom handles edge cases | 80/20 scenarios |
 | **Domain Bridging** | Connect multiple SaaS AI solutions | Multi-domain enterprise |
 | **Data Sovereignty** | Sensitive processing on-premises, non-sensitive in cloud | Regulated data + cloud scale |
@@ -547,7 +547,7 @@ When no single platform meets all requirements, consider hybrid approaches.
 
 ### 7.1 Skills Requirements by Tier
 
-| Skill Area | [T1](implementation-tiers.md#t1-basic) Basic | [T2](implementation-tiers.md#t2-enhanced) Enhanced | [T3](implementation-tiers.md#t3-orchestrated) Orchestrated | [T4](implementation-tiers.md#t4-agentic) Agentic |
+| Skill Area | [T1](implementation-tiers.md#implementation-tiers) Basic | [T2](implementation-tiers.md#implementation-tiers) Enhanced | [T3](implementation-tiers.md#implementation-tiers) Orchestrated | [T4](implementation-tiers.md#implementation-tiers) Agentic |
 |:---|:---|:---|:---|:---|
 | AI/ML Fundamentals | Awareness | Practitioner | Practitioner | Expert |
 | Prompt Engineering | Basic | Intermediate | Advanced | Expert |
@@ -562,7 +562,7 @@ When no single platform meets all requirements, consider hybrid approaches.
 
 **SaaS / Low-Code Platforms**
 
-| Role | [T1](implementation-tiers.md#t1-basic) | [T2](implementation-tiers.md#t2-enhanced) | [T3](implementation-tiers.md#t3-orchestrated) |
+| Role | [T1](implementation-tiers.md#implementation-tiers) | [T2](implementation-tiers.md#implementation-tiers) | [T3](implementation-tiers.md#implementation-tiers) |
 |------|----|----|-----|
 | Platform Admin/Configurator | 0.5 FTE | 1 FTE | 1-2 FTE |
 | Business Analyst | 0.25 FTE | 0.5 FTE | 1 FTE |
@@ -572,7 +572,7 @@ When no single platform meets all requirements, consider hybrid approaches.
 
 **Cloud AI / Custom Development**
 
-| Role | [T2](implementation-tiers.md#t2-enhanced) | [T3](implementation-tiers.md#t3-orchestrated) | [T4](implementation-tiers.md#t4-agentic) |
+| Role | [T2](implementation-tiers.md#implementation-tiers) | [T3](implementation-tiers.md#implementation-tiers) | [T4](implementation-tiers.md#implementation-tiers) |
 |------|----|----|-----|
 | AI/ML Engineer | 1 FTE | 2 FTE | 3-5 FTE |
 | Backend Developer | 0.5 FTE | 1-2 FTE | 2-3 FTE |
@@ -678,8 +678,8 @@ TRAINING INVESTMENT BY TIER
 
 | Factor | Copilot Studio | Salesforce Einstein | ServiceNow AI | Cloud AI (Azure/AWS/GCP) | Custom Dev |
 |--------|----------------|---------------------|---------------|-------------------------|------------|
-| **Best For** | M365-centric, [T1](implementation-tiers.md#t1-basic)-[T3](implementation-tiers.md#t3-orchestrated) | SFDC-centric CRM | ITSM-focused | Flexible [T2](implementation-tiers.md#t2-enhanced)-[T4](implementation-tiers.md#t4-agentic) | Unique [T3](implementation-tiers.md#t3-orchestrated)-[T4](implementation-tiers.md#t4-agentic) |
-| **Functional Ceiling** | [T3](implementation-tiers.md#t3-orchestrated) (limited) | [T2](implementation-tiers.md#t2-enhanced) | [T2](implementation-tiers.md#t2-enhanced) | [T4](implementation-tiers.md#t4-agentic) | [T4](implementation-tiers.md#t4-agentic) |
+| **Best For** | M365-centric, [T1](implementation-tiers.md#implementation-tiers)-[T3](implementation-tiers.md#implementation-tiers) | SFDC-centric CRM | ITSM-focused | Flexible [T2](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers) | Unique [T3](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers) |
+| **Functional Ceiling** | [T3](implementation-tiers.md#implementation-tiers) (limited) | [T2](implementation-tiers.md#implementation-tiers) | [T2](implementation-tiers.md#implementation-tiers) | [T4](implementation-tiers.md#implementation-tiers) | [T4](implementation-tiers.md#implementation-tiers) |
 | **Time to Value** | Fast | Fast | Fast | Medium | Slow |
 | **TCO (small)** | Medium | Medium | Medium | Higher | Highest |
 | **TCO (large)** | Higher | Higher | Higher | Medium | Lower |
@@ -691,18 +691,18 @@ TRAINING INVESTMENT BY TIER
 
 | If You Have... | And Need... | Consider... | Watch Out For... |
 |:---|:---|:---|:---|
-| M365 ecosystem | [T1](implementation-tiers.md#t1-basic)-[T2](implementation-tiers.md#t2-enhanced), fast deployment | Copilot Studio | [T3](implementation-tiers.md#t3-orchestrated)+ complexity ceiling |
+| M365 ecosystem | [T1](implementation-tiers.md#implementation-tiers)-[T2](implementation-tiers.md#implementation-tiers), fast deployment | Copilot Studio | [T3](implementation-tiers.md#implementation-tiers)+ complexity ceiling |
 | Salesforce | CRM-integrated AI | Einstein | Limited customization |
 | AWS cloud | Flexibility, scale | Bedrock + LangChain | Integration complexity |
 | Azure cloud | Enterprise security | Azure AI + Semantic Kernel | Learning curve |
-| Strong AI team | [T3](implementation-tiers.md#t3-orchestrated)-[T4](implementation-tiers.md#t4-agentic), differentiation | Custom with frameworks | Time and cost |
+| Strong AI team | [T3](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers), differentiation | Custom with frameworks | Time and cost |
 | Limited skills | Quick wins | SaaS AI platforms | Vendor lock-in |
 | Sensitive data | Compliance, control | Enterprise platforms or on-prem | Higher cost |
 | High volume | Cost efficiency | Custom with optimization | Development investment |
 
 ### 10.3 Use Case → Platform Type
 
-| Use Case Category | [T1](implementation-tiers.md#t1-basic) Platform | [T2](implementation-tiers.md#t2-enhanced) Platform | [T3](implementation-tiers.md#t3-orchestrated) Platform | [T4](implementation-tiers.md#t4-agentic) Platform |
+| Use Case Category | [T1](implementation-tiers.md#implementation-tiers) Platform | [T2](implementation-tiers.md#implementation-tiers) Platform | [T3](implementation-tiers.md#implementation-tiers) Platform | [T4](implementation-tiers.md#implementation-tiers) Platform |
 |:---|:---|:---|:---|:---|
 | Content Generation | LLM API | LLM + Templates | Orchestration Framework | Agent Framework |
 | Knowledge Work | LLM API | RAG Platform | Orchestration + RAG | Agentic RAG |

@@ -370,15 +370,15 @@ Use **Matrix A** in [03-capability-features.md](capability-features.md) to build
 
 #### 2. Highest Tier Governs
 
-Each participating archetype implies a minimum implementation tier (T1-[T4](implementation-tiers.md#t4-agentic)). The **most complex archetype sets the floor** for the entire composition.
+Each participating archetype implies a minimum implementation tier ([T1](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers)). The **most complex archetype sets the floor** for the entire composition.
 
 | Archetype | Typical minimum tier |
 |-----------|---------------------|
-| Content Generation | [T1](implementation-tiers.md#t1-basic)-[T2](implementation-tiers.md#t2-enhanced) |
-| Research & Synthesis | [T2](implementation-tiers.md#t2-enhanced)-[T3](implementation-tiers.md#t3-orchestrated) |
-| Agentic Task Automation | [T3](implementation-tiers.md#t3-orchestrated)-[T4](implementation-tiers.md#t4-agentic) |
+| Content Generation | [T1](implementation-tiers.md#implementation-tiers)-[T2](implementation-tiers.md#implementation-tiers) |
+| Research & Synthesis | [T2](implementation-tiers.md#implementation-tiers)-[T3](implementation-tiers.md#implementation-tiers) |
+| Agentic Task Automation | [T3](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers) |
 
-If you chain a [T1](implementation-tiers.md#t1-basic) archetype behind a [T3](implementation-tiers.md#t3-orchestrated) archetype, the overall solution is at least [T3](implementation-tiers.md#t3-orchestrated) — because the orchestration, observability, and governance requirements of the highest-tier participant apply system-wide.
+If you chain a [T1](implementation-tiers.md#implementation-tiers) archetype behind a [T3](implementation-tiers.md#implementation-tiers) archetype, the overall solution is at least [T3](implementation-tiers.md#implementation-tiers) — because the orchestration, observability, and governance requirements of the highest-tier participant apply system-wide.
 
 #### 3. Interface Contracts Between Stages
 
@@ -415,7 +415,7 @@ Evaluating individual stages is necessary but not sufficient. Add **end-to-end m
 
 **Composition pattern**: Sequential pipeline (1 → 2 → 3).
 **Merged feature set**: [F1](capability-features.md#f1-contextual-grounding), [F2](capability-features.md#f2-multi-source-synthesis), [F3](capability-features.md#f3-structured-output-generation), [F4](capability-features.md#f4-interactive-refinement), [F5](capability-features.md#f5-citation-provenance), [F6](capability-features.md#f6-adaptive-personalization), [F7](capability-features.md#f7-autonomous-planning-execution), [F8](capability-features.md#f8-tool-orchestration), [F15](capability-features.md#f15-auditability-compliance) (+ implicit [F12](capability-features.md#f12-safety-content-controls), [F13](capability-features.md#f13-continuous-learning-feedback)).
-**Governing tier**: [T3](implementation-tiers.md#t3-orchestrated) (Research & Synthesis drives orchestration needs).
+**Governing tier**: [T3](implementation-tiers.md#implementation-tiers) (Research & Synthesis drives orchestration needs).
 **Governance posture**: Inherits from Stage 3 — full auditability, provenance chain, compliance logging.
 **Interface contracts**:
 - Stage 1 → 2: Structured findings JSON with source citations and confidence scores; quality gate = minimum 3 corroborating sources.
@@ -438,7 +438,7 @@ Evaluating individual stages is necessary but not sufficient. Add **end-to-end m
 
 **Merged feature set**: [F1](capability-features.md#f1-contextual-grounding), [F2](capability-features.md#f2-multi-source-synthesis), [F3](capability-features.md#f3-structured-output-generation), [F4](capability-features.md#f4-interactive-refinement), [F5](capability-features.md#f5-citation-provenance), [F6](capability-features.md#f6-adaptive-personalization), [F7](capability-features.md#f7-autonomous-planning-execution), [F8](capability-features.md#f8-tool-orchestration), [F9](capability-features.md#f9-real-time-data-access), [F10](capability-features.md#f10-long-term-memory-context), [F11](capability-features.md#f11-human-oversight-gates), [F14](capability-features.md#f14-multi-agent-collaboration) (+ implicit [F12](capability-features.md#f12-safety-content-controls), [F13](capability-features.md#f13-continuous-learning-feedback)).
 
-**Governing tier**: [T4](implementation-tiers.md#t4-agentic) — autonomous planning with parallel workstreams and multi-agent coordination.
+**Governing tier**: [T4](implementation-tiers.md#implementation-tiers) — autonomous planning with parallel workstreams and multi-agent coordination.
 
 **Architectural dimensions**:
 - *Interaction Model*: Proactive — executes autonomously once the goal is set; user can provide mid-task direction.
@@ -548,7 +548,7 @@ Use this to assess organizational readiness by archetype group.
 - [ ] Human-in-the-loop workflows designed
 - [ ] Full observability and tracing operational
 - [ ] State management and recovery proven
-- [ ] Multi-agent coordination patterns validated (if [T4](implementation-tiers.md#t4-agentic))
+- [ ] Multi-agent coordination patterns validated (if [T4](implementation-tiers.md#implementation-tiers))
 - [ ] **Tool API contracts documented and validated** — schemas, authentication, rate limits, error modes, and idempotency guarantees confirmed in non-production environment before agent deployment
 - [ ] **Agent action space explicitly bounded** — written inventory of permitted/prohibited operations enforced at the authorization layer, not only in the prompt
 - [ ] **Rollback and compensating transaction capability documented** for every write or state-changing tool invocation the agent can perform

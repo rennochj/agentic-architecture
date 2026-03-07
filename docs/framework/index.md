@@ -48,7 +48,7 @@ Follow these steps to go from idea to architecture:
 
 #### Step 5
   SELECT implementation tier and platform.
-  Read: 06-implementation-tiers.md (maturity tiers [T1](implementation-tiers.md#t1-basic)-[T4](implementation-tiers.md#t4-agentic))
+  Read: 06-implementation-tiers.md (maturity tiers [T1](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers))
   Read: 07-platform-selection.md (platform comparison & TCO)
   Ask:  "What tier matches our maturity? What platform fits our org?"
 
@@ -63,15 +63,15 @@ The Practitioner's Path assumes you're starting from a use case idea. If you're 
 
 | You're Starting From | Your Question | Entry Point |
 |---|---|---|
-| **A known tier** | "I'm building a [T2](implementation-tiers.md#t2-enhanced) system — what do I need?" | Start at [06-implementation-tiers.md](implementation-tiers.md) §1 to confirm your tier, then §4 for the component stack pattern. Use Matrix C in [03-capability-features.md](capability-features.md) to identify components for your archetype. |
+| **A known tier** | "I'm building a [T2](implementation-tiers.md#implementation-tiers) system — what do I need?" | Start at [06-implementation-tiers.md](implementation-tiers.md) §1 to confirm your tier, then §4 for the component stack pattern. Use Matrix C in [03-capability-features.md](capability-features.md) to identify components for your archetype. |
 | **A platform constraint** | "We use Azure / we're a Microsoft shop" | Start at [07-platform-selection.md](platform-selection.md) §3 (decision trees) and §5 (ecosystem checklists). Work backward from the platform's tier ceiling to select an achievable archetype. |
-| **An existing system to upgrade** | "I have a [T2](implementation-tiers.md#t2-enhanced) RAG system and want to add agentic capabilities" | Start at [06-implementation-tiers.md](implementation-tiers.md) §9 (Upgrading an Existing System). Assess your current tier, then follow the upgrade requirements and principles. |
+| **An existing system to upgrade** | "I have a [T2](implementation-tiers.md#implementation-tiers) RAG system and want to add agentic capabilities" | Start at [06-implementation-tiers.md](implementation-tiers.md) §9 (Upgrading an Existing System). Assess your current tier, then follow the upgrade requirements and principles. |
 | **A specific component question** | "Should I use Graph RAG or basic RAG?" | Go directly to [04-technical-components.md](technical-components.md) — use the Section Index at the top to find the relevant component, then evaluate with the Seven Questions from [05-component-selection-guide.md](component-selection-guide.md). |
 | **A data readiness concern** | "Is our data ready for AI?" | Start at [02-use-case-archetypes.md](use-case-archetypes.md) Part 5 (Data Readiness Gate) and [04-technical-components.md](technical-components.md) §5.9.0 (Data Readiness Assessment). |
 
 ### Quick Start: Your First Knowledge Assistant (T2)
 
-The most common GenAI deployment is a [T2](implementation-tiers.md#t2-enhanced) RAG-based knowledge assistant. If that's what you're building, here's the minimum viable path:
+The most common GenAI deployment is a [T2](implementation-tiers.md#implementation-tiers) RAG-based knowledge assistant. If that's what you're building, here's the minimum viable path:
 
 ```
 Archetype:   Grounded Q&A (#3)
@@ -128,7 +128,7 @@ After following the Practitioner's Path (or any alternative entry), use this che
 | **[03-capability-features.md](capability-features.md)** | Layer 2: WHY | 15 capability features, Matrix A (Archetypes→Features), Matrix B (Features→Components), Matrix C (Archetypes→Components quick lookup). |
 | **[04-technical-components.md](technical-components.md)** | Layer 3: HOW | Comprehensive catalog: 13 capability components across 4 maturity layers (incl. §1.3 Model Selection, §4.4 Agent Runtime) + 11 Operational Excellence cross-cutting sections (incl. §5.9 Data Readiness & Knowledge Governance with pre-project assessment and structured data readiness). |
 | **[05-component-selection-guide.md](component-selection-guide.md)** | Evaluation tool | Seven Questions framework, Component Selection Canvas, anti-patterns, production readiness. |
-| **[06-implementation-tiers.md](implementation-tiers.md)** | Mapping & maturity | [T1](implementation-tiers.md#t1-basic)-[T4](implementation-tiers.md#t4-agentic) implementation tiers, maturity progression, component stack patterns, NFR framework, brownfield upgrade guidance. |
+| **[06-implementation-tiers.md](implementation-tiers.md)** | Mapping & maturity | [T1](implementation-tiers.md#implementation-tiers)-[T4](implementation-tiers.md#implementation-tiers) implementation tiers, maturity progression, component stack patterns, NFR framework, brownfield upgrade guidance. |
 | **[07-platform-selection.md](platform-selection.md)** | Layer 4: WHERE | Platform comparison, decision trees, hybrid patterns, TCO, organizational fit. |
 
 ---
@@ -143,7 +143,7 @@ The framework uses consistent terminology across all documents:
 | Functional capability | **Capability Feature** | A reusable, composable facet (e.g., "Contextual Grounding") that an archetype requires. |
 | Technical building block | **Technical Component** | A concrete technology element (e.g., RAG Pipeline, Memory System) that enables a feature. |
 | Component maturity layer | **Foundation / Augmentation / Orchestration / Autonomy** | The four progressive layers of technical component complexity. |
-| Implementation complexity | **Tier 1-4 (T1-[T4](implementation-tiers.md#t4-agentic))** | Basic → Enhanced → Orchestrated → Agentic. Maps to maturity layers. |
+| Implementation complexity | **Tier 1-4 (T1-[T4](implementation-tiers.md#implementation-tiers))** | Basic → Enhanced → Orchestrated → Agentic. Maps to maturity layers. |
 | Cross-cutting concerns | **Operational Excellence** | 11 cross-cutting sections that apply at every tier: Safety & Guardrails, Evaluation & Testing, Infrastructure & Deployment, Observability, Cost Management, Resilience & Fault Tolerance, Performance & Latency, DevOps & Change Management, Data Readiness & Knowledge Governance, Identity & Authorization, Incident Response. |
 | User/system interaction style | **Interaction Model** | One-shot, Conversational, Proactive, or API-driven. |
 | Degree of independent action | **Autonomy Level** | Assistive, Semi-Autonomous, or Fully Autonomous. |
@@ -236,18 +236,18 @@ Example evaluation for **RAG & Retrieval** using the Light Canvas:
 | **CAN WE SHIP?** | RAG is battle-tested, mature patterns — Battle-tested |
 | **Decision** | **INCLUDE** |
 
-*(Repeat for each component. For a [T2](implementation-tiers.md#t2-enhanced)-[T3](implementation-tiers.md#t3-orchestrated) system like this, the Light Canvas suffices.)*
+*(Repeat for each component. For a [T2](implementation-tiers.md#implementation-tiers)-[T3](implementation-tiers.md#implementation-tiers) system like this, the Light Canvas suffices.)*
 
 ### Step 5: Select Tier and Platform (→ 06, 07)
 
-**Tier**: [T2](implementation-tiers.md#t2-enhanced)-[T3](implementation-tiers.md#t3-orchestrated) — [T2](implementation-tiers.md#t2-enhanced) for the core RAG Q&A capability; [T3](implementation-tiers.md#t3-orchestrated) for escalation workflows and HITL gates. Per the composition rule (02, Part 4): highest tier governs → **[T3](implementation-tiers.md#t3-orchestrated)**.
+**Tier**: [T2](implementation-tiers.md#implementation-tiers)-[T3](implementation-tiers.md#implementation-tiers) — [T2](implementation-tiers.md#implementation-tiers) for the core RAG Q&A capability; [T3](implementation-tiers.md#implementation-tiers) for escalation workflows and HITL gates. Per the composition rule (02, Part 4): highest tier governs → **[T3](implementation-tiers.md#implementation-tiers)**.
 
 **Feature Maturity check** (06, Feature Maturity matrix):
-- F1 at [T3](implementation-tiers.md#t3-orchestrated): Hybrid search + re-ranking + agentic retrieval ✓
-- F11 at [T3](implementation-tiers.md#t3-orchestrated): HITL checkpoints at each critical stage ✓
-- F10 at [T3](implementation-tiers.md#t3-orchestrated): Persistent memory across sessions ✓
+- F1 at [T3](implementation-tiers.md#implementation-tiers): Hybrid search + re-ranking + agentic retrieval ✓
+- F11 at [T3](implementation-tiers.md#implementation-tiers): HITL checkpoints at each critical stage ✓
+- F10 at [T3](implementation-tiers.md#implementation-tiers): Persistent memory across sessions ✓
 
-**Platform** (07): If Microsoft ecosystem → Copilot Studio for the [T2](implementation-tiers.md#t2-enhanced) layer + custom extension for [T3](implementation-tiers.md#t3-orchestrated) escalation logic. If cloud-native → Azure AI / AWS Bedrock + LangChain/LangGraph for orchestration.
+**Platform** (07): If Microsoft ecosystem → Copilot Studio for the [T2](implementation-tiers.md#implementation-tiers) layer + custom extension for [T3](implementation-tiers.md#implementation-tiers) escalation logic. If cloud-native → Azure AI / AWS Bedrock + LangChain/LangGraph for orchestration.
 
 ### Step 6: Govern (→ 02, Part 5)
 
@@ -321,7 +321,7 @@ Technical abbreviations used across the framework documents:
 
     | Version | Date | Changes |
     |---------|------|---------|
-    | 5.5 | 2026-03-03 | Major usability update: Added Alternative Starting Points (Tier-First, Platform-First, Upgrade, Component, Data Readiness entry paths). Added Quick Start for [T2](implementation-tiers.md#t2-enhanced) Knowledge Assistant. Added Architecture Definition of Done checklist (12 items). Added end-to-end worked example (Customer Support Assistant tracing all 6 steps). Added Glossary of 40+ technical abbreviations. Updated §5.9 name to "Data Readiness & Knowledge Governance" in OE terminology and document map. All framework documents aligned to v5.5. |
+    | 5.5 | 2026-03-03 | Major usability update: Added Alternative Starting Points (Tier-First, Platform-First, Upgrade, Component, Data Readiness entry paths). Added Quick Start for [T2](implementation-tiers.md#implementation-tiers) Knowledge Assistant. Added Architecture Definition of Done checklist (12 items). Added end-to-end worked example (Customer Support Assistant tracing all 6 steps). Added Glossary of 40+ technical abbreviations. Updated §5.9 name to "Data Readiness & Knowledge Governance" in OE terminology and document map. All framework documents aligned to v5.5. |
     | 5.4 | 2026-03-01 | Updated Layer 3 component count (~15 → ~25: 13 capability components + 11 OE sections). Expanded Operational Excellence terminology to list all 11 sections. Updated document map for 04. Aligns with 04-technical-components.md v5.4 additions: §1.3 Model Selection & Customization Strategy, §3.2.4 Shared Memory, §4.4 Agent Runtime & Deployment, §5.5 Cost Management, §5.6 Resilience, §5.7 Performance, §5.8 DevOps, §5.9 Data Governance, §5.10 Identity & Authorization, §5.11 Incident Response. |
     | 5.0 | 2026-02-27 | Major restructure: introduced 4-layer model with new Capability Features layer, harmonized terminology, reorganized documents for clarity and usability. |
     | 4.0 | 2026-01-20 | Consolidated v1-v3 archetypes into single guide. |
