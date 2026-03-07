@@ -15,25 +15,25 @@ This document defines the 13 use case archetypes that form Layer 1 of the GenAI 
 
 ## Part 1: Agentic Use Case Archetypes - Quick Reference
 
-*All archetypes implicitly require F12 (Safety Controls) and F13 (Learning & Feedback) for production use.*
+*All archetypes implicitly require [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) and [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback) for production use.*
 
 | Group | # | Archetype | Description | Primary Features | Typical Outputs |
 |-------|---|-----------|-------------|-----------------|-----------------|
-| **A: Content & Knowledge Synthesis** | 1 | **Content Generation** | Create or rewrite content (text, code, images, audio, video) based on prompts, templates, or inputs. | F3 · F4 · F6 · F12 · F13 | Drafts, creative assets, translations, rewritten tone/style. |
-| | 2 | **Summarization & Extraction** | Condense information or pull structured data from unstructured or semi-structured inputs. | F1 · F3 · F5 · F12 · F13 | Executive summaries, key-value fields, named entities, timelines. |
-| | 3 | **Grounded Q&A** | Answer questions using a specific, curated body of knowledge with citations and evidence. | F1 · F4 · F5 · F12 · F13 | Answers with source links, document snippets, known-vs-unknown signals. |
-| | 4 | **Research & Synthesis** | Produce analytical artifacts by synthesizing information from many sources. | F1 · F2 · F3 · F5 · F7 · F8 · F13 | Research briefs, competitive analysis, literature reviews. |
-| **B: Insight & Decision Intelligence** | 5 | **Data Interpretation & Analytics** | Explain trends and act on anomalies from structured data, from narrative insight to automated response. | F3 · F8 · F9 · F12 · F13 | Narrative explanations of KPI changes, anomaly summaries, triggered alerts. |
-| | 6 | **Recommendation & Personalization** | Tailor and deliver content, workflows, or experiences to a user, segment, or context. | F1 · F6 · F10 · F12 · F13 | Personalized content, next-best-action suggestions, adaptive learning plans, dynamic pricing. |
-| | 7 | **Simulation & Synthetic Data** | Generate data, scenarios, or environments for training, testing, or what-if analysis. | F3 · F7 · F12 · F13 | Synthetic datasets, adversarial test cases, scenario catalogs. |
-| **C: Process & Task Automation** | 8 | **Software Dev Acceleration** | Assist with coding, testing, reviewing, and debugging across the SDLC. | F1 · F3 · F4 · F8 · F11 · F12 · F13 | Code diffs, unit tests, PR summaries, refactoring suggestions. |
-| | 9 | **Structured Workflow Automation** | Automate deterministic business processes using GenAI for NLU/NLG steps. | F3 · F8 · F11 · F12 · F13 · F15 | Completed forms, drafted emails, reconciled records. |
-| | 10 | **Agentic Task Automation** | Plan and execute multi-step, dynamic tasks by orchestrating tools and adapting to observations. | F7 · F8 · F9 · F10 · F11 · F12 · F13 · F14 · F15 | Completed end-to-end tasks, detailed action logs. |
-| | 11 | **Ops & Monitoring Copilot** | Assist operators by monitoring signals, diagnosing issues, and suggesting remediation. | F1 · F7 · F8 · F9 · F10 · F11 · F12 · F13 · F15 | Incident summaries, root-cause hypotheses, remediation playbooks. |
-| | 12 | **AI Governance & Assurance** | Use GenAI to support GRC: policy checks, control testing, audit evidence gathering. | F1 · F2 · F3 · F5 · F11 · F12 · F13 · F15 | Compliance reports, risk registers, red-teaming findings. |
-| | 13 | **Conversational Agent** | Conduct sustained, goal-directed conversations for support, sales, coaching, or advisory interactions. | F1 · F4 · F6 · F10 · F11 · F12 · F13 | Resolved support tickets, guided sales conversations, coaching sessions, escalation handoffs. |
+| **A: Content & Knowledge Synthesis** | 1 | **Content Generation** | Create or rewrite content (text, code, images, audio, video) based on prompts, templates, or inputs. | [F3](capability-features.md#f3-structured-output-generation) · [F4](capability-features.md#f4-interactive-refinement) · [F6](capability-features.md#f6-adaptive-personalization) · [F12](capability-features.md#f12-safety-content-controls) · [F13](capability-features.md#f13-continuous-learning-feedback) | Drafts, creative assets, translations, rewritten tone/style. |
+| | 2 | **Summarization & Extraction** | Condense information or pull structured data from unstructured or semi-structured inputs. | [F1](capability-features.md#f1-contextual-grounding) · [F3](capability-features.md#f3-structured-output-generation) · [F5](capability-features.md#f5-citation-provenance) · [F12](capability-features.md#f12-safety-content-controls) · [F13](capability-features.md#f13-continuous-learning-feedback) | Executive summaries, key-value fields, named entities, timelines. |
+| | 3 | **Grounded Q&A** | Answer questions using a specific, curated body of knowledge with citations and evidence. | [F1](capability-features.md#f1-contextual-grounding) · [F4](capability-features.md#f4-interactive-refinement) · [F5](capability-features.md#f5-citation-provenance) · [F12](capability-features.md#f12-safety-content-controls) · [F13](capability-features.md#f13-continuous-learning-feedback) | Answers with source links, document snippets, known-vs-unknown signals. |
+| | 4 | **Research & Synthesis** | Produce analytical artifacts by synthesizing information from many sources. | [F1](capability-features.md#f1-contextual-grounding) · [F2](capability-features.md#f2-multi-source-synthesis) · [F3](capability-features.md#f3-structured-output-generation) · [F5](capability-features.md#f5-citation-provenance) · [F7](capability-features.md#f7-autonomous-planning-execution) · [F8](capability-features.md#f8-tool-orchestration) · [F13](capability-features.md#f13-continuous-learning-feedback) | Research briefs, competitive analysis, literature reviews. |
+| **B: Insight & Decision Intelligence** | 5 | **Data Interpretation & Analytics** | Explain trends and act on anomalies from structured data, from narrative insight to automated response. | [F3](capability-features.md#f3-structured-output-generation) · [F8](capability-features.md#f8-tool-orchestration) · [F9](capability-features.md#f9-real-time-data-access) · [F12](capability-features.md#f12-safety-content-controls) · [F13](capability-features.md#f13-continuous-learning-feedback) | Narrative explanations of KPI changes, anomaly summaries, triggered alerts. |
+| | 6 | **Recommendation & Personalization** | Tailor and deliver content, workflows, or experiences to a user, segment, or context. | [F1](capability-features.md#f1-contextual-grounding) · [F6](capability-features.md#f6-adaptive-personalization) · [F10](capability-features.md#f10-long-term-memory-context) · [F12](capability-features.md#f12-safety-content-controls) · [F13](capability-features.md#f13-continuous-learning-feedback) | Personalized content, next-best-action suggestions, adaptive learning plans, dynamic pricing. |
+| | 7 | **Simulation & Synthetic Data** | Generate data, scenarios, or environments for training, testing, or what-if analysis. | [F3](capability-features.md#f3-structured-output-generation) · [F7](capability-features.md#f7-autonomous-planning-execution) · [F12](capability-features.md#f12-safety-content-controls) · [F13](capability-features.md#f13-continuous-learning-feedback) | Synthetic datasets, adversarial test cases, scenario catalogs. |
+| **C: Process & Task Automation** | 8 | **Software Dev Acceleration** | Assist with coding, testing, reviewing, and debugging across the SDLC. | [F1](capability-features.md#f1-contextual-grounding) · [F3](capability-features.md#f3-structured-output-generation) · [F4](capability-features.md#f4-interactive-refinement) · [F8](capability-features.md#f8-tool-orchestration) · [F11](capability-features.md#f11-human-oversight-gates) · [F12](capability-features.md#f12-safety-content-controls) · [F13](capability-features.md#f13-continuous-learning-feedback) | Code diffs, unit tests, PR summaries, refactoring suggestions. |
+| | 9 | **Structured Workflow Automation** | Automate deterministic business processes using GenAI for NLU/NLG steps. | [F3](capability-features.md#f3-structured-output-generation) · [F8](capability-features.md#f8-tool-orchestration) · [F11](capability-features.md#f11-human-oversight-gates) · [F12](capability-features.md#f12-safety-content-controls) · [F13](capability-features.md#f13-continuous-learning-feedback) · [F15](capability-features.md#f15-auditability-compliance) | Completed forms, drafted emails, reconciled records. |
+| | 10 | **Agentic Task Automation** | Plan and execute multi-step, dynamic tasks by orchestrating tools and adapting to observations. | [F7](capability-features.md#f7-autonomous-planning-execution) · [F8](capability-features.md#f8-tool-orchestration) · [F9](capability-features.md#f9-real-time-data-access) · [F10](capability-features.md#f10-long-term-memory-context) · [F11](capability-features.md#f11-human-oversight-gates) · [F12](capability-features.md#f12-safety-content-controls) · [F13](capability-features.md#f13-continuous-learning-feedback) · [F14](capability-features.md#f14-multi-agent-collaboration) · [F15](capability-features.md#f15-auditability-compliance) | Completed end-to-end tasks, detailed action logs. |
+| | 11 | **Ops & Monitoring Copilot** | Assist operators by monitoring signals, diagnosing issues, and suggesting remediation. | [F1](capability-features.md#f1-contextual-grounding) · [F7](capability-features.md#f7-autonomous-planning-execution) · [F8](capability-features.md#f8-tool-orchestration) · [F9](capability-features.md#f9-real-time-data-access) · [F10](capability-features.md#f10-long-term-memory-context) · [F11](capability-features.md#f11-human-oversight-gates) · [F12](capability-features.md#f12-safety-content-controls) · [F13](capability-features.md#f13-continuous-learning-feedback) · [F15](capability-features.md#f15-auditability-compliance) | Incident summaries, root-cause hypotheses, remediation playbooks. |
+| | 12 | **AI Governance & Assurance** | Use GenAI to support GRC: policy checks, control testing, audit evidence gathering. | [F1](capability-features.md#f1-contextual-grounding) · [F2](capability-features.md#f2-multi-source-synthesis) · [F3](capability-features.md#f3-structured-output-generation) · [F5](capability-features.md#f5-citation-provenance) · [F11](capability-features.md#f11-human-oversight-gates) · [F12](capability-features.md#f12-safety-content-controls) · [F13](capability-features.md#f13-continuous-learning-feedback) · [F15](capability-features.md#f15-auditability-compliance) | Compliance reports, risk registers, red-teaming findings. |
+| | 13 | **Conversational Agent** | Conduct sustained, goal-directed conversations for support, sales, coaching, or advisory interactions. | [F1](capability-features.md#f1-contextual-grounding) · [F4](capability-features.md#f4-interactive-refinement) · [F6](capability-features.md#f6-adaptive-personalization) · [F10](capability-features.md#f10-long-term-memory-context) · [F11](capability-features.md#f11-human-oversight-gates) · [F12](capability-features.md#f12-safety-content-controls) · [F13](capability-features.md#f13-continuous-learning-feedback) | Resolved support tickets, guided sales conversations, coaching sessions, escalation handoffs. |
 
-**Feature Key**: F1 Contextual Grounding · F2 Multi-Source Synthesis · F3 Structured Output · F4 Interactive Refinement · F5 Citation & Provenance · F6 Adaptive Personalization · F7 Autonomous Planning · F8 Tool Orchestration · F9 Real-Time Data · F10 Long-Term Memory · F11 Human Oversight · F12 Safety Controls · F13 Learning & Feedback · F14 Multi-Agent Collaboration · F15 Auditability & Compliance
+**Feature Key**: [F1](capability-features.md#f1-contextual-grounding) Contextual Grounding · [F2](capability-features.md#f2-multi-source-synthesis) Multi-Source Synthesis · [F3](capability-features.md#f3-structured-output-generation) Structured Output · [F4](capability-features.md#f4-interactive-refinement) Interactive Refinement · [F5](capability-features.md#f5-citation-provenance) Citation & Provenance · [F6](capability-features.md#f6-adaptive-personalization) Adaptive Personalization · [F7](capability-features.md#f7-autonomous-planning-execution) Autonomous Planning · [F8](capability-features.md#f8-tool-orchestration) Tool Orchestration · [F9](capability-features.md#f9-real-time-data-access) Real-Time Data · [F10](capability-features.md#f10-long-term-memory-context) Long-Term Memory · [F11](capability-features.md#f11-human-oversight-gates) Human Oversight · [F12](capability-features.md#f12-safety-content-controls) Safety Controls · [F13](capability-features.md#f13-continuous-learning-feedback) Learning & Feedback · [F14](capability-features.md#f14-multi-agent-collaboration) Multi-Agent Collaboration · [F15](capability-features.md#f15-auditability-compliance) Auditability & Compliance
 
 ---
 
@@ -69,7 +69,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 - Image, video, and audio generation from descriptions
 - Template and draft creation for human refinement
 
-**Primary Features**: F3 (Structured Output) · F12 (Safety Controls) · F13 (Learning & Feedback) · F4 (Interactive Refinement) · F6 (Adaptive Personalization)
+**Primary Features**: [F3](capability-features.md#f3-structured-output-generation) (Structured Output) · [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback) · [F4](capability-features.md#f4-interactive-refinement) (Interactive Refinement) · [F6](capability-features.md#f6-adaptive-personalization) (Adaptive Personalization)
 
 **Common Patterns**: Prompt engineering, few-shot examples, structured output constraints (JSON schema), style guides, post-processing validation.
 
@@ -89,7 +89,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 - Text transformation (summarization, paraphrasing, translation, format conversion)
 - Document analysis (entity extraction, key point identification, structured data extraction)
 
-**Primary Features**: F3 (Structured Output) · F5 (Citation & Provenance) · F1 (Contextual Grounding) · F12 (Safety Controls) · F13 (Learning & Feedback)
+**Primary Features**: [F3](capability-features.md#f3-structured-output-generation) (Structured Output) · [F5](capability-features.md#f5-citation-provenance) (Citation & Provenance) · [F1](capability-features.md#f1-contextual-grounding) (Contextual Grounding) · [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback)
 
 **Common Patterns**: OCR/document parsing pipelines, schema-guided extraction, confidence scoring, human-in-the-loop verification.
 
@@ -109,7 +109,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 - Question answering from knowledge bases, documents, or structured data
 - Explanation and education — breaking down complex topics for target audiences
 
-**Primary Features**: F1 (Contextual Grounding) · F4 (Interactive Refinement) · F5 (Citation & Provenance) · F12 (Safety Controls) · F13 (Learning & Feedback)
+**Primary Features**: [F1](capability-features.md#f1-contextual-grounding) (Contextual Grounding) · [F4](capability-features.md#f4-interactive-refinement) (Interactive Refinement) · [F5](capability-features.md#f5-citation-provenance) (Citation & Provenance) · [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback)
 
 **Common Patterns**: RAG with chunking and embedding, hybrid search, re-ranking, robust citation and provenance tracking, "I don't know" handling.
 
@@ -129,7 +129,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 - Information retrieval and synthesis from multiple sources
 - Research assistance — literature review, competitive analysis, market research
 
-**Primary Features**: F1 (Contextual Grounding) · F2 (Multi-Source Synthesis) · F3 (Structured Output) · F5 (Citation & Provenance) · F7 (Autonomous Planning) · F8 (Tool Orchestration) · F13 (Learning & Feedback)
+**Primary Features**: [F1](capability-features.md#f1-contextual-grounding) (Contextual Grounding) · [F2](capability-features.md#f2-multi-source-synthesis) (Multi-Source Synthesis) · [F3](capability-features.md#f3-structured-output-generation) (Structured Output) · [F5](capability-features.md#f5-citation-provenance) (Citation & Provenance) · [F7](capability-features.md#f7-autonomous-planning-execution) (Autonomous Planning) · [F8](capability-features.md#f8-tool-orchestration) (Tool Orchestration) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback)
 
 **Common Patterns**: Iterative retrieval and decomposition (outline-first generation), evidence mapping, evaluation gates for contradiction detection, web/document tool integration.
 
@@ -156,7 +156,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 - Report and dashboard narration — converting charts and metrics into narratives
 - Automated response — triggering alerts, adjustments, or escalations based on detected patterns
 
-**Primary Features**: F3 (Structured Output) · F8 (Tool Orchestration) · F9 (Real-Time Data Access) · F12 (Safety Controls) · F13 (Learning & Feedback)
+**Primary Features**: [F3](capability-features.md#f3-structured-output-generation) (Structured Output) · [F8](capability-features.md#f8-tool-orchestration) (Tool Orchestration) · [F9](capability-features.md#f9-real-time-data-access) (Real-Time Data Access) · [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback)
 
 **Common Patterns**: Tool use for data querying (SQL, Python), code execution sandboxes, constrained generation for data fidelity.
 
@@ -177,7 +177,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 - Recommendation generation — actionable suggestions from analysis
 - Learning and skill development — personalized tutoring and adaptive experiences
 
-**Primary Features**: F6 (Adaptive Personalization) · F10 (Long-Term Memory) · F1 (Contextual Grounding) · F12 (Safety Controls) · F13 (Learning & Feedback)
+**Primary Features**: [F6](capability-features.md#f6-adaptive-personalization) (Adaptive Personalization) · [F10](capability-features.md#f10-long-term-memory-context) (Long-Term Memory) · [F1](capability-features.md#f1-contextual-grounding) (Contextual Grounding) · [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback)
 
 **Common Patterns**: User/context modeling, preference capture, session and persistent memory, consent management for data use.
 
@@ -198,7 +198,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 - Adversarial and edge case testing for AI system robustness
 - Scenario analysis — exploring "what-if" outcomes
 
-**Primary Features**: F3 (Structured Output) · F7 (Autonomous Planning) · F12 (Safety Controls) · F13 (Learning & Feedback)
+**Primary Features**: [F3](capability-features.md#f3-structured-output-generation) (Structured Output) · [F7](capability-features.md#f7-autonomous-planning-execution) (Autonomous Planning) · [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback)
 
 **Common Patterns**: Constraint-based generation, statistical validation against real-world distributions, privacy checks to prevent data leakage.
 
@@ -227,7 +227,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 - Documentation generation from code
 - Debugging and troubleshooting
 
-**Primary Features**: F1 (Contextual Grounding) · F3 (Structured Output) · F4 (Interactive Refinement) · F8 (Tool Orchestration) · F11 (Human Oversight) · F12 (Safety Controls) · F13 (Learning & Feedback)
+**Primary Features**: [F1](capability-features.md#f1-contextual-grounding) (Contextual Grounding) · [F3](capability-features.md#f3-structured-output-generation) (Structured Output) · [F4](capability-features.md#f4-interactive-refinement) (Interactive Refinement) · [F8](capability-features.md#f8-tool-orchestration) (Tool Orchestration) · [F11](capability-features.md#f11-human-oversight-gates) (Human Oversight) · [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback)
 
 **Common Patterns**: RAG over codebase, sandboxed code execution, linting and testing loops, IDE/CI-CD integration.
 
@@ -247,7 +247,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 - Workflow automation — integrating GenAI into business process steps
 - Writing assistance — drafting, editing, and improving communications
 
-**Primary Features**: F3 (Structured Output) · F8 (Tool Orchestration) · F11 (Human Oversight) · F15 (Auditability & Compliance) · F12 (Safety Controls) · F13 (Learning & Feedback)
+**Primary Features**: [F3](capability-features.md#f3-structured-output-generation) (Structured Output) · [F8](capability-features.md#f8-tool-orchestration) (Tool Orchestration) · [F11](capability-features.md#f11-human-oversight-gates) (Human Oversight) · [F15](capability-features.md#f15-auditability-compliance) (Auditability & Compliance) · [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback)
 
 **Common Patterns**: Integration with workflow engines (BPM, RPA), idempotent tool calls, human-in-the-loop approval steps.
 
@@ -268,7 +268,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 - Autonomous agents — handling journeys end-to-end including follow-ups and transactions
 - Personal productivity agents — managing schedules, emails, organization
 
-**Primary Features**: F7 (Autonomous Planning) · F8 (Tool Orchestration) · F9 (Real-Time Data) · F10 (Long-Term Memory) · F11 (Human Oversight) · F14 (Multi-Agent) · F15 (Auditability) · F12 (Safety Controls) · F13 (Learning & Feedback)
+**Primary Features**: [F7](capability-features.md#f7-autonomous-planning-execution) (Autonomous Planning) · [F8](capability-features.md#f8-tool-orchestration) (Tool Orchestration) · [F9](capability-features.md#f9-real-time-data-access) (Real-Time Data) · [F10](capability-features.md#f10-long-term-memory-context) (Long-Term Memory) · [F11](capability-features.md#f11-human-oversight-gates) (Human Oversight) · [F14](capability-features.md#f14-multi-agent-collaboration) (Multi-Agent) · [F15](capability-features.md#f15-auditability-compliance) (Auditability) · [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback)
 
 **Common Patterns**: Planning and execution loops (ReAct), function/tool calling, state management, robust error handling, human checkpoints for high-stakes actions.
 
@@ -287,7 +287,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 **Scope**:
 - Proactive system monitoring — identifying issues and taking corrective action or escalating
 
-**Primary Features**: F1 (Contextual Grounding) · F7 (Autonomous Planning) · F8 (Tool Orchestration) · F9 (Real-Time Data) · F10 (Long-Term Memory) · F11 (Human Oversight) · F15 (Auditability) · F12 (Safety Controls) · F13 (Learning & Feedback)
+**Primary Features**: [F1](capability-features.md#f1-contextual-grounding) (Contextual Grounding) · [F7](capability-features.md#f7-autonomous-planning-execution) (Autonomous Planning) · [F8](capability-features.md#f8-tool-orchestration) (Tool Orchestration) · [F9](capability-features.md#f9-real-time-data-access) (Real-Time Data) · [F10](capability-features.md#f10-long-term-memory-context) (Long-Term Memory) · [F11](capability-features.md#f11-human-oversight-gates) (Human Oversight) · [F15](capability-features.md#f15-auditability-compliance) (Auditability) · [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback)
 
 **Common Patterns**: Integrations with observability tools (Datadog, Splunk), runbooks-as-code, strict permissions, detailed audit logs.
 
@@ -307,7 +307,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 - Risk assessment — identifying risks, likelihood, and impact
 - Legal and compliance — analyzing contracts, regulations, and supporting compliance workflows
 
-**Primary Features**: F1 (Contextual Grounding) · F2 (Multi-Source Synthesis) · F3 (Structured Output) · F5 (Citation & Provenance) · F11 (Human Oversight) · F15 (Auditability & Compliance) · F12 (Safety Controls) · F13 (Learning & Feedback)
+**Primary Features**: [F1](capability-features.md#f1-contextual-grounding) (Contextual Grounding) · [F2](capability-features.md#f2-multi-source-synthesis) (Multi-Source Synthesis) · [F3](capability-features.md#f3-structured-output-generation) (Structured Output) · [F5](capability-features.md#f5-citation-provenance) (Citation & Provenance) · [F11](capability-features.md#f11-human-oversight-gates) (Human Oversight) · [F15](capability-features.md#f15-auditability-compliance) (Auditability & Compliance) · [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback)
 
 **Common Patterns**: RAG over compliance frameworks and internal policies, evaluation harnesses for testing other AI systems, detailed provenance logging.
 
@@ -330,7 +330,7 @@ Once you have identified your archetype, use these four dimensions to characteri
 - Onboarding and guided workflows — walking users through processes conversationally
 - Escalation management — detecting when to hand off to a human agent, with full context transfer
 
-**Primary Features**: F1 (Contextual Grounding) · F4 (Interactive Refinement) · F6 (Adaptive Personalization) · F10 (Long-Term Memory) · F11 (Human Oversight) · F12 (Safety Controls) · F13 (Learning & Feedback)
+**Primary Features**: [F1](capability-features.md#f1-contextual-grounding) (Contextual Grounding) · [F4](capability-features.md#f4-interactive-refinement) (Interactive Refinement) · [F6](capability-features.md#f6-adaptive-personalization) (Adaptive Personalization) · [F10](capability-features.md#f10-long-term-memory-context) (Long-Term Memory) · [F11](capability-features.md#f11-human-oversight-gates) (Human Oversight) · [F12](capability-features.md#f12-safety-content-controls) (Safety Controls) · [F13](capability-features.md#f13-continuous-learning-feedback) (Learning & Feedback)
 
 **Common Patterns**: Persona and tone management, intent classification and routing, escalation logic with context handoff, sentiment and frustration detection, conversation repair strategies, multi-turn context tracking, response latency optimization, CSAT/NPS feedback loops.
 
@@ -370,15 +370,15 @@ Use **Matrix A** in [03-capability-features.md](capability-features.md) to build
 
 #### 2. Highest Tier Governs
 
-Each participating archetype implies a minimum implementation tier (T1-T4). The **most complex archetype sets the floor** for the entire composition.
+Each participating archetype implies a minimum implementation tier (T1-[T4](implementation-tiers.md#t4-agentic)). The **most complex archetype sets the floor** for the entire composition.
 
 | Archetype | Typical minimum tier |
 |-----------|---------------------|
-| Content Generation | T1-T2 |
-| Research & Synthesis | T2-T3 |
-| Agentic Task Automation | T3-T4 |
+| Content Generation | [T1](implementation-tiers.md#t1-basic)-[T2](implementation-tiers.md#t2-enhanced) |
+| Research & Synthesis | [T2](implementation-tiers.md#t2-enhanced)-[T3](implementation-tiers.md#t3-orchestrated) |
+| Agentic Task Automation | [T3](implementation-tiers.md#t3-orchestrated)-[T4](implementation-tiers.md#t4-agentic) |
 
-If you chain a T1 archetype behind a T3 archetype, the overall solution is at least T3 — because the orchestration, observability, and governance requirements of the highest-tier participant apply system-wide.
+If you chain a [T1](implementation-tiers.md#t1-basic) archetype behind a [T3](implementation-tiers.md#t3-orchestrated) archetype, the overall solution is at least [T3](implementation-tiers.md#t3-orchestrated) — because the orchestration, observability, and governance requirements of the highest-tier participant apply system-wide.
 
 #### 3. Interface Contracts Between Stages
 
@@ -409,13 +409,13 @@ Evaluating individual stages is necessary but not sufficient. Add **end-to-end m
 
 | Stage | Archetype | Role | Key Features |
 |-------|-----------|------|--------------|
-| 1 | Research & Synthesis | Gather and synthesize regulatory sources | F1, F2, F5, F7, F8 |
-| 2 | Content Generation | Draft the impact report in the org's template | F3, F4, F6 |
-| 3 | AI Governance & Assurance | Validate against internal policies; file evidence | F1, F5, F15 |
+| 1 | Research & Synthesis | Gather and synthesize regulatory sources | [F1](capability-features.md#f1-contextual-grounding), [F2](capability-features.md#f2-multi-source-synthesis), [F5](capability-features.md#f5-citation-provenance), [F7](capability-features.md#f7-autonomous-planning-execution), [F8](capability-features.md#f8-tool-orchestration) |
+| 2 | Content Generation | Draft the impact report in the org's template | [F3](capability-features.md#f3-structured-output-generation), [F4](capability-features.md#f4-interactive-refinement), [F6](capability-features.md#f6-adaptive-personalization) |
+| 3 | AI Governance & Assurance | Validate against internal policies; file evidence | [F1](capability-features.md#f1-contextual-grounding), [F5](capability-features.md#f5-citation-provenance), [F15](capability-features.md#f15-auditability-compliance) |
 
 **Composition pattern**: Sequential pipeline (1 → 2 → 3).
-**Merged feature set**: F1, F2, F3, F4, F5, F6, F7, F8, F15 (+ implicit F12, F13).
-**Governing tier**: T3 (Research & Synthesis drives orchestration needs).
+**Merged feature set**: [F1](capability-features.md#f1-contextual-grounding), [F2](capability-features.md#f2-multi-source-synthesis), [F3](capability-features.md#f3-structured-output-generation), [F4](capability-features.md#f4-interactive-refinement), [F5](capability-features.md#f5-citation-provenance), [F6](capability-features.md#f6-adaptive-personalization), [F7](capability-features.md#f7-autonomous-planning-execution), [F8](capability-features.md#f8-tool-orchestration), [F15](capability-features.md#f15-auditability-compliance) (+ implicit [F12](capability-features.md#f12-safety-content-controls), [F13](capability-features.md#f13-continuous-learning-feedback)).
+**Governing tier**: [T3](implementation-tiers.md#t3-orchestrated) (Research & Synthesis drives orchestration needs).
 **Governance posture**: Inherits from Stage 3 — full auditability, provenance chain, compliance logging.
 **Interface contracts**:
 - Stage 1 → 2: Structured findings JSON with source citations and confidence scores; quality gate = minimum 3 corroborating sources.
@@ -430,15 +430,15 @@ Evaluating individual stages is necessary but not sufficient. Add **end-to-end m
 
 | Stage | Archetype | Role | Key Features |
 |-------|-----------|------|--------------|
-| 1 | Agentic Task Automation | Outer orchestrator: decomposes the goal, manages parallel workstreams, coordinates file system and internet access | F7, F8, F9, F10, F11, F14 |
-| 2 | Research & Synthesis | Inner: reads local files, queries internet for market/competitive context, synthesises findings into structured evidence | F1, F2, F5, F7, F8 |
-| 3 | Content Generation | Inner: produces formatted deliverables (Excel with formulas, presentations, polished documents) from synthesised findings | F3, F4, F6 |
+| 1 | Agentic Task Automation | Outer orchestrator: decomposes the goal, manages parallel workstreams, coordinates file system and internet access | [F7](capability-features.md#f7-autonomous-planning-execution), [F8](capability-features.md#f8-tool-orchestration), [F9](capability-features.md#f9-real-time-data-access), [F10](capability-features.md#f10-long-term-memory-context), [F11](capability-features.md#f11-human-oversight-gates), [F14](capability-features.md#f14-multi-agent-collaboration) |
+| 2 | Research & Synthesis | Inner: reads local files, queries internet for market/competitive context, synthesises findings into structured evidence | [F1](capability-features.md#f1-contextual-grounding), [F2](capability-features.md#f2-multi-source-synthesis), [F5](capability-features.md#f5-citation-provenance), [F7](capability-features.md#f7-autonomous-planning-execution), [F8](capability-features.md#f8-tool-orchestration) |
+| 3 | Content Generation | Inner: produces formatted deliverables (Excel with formulas, presentations, polished documents) from synthesised findings | [F3](capability-features.md#f3-structured-output-generation), [F4](capability-features.md#f4-interactive-refinement), [F6](capability-features.md#f6-adaptive-personalization) |
 
 **Composition pattern**: Nested (Delegation) — Agentic Task Automation is the outer orchestrator; Research & Synthesis and Content Generation are invoked as sub-tasks.
 
-**Merged feature set**: F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F14 (+ implicit F12, F13).
+**Merged feature set**: [F1](capability-features.md#f1-contextual-grounding), [F2](capability-features.md#f2-multi-source-synthesis), [F3](capability-features.md#f3-structured-output-generation), [F4](capability-features.md#f4-interactive-refinement), [F5](capability-features.md#f5-citation-provenance), [F6](capability-features.md#f6-adaptive-personalization), [F7](capability-features.md#f7-autonomous-planning-execution), [F8](capability-features.md#f8-tool-orchestration), [F9](capability-features.md#f9-real-time-data-access), [F10](capability-features.md#f10-long-term-memory-context), [F11](capability-features.md#f11-human-oversight-gates), [F14](capability-features.md#f14-multi-agent-collaboration) (+ implicit [F12](capability-features.md#f12-safety-content-controls), [F13](capability-features.md#f13-continuous-learning-feedback)).
 
-**Governing tier**: T4 — autonomous planning with parallel workstreams and multi-agent coordination.
+**Governing tier**: [T4](implementation-tiers.md#t4-agentic) — autonomous planning with parallel workstreams and multi-agent coordination.
 
 **Architectural dimensions**:
 - *Interaction Model*: Proactive — executes autonomously once the goal is set; user can provide mid-task direction.
@@ -548,7 +548,7 @@ Use this to assess organizational readiness by archetype group.
 - [ ] Human-in-the-loop workflows designed
 - [ ] Full observability and tracing operational
 - [ ] State management and recovery proven
-- [ ] Multi-agent coordination patterns validated (if T4)
+- [ ] Multi-agent coordination patterns validated (if [T4](implementation-tiers.md#t4-agentic))
 - [ ] **Tool API contracts documented and validated** — schemas, authentication, rate limits, error modes, and idempotency guarantees confirmed in non-production environment before agent deployment
 - [ ] **Agent action space explicitly bounded** — written inventory of permitted/prohibited operations enforced at the authorization layer, not only in the prompt
 - [ ] **Rollback and compensating transaction capability documented** for every write or state-changing tool invocation the agent can perform

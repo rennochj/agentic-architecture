@@ -162,9 +162,9 @@ Use this canvas to evaluate each component decision:
 
 ---
 
-## Light Canvas (T1-T2 Quick Decisions)
+## Light Canvas (T1-[T2](implementation-tiers.md#t2-enhanced) Quick Decisions)
 
-For T1-T2 systems with fewer than 10 components, the full Canvas can be overkill. Use this three-question variant for quick component decisions. Reserve the full Canvas v2.0 for T3-T4 systems or formal governance reviews.
+For [T1](implementation-tiers.md#t1-basic)-[T2](implementation-tiers.md#t2-enhanced) systems with fewer than 10 components, the full Canvas can be overkill. Use this three-question variant for quick component decisions. Reserve the full Canvas v2.0 for [T3](implementation-tiers.md#t3-orchestrated)-[T4](implementation-tiers.md#t4-agentic) systems or formal governance reviews.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -436,7 +436,7 @@ Component Selection:
 
     | Version | Date | Changes |
     |---------|------|---------|
-    | 5.5 | 2026-03-03 | Aligned with Framework v5.5. Added component scope note referencing expanded OE catalog (§5.5-§5.11), Data Readiness (§5.9.0/§5.9.5), Model Selection (§1.3), Agent Runtime (§4.4), Identity (§5.10), Incident Response (§5.11). Added Light Canvas for T1-T2 quick decisions. |
+    | 5.5 | 2026-03-03 | Aligned with Framework v5.5. Added component scope note referencing expanded OE catalog (§5.5-§5.11), Data Readiness (§5.9.0/§5.9.5), Model Selection (§1.3), Agent Runtime (§4.4), Identity (§5.10), Incident Response (§5.11). Added Light Canvas for [T1](implementation-tiers.md#t1-basic)-[T2](implementation-tiers.md#t2-enhanced) quick decisions. |
     | 3.0 | 2026-02-27 | Refactored from genai-purpose-driven-components.md. Repositioned as evaluation guide (not component taxonomy). Added feature references throughout. Retained Seven Questions, Canvas, anti-patterns, scenarios. |
     | 2.0 | 2026-01-19 | Extended Value Equation with operational concerns. |
     | 1.0 | 2026-01-19 | Initial purpose-driven component selection guide. |

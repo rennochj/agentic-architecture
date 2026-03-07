@@ -14,49 +14,11 @@ A comprehensive catalog of the technical building blocks that comprise modern Ge
 
 Components are organized into four progressive maturity layers plus cross-cutting Operational Excellence concerns:
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     User Interface Layer                         │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  AUTONOMY LAYER (T4)                                             │
-│  Agentic Architectures · Workflow Orchestration ·                │
-│  HITL Patterns · Agent Runtime & Deployment                      │
-│                                                                  │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  ORCHESTRATION LAYER (T3)                                        │
-│  Context Management · Memory Systems · Reasoning & Planning ·   │
-│  Tool Use & Function Calling                                     │
-│                                                                  │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  AUGMENTATION LAYER (T2)                                         │
-│  RAG & Information Retrieval · Output Processing &               │
-│  Structured Generation                                           │
-│                                                                  │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  FOUNDATION LAYER (T1)                                           │
-│  Foundation Models · Prompting Techniques ·                      │
-│  Model Selection & Customization Strategy                        │
-│                                                                  │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│  OPERATIONAL EXCELLENCE (Cross-Cutting)                          │
-│  Safety & Guardrails · Evaluation & Testing ·                    │
-│  Infrastructure & Deployment · Observability ·                   │
-│  Cost Management · Resilience & Fault Tolerance ·                │
-│  Performance & Latency · DevOps & Change Management ·            │
-│  Data Readiness & Knowledge Governance · Identity, Access & Authz ·│
-│  Incident Response & AI Operations Runbooks                      │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
-```
+![Component Architecture Overview](assets/diagrams/component-architecture.svg){ loading=lazy }
 
 !!! note "Note on layer assignment"
 
-    Layer labels reflect where a component's core complexity lives. Many components span tiers — for example, Agentic Prompting (§1.2.4) lives in the Foundation Layer but applies at T3-T4. For component maturity by tier, see the Feature Maturity matrix in [06-implementation-tiers.md](implementation-tiers.md). For component interdependencies and dependency graphs, see §6 of [06-implementation-tiers.md](implementation-tiers.md).
+    Layer labels reflect where a component's core complexity lives. Many components span tiers — for example, Agentic Prompting (§1.2.4) lives in the Foundation Layer but applies at [T3](implementation-tiers.md#t3-orchestrated)-[T4](implementation-tiers.md#t4-agentic). For component maturity by tier, see the Feature Maturity matrix in [06-implementation-tiers.md](implementation-tiers.md). For component interdependencies and dependency graphs, see §6 of [06-implementation-tiers.md](implementation-tiers.md).
 
 
 ### Section Index
@@ -97,7 +59,7 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 
 ## 1. Foundation Layer
 
-*Tier: T1 (Basic). Focus: Reliable generation, data access, and model selection.*
+*Tier: [T1](implementation-tiers.md#t1-basic) (Basic). Focus: Reliable generation, data access, and model selection.*
 *Primarily Enables Features: F1 (Contextual Grounding), F2 (Multi-Source Synthesis), F3 (Structured Output), F4 (Interactive Refinement), F6 (Adaptive Personalization), F7 (Autonomous Planning)*
 *Approximate cost baseline: $ (LLM API calls — the cost floor for all solutions)*
 
@@ -127,7 +89,7 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 
 #### 1.1.4 Model Optimization
 
-- **Quantization** — INT8/INT4, GPTQ, AWQ, GGML/GGUF, mixed-precision. *Primary lever for reducing inference cost and latency in self-hosted deployments.*
+- **Quantization** — INT8/IN[T4](implementation-tiers.md#t4-agentic), GPTQ, AWQ, GGML/GGUF, mixed-precision. *Primary lever for reducing inference cost and latency in self-hosted deployments.*
 - **Pruning** — Structured and unstructured. *Use with caution: can degrade quality; measure carefully before production.*
 - **Speculative Decoding** — Draft model acceleration, parallel token generation. *Use for: latency-sensitive applications where output quality cannot be sacrificed for throughput.*
 
@@ -142,7 +104,7 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 
 - **Chain-of-Thought (CoT)** — Step-by-step reasoning, few-shot and zero-shot variants. *Use for: math, logic, multi-step analysis; significant quality gains for reasoning tasks.*
 - **Self-Consistency** — Multiple reasoning paths with majority voting. *Use for: high-stakes answers where variance reduction matters; increases cost proportionally.*
-- **Tree of Thoughts (ToT)** — Branching paths with exploration and backtracking. *Use for: complex planning and creative problem-solving where exploration of alternatives is valuable (T3-T4).*
+- **Tree of Thoughts (ToT)** — Branching paths with exploration and backtracking. *Use for: complex planning and creative problem-solving where exploration of alternatives is valuable (T3-[T4](implementation-tiers.md#t4-agentic)).*
 - **Graph of Thoughts (GoT)** — Non-linear reasoning structures, thought combination. *Use for: highly complex problems requiring non-linear reasoning (research/experimental).*
 - **Skeleton-of-Thought** — Outline-first generation with parallel expansion. *Use for: long-form structured content where parallel generation reduces latency.*
 
@@ -152,7 +114,7 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 - **Decomposed Prompting (DecomP)** — Sub-task delegation, modular problem solving
 - **Plan-and-Solve** — Explicit planning phase then structured execution. *Use for: multi-step tasks where an explicit plan reduces errors in execution.*
 
-#### 1.2.4 Agentic Prompting *(T3-T4)*
+#### 1.2.4 Agentic Prompting *(T3-[T4](implementation-tiers.md#t4-agentic))*
 
 *These techniques are defined here as prompting patterns but require agent infrastructure (§4.1) to fully realize.*
 
@@ -250,7 +212,7 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 
 ## 2. Augmentation Layer
 
-*Tier: T2 (Enhanced). Focus: Knowledge augmentation and output fidelity.*
+*Tier: [T2](implementation-tiers.md#t2-enhanced) (Enhanced). Focus: Knowledge augmentation and output fidelity.*
 *Primarily Enables Features: F1 (Contextual Grounding), F2 (Multi-Source Synthesis), F3 (Structured Output), F5 (Citation & Provenance)*
 *Approximate cost: $$ (adds embedding + vector DB hosting + document processing to baseline)*
 
@@ -258,15 +220,15 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 
 #### 2.1.1 RAG Patterns
 
-- **Basic RAG** — Query → Retrieve → Generate (single-step). *Use for: prototyping and simple Q&A where precision requirements are low (T1-T2).*
-- **Advanced RAG** — Pre-retrieval optimization (query rewriting, decomposition, HyDE), Retrieval optimization (hybrid search, re-ranking, contextual compression), Post-retrieval optimization (filtering, scoring, reordering). *Use for: production systems where retrieval quality directly impacts answer quality (T2-T3).*
+- **Basic RAG** — Query → Retrieve → Generate (single-step). *Use for: prototyping and simple Q&A where precision requirements are low (T1-[T2](implementation-tiers.md#t2-enhanced)).*
+- **Advanced RAG** — Pre-retrieval optimization (query rewriting, decomposition, HyDE), Retrieval optimization (hybrid search, re-ranking, contextual compression), Post-retrieval optimization (filtering, scoring, reordering). *Use for: production systems where retrieval quality directly impacts answer quality (T2-[T3](implementation-tiers.md#t3-orchestrated)).*
 
 #### 2.1.2 RAG Architectures
 
-- **Naive RAG** — Simple retrieve-and-generate. *Use for: prototyping, small document sets, internal tools with low precision requirements (T1-T2).*
-- **Modular RAG** — Pluggable components, flexible pipelines. *Use for: production systems needing independently upgradeable retrieval stages (T2-T3).*
-- **Agentic RAG** — Tool-based retrieval, iterative and self-correcting. *Use for: complex queries requiring multiple retrieval passes and adaptive search strategy (T3-T4).*
-- **Graph RAG** — Knowledge graph integration, entity-relationship retrieval. *Use for: domains with rich entity relationships and multi-hop reasoning needs (e.g., legal, compliance, enterprise knowledge) (T3-T4).*
+- **Naive RAG** — Simple retrieve-and-generate. *Use for: prototyping, small document sets, internal tools with low precision requirements (T1-[T2](implementation-tiers.md#t2-enhanced)).*
+- **Modular RAG** — Pluggable components, flexible pipelines. *Use for: production systems needing independently upgradeable retrieval stages (T2-[T3](implementation-tiers.md#t3-orchestrated)).*
+- **Agentic RAG** — Tool-based retrieval, iterative and self-correcting. *Use for: complex queries requiring multiple retrieval passes and adaptive search strategy (T3-[T4](implementation-tiers.md#t4-agentic)).*
+- **Graph RAG** — Knowledge graph integration, entity-relationship retrieval. *Use for: domains with rich entity relationships and multi-hop reasoning needs (e.g., legal, compliance, enterprise knowledge) (T3-[T4](implementation-tiers.md#t4-agentic)).*
 - **Multi-Modal RAG** — Cross-modal search (image + text). *Use for: document understanding with mixed content — technical diagrams, product catalogs, medical imaging (T2+).*
 
 #### 2.1.3 Vector Storage & Search
@@ -321,7 +283,7 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 
 ## 3. Orchestration Layer
 
-*Tier: T3 (Orchestrated). Focus: State, memory, reasoning, and action.*
+*Tier: [T3](implementation-tiers.md#t3-orchestrated) (Orchestrated). Focus: State, memory, reasoning, and action.*
 *Primarily Enables Features: F2 (Multi-Source Synthesis), F4 (Interactive Refinement), F6 (Adaptive Personalization), F7 (Autonomous Planning), F8 (Tool Orchestration), F9 (Real-Time Data), F10 (Long-Term Memory), F14 (Multi-Agent Collaboration)*
 *Approximate cost: $$$ (multiplied LLM calls per workflow step; add tool API costs)*
 
@@ -439,7 +401,7 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 
 ## 4. Autonomy Layer
 
-*Tier: T4 (Agentic). Focus: Collaboration, autonomy, production agent deployment.*
+*Tier: [T4](implementation-tiers.md#t4-agentic) (Agentic). Focus: Collaboration, autonomy, production agent deployment.*
 *Primarily Enables Features: F7 (Autonomous Planning), F11 (Human Oversight), F14 (Multi-Agent Collaboration), F15 (Auditability & Compliance)*
 *Approximate cost: $$$$ (multiplicative: agents × steps × tools × LLM calls; budget controls are essential)*
 
@@ -448,9 +410,9 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 #### 4.1.1 Single-Agent Patterns
 
 - **ReAct Agent** — Reasoning + Action loop with observation integration. *Use for: the default agentic pattern for most use cases; transparent, debuggable, effective (T3).*
-- **Plan-and-Execute Agent** — Upfront planning with step execution. *Use for: tasks with predictable structure where a complete plan reduces total LLM calls and latency (T3-T4).*
+- **Plan-and-Execute Agent** — Upfront planning with step execution. *Use for: tasks with predictable structure where a complete plan reduces total LLM calls and latency (T3-[T4](implementation-tiers.md#t4-agentic)).*
 - **Reflexion Agent** — Self-critique and iterative improvement. *Use for: quality-critical tasks where iterating to a higher-quality answer is worth the extra cost (T4).*
-- **Tool-Using Agent** — Tool selection, use, and result interpretation. *Use for: tasks with predictable tool sequences that don't require full reasoning loops (T2-T3).*
+- **Tool-Using Agent** — Tool selection, use, and result interpretation. *Use for: tasks with predictable tool sequences that don't require full reasoning loops (T2-[T3](implementation-tiers.md#t3-orchestrated)).*
 
 #### 4.1.2 Multi-Agent Systems
 
@@ -654,7 +616,7 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 - **Task-Specific Accuracy** — F1, exact match, pass@k (code), slot-filling accuracy
 - **Retrieval Quality** — Precision@k, recall@k, NDCG for RAG pipelines
 
-**Agent-Specific Metrics** *(required for T3-T4)*:
+**Agent-Specific Metrics** *(required for [T3](implementation-tiers.md#t3-orchestrated)-[T4](implementation-tiers.md#t4-agentic))*:
 - **Task Completion Rate** — % of tasks completed end-to-end without human intervention
 - **Steps-to-Completion** — Average number of LLM calls / tool calls per task; proxy for efficiency
 - **Human Intervention Rate** — How often the agent requires human override or correction
@@ -749,7 +711,7 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 
 ### 5.5 Cost Management & Budget Controls
 
-*Cost is a first-class operational concern for GenAI systems — not an afterthought. Unlike traditional software, costs scale non-linearly with system complexity: a multi-agent workflow at T4 can cost 100× more per task than a simple T1 LLM call. Agentic loops, re-planning, and tool chains can consume unbounded tokens without explicit controls. This section covers the governance and oversight mechanisms needed to make GenAI systems economically sustainable.*
+*Cost is a first-class operational concern for GenAI systems — not an afterthought. Unlike traditional software, costs scale non-linearly with system complexity: a multi-agent workflow at [T4](implementation-tiers.md#t4-agentic) can cost 100× more per task than a simple [T1](implementation-tiers.md#t1-basic) LLM call. Agentic loops, re-planning, and tool chains can consume unbounded tokens without explicit controls. This section covers the governance and oversight mechanisms needed to make GenAI systems economically sustainable.*
 
 #### 5.5.1 Budget Guardrails
 
