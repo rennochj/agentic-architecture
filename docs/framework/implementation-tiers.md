@@ -244,17 +244,59 @@ Autonomy:      [Objective] → [Supervisor Agent]
 
 ### Pattern A: Simple Assistant (T1-T2 / Foundation)
 
+A single LLM call with a well-crafted prompt and optional output formatting. There is no external data retrieval, no persistent memory, and no tool use — the model answers from its training knowledge alone. The entire value proposition rests on prompt quality and model capability.
+
+**When to use**: FAQ bots, content drafting, classification tasks, internal productivity tools where training knowledge is sufficient and factual accuracy is not mission-critical.
+
+**Key risks**: Hallucination with no retrieval backstop; no personalisation beyond the system prompt; no audit trail beyond basic API logs. These are manageable at [T1](implementation-tiers.md#implementation-tiers)–[T2](implementation-tiers.md#implementation-tiers) scale but become blockers as requirements grow.
+
+**Upgrade trigger**: When users start asking questions the model cannot reliably answer from training data, or when you need citations, personalisation, or memory — move to Pattern B.
+
 ![Pattern A: Simple Assistant](assets/diagrams/pattern-a-simple-assistant.svg){ loading=lazy }
+
+---
 
 ### Pattern B: RAG-Enhanced Assistant (T2 / Foundation-Augmentation)
 
+Adds a retrieval layer between the user and the model. Queries are embedded, matched against a vector store, and the retrieved context is injected into the prompt before generation. This grounds responses in your documents, reduces hallucination, and enables document-level citations. Conversation memory preserves context across turns.
+
+**When to use**: Knowledge base assistants, customer support with product documentation, internal Q&A over enterprise content, research summarisation over a defined corpus.
+
+**Key design decisions**: Chunking strategy and embedding model quality determine retrieval accuracy more than anything else. Invest in evaluation before tuning the LLM. Add a re-ranker if precision matters. Implement citation tracking ([F5](capability-features.md#f5-citation-provenance)) from day one — retrofitting it is painful.
+
+**Key risks**: Retrieval misses (wrong chunks returned); embedding model staleness; no tool access means the system cannot take actions or query live data.
+
+**Upgrade trigger**: When users need live data, multi-step reasoning, or the system must take actions (send emails, update records, run code) — move to Pattern C.
+
 ![Pattern B: RAG-Enhanced Assistant](assets/diagrams/pattern-b-rag-assistant.svg){ loading=lazy }
+
+---
 
 ### Pattern C: Workflow Orchestration (T3 / Orchestration)
 
+Replaces the single LLM call with a directed, multi-step workflow. Each step can invoke a different model, call external tools, branch conditionally, and pause for human approval. State is persisted across steps so long-running processes can resume after failure. This pattern delivers reliable, auditable automation over structured processes.
+
+**When to use**: Business process automation (onboarding, approvals, report generation), research pipelines with web search, coding assistants that run and test code, any use case requiring deterministic sequencing with conditional logic.
+
+**Key design decisions**: Define the workflow graph before choosing components — the graph is the architecture. HITL gates ([F11](capability-features.md#f11-human-oversight-gates)) should be inserted at every step that takes an irreversible external action. Invest in distributed tracing ([F15](capability-features.md#f15-auditability-compliance)) early; debugging multi-step failures without traces is very difficult.
+
+**Key risks**: Workflow complexity grows faster than expected; error recovery and partial-failure handling require careful design; tool permission sprawl if access controls are not established from the start.
+
+**Upgrade trigger**: When the workflow graph itself needs to be decided at runtime, when multiple independent agents need to collaborate in parallel, or when the system must self-correct without human intervention — move to Pattern D.
+
 ![Pattern C: Workflow Orchestration](assets/diagrams/pattern-c-workflow-orchestration.svg){ loading=lazy }
 
+---
+
 ### Pattern D: Agentic System (T4 / Autonomy)
+
+A supervisor agent decomposes high-level goals into subtasks, delegates to specialist agents, monitors progress, and synthesises results — all without a predefined workflow graph. Agents share a common memory and tool suite, can spawn sub-tasks dynamically, and self-correct when steps fail. This pattern handles open-ended, long-horizon tasks that cannot be reduced to a fixed sequence.
+
+**When to use**: Autonomous coding assistants (plan → code → test → deploy), competitive intelligence agents, complex research synthesis across many sources, multi-domain copilots that coordinate specialists.
+
+**Key design decisions**: The supervisor's planning and reflection capability ([F7](capability-features.md#f7-autonomous-planning-execution)) is the primary quality lever — invest heavily in it. Start with read-only tools and add write-access incrementally with explicit HITL gates ([F11](capability-features.md#f11-human-oversight-gates)). Full agent trace visualisation ([F15](capability-features.md#f15-auditability-compliance)) and cost controls are non-negotiable prerequisites, not afterthoughts. Do not skip to [T4](implementation-tiers.md#implementation-tiers) from [T1](implementation-tiers.md#implementation-tiers)–[T2](implementation-tiers.md#implementation-tiers): the operational maturity built at [T3](implementation-tiers.md#implementation-tiers) (tracing, error recovery, HITL patterns) is what makes agentic systems survivable in production.
+
+**Key risks**: Runaway cost without hard budget controls; agent failure modes are hard to predict; autonomous actions on production systems require zero-trust architecture and sandboxing.
 
 ![Pattern D: Agentic System](assets/diagrams/pattern-d-agentic-system.svg){ loading=lazy }
 
