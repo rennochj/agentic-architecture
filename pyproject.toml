@@ -5,8 +5,8 @@ description = "GenAI & Agentic Architecture Framework documentation site"
 requires-python = ">=3.13"
 
 dependencies = [
-    "mkdocs>=1.6",
-    "mkdocs-material>=9.5",
+    "mkdocs>=1.6,<2",
+    "mkdocs-material>=9.5,<9.6",
     "pymdown-extensions>=10.7",
     "mkdocs-awesome-pages-plugin>=2.9",
     "mkdocs-git-revision-date-localized-plugin>=1.3",
@@ -16,5 +16,5 @@ dependencies = [
 
 [tool.uv]
 dev-dependencies = [
-    "mkdocs-material[imaging]>=9.5",
+    "mkdocs-material[imaging]>=9.5,<9.6",
 ]
