@@ -1,0 +1,295 @@
+<mxfile host="65bd71144e">
+    <diagram name="Framework Relationship Overview" id="framework-relationship-overview">
+        <mxGraphModel dx="1031" dy="963" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="layer1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e4e8f5;strokeColor=#3d5a8a;strokeWidth=2;arcSize=5;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="227" y="81" width="770" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer1_badge" value="LAYER 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3d5a8a;strokeColor=none;fontColor=#ffffff;fontSize=9;fontStyle=1;align=center;arcSize=50;" parent="1" vertex="1">
+                    <mxGeometry x="237" y="91" width="55" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer1_title" value="Use Case Archetypes (13)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#000000;fontSize=14;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="297" y="91" width="300" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer1_q" value="&quot;What job needs to be done?&quot;" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#000000;fontSize=14;fontStyle=2;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="477" y="91" width="250" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="groupA" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef2fa;strokeColor=#8CA4C8;strokeWidth=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="237" y="119" width="240" height="92" as="geometry"/>
+                </mxCell>
+                <mxCell id="groupA_title" value="Group A: Content &amp;amp; Knowledge" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#1E3050;fontSize=11;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="237" y="123" width="240" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="groupA_items" value="1. Content Generation&lt;br&gt;2. Summarization &amp; Extraction&lt;br&gt;3. Grounded Q&amp;A&lt;br&gt;4. Research &amp; Synthesis" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#5a5654;fontSize=10;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="237" y="143" width="240" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="groupB" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eef2fa;strokeColor=#8ca4c8;strokeWidth=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="489" y="119" width="240" height="92" as="geometry"/>
+                </mxCell>
+                <mxCell id="groupB_title" value="Group B: Insight &amp; Decision" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#1e3050;fontSize=11;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="489" y="123" width="240" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="groupB_items" value="5. Data Interpretation&lt;br&gt;6. Recommendation&lt;br&gt;7. Simulation &amp; Synthetic Data" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#5a5654;fontSize=10;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="489" y="143" width="240" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="groupC" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FA;strokeColor=#8CA4C8;strokeWidth=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="741" y="119" width="246" height="92" as="geometry"/>
+                </mxCell>
+                <mxCell id="groupC_title" value="Group C: Process &amp; Automation" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#1e3050;fontSize=11;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="741" y="123" width="246" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="groupC_items" value="8. Software Dev  ·  9. Workflow Auto&lt;br&gt;10. Agentic Task  ·  11. Ops Copilot&lt;br&gt;12. Governance  ·  13. Conversational" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#5a5654;fontSize=10;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="741" y="143" width="246" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fillColor=none;" parent="1" source="layer1" target="layer2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow1_2_label" value="Requires  (Matrix A)" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontColor=#000000;fontSize=11;fontStyle=1;fillColor=#f5f4f2;labelBackgroundColor=#FFFFFF;" parent="arrow1_2" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="layer2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#deeede;strokeColor=#4a7060;strokeWidth=2;arcSize=5;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="401" width="770" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer2_badge" value="LAYER 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4a7060;strokeColor=none;fontColor=#ffffff;fontSize=9;fontStyle=1;align=center;arcSize=50;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="411" width="55" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer2_title" value="Capability Features (15)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#000000;fontSize=14;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="411" width="300" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer2_q" value="&quot;What capabilities must the solution exhibit?&quot;" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#000000;fontSize=14;fontStyle=2;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="411" width="350" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="feat_ck" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf4ea;strokeColor=#8ab898;strokeWidth=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="442.5" width="240" height="96" as="geometry"/>
+                </mxCell>
+                <mxCell id="feat_ck_title" value="Content &amp; Knowledge" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#253830;fontSize=11;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="441" width="240" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="feat_ck_items" value="F1 Contextual Grounding&lt;br&gt;F2 Multi-Source Synthesis&lt;br&gt;F3 Structured Output&lt;br&gt;F4 Interactive Refinement&lt;br&gt;F5 Citation &amp; Provenance" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#5a5654;fontSize=10;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="459" width="240" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="feat_ip" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf4ea;strokeColor=#8ab898;strokeWidth=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="492" y="442.5" width="240" height="96" as="geometry"/>
+                </mxCell>
+                <mxCell id="feat_ip_title" value="Intelligence &amp; Personalization" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#253830;fontSize=11;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="492" y="441" width="240" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="feat_ip_items" value="F6 Adaptive Personalization&lt;br&gt;F7 Autonomous Planning&lt;br&gt;F8 Tool Orchestration&lt;br&gt;F9 Real-Time Data Access&lt;br&gt;F10 Long-Term Memory" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#5a5654;fontSize=10;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="492" y="459" width="240" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="feat_co" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf4ea;strokeColor=#8ab898;strokeWidth=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="744" y="442.5" width="246" height="96" as="geometry"/>
+                </mxCell>
+                <mxCell id="feat_co_title" value="Control &amp; Operations" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#253830;fontSize=11;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="744" y="441" width="246" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="feat_co_items" value="F11 Human Oversight Gates&lt;br&gt;F12 Safety &amp; Content Controls&lt;br&gt;F13 Learning &amp; Feedback&lt;br&gt;F14 Multi-Agent Collaboration&lt;br&gt;F15 Auditability &amp; Compliance" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#5a5654;fontSize=10;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="744" y="459" width="246" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow2_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fillColor=none;" parent="1" source="layer2" target="layer3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow2_3_label" value="Enabled by  (Matrix B)" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontColor=#000000;fontSize=11;fontStyle=1;fillColor=#f5f4f2;labelBackgroundColor=#FFFFFF;" parent="arrow2_3" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="layer3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0e8d8;strokeColor=#8a6030;strokeWidth=2;arcSize=5;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="590" width="770" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer3_badge" value="LAYER 3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8a6030;strokeColor=none;fontColor=#ffffff;fontSize=9;fontStyle=1;align=center;arcSize=50;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="600" width="55" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer3_title" value="Technical Components (~25 categories)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#000000;fontSize=14;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="600" width="350" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer3_q" value="&quot;What building blocks implement the features?&quot;" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#000000;fontSize=14;fontStyle=2;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="600" width="350" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="comp_oe" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#faf2e5;strokeColor=#c09060;strokeWidth=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="714" y="629" width="276" height="151" as="geometry"/>
+                </mxCell>
+                <mxCell id="comp_oe_title" value="Operational Excellence" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#6a4010;fontSize=11;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="714" y="632" width="276" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="comp_oe_label" value="(Cross-Cutting)" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#8a6030;fontSize=9;fontStyle=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="714" y="649" width="276" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="comp_oe_items" value="Safety &amp; Guardrails · Evaluation &amp; Testing&lt;br&gt;Infrastructure · Observability&lt;br&gt;Cost Mgmt · Resilience · Performance&lt;br&gt;DevOps · Data Governance&lt;br&gt;Identity &amp; Access · Incident Response" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#5a5654;fontSize=9;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="714" y="667" width="276" height="63" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow3_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;strokeColor=#000000;strokeWidth=2;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fillColor=none;" parent="1" source="layer3" target="layer4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="arrow3_4_label" value="Deployed on" style="edgeLabel;html=1;align=center;verticalAlign=middle;fontColor=#000000;fontSize=11;fontStyle=1;fillColor=#f5f4f2;labelBackgroundColor=#FFFFFF;" parent="arrow3_4" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="layer4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ece4f5;strokeColor=#6a4a8a;strokeWidth=2;arcSize=5;shadow=0;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="830" width="770" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer4_badge" value="LAYER 4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a4a8a;strokeColor=none;fontColor=#ffffff;fontSize=9;fontStyle=1;align=center;arcSize=50;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="840" width="55" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer4_title" value="Platforms &amp;amp; Implementation" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#000000;fontSize=14;fontStyle=1;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="840" width="300" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer4_q" value="&quot;What tools and platforms do we use?&quot;" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#000000;fontSize=14;fontStyle=2;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="840" width="300" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer4_items" value="LLM APIs  ·  Enterprise Low-Code AI  ·  Cloud AI Platforms  ·  Open-Source Frameworks  ·  Custom Development" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#5a5654;fontSize=10;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="870" width="770" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="dim_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FA;strokeColor=#8CA4C8;strokeWidth=1;arcSize=8;" parent="1" vertex="1">
+                    <mxGeometry x="237" y="236" width="752" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="dim_title" value="Four Architectural Dimensions" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#1E3050;fontSize=12;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="247" y="238.5" width="195" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="dim_sub" value="Characterize how each archetype is implemented" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#1E3050;fontSize=12;fontStyle=2;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="442" y="238.5" width="380" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="dim1" value="1. Interaction Model&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;One-shot · Conversational · Batch&lt;br&gt;Proactive · API-driven&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3E8F5;strokeColor=#8CA4C8;strokeWidth=1;fontColor=#1E3050;fontSize=10;fontStyle=1;align=center;arcSize=12;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="247" y="273" width="175" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="dim2" value="2. Autonomy Level&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Assistive → Semi-Auto → Fully Auto&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3E8F5;strokeColor=#8CA4C8;strokeWidth=1;fontColor=#1E3050;fontSize=10;fontStyle=1;align=center;arcSize=12;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="432" y="273" width="175" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="dim3" value="3. Grounding Strategy&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Ungrounded → Curated (RAG) → Live&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3E8F5;strokeColor=#8CA4C8;strokeWidth=1;fontColor=#1E3050;fontSize=10;fontStyle=1;align=center;arcSize=12;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="614" y="273" width="175" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="dim4" value="4. Governance Posture&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Data handling · Auditability · Safety&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3E8F5;strokeColor=#8CA4C8;strokeWidth=1;fontColor=#1E3050;fontSize=10;fontStyle=1;align=center;arcSize=12;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="802" y="273" width="175" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="tiers_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede5f5;strokeColor=#6a4a8a;strokeWidth=1;arcSize=5;" parent="1" vertex="1">
+                    <mxGeometry x="1110" y="80" width="180" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="tiers_title" value="Implementation Tiers" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#3a2050;fontSize=13;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1110" y="90" width="185" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="tiers_sub" value="Maturity progression" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#7a7672;fontSize=9;fontStyle=2;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1110" y="114" width="185" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="t4" value="&lt;b&gt;T4 Agentic&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Autonomous planning&lt;br&gt;Multi-agent · Self-correction&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ddd0ee;strokeColor=#6a4a8a;strokeWidth=1;fontColor=#3a2050;fontSize=10;align=center;arcSize=12;container=1;" parent="1" vertex="1">
+                    <mxGeometry x="1120.5" y="357" width="160" height="50" as="geometry">
+                        <mxRectangle x="1420" y="375" width="150" height="50" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="t3" value="&lt;b&gt;T3 Orchestrated&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Multi-step workflows&lt;br&gt;Tool use · Conditional logic&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ddd0ee;strokeColor=#6a4a8a;strokeWidth=1;fontColor=#3a2050;fontSize=10;align=center;arcSize=12;container=1;" parent="1" vertex="1">
+                    <mxGeometry x="1120.5" y="281.5" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="t2" value="&lt;b&gt;T2 Enhanced&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;RAG · Basic memory&lt;br&gt;Structured output&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ddd0ee;strokeColor=#6a4a8a;strokeWidth=1;fontColor=#3a2050;fontSize=10;align=center;arcSize=12;container=1;" parent="1" vertex="1">
+                    <mxGeometry x="1120.5" y="212" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="t1" value="&lt;b&gt;T1 Basic&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;Single LLM call&lt;br&gt;Prompt engineering&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ddd0ee;strokeColor=#6a4a8a;strokeWidth=1;fontColor=#3a2050;fontSize=10;align=center;arcSize=12;container=1;" parent="1" vertex="1">
+                    <mxGeometry x="1120.5" y="143" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="ta1" style="strokeColor=#000000;strokeWidth=1;exitX=0.5;exitY=1;fillColor=none;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="t1" target="t2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1201.5" y="242" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ta2" style="strokeColor=#000000;strokeWidth=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fillColor=none;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" parent="1" source="t2" target="t3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ta3" style="strokeColor=#000000;strokeWidth=1;exitX=0.5;exitY=1;fillColor=none;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="t3" target="t4" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1201.5" y="392" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="tier_alignment" value="&lt;b&gt;Maps to Layer 3:&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;T1/T2 → Foundation &amp; Augmentation&lt;br&gt;T3 → Orchestration layer&lt;br&gt;T4 → Autonomy layer&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#5a3a70;fontSize=9;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="425" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="path_box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0ecf8;strokeColor=#4060a0;strokeWidth=1;arcSize=5;" parent="1" vertex="1">
+                    <mxGeometry x="1110" y="745" width="180" height="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="path_title" value="Practitioner&#39;s Path" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#203060;fontSize=12;fontStyle=1;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="1110" y="745" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="path_items" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;1. Identify archetype&lt;br&gt;2. Map to features &lt;font&gt;(Matrix A)&lt;/font&gt;&lt;br&gt;3. Identify components &lt;font&gt;(Matrix B)&lt;/font&gt;&lt;br&gt;4. Evaluate &lt;font&gt;(Seven Questions)&lt;/font&gt;&lt;br&gt;5. Select tier &amp;amp; platform&lt;br&gt;6. Govern &lt;font&gt;(NIST RMF)&lt;/font&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#203060;fontSize=10;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="765" width="160" height="87" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;span style=&quot;background-color: rgb(227, 232, 245);&quot;&gt;&amp;nbsp;Characterized By&amp;nbsp;&lt;/span&gt;" style="endArrow=none;html=1;dashed=1;strokeColor=light-dark(#000000,#EDEDED);fontStyle=1" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="337" y="224" as="sourcePoint"/>
+                        <mxPoint x="905" y="224" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="240" y="630" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="comp_fnd" value="Foundation  —  Foundation Models · Prompting · Model Selection &amp; Customization" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#faf2e5;strokeColor=#b08050;strokeWidth=1;fontColor=#4a3010;fontSize=10;align=center;arcSize=12;" parent="5" vertex="1">
+                    <mxGeometry width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="badge_t1t2" value="T1-T2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3d5a8a;strokeColor=none;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;arcSize=50;" parent="5" vertex="1">
+                    <mxGeometry x="418" y="7.5" width="32" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="240" y="670" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="comp_aug" value="Augmentation  —  RAG &amp; Retrieval · Output Processing &amp; Structured Generation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#faf2e5;strokeColor=#b08050;strokeWidth=1;fontColor=#4a3010;fontSize=10;align=center;arcSize=12;" parent="6" vertex="1">
+                    <mxGeometry width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="badge_t2" value="T2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3d5a8a;strokeColor=none;fontColor=#ffffff;fontSize=8;fontStyle=1;align=center;arcSize=50;" parent="6" vertex="1">
+                    <mxGeometry x="426" y="7.5" width="22" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="240" y="710" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="comp_orch" value="Orchestration  —  Context Management · Memory · Reasoning &amp; Planning · Tool Use" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#faf2e5;strokeColor=#b08050;strokeWidth=1;fontColor=#4a3010;fontSize=10;align=center;arcSize=12;" parent="7" vertex="1">
+                    <mxGeometry width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="badge_t3" value="T3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4a7060;strokeColor=none;fontColor=#ffffff;fontSize=8;fontStyle=1;align=center;arcSize=50;" parent="7" vertex="1">
+                    <mxGeometry x="426" y="7.5" width="22" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="240" y="750" width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="comp_auto" value="Autonomy  —  Agentic Architectures · Workflow Orchestration · HITL · Agent Runtime" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#faf2e5;strokeColor=#b08050;strokeWidth=1;fontColor=#4a3010;fontSize=10;align=center;arcSize=12;" parent="8" vertex="1">
+                    <mxGeometry width="460" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="badge_t4" value="T4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a4a8a;strokeColor=none;fontColor=#ffffff;fontSize=8;fontStyle=1;align=center;arcSize=50;" parent="8" vertex="1">
+                    <mxGeometry x="426" y="7.5" width="22" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.218;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=#000000;fontStyle=0" edge="1" parent="1" source="layer1" target="tiers_box">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1000" y="370" as="sourcePoint"/>
+                        <mxPoint x="1050" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="&lt;span style=&quot;color: rgb(30, 48, 80); font-style: italic;&quot;&gt;archetype sets&lt;/span&gt;&lt;br style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); font-style: italic;&quot;&gt;&lt;span style=&quot;color: rgb(30, 48, 80); font-style: italic;&quot;&gt;minimum tier&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#FFFFFF;fontSize=8;fontStyle=0" vertex="1" connectable="0" parent="9">
+                    <mxGeometry x="-0.004" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=-0.007;exitY=0.618;exitDx=0;exitDy=0;exitPerimeter=0;fontColor=#000000;fontStyle=0" edge="1" parent="1" source="tiers_box" target="layer2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1080" y="450" as="sourcePoint"/>
+                        <mxPoint x="1010" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="&lt;font style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;Tier gates the depth&lt;br&gt;each feature can&lt;br&gt;deliver&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#FFFFFF;fontSize=8;fontStyle=0" vertex="1" connectable="0" parent="11">
+                    <mxGeometry x="-0.004" relative="1" as="geometry">
+                        <mxPoint x="4" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="" style="endArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.004;exitY=0.954;exitDx=0;exitDy=0;exitPerimeter=0;fontColor=#000000;fontStyle=0" edge="1" parent="1" source="tiers_box" target="layer3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="1060" y="620" as="sourcePoint"/>
+                        <mxPoint x="1004" y="689.66" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="&lt;span style=&quot;color: rgb(63, 63, 63); background-color: rgb(255, 255, 255);&quot;&gt;Tier maps to component&lt;br&gt;maturity layers&lt;/span&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=#FFFFFF;fontSize=8;fontStyle=0" vertex="1" connectable="0" parent="13">
+                    <mxGeometry x="-0.004" relative="1" as="geometry">
+                        <mxPoint x="4" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
