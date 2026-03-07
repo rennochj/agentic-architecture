@@ -60,29 +60,7 @@ Every component decision should answer these seven questions across two categori
 
 ## The Architecture Compass
 
-```
-                                    USE CASES
-                                   What to Enable
-                                        ◆
-                                       /│\
-                                      / │ \
-                         COMPLIANCE  /  │  \  QUALITIES
-                         Is It Legal?   │   How Well?
-                                ◆───────┼───────◆
-                               /        │        \
-                              /         │         \
-                     RISKS ◆───────────◆───────────◆ OBSERVABILITY
-                   What If?        COMPONENTS       Can We See?
-                             \     (The Means)     /
-                              \         │         /
-                               \        │        /
-                                ◆───────┼───────◆
-                         EVOLVABILITY   │    PRODUCTION
-                         Can We Learn?  │    READINESS
-                                        │    Can We Ship?
-                                        ◆
-                                   VALUE DELIVERED
-```
+![The Architecture Compass](assets/diagrams/architecture-compass.svg){ loading=lazy }
 
 **The Compass Principle**:
 - Components that only address **design-time** concerns create **operational debt**.
@@ -97,26 +75,26 @@ Use this canvas to evaluate each component decision:
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                   COMPONENT SELECTION CANVAS v2.0                            │
+│                   COMPONENT SELECTION CANVAS v2.0                           │
 │                                                                             │
 │  Component: ___________________________________                             │
-│  Candidate for Feature(s): ________________________                        │
+│  Candidate for Feature(s): ________________________                         │
 │                                                                             │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │  DESIGN-TIME VALUE                                                          │
 │                                                                             │
-│  1. USE CASE ENABLEMENT (WHY?)                              SCORE: ___/5   │
+│  1. USE CASE ENABLEMENT (WHY?)                              SCORE: ___/5    │
 │     □ Essential    □ High Value    □ Nice to Have    □ Not Needed           │
-│     Feature(s) enabled: _____________________________________________      │
+│     Feature(s) enabled: _____________________________________________       │
 │                                                                             │
-│  2. QUALITY DELIVERY (HOW WELL?)                            SCORE: ___/5   │
-│     □ Accuracy  □ Performance  □ Security  □ Reliability  □ Scalability    │
-│     Quality improvement: ____________________________________________      │
+│  2. QUALITY DELIVERY (HOW WELL?)                            SCORE: ___/5    │
+│     □ Accuracy  □ Performance  □ Security  □ Reliability  □ Scalability     │
+│     Quality improvement: ____________________________________________       │
 │                                                                             │
-│  3. RISK MITIGATION (WHAT IF?)                              SCORE: ___/5   │
-│     □ Hallucination  □ Security  □ Data Exposure  □ Cost  □ Outage        │
+│  3. RISK MITIGATION (WHAT IF?)                              SCORE: ___/5    │
+│     □ Hallucination  □ Security  □ Data Exposure  □ Cost  □ Outage         │
 │     Risk reduction: _________________________________________________      │
-│                                                                             │
+│                                                                            │
 │  4. COMPLIANCE ENABLEMENT (IS IT LEGAL?)                    SCORE: ___/5   │
 │     □ Audit Trail  □ Data Privacy  □ Explainability  □ Human Oversight     │
 │     Compliance addressed: ___________________________________________      │
