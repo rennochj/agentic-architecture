@@ -2,7 +2,7 @@
 
 A structured approach for identifying, designing, and implementing Generative AI and Agentic AI capabilities in the enterprise. Designed for architects, developers, and product leaders who need to move from a use case idea to a well-defined, governable system.
 
-![Framework Relationship Overview](assets/diagrams/framework-overview.svg){ loading=lazy }
+![Framework Relationship Overview](framework/assets/diagrams/framework-overview.svg){ loading=lazy }
 
 ---
 
@@ -10,7 +10,7 @@ A structured approach for identifying, designing, and implementing Generative AI
 
 The framework is organized into four layers that form a natural chain from business need to implementation:
 
-![The Four-Layer Model](assets/diagrams/four-layer-model.svg){ loading=lazy }
+![The Four-Layer Model](framework/assets/diagrams/four-layer-model.svg){ loading=lazy }
 
 ---
 
@@ -94,8 +94,8 @@ The most common GenAI deployment is a RAG-based knowledge assistant. Start here 
 
 | Asset | Description |
 |-------|-------------|
-| [:material-file-powerpoint: Framework Deck (PPTX)](assets/downloads/agentic-architecture-framework-20260306.pptx) | Slide deck covering all framework layers — suitable for stakeholder presentations |
-| [:material-file-excel: Formatted Charts (XLSX)](assets/downloads/formatted-charts.xlsx) | Archetype, feature, and component matrices in spreadsheet form |
+| [:material-file-powerpoint: Framework Deck (PPTX)](framework/assets/downloads/agentic-architecture-framework-20260306.pptx) | Slide deck covering all framework layers — suitable for stakeholder presentations |
+| [:material-file-excel: Formatted Charts (XLSX)](framework/assets/downloads/formatted-charts.xlsx) | Archetype, feature, and component matrices in spreadsheet form |
 
 ---
 

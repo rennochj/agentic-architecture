@@ -1,6 +1,6 @@
 .PHONY: help install diagrams serve build clean
 
-DIAGRAMS_OUT    := docs/assets/diagrams
+DIAGRAMS_OUT    := docs/framework/assets/diagrams
 DRAWIO_SOURCES  := $(wildcard original-diagrams/*.drawio)
 
 help:

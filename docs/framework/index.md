@@ -12,6 +12,8 @@ This framework provides a structured approach for identifying, designing, and im
 
 The framework is organized into four layers that form a natural chain from **business need** to **implementation**:
 
+![Four-Layer Model](assets/diagrams/four-layer-model.svg){ loading=lazy }
+
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │  LAYER 1: USE CASE ARCHETYPES (13)                                          │
