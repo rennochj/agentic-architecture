@@ -56,89 +56,89 @@ A comprehensive guide for evaluating and selecting GenAI implementation platform
 
 ### 2.1 Functional Capability Matrix
 
-Legend: ● Full Support | ◐ Partial/Limited | ○ Requires Extension | − Not Supported
+Legend: :material-circle: Full Support | :material-circle-half-full: Partial/Limited | :material-circle-outline: Requires Extension | − Not Supported
 
 | Capability | Copilot Studio | Salesforce Einstein | ServiceNow AI | Azure AI / Bedrock | LangChain/Graph | Custom Dev |
 |------------|----------------|---------------------|---------------|-------------------|-----------------|------------|
 | **Complexity Tier Support** |
-| [T1](implementation-tiers.md#implementation-tiers) - Basic | ● | ● | ● | ● | ● | ● |
-| [T2](implementation-tiers.md#implementation-tiers) - Enhanced | ● | ◐ | ◐ | ● | ● | ● |
-| [T3](implementation-tiers.md#implementation-tiers) - Orchestrated | ◐ | ○ | ○ | ● | ● | ● |
-| [T4](implementation-tiers.md#implementation-tiers) - Agentic | ○ | − | − | ● | ● | ● |
+| [T1](implementation-tiers.md#implementation-tiers) - Basic | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle: |
+| [T2](implementation-tiers.md#implementation-tiers) - Enhanced | :material-circle: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
+| [T3](implementation-tiers.md#implementation-tiers) - Orchestrated | :material-circle-half-full: | :material-circle-outline: | :material-circle-outline: | :material-circle: | :material-circle: | :material-circle: |
+| [T4](implementation-tiers.md#implementation-tiers) - Agentic | :material-circle-outline: | − | − | :material-circle: | :material-circle: | :material-circle: |
 | **Core Components** |
-| LLM Integration | ● | ● | ● | ● | ● | ● |
-| Prompt Management | ● | ◐ | ◐ | ● | ● | ● |
-| RAG / Knowledge Base | ● | ◐ | ◐ | ● | ● | ● |
-| Conversation Memory | ● | ● | ● | ● | ● | ● |
-| Long-term Memory | ◐ | ○ | ○ | ● | ● | ● |
-| Single Tool/Action | ● | ● | ● | ● | ● | ● |
-| Multi-tool Orchestration | ◐ | ○ | ○ | ● | ● | ● |
-| Custom Tool Development | ◐ | ○ | ○ | ● | ● | ● |
-| Code Execution | − | − | − | ● | ● | ● |
-| Workflow / Chains | ● | ◐ | ◐ | ● | ● | ● |
-| Conditional Logic | ● | ◐ | ◐ | ● | ● | ● |
-| Parallel Execution | ○ | − | − | ● | ● | ● |
-| Agent Autonomy | ○ | − | − | ● | ● | ● |
-| Multi-agent Coordination | − | − | − | ◐ | ● | ● |
-| Structured Output | ● | ◐ | ◐ | ● | ● | ● |
-| Streaming | ◐ | ◐ | ◐ | ● | ● | ● |
+| LLM Integration | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle: |
+| Prompt Management | :material-circle: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
+| RAG / Knowledge Base | :material-circle: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
+| Conversation Memory | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle: |
+| Long-term Memory | :material-circle-half-full: | :material-circle-outline: | :material-circle-outline: | :material-circle: | :material-circle: | :material-circle: |
+| Single Tool/Action | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle: |
+| Multi-tool Orchestration | :material-circle-half-full: | :material-circle-outline: | :material-circle-outline: | :material-circle: | :material-circle: | :material-circle: |
+| Custom Tool Development | :material-circle-half-full: | :material-circle-outline: | :material-circle-outline: | :material-circle: | :material-circle: | :material-circle: |
+| Code Execution | − | − | − | :material-circle: | :material-circle: | :material-circle: |
+| Workflow / Chains | :material-circle: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
+| Conditional Logic | :material-circle: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
+| Parallel Execution | :material-circle-outline: | − | − | :material-circle: | :material-circle: | :material-circle: |
+| Agent Autonomy | :material-circle-outline: | − | − | :material-circle: | :material-circle: | :material-circle: |
+| Multi-agent Coordination | − | − | − | :material-circle-half-full: | :material-circle: | :material-circle: |
+| Structured Output | :material-circle: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
+| Streaming | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
 | **Integration** |
-| Enterprise Systems | ● | ● (Salesforce) | ● (ServiceNow) | ◐ | ○ | ● |
-| Microsoft 365 | ● | ○ | ○ | ◐ | ○ | ● |
-| Custom APIs | ◐ | ◐ | ◐ | ● | ● | ● |
-| Databases | ◐ | ◐ | ◐ | ● | ● | ● |
-| File Systems | ◐ | ○ | ○ | ● | ● | ● |
+| Enterprise Systems | :material-circle: | :material-circle: (Salesforce) | :material-circle: (ServiceNow) | :material-circle-half-full: | :material-circle-outline: | :material-circle: |
+| Microsoft 365 | :material-circle: | :material-circle-outline: | :material-circle-outline: | :material-circle-half-full: | :material-circle-outline: | :material-circle: |
+| Custom APIs | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
+| Databases | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
+| File Systems | :material-circle-half-full: | :material-circle-outline: | :material-circle-outline: | :material-circle: | :material-circle: | :material-circle: |
 
 ### 2.2 Non-Functional Capability Matrix
 
-Legend: ● Built-in | ◐ Partial/Configurable | ○ Requires Custom Work | − Not Available
+Legend: :material-circle: Built-in | :material-circle-half-full: Partial/Configurable | :material-circle-outline: Requires Custom Work | − Not Available
 
 | NFR Category | Copilot Studio | Salesforce Einstein | ServiceNow AI | Azure AI / Bedrock | LangChain/Graph | Custom Dev |
 |--------------|----------------|---------------------|---------------|-------------------|-----------------|------------|
 | **Information Security** |
-| Enterprise SSO/OIDC | ● | ● | ● | ● | ○ | ○ |
-| MFA Integration | ● | ● | ● | ● | ○ | ○ |
-| RBAC | ● | ● | ● | ● | ○ | ○ |
-| Data Encryption at Rest | ● | ● | ● | ● | ○ | ○ |
-| Data Encryption in Transit | ● | ● | ● | ● | ● | ○ |
-| PII Masking/Redaction | ◐ | ◐ | ◐ | ● | ○ | ○ |
-| DLP Integration | ● | ◐ | ◐ | ● | ○ | ○ |
-| Prompt Injection Defense | ◐ | ◐ | ◐ | ◐ | ○ | ○ |
-| Audit Logging | ● | ● | ● | ● | ○ | ○ |
+| Enterprise SSO/OIDC | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| MFA Integration | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| RBAC | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| Data Encryption at Rest | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| Data Encryption in Transit | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: |
+| PII Masking/Redaction | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| DLP Integration | :material-circle: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| Prompt Injection Defense | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle-outline: | :material-circle-outline: |
+| Audit Logging | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
 | **Performance & Scale** |
-| Auto-scaling | ● | ● | ● | ● | ○ | ○ |
-| Global Distribution | ● | ● | ● | ● | ○ | ○ |
-| Response Caching | ◐ | ◐ | ◐ | ● | ○ | ○ |
-| Semantic Caching | − | − | − | ◐ | ○ | ○ |
-| Rate Limiting | ● | ● | ● | ● | ○ | ○ |
+| Auto-scaling | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| Global Distribution | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| Response Caching | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| Semantic Caching | − | − | − | :material-circle-half-full: | :material-circle-outline: | :material-circle-outline: |
+| Rate Limiting | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
 | **Resilience** |
-| Automatic Failover | ● | ● | ● | ● | ○ | ○ |
-| Circuit Breakers | ● | ● | ● | ● | ○ | ○ |
-| State Recovery | ◐ | ◐ | ◐ | ● | ○ | ○ |
-| Multi-region HA | ● | ● | ● | ● | ○ | ○ |
+| Automatic Failover | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| Circuit Breakers | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| State Recovery | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| Multi-region HA | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
 | **Observability** |
-| Built-in Analytics | ● | ● | ● | ● | ◐ | ○ |
-| Custom Metrics | ◐ | ◐ | ◐ | ● | ● | ● |
-| Distributed Tracing | ◐ | ◐ | ◐ | ● | ● | ● |
-| Cost Attribution | ● | ● | ● | ● | ○ | ○ |
+| Built-in Analytics | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-half-full: | :material-circle-outline: |
+| Custom Metrics | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
+| Distributed Tracing | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
+| Cost Attribution | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
 | **Responsible AI** |
-| Content Filtering | ● | ● | ● | ● | ○ | ○ |
-| Custom Guardrails | ◐ | ○ | ○ | ● | ● | ● |
-| Bias Detection | ○ | ○ | ○ | ◐ | ○ | ○ |
-| Explainability/Citations | ◐ | ◐ | ◐ | ◐ | ● | ● |
-| HITL Workflows | ● | ● | ● | ◐ | ● | ● |
+| Content Filtering | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| Custom Guardrails | :material-circle-half-full: | :material-circle-outline: | :material-circle-outline: | :material-circle: | :material-circle: | :material-circle: |
+| Bias Detection | :material-circle-outline: | :material-circle-outline: | :material-circle-outline: | :material-circle-half-full: | :material-circle-outline: | :material-circle-outline: |
+| Explainability/Citations | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: |
+| HITL Workflows | :material-circle: | :material-circle: | :material-circle: | :material-circle-half-full: | :material-circle: | :material-circle: |
 | **Compliance** |
-| SOC 2 Type II | ● | ● | ● | ● | N/A | ○ |
-| ISO 27001 | ● | ● | ● | ● | N/A | ○ |
-| HIPAA BAA Available | ● | ● | ● | ● | N/A | ○ |
-| GDPR Compliance | ● | ● | ● | ● | ○ | ○ |
-| FedRAMP (US Gov) | ● | ◐ | ◐ | ● | N/A | ○ |
-| Data Residency Control | ● | ● | ● | ● | ○ | ○ |
+| SOC 2 Type II | :material-circle: | :material-circle: | :material-circle: | :material-circle: | N/A | :material-circle-outline: |
+| ISO 27001 | :material-circle: | :material-circle: | :material-circle: | :material-circle: | N/A | :material-circle-outline: |
+| HIPAA BAA Available | :material-circle: | :material-circle: | :material-circle: | :material-circle: | N/A | :material-circle-outline: |
+| GDPR Compliance | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
+| FedRAMP (US Gov) | :material-circle: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | N/A | :material-circle-outline: |
+| Data Residency Control | :material-circle: | :material-circle: | :material-circle: | :material-circle: | :material-circle-outline: | :material-circle-outline: |
 | **DevOps** |
-| CI/CD Integration | ◐ | ◐ | ◐ | ● | ● | ● |
-| Version Control | ◐ | ◐ | ◐ | ● | ● | ● |
-| Infrastructure as Code | ◐ | ○ | ○ | ● | ● | ● |
-| A/B Testing | ○ | ○ | ○ | ● | ● | ● |
+| CI/CD Integration | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
+| Version Control | :material-circle-half-full: | :material-circle-half-full: | :material-circle-half-full: | :material-circle: | :material-circle: | :material-circle: |
+| Infrastructure as Code | :material-circle-half-full: | :material-circle-outline: | :material-circle-outline: | :material-circle: | :material-circle: | :material-circle: |
+| A/B Testing | :material-circle-outline: | :material-circle-outline: | :material-circle-outline: | :material-circle: | :material-circle: | :material-circle: |
 
 ### 2.3 NFR Delivery Comparison (Narrative)
 
@@ -206,21 +206,21 @@ NFR ASSESSMENT: Does use case involve sensitive data or regulated domain?
 │   │
 │   ├─► Customer PII
 │   │   └─► REQUIREMENT: PII masking/redaction before LLM
-│   │       ├─► Copilot Studio: ◐ Built-in DLP, requires config
-│   │       ├─► Cloud AI: ● Use AWS Macie / Azure Purview / Google DLP
-│   │       └─► Custom: ○ Implement Presidio or similar
+│   │       ├─► Copilot Studio: :material-circle-half-full: Built-in DLP, requires config
+│   │       ├─► Cloud AI: :material-circle: Use AWS Macie / Azure Purview / Google DLP
+│   │       └─► Custom: :material-circle-outline: Implement Presidio or similar
 │   │
 │   ├─► Healthcare PHI (HIPAA)
 │   │   └─► REQUIREMENT: HIPAA BAA + audit trails + access controls
-│   │       ├─► Copilot Studio: ● HIPAA-eligible with proper config
-│   │       ├─► Cloud AI: ● HIPAA-eligible services available
-│   │       └─► Custom: ○ Must achieve compliance independently
+│   │       ├─► Copilot Studio: :material-circle: HIPAA-eligible with proper config
+│   │       ├─► Cloud AI: :material-circle: HIPAA-eligible services available
+│   │       └─► Custom: :material-circle-outline: Must achieve compliance independently
 │   │
 │   ├─► Financial Data (PCI, SOX)
 │   │   └─► REQUIREMENT: PCI-DSS compliance + SOX controls
-│   │       ├─► Copilot Studio: ● Certified, inherits controls
-│   │       ├─► Cloud AI: ● PCI-certified services available
-│   │       └─► Custom: ○ Requires certification effort
+│   │       ├─► Copilot Studio: :material-circle: Certified, inherits controls
+│   │       ├─► Cloud AI: :material-circle: PCI-certified services available
+│   │       └─► Custom: :material-circle-outline: Requires certification effort
 │   │
 │   ├─► Legal / Privileged
 │   │   └─► REQUIREMENT: Strict access control + audit + retention
@@ -228,9 +228,9 @@ NFR ASSESSMENT: Does use case involve sensitive data or regulated domain?
 │   │
 │   └─► Classified / Government
 │       └─► REQUIREMENT: FedRAMP, IL4/IL5, or equivalent
-│           ├─► Copilot Studio: ● GCC/GCC-High available
-│           ├─► Cloud AI: ● GovCloud options (AWS, Azure)
-│           └─► Custom: ○ Air-gapped deployment required
+│           ├─► Copilot Studio: :material-circle: GCC/GCC-High available
+│           ├─► Cloud AI: :material-circle: GovCloud options (AWS, Azure)
+│           └─► Custom: :material-circle-outline: Air-gapped deployment required
 │
 └─► NO: Standard security practices apply → Follow primary decision tree
 ```
@@ -380,14 +380,14 @@ NFR Maturity (OOTB):High ──────────────────�
 
 | Capability Area | Required for SaaS | Required for Cloud AI | Required for Custom |
 |:---|:---|:---|:---|
-| Low-code / Config | ● Required | ○ Nice-to-have | − Not needed |
-| Cloud Architecture | ○ Nice-to-have | ● Required | ● Required |
-| AI/ML Engineering | − Not needed | ◐ Helpful | ● Required |
-| Full-stack Dev | ○ Nice-to-have | ◐ Helpful | ● Required |
-| DevOps/MLOps | ○ Nice-to-have | ● Required | ● Required |
-| Vendor Management | ● Required | ● Required | ◐ Helpful |
-| Change Management | ● Required | ● Required | ● Required |
-| Executive Sponsorship | ◐ Helpful | ● Required | ● Required |
+| Low-code / Config | :material-circle: Required | :material-circle-outline: Nice-to-have | − Not needed |
+| Cloud Architecture | :material-circle-outline: Nice-to-have | :material-circle: Required | :material-circle: Required |
+| AI/ML Engineering | − Not needed | :material-circle-half-full: Helpful | :material-circle: Required |
+| Full-stack Dev | :material-circle-outline: Nice-to-have | :material-circle-half-full: Helpful | :material-circle: Required |
+| DevOps/MLOps | :material-circle-outline: Nice-to-have | :material-circle: Required | :material-circle: Required |
+| Vendor Management | :material-circle: Required | :material-circle: Required | :material-circle-half-full: Helpful |
+| Change Management | :material-circle: Required | :material-circle: Required | :material-circle: Required |
+| Executive Sponsorship | :material-circle-half-full: Helpful | :material-circle: Required | :material-circle: Required |
 
 ### 5.4 Ecosystem Alignment Checklists
 

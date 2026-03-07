@@ -4,7 +4,7 @@
 
 A comprehensive catalog of the technical building blocks that comprise modern GenAI and Agentic AI systems. This document is the Layer 3 reference for the GenAI & Agentic Architecture Framework.
 
-**Scope**: This document catalogs *what* each component is and *what it does*, with guidance on when to use each variant. For *how* to combine components into stack patterns at different maturity tiers, see [06-implementation-tiers.md](implementation-tiers.md). For *whether* to include a component, see [05-component-selection-guide.md](component-selection-guide.md). For *which features* each component enables, see Matrix B in [03-capability-features.md](capability-features.md) — the authoritative detailed mapping. The appendix here summarizes primary (●) relationships only.
+**Scope**: This document catalogs *what* each component is and *what it does*, with guidance on when to use each variant. For *how* to combine components into stack patterns at different maturity tiers, see [06-implementation-tiers.md](implementation-tiers.md). For *whether* to include a component, see [05-component-selection-guide.md](component-selection-guide.md). For *which features* each component enables, see Matrix B in [03-capability-features.md](capability-features.md) — the authoritative detailed mapping. The appendix here summarizes primary (:material-circle:) relationships only.
 
 **How to use this document**: After identifying your required capability features (Layer 2), use this catalog to understand the technical components that enable those features. Each component category links back to the features it supports.
 
@@ -972,9 +972,9 @@ Components are organized into four progressive maturity layers plus cross-cuttin
 
 
 
-Quick reference showing which features each component category **primarily enables (●)**. For the full mapping including supporting (◐) and optional (○) roles, see **Matrix B in [03-capability-features.md](capability-features.md)** — the authoritative source.
+Quick reference showing which features each component category **primarily enables (:material-circle:)**. For the full mapping including supporting (:material-circle-half-full:) and optional (:material-circle-outline:) roles, see **Matrix B in [03-capability-features.md](capability-features.md)** — the authoritative source.
 
-| Component Category | Primary Features Enabled (●) |
+| Component Category | Primary Features Enabled (:material-circle:) |
 |---|---|
 | **Foundation Models** | F1, F2, F3, F4, F6, F7, F8, F9, F14 |
 | **Prompting Techniques** | F1, F2, F3, F4, F6, F7, F14 |

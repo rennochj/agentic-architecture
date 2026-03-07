@@ -107,7 +107,7 @@ After following the Practitioner's Path (or any alternative entry), use this che
 - [ ] **Archetype(s) identified** — primary archetype selected; if composite, composition pattern defined (02, Part 4)
 - [ ] **Architectural dimensions defined** — Interaction Model, Autonomy Level, Grounding Strategy, and Governance Posture set (02, Part 2)
 - [ ] **Data Readiness Gate passed** — all six questions answered, no unresolved red flags (02, Part 5)
-- [ ] **Required features identified** — ● features from Matrix A confirmed; ◐ features evaluated against dimensions and dependencies (03, Matrix A)
+- [ ] **Required features identified** — :material-circle: features from Matrix A confirmed; :material-circle-half-full: features evaluated against dimensions and dependencies (03, Matrix A)
 - [ ] **Feature dependencies traced** — all prerequisite features included per the dependency table (03, Feature Dependencies)
 - [ ] **Components selected** — Matrix C (or A→B trace) completed; each component evaluated with Seven Questions (03, 05)
 - [ ] **Implementation tier confirmed** — Feature Maturity matrix checked; all required features achievable at the chosen tier (06, §1)
@@ -192,18 +192,18 @@ This example traces a single use case through all six steps of the Practitioner'
 
 ### Step 2: Map to Features (→ 03-capability-features.md, Matrix A)
 
-Union of ● features from both archetypes:
+Union of :material-circle: features from both archetypes:
 
 | Feature | Source | Rationale |
 |---|---|---|
-| F1 Contextual Grounding | ● (both) | Must answer from product knowledge base |
-| F4 Interactive Refinement | ● (both) | Multi-turn conversation with clarification |
-| F5 Citation & Provenance | ● (Q&A) | Customers need to verify answers against docs |
-| F6 Adaptive Personalization | ● (Conv) | Tailor tone and responses to customer context |
-| F10 Long-Term Memory | ● (Conv) | Returning customers expect continuity |
-| F11 Human Oversight Gates | ● (Conv) | Escalation to human agents |
-| F12 Safety & Content Controls | ● (both) | Enterprise environment, customer-facing |
-| F13 Learning & Feedback | ● (both) | Must improve quality over time |
+| F1 Contextual Grounding | :material-circle: (both) | Must answer from product knowledge base |
+| F4 Interactive Refinement | :material-circle: (both) | Multi-turn conversation with clarification |
+| F5 Citation & Provenance | :material-circle: (Q&A) | Customers need to verify answers against docs |
+| F6 Adaptive Personalization | :material-circle: (Conv) | Tailor tone and responses to customer context |
+| F10 Long-Term Memory | :material-circle: (Conv) | Returning customers expect continuity |
+| F11 Human Oversight Gates | :material-circle: (Conv) | Escalation to human agents |
+| F12 Safety & Content Controls | :material-circle: (both) | Enterprise environment, customer-facing |
+| F13 Learning & Feedback | :material-circle: (both) | Must improve quality over time |
 
 ### Step 3: Identify Components (→ 03-capability-features.md, Matrix C + Matrix B)
 
