@@ -10,49 +10,7 @@ A structured approach for identifying, designing, and implementing Generative AI
 
 The framework is organized into four layers that form a natural chain from business need to implementation:
 
-<div class="grid cards" markdown>
-
--   **Layer 1 · Use Case Archetypes**
-
-    ---
-
-    *What job needs to be done?*
-
-    13 archetypes across 3 value groups, each characterized by 4 Architectural Dimensions: Interaction Model, Autonomy Level, Grounding Strategy, and Governance Posture.
-
-    [:octicons-arrow-right-24: Use Case Archetypes](framework/use-case-archetypes.md)
-
--   **Layer 2 · Capability Features**
-
-    ---
-
-    *What functional capabilities must the solution exhibit?*
-
-    15 reusable, composable capabilities shared across archetypes. The bridge that explains *why* a technical component is needed.
-
-    [:octicons-arrow-right-24: Capability Features](framework/capability-features.md)
-
--   **Layer 3 · Technical Components**
-
-    ---
-
-    *What building blocks implement the features?*
-
-    13 capability components across 4 maturity tiers (Foundation → Augmentation → Orchestration → Autonomy) plus 11 cross-cutting Operational Excellence sections.
-
-    [:octicons-arrow-right-24: Technical Components](framework/technical-components.md)
-
--   **Layer 4 · Platforms & Implementation**
-
-    ---
-
-    *What tools, platforms, and patterns do we use?*
-
-    Platform comparison, TCO analysis, decision trees, organizational fit, and reference architectures.
-
-    [:octicons-arrow-right-24: Platform Selection](framework/platform-selection.md)
-
-</div>
+![The Four-Layer Model](assets/diagrams/four-layer-model.svg){ loading=lazy }
 
 ---
 
