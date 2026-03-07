@@ -62,10 +62,30 @@ Every component decision should answer these seven questions across two categori
 
 ![The Architecture Compass](assets/diagrams/architecture-compass.svg){ loading=lazy }
 
-**The Compass Principle**:
+The compass maps the eight forces that determine whether a component earns its place in your architecture. **COMPONENTS** sits at the centre — the means, not the end. Every spoke and edge represents a question the component must answer.
+
+### Two Halves
+
+| Half | Nodes | Concern |
+|------|-------|---------|
+| **Design-Time** (top) | USE CASES · COMPLIANCE · QUALITIES · RISKS | Why does this component exist? What does it enable, protect, deliver, or satisfy? |
+| **Operational** (bottom) | OBSERVABILITY · EVOLVABILITY · PRODUCTION READINESS · VALUE DELIVERED | Can we run it safely, improve it over time, and ship it confidently? |
+
+The horizontal spine (RISKS → COMPONENTS → OBSERVABILITY) is the system's **reality check**: what can go wrong, and will you see it when it does?
+
+The vertical spine (USE CASES → COMPONENTS → VALUE DELIVERED) is the system's **purpose chain**: the component exists to enable use cases, and those use cases must deliver value.
+
+### How to Read the Edges
+
+- **Outer octagon** — adjacency relationships. Nodes connected on the octagon share concerns. COMPLIANCE sits between USE CASES and RISKS because legal requirements are both a business constraint and a risk mitigation. EVOLVABILITY sits between RISKS and VALUE DELIVERED because a system that can't adapt accumulates risk and erodes value.
+- **Horizontal spines** (NW–NE and SW–SE) — the design-time and operational **balance lines**. A component strong on the top half (USE CASES, QUALITIES) but absent from the bottom (OBSERVABILITY, PRODUCTION READINESS) crosses the design-time balance line without crossing the operational one — it's a liability in production.
+- **Centre spokes** — direct lines of accountability. Every component must trace a path from USE CASES through COMPONENTS to VALUE DELIVERED, and from RISKS through COMPONENTS to OBSERVABILITY.
+
+### The Compass Principle
+
 - Components that only address **design-time** concerns create **operational debt**.
 - Components that only address **operational** concerns lack **business purpose**.
-- The best architectures balance both halves.
+- The best architectures balance both halves — every component should have at least one answer on each side of the horizontal axis.
 
 ---
 
