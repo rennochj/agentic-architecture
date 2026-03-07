@@ -4,7 +4,7 @@
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="L1" value="&lt;font style=&quot;color: rgb(255, 255, 255);&quot;&gt;&lt;b style=&quot;font-size:15px&quot;&gt;Layer 1 · Use Case Archetypes&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px&quot;&gt;What job needs to be done?&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;opacity:0.8&quot;&gt;13 archetypes · 3 value groups · 4 Architectural Dimensions&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=middle;align=center;arcSize=4;spacingTop=0;" parent="1" vertex="1">
+                <mxCell id="L1" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;b style=&quot;font-size: 15px;&quot;&gt;Layer 1 · Use Case Archetypes&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 11px;&quot;&gt;What job needs to be done?&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 10px; opacity: 0.8;&quot;&gt;13 archetypes · 3 value groups · 4 Architectural Dimensions&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=middle;align=center;arcSize=4;spacingTop=0;" parent="1" vertex="1">
                     <mxGeometry x="20" y="20" width="660" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="a1" value="requires" style="endArrow=block;endFill=1;strokeColor=#78909C;strokeWidth=2;fontColor=#000000;fontSize=10;fontStyle=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" parent="1" source="L1" target="L2" edge="1">
