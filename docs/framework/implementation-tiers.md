@@ -167,19 +167,7 @@ Compliance:           Minimal │ Industry Standards │ Regulated │ Mission-c
 
 #### Component Stacks
 
-```
-Foundation:    [User] → [Prompt] → [RAG (Optional)] → [LLM] → [Output]
-
-Orchestration: [User] → [Query Rewriter] → [Hybrid Search] → [Re-ranker]
-                                ↓
-                         [Context Window] → [Few-Shot] → [LLM] → [Citations]
-
-Autonomy:      [Goal] → [Research Agent] ⟷ [Web/Doc Tools]
-                              ↓
-                        [Reasoning Loop (Plan → Execute → Critique)]
-                              ↓
-                        [Writer Agent] → [Editor Agent] → [Final Report]
-```
+![Group A: Content & Knowledge Synthesis — Component Stacks](assets/diagrams/group-a-content-knowledge-stacks.svg){ loading=lazy }
 
 ### 4.2 Group B: Insight & Decision Intelligence
 
@@ -195,19 +183,7 @@ Autonomy:      [Goal] → [Research Agent] ⟷ [Web/Doc Tools]
 
 #### Component Stacks
 
-```
-Foundation:    [Data Context] → [LLM] → [Narrative Explanation]
-
-Orchestration: [Question] → [Code Generator] → [SQL/Python Executor]
-                                  ↓
-                           [Structured Data] → [LLM] → [Insight]
-
-Autonomy:      [Data Stream] → [Monitor Agent]
-                                     ↓ (Trigger)
-                              [Analyst Agent] ⟷ [Data Tools]
-                                     ↓
-                              [Report Generator] → [Alert/Dashboard]
-```
+![Group B: Insight & Decision Intelligence — Component Stacks](assets/diagrams/group-b-insight-decision-stacks.svg){ loading=lazy }
 
 ### 4.3 Group C: Process & Task Automation
 
@@ -223,20 +199,7 @@ Autonomy:      [Data Stream] → [Monitor Agent]
 
 #### Component Stacks
 
-```
-Foundation:    [Context/Diff] → [Code LLM] → [Suggestion]
-
-Orchestration: [Trigger] → [Workflow Engine] → [Step 1: LLM] → [Step 2: Tool]
-                                  ↓
-                           [Approval Gate] → [Step 3: Action]
-
-Autonomy:      [Objective] → [Supervisor Agent]
-                                    ↓
-                  ┌─────────────────┼─────────────────┐
-            [Coder Agent]    [Tester Agent]    [DevOps Agent]
-                  ↓                 ↓                ↓
-             [Git Tools]       [CI Harness]    [Cloud CLI]
-```
+![Group C: Process & Task Automation — Component Stacks](assets/diagrams/group-c-process-automation-stacks.svg){ loading=lazy }
 
 ---
 
@@ -304,45 +267,7 @@ A supervisor agent decomposes high-level goals into subtasks, delegates to speci
 
 ## 6. Component Dependency Graph
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     User Interface Layer                         │
-├─────────────────────────────────────────────────────────────────┤
-│                  Human-in-the-Loop                               │
-│            (Approvals, Feedback, Escalation)                     │
-├─────────────────────────────────────────────────────────────────┤
-│                  AUTONOMY LAYER (T4)                             │
-│  ┌─────────────┐  ┌─────────────┐  ┌───────────┐  ┌─────────┐ │
-│  │  Workflows  │  │    State    │  │   Error   │  │ Routing │ │
-│  │  (DAG/Graph)│  │ Management  │  │ Handling  │  │         │ │
-│  └──────┬──────┘  └──────┬──────┘  └─────┬─────┘  └────┬────┘ │
-├─────────┼────────────────┼────────────────┼─────────────┼──────┤
-│                  ORCHESTRATION LAYER (T3)                        │
-│  ┌─────────────┐  ┌─────────────┐  ┌───────────┐  ┌─────────┐ │
-│  │   Agents    │◄─│   Memory    │  │   Tools   │  │Reasoning│ │
-│  │  (ReAct,    │  │ (Short/Long │  │(Functions,│  │(CoT,ToT,│ │
-│  │  Plan-Exec) │──│  Term)      │  │ MCP,Code) │  │Planning)│ │
-│  └──────┬──────┘  └──────┬──────┘  └─────┬─────┘  └────┬────┘ │
-├─────────┼────────────────┼────────────────┼─────────────┼──────┤
-│                  AUGMENTATION LAYER (T2)                         │
-│  ┌────────────────────────────────────────┐  ┌───────────────┐ │
-│  │              RAG Pipeline               │  │  Structured   │ │
-│  │  Chunking → Embedding → Vector Search  │  │    Output     │ │
-│  │  Rewrite  → Rerank   → Context         │  └───────────────┘ │
-│  └────────────────────────────────────────┘                     │
-├─────────────────────────────────────────────────────────────────┤
-│                  FOUNDATION LAYER (T1)                           │
-│  ┌─────────────┐  ┌─────────────┐  ┌───────────┐  ┌─────────┐ │
-│  │    LLMs     │  │    VLMs     │  │ Embedding │  │Prompting│ │
-│  └─────────────┘  └─────────────┘  └───────────┘  └─────────┘ │
-├─────────────────────────────────────────────────────────────────┤
-│                  OPERATIONAL EXCELLENCE (Cross-Cutting)          │
-│  ┌──────────────┐ ┌──────────────┐ ┌────────────┐ ┌──────────┐│
-│  │  Guardrails  │ │  Evaluation  │ │Observability│ │  Infra   ││
-│  │  & Safety    │ │  & Testing   │ │ & Tracing  │ │& Deploy  ││
-│  └──────────────┘ └──────────────┘ └────────────┘ └──────────┘│
-└─────────────────────────────────────────────────────────────────┘
-```
+![Component Dependency Graph](assets/diagrams/component-dependency-graph.svg){ loading=lazy }
 
 ---
 

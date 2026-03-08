@@ -1,0 +1,162 @@
+<mxfile host="65bd71144e">
+    <diagram id="comp-dep" name="Component-Dependency-Graph">
+        <mxGraphModel dx="1382" dy="1156" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="760" pageHeight="570" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+
+                <!-- ═══ USER INTERFACE LAYER ═══ -->
+                <mxCell id="UI" value="&lt;b&gt;User Interface Layer&lt;/b&gt; · Streaming · Progress Indicators · HITL Interactions" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#999999;fontSize=12;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="10" width="740" height="40" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══ HUMAN-IN-THE-LOOP ═══ -->
+                <mxCell id="HITL" value="&lt;b&gt;Human-in-the-Loop&lt;/b&gt; · Approvals · Feedback · Escalation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e8f4f8;fontColor=#1a5276;strokeColor=#7bb3cc;fontSize=11;verticalAlign=middle;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="50" width="740" height="38" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══ AUTONOMY LAYER (T4) ═══ -->
+                <mxCell id="T4_BG" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="88" width="740" height="97" as="geometry"/>
+                </mxCell>
+                <mxCell id="T4_LBL" value="&lt;b&gt;AUTONOMY LAYER (T4)&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#1a4a7a;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="18" y="92" width="220" height="18" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="T4_WF" value="&lt;b&gt;Workflows&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:9px;'&gt;DAG / Dynamic Graph&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9dff7;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="110" width="163" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="T4_SM" value="&lt;b&gt;State Management&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:9px;'&gt;Checkpoint / Resume&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9dff7;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="198" y="110" width="163" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="T4_EH" value="&lt;b&gt;Error Handling&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:9px;'&gt;Self-healing · Recovery&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9dff7;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="376" y="110" width="163" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="T4_RT" value="&lt;b&gt;Routing&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:9px;'&gt;Dynamic · Conditional&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c9dff7;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="554" y="110" width="186" height="65" as="geometry"/>
+                </mxCell>
+
+                <!-- Vertical dependency arrows T4 → T3 -->
+                <mxCell id="dep_a" value="" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=1.5;" edge="1" parent="1">
+                    <mxGeometry x="101" y="175" width="1" height="1" as="geometry"><Array as="points"/></mxGeometry>
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="101" y="175" as="sourcePoint"/><mxPoint x="101" y="202" as="targetPoint"/></mxGeometry>
+                </mxCell>
+                <mxCell id="dep_b" value="" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=1.5;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="279" y="175" as="sourcePoint"/><mxPoint x="279" y="202" as="targetPoint"/></mxGeometry>
+                </mxCell>
+                <mxCell id="dep_c" value="" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=1.5;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="457" y="175" as="sourcePoint"/><mxPoint x="457" y="202" as="targetPoint"/></mxGeometry>
+                </mxCell>
+                <mxCell id="dep_d" value="" style="endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=1.5;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="647" y="175" as="sourcePoint"/><mxPoint x="647" y="202" as="targetPoint"/></mxGeometry>
+                </mxCell>
+
+                <!-- ═══ ORCHESTRATION LAYER (T3) ═══ -->
+                <mxCell id="T3_BG" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="185" width="740" height="118" as="geometry"/>
+                </mxCell>
+                <mxCell id="T3_LBL" value="&lt;b&gt;ORCHESTRATION LAYER (T3)&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#2e7d32;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="18" y="189" width="250" height="18" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="T3_AG" value="&lt;b&gt;Agents&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:9px;'&gt;ReAct · Plan-Execute&lt;br/&gt;Reflexion&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="208" width="163" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="T3_MEM" value="&lt;b&gt;Memory&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:9px;'&gt;Short-term · Long-term&lt;br/&gt;Episodic · Semantic&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="198" y="208" width="163" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="T3_TOOLS" value="&lt;b&gt;Tools&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:9px;'&gt;Functions · MCP&lt;br/&gt;Code Execution&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="376" y="208" width="163" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="T3_REAS" value="&lt;b&gt;Reasoning&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:9px;'&gt;CoT · Tree of Thoughts&lt;br/&gt;Planning&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="554" y="208" width="186" height="84" as="geometry"/>
+                </mxCell>
+
+                <!-- Bidirectional arrow: Agents ↔ Memory -->
+                <mxCell id="AG_MEM" value="" style="startArrow=block;startFill=1;endArrow=block;endFill=1;strokeColor=#82b366;strokeWidth=1.5;" edge="1" source="T3_AG" target="T3_MEM" parent="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- Vertical dependency arrows T3 → T2 -->
+                <mxCell id="dep_e" value="" style="endArrow=block;endFill=1;strokeColor=#9673a6;strokeWidth=1.5;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="101" y="292" as="sourcePoint"/><mxPoint x="101" y="318" as="targetPoint"/></mxGeometry>
+                </mxCell>
+                <mxCell id="dep_f" value="" style="endArrow=block;endFill=1;strokeColor=#9673a6;strokeWidth=1.5;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="279" y="292" as="sourcePoint"/><mxPoint x="279" y="318" as="targetPoint"/></mxGeometry>
+                </mxCell>
+                <mxCell id="dep_g" value="" style="endArrow=block;endFill=1;strokeColor=#9673a6;strokeWidth=1.5;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="457" y="292" as="sourcePoint"/><mxPoint x="457" y="318" as="targetPoint"/></mxGeometry>
+                </mxCell>
+                <mxCell id="dep_h" value="" style="endArrow=block;endFill=1;strokeColor=#9673a6;strokeWidth=1.5;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="647" y="292" as="sourcePoint"/><mxPoint x="647" y="318" as="targetPoint"/></mxGeometry>
+                </mxCell>
+
+                <!-- ═══ AUGMENTATION LAYER (T2) ═══ -->
+                <mxCell id="T2_BG" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="303" width="740" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="T2_LBL" value="&lt;b&gt;AUGMENTATION LAYER (T2)&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#6a1b9a;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="18" y="307" width="250" height="18" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="T2_RAG" value="&lt;b&gt;RAG Pipeline&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:9px;'&gt;Chunking · Embedding · Vector Search · Query Rewrite · Re-rank · Context Assembly&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="326" width="484" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="T2_SO" value="&lt;b&gt;Structured Output&lt;/b&gt;&lt;br/&gt;&lt;span style='font-size:9px;'&gt;Schema · Validation&lt;br/&gt;Multi-artifact&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="326" width="220" height="72" as="geometry"/>
+                </mxCell>
+
+                <!-- Vertical dependency arrows T2 → T1 -->
+                <mxCell id="dep_i" value="" style="endArrow=block;endFill=1;strokeColor=#d79b00;strokeWidth=1.5;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="262" y="398" as="sourcePoint"/><mxPoint x="101" y="424" as="targetPoint"/></mxGeometry>
+                </mxCell>
+                <mxCell id="dep_j" value="" style="endArrow=block;endFill=1;strokeColor=#d79b00;strokeWidth=1.5;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry"><mxPoint x="630" y="398" as="sourcePoint"/><mxPoint x="647" y="424" as="targetPoint"/></mxGeometry>
+                </mxCell>
+
+                <!-- ═══ FOUNDATION LAYER (T1) ═══ -->
+                <mxCell id="T1_BG" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#d79b00;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="408" width="740" height="92" as="geometry"/>
+                </mxCell>
+                <mxCell id="T1_LBL" value="&lt;b&gt;FOUNDATION LAYER (T1)&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#b85c00;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="18" y="412" width="220" height="18" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="T1_LLM" value="&lt;b&gt;LLMs&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="430" width="163" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="T1_VLM" value="&lt;b&gt;VLMs&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="198" y="430" width="163" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="T1_EMB" value="&lt;b&gt;Embedding Models&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="376" y="430" width="163" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="T1_PRO" value="&lt;b&gt;Prompting&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="554" y="430" width="186" height="60" as="geometry"/>
+                </mxCell>
+
+                <!-- ═══ OPERATIONAL EXCELLENCE (Cross-Cutting) ═══ -->
+                <mxCell id="OE_BG" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e8ecef;strokeColor=#546e7a;" vertex="1" parent="1">
+                    <mxGeometry x="10" y="500" width="740" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="OE_LBL" value="&lt;b&gt;OPERATIONAL EXCELLENCE&lt;/b&gt; · Cross-Cutting" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontColor=#263238;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="18" y="504" width="280" height="16" as="geometry"/>
+                </mxCell>
+
+                <mxCell id="OE_GRD" value="Guardrails &amp;amp; Safety" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="522" width="163" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="OE_EVL" value="Evaluation &amp;amp; Testing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="198" y="522" width="163" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="OE_OBS" value="Observability &amp;amp; Tracing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="376" y="522" width="163" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="OE_INF" value="Infra &amp;amp; Deploy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+                    <mxGeometry x="554" y="522" width="186" height="30" as="geometry"/>
+                </mxCell>
+
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

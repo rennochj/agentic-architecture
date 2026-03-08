@@ -27,7 +27,7 @@ $(DIAGRAMS_OUT):
 	mkdir -p $@
 
 serve:
-	uv run mkdocs serve --dirtyreload
+	uv run mkdocs serve
 
 build:
 	uv run mkdocs build
